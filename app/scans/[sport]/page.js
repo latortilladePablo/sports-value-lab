@@ -3,8 +3,7 @@ import { notFound } from "next/navigation";
 import AppNav from "../../../components/AppNav";
 import { getDashboardData } from "../../../lib/live";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+export const revalidate = 20;
 
 function RunCard({ run }) {
   const analyzed = run.analysisStatus && run.analysisStatus !== "CHECK_ONLY_OR_NO_ODDS";
