@@ -2,8 +2,7 @@ import Link from "next/link";
 import AppNav from "../../components/AppNav";
 import { getDashboardData } from "../../lib/live";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+export const revalidate = 20;
 
 const VALID_RESULTS = ["Ganada","Perdida","Nula","Media ganada","Media perdida"];
 
