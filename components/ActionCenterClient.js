@@ -10,6 +10,15 @@ const ACTIONS = [
   ["P2_FORCE", "P2 FORCE"],
 ];
 
+function recommendedActionFor(sport) {
+  const scan = String(sport.scan || "").trim().toUpperCase();
+  if (scan === "P1 COMPLETO") return "P1_COMPLETO";
+  if (scan === "CHECK P2") return "P2_CHECK";
+  if (scan === "P2 AUTO") return "P2_AUTO";
+  if (scan === "P2 FORCE") return "P2_FORCE";
+  return null;
+}
+
 export default function ActionCenterClient({ sports }) {
   const router = useRouter();
   const [busy, setBusy] = useState({});
@@ -47,6 +56,16 @@ export default function ActionCenterClient({ sports }) {
 
   function eligibleCount(action) {
     return sports.filter((sport) => selected[sport.id] && sport.policy[action]?.allowed).length;
+  }
+
+  function recommendedSummary() {
+    const selectedSports = sports.filter((sport) => selected[sport.id]);
+    const actionable = selectedSports
+      .map((sport) => recommendedActionFor(sport))
+      .filter(Boolean);
+    const paid = actionable.filter((action) => ["P1_COMPLETO", "P2_AUTO", "P2_FORCE"].includes(action)).length;
+    const force = actionable.filter((action) => action === "P2_FORCE").length;
+    return { actionable: actionable.length, paid, force };
   }
 
   async function run(sport, action) {
@@ -112,8 +131,8 @@ export default function ActionCenterClient({ sports }) {
           const next = { ...m };
           data.results.forEach((result) => {
             next[result.sport] = result.ok
-              ? `✓ ${result.name} completado`
-              : result.status === "blocked"
+              ? `✓ ${result.name} · ${result.actualAction || "completado"}`
+              : result.status === "blocked" || result.status === "no_action"
                 ? `↷ Omitido: ${result.error}`
                 : `✕ ${result.error || "Error de ejecución"}`;
           });
@@ -143,8 +162,8 @@ export default function ActionCenterClient({ sports }) {
             <span className="eyebrow">EJECUCIÓN MÚLTIPLE</span>
             <h2>Seleccionar deportes</h2>
             <p>
-              Ejecuta la misma acción en varios deportes a la vez. Cada deporte vuelve a pasar
-              su gate CURRENT; los bloqueados se omiten sin detener los demás.
+              Ejecuta la misma acción en varios deportes o usa Recomendada para que cada deporte
+              ejecute su propia acción CURRENT. Los gates se vuelven a validar justo antes del POST.
             </p>
           </div>
           <div className="batchCount">
@@ -218,6 +237,28 @@ export default function ActionCenterClient({ sports }) {
 
         {bulkMessage ? <div className="bulkMessage">{bulkMessage}</div> : null}
       </section>
+
+        <div className="recommendedRow">
+          {(() => {
+            const summary = recommendedSummary();
+            return (
+              <button
+                type="button"
+                disabled={!selectedIds.length || bulkBusy !== ""}
+                className="recommendedBatchAction"
+                onClick={() => runBatch("RECOMMENDED")}
+              >
+                <span>EJECUTAR RECOMENDADA</span>
+                <small>
+                  {summary.actionable}/{selectedIds.length || 0} con acción CURRENT
+                  {summary.paid ? ` · ${summary.paid} usa(n) /odds` : " · sin /odds"}
+                  {summary.force ? ` · ${summary.force} FORCE` : ""}
+                </small>
+                {bulkBusy === "RECOMMENDED" ? <em>Ejecutando recomendadas…</em> : null}
+              </button>
+            );
+          })()}
+        </div>
 
       <section className="actionSportGrid">
         {sports.map((sport) => (
