@@ -1,3 +1,4 @@
+import AppNav from "../components/AppNav";
 import { getDashboardData } from "../lib/live";
 
 export const dynamic = "force-dynamic";
@@ -83,13 +84,7 @@ export default async function Home() {
         </span>
       </header>
 
-      <nav className="nav" aria-label="Principal">
-        <span className="navActive">Hoy</span>
-        <span>Scans</span>
-        <span>Picks</span>
-        <span>Portfolio</span>
-        <span>Más</span>
-      </nav>
+      <AppNav active="hoy" />
 
       {!data.live ? (
         <section className="fallbackNotice">
