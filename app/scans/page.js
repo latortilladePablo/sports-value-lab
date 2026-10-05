@@ -2,8 +2,7 @@ import Link from "next/link";
 import AppNav from "../../components/AppNav";
 import { getDashboardData } from "../../lib/live";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+export const revalidate = 20;
 
 function ScanCard({ sport, statusMeta }) {
   const meta = statusMeta[sport.status];
