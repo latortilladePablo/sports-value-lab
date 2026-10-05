@@ -163,8 +163,11 @@ export default function ActionCenterClient({ sports }) {
                   setSelected((state) => ({ ...state, [sport.id]: e.target.checked }))
                 }
               />
-              <span>{sport.icon}</span>
-              <b>{sport.name}</b>
+              <span className="selectorIcon">{sport.icon}</span>
+              <span className="selectorText">
+                <b>{sport.name}</b>
+                <small>{sport.scan}</small>
+              </span>
             </label>
           ))}
           <button type="button" onClick={selectAll}>Todos</button>
