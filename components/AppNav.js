@@ -7,7 +7,7 @@ export default function AppNav({ active }) {
       <Link href="/scans" className={active === "scans" ? "navActive" : ""}>Scans</Link>
       <Link href="/picks" className={active === "picks" ? "navActive" : ""}>Picks</Link>
       <span>Portfolio</span>
-      <span>Más</span>
+      <Link href="/actions" className={active === "actions" ? "navActive" : ""}>Acciones</Link>
     </nav>
   );
 }
