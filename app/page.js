@@ -1,4 +1,7 @@
-import { orderedSports, primaryAction, snapshot, statusMeta } from "../lib/state";
+import { getDashboardData } from "../lib/live";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 function Metric({ label, value, sub }) {
   return (
@@ -10,7 +13,7 @@ function Metric({ label, value, sub }) {
   );
 }
 
-function SportCard({ sport }) {
+function SportCard({ sport, statusMeta }) {
   const meta = statusMeta[sport.status];
   return (
     <article className="sportCard">
@@ -59,10 +62,11 @@ function SportCard({ sport }) {
   );
 }
 
-export default function Home() {
-  const p = snapshot.portfolio;
-  const primary = primaryAction();
-  const primaryMeta = statusMeta[primary.status];
+export default async function Home() {
+  const data = await getDashboardData();
+  const p = data.portfolio;
+  const primary = data.primary;
+  const primaryMeta = data.statusMeta[primary.status];
 
   return (
     <main>
@@ -74,7 +78,9 @@ export default function Home() {
             <span>PAPER_LIVE · Control Center</span>
           </div>
         </div>
-        <span className="sync">● Snapshot {snapshot.capturedAt}</span>
+        <span className={"sync " + (data.live ? "liveSync" : "")}>
+          ● {data.live ? "LIVE" : "Fallback"} · {data.capturedAt}
+        </span>
       </header>
 
       <nav className="nav" aria-label="Principal">
@@ -84,6 +90,13 @@ export default function Home() {
         <span>Portfolio</span>
         <span>Más</span>
       </nav>
+
+      {!data.live ? (
+        <section className="fallbackNotice">
+          Fuente live aún no conectada. La app sigue operativa con el último snapshot seguro.
+          {data.fallbackReason ? <small>{data.fallbackReason}</small> : null}
+        </section>
+      ) : null}
 
       <section className="hero">
         <div>
@@ -99,10 +112,10 @@ export default function Home() {
       </section>
 
       <section className="metrics" aria-label="Portfolio">
-        <Metric label="Bank" value={p.bank.toFixed(2) + "u"} sub="Inicial 200u" />
-        <Metric label="P&L" value={p.pnl.toFixed(2) + "u"} sub={"ROI " + p.roi.toFixed(2) + "%"} />
+        <Metric label="Bank" value={Number(p.bank).toFixed(2) + "u"} sub="Inicial 200u" />
+        <Metric label="P&L" value={Number(p.pnl).toFixed(2) + "u"} sub={"ROI " + Number(p.roi).toFixed(2) + "%"} />
         <Metric label="Picks" value={p.resolved + "/" + p.picks} sub={p.pending + " pendientes"} />
-        <Metric label="Stake liquidado" value={p.settledStake.toFixed(0) + "u"} sub={"Acierto pleno " + p.hitRate.toFixed(1) + "%"} />
+        <Metric label="Stake liquidado" value={Number(p.settledStake).toFixed(0) + "u"} sub={"Acierto pleno " + Number(p.hitRate).toFixed(1) + "%"} />
       </section>
 
       <section className="sectionHead">
@@ -110,24 +123,32 @@ export default function Home() {
           <span className="eyebrow">5 DEPORTES</span>
           <h2>Qué toca ahora</h2>
         </div>
-        <span className="source">{snapshot.source}</span>
+        <span className="source">{data.source}</span>
       </section>
 
       <section className="cards">
-        {orderedSports().map((sport) => <SportCard key={sport.id} sport={sport} />)}
+        {data.orderedSports.map((sport) => (
+          <SportCard key={sport.id} sport={sport} statusMeta={data.statusMeta} />
+        ))}
       </section>
 
       <section className="queue">
         <div>
           <span className="eyebrow">CHATGPT QUEUE</span>
-          <h2>Sin snapshots pendientes</h2>
-          <p>Los últimos CHECK de NHL y Tennis no produjeron odds. No hay archivo nuevo que adjuntar antes de otra decisión.</p>
+          <h2>{data.sports.some((s) => s.status === "CHATGPT_REQUIRED") ? "Hay análisis pendientes" : "Sin snapshots pendientes"}</h2>
+          <p>
+            {data.sports.some((s) => s.status === "CHATGPT_REQUIRED")
+              ? "Hay un P1/P2 capturado pendiente de analizar en ChatGPT antes de volver a comprar odds."
+              : "No hay snapshot capturado pendiente de análisis según el estado CURRENT."}
+          </p>
         </div>
-        <div className="queueState">0 pendientes</div>
+        <div className="queueState">
+          {data.sports.filter((s) => s.status === "CHATGPT_REQUIRED").length} pendientes
+        </div>
       </section>
 
       <footer>
-        <p>V1 · Los datos de esta pantalla son un snapshot CURRENT leído de Google Sheets. La conexión live será el siguiente paso.</p>
+        <p>V1.1 · Sheets siguen siendo la fuente de verdad. La web sólo lee y deriva el estado operativo.</p>
       </footer>
     </main>
   );
