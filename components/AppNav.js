@@ -8,7 +8,7 @@ export default function AppNav({ active }) {
       <Link href="/picks" className={active === "picks" ? "navActive" : ""}>Picks</Link>
       <span>Portfolio</span>
       <Link href="/actions" className={active === "actions" ? "navActive" : ""}>Acciones</Link>
-      <Link href="/ai" className={active === "ai" ? "navActive" : ""}>AI</Link>
+      <Link href="/ai" className={active === "ai" ? "navActive" : ""}>ChatGPT</Link>
     </nav>
   );
 }
