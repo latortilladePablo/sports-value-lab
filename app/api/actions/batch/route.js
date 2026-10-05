@@ -1,7 +1,7 @@
 import { revalidatePath, revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
 import { getDashboardData } from "../../../../lib/live";
-import { validateActionRequest } from "../../../../lib/action-policy";
+import { getRecommendedAction, validateActionRequest } from "../../../../lib/action-policy";
 
 export const maxDuration = 60;
 
@@ -55,7 +55,8 @@ async function dispatchSport({ sport, action }) {
       name: sport.name,
       ok: true,
       status: "completed",
-      message: `${sport.name} completado`,
+      message: `${sport.name} · ${action} completado`,
+      actualAction: action,
       result: payload.runner,
     };
   } catch (err) {
@@ -96,9 +97,25 @@ export async function POST(request) {
 
     for (const sport of selectedSports) {
       const runnerConfigured = !!data.runners?.[sport.name]?.configured;
+      const resolvedAction = body.action === "RECOMMENDED"
+        ? getRecommendedAction(sport)
+        : body.action;
+
+      if (!resolvedAction) {
+        blocked.push({
+          sport: sport.id,
+          name: sport.name,
+          ok: false,
+          status: "no_action",
+          error: "NINGUNA: el motor CURRENT no recomienda captura",
+          actualAction: null,
+        });
+        continue;
+      }
+
       const gate = validateActionRequest({
         sport,
-        action: body.action,
+        action: resolvedAction,
         runnerConfigured,
         confirmPaid: body.confirmPaid,
         materialTrigger: body.materialTrigger,
@@ -111,9 +128,10 @@ export async function POST(request) {
           ok: false,
           status: "blocked",
           error: gate.error,
+          actualAction: resolvedAction,
         });
       } else {
-        runnable.push({ sport, action: body.action, def: gate.def });
+        runnable.push({ sport, action: resolvedAction, def: gate.def });
       }
     }
 
@@ -148,7 +166,7 @@ export async function POST(request) {
       succeeded,
       blocked: blocked.length,
       failed,
-      message: `${succeeded} completado(s) · ${blocked.length} bloqueado(s) · ${failed} error(es)`,
+      message: `${succeeded} completado(s) · ${blocked.length} omitido/bloqueado(s) · ${failed} error(es)`,
       results,
     }, { status: succeeded > 0 ? 200 : 502 });
   } catch (err) {
