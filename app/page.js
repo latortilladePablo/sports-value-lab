@@ -67,6 +67,15 @@ export default async function Home() {
   const p = data.portfolio;
   const primary = data.primary;
   const primaryMeta = data.statusMeta[primary.status];
+  const captureStatuses = new Set(["P1_REQUIRED","AUTO_REQUIRED","CHECK_REQUIRED","FORCE_RECOMMENDED"]);
+  const captureNow = data.sports.filter((s) => captureStatuses.has(s.status));
+  const chatgptPending = data.sports.filter((s) => s.status === "CHATGPT_REQUIRED");
+  const scopeErrors = data.sports.filter((s) => s.status === "ERROR");
+  const cdmxWeekday = new Intl.DateTimeFormat("es-MX", {
+    timeZone: "America/Mexico_City",
+    weekday: "long",
+  }).format(new Date());
+  const systemBlockNow = cdmxWeekday.toLowerCase().startsWith("lunes");
 
   return (
     <main>
@@ -110,6 +119,45 @@ export default async function Home() {
         <Metric label="P&L" value={Number(p.pnl).toFixed(2) + "u"} sub={"ROI " + Number(p.roi).toFixed(2) + "%"} />
         <Metric label="Picks" value={p.resolved + "/" + p.picks} sub={p.pending + " pendientes"} />
         <Metric label="Stake liquidado" value={Number(p.settledStake).toFixed(0) + "u"} sub={"Acierto pleno " + Number(p.hitRate).toFixed(1) + "%"} />
+      </section>
+
+      <section className="opsChecklist">
+        <div className="opsChecklistHead">
+          <div>
+            <span className="eyebrow">NO PERDER NADA</span>
+            <h2>Control operativo</h2>
+          </div>
+          <span className="source">America/Mexico_City · {cdmxWeekday}</span>
+        </div>
+        <div className="opsChecklistGrid">
+          <a href="/actions" className={captureNow.length ? "attention" : ""}>
+            <span>Capturas</span>
+            <strong>{captureNow.length ? captureNow.length + " acción(es)" : "Al día"}</strong>
+            <small>{captureNow.length ? captureNow.map((s)=>s.name + ": " + s.scan).join(" · ") : "Sin P1/P2 de captura pendiente"}</small>
+          </a>
+          <a href="/ai" className={chatgptPending.length ? "attention" : ""}>
+            <span>ChatGPT</span>
+            <strong>{chatgptPending.length} snapshot(s)</strong>
+            <small>{chatgptPending.length ? "Descargar, subir al Project y ejecutar P1/P2 antes de nuevas compras" : "Sin análisis P1/P2 pendiente"}</small>
+          </a>
+          <a href="/picks?tab=activos">
+            <span>P3 / Picks</span>
+            <strong>{p.pending} pendiente(s)</strong>
+            <small>{p.pending ? "Liquidar/verificar cuando los eventos terminen" : "Registro sin posiciones abiertas"}</small>
+          </a>
+          <div className={systemBlockNow ? "attention" : ""}>
+            <span>Sistema / Model review</span>
+            <strong>{systemBlockNow ? "P5 → P3 → P4 ligero" : "Próximo lunes"}</strong>
+            <small>{systemBlockNow ? "Actualizar datos, liquidar y revisar rendimiento/calibración" : "P5 → P3 → P4 ligero para no perder mejoras de modelo"}</small>
+          </div>
+          {scopeErrors.length ? (
+            <div className="opsError">
+              <span>Incidencias</span>
+              <strong>{scopeErrors.length} bloqueo(s)</strong>
+              <small>{scopeErrors.map((s)=>s.name + ": " + s.reason).join(" · ")}</small>
+            </div>
+          ) : null}
+        </div>
       </section>
 
       <section className="sectionHead">
