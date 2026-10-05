@@ -1,16 +1,11 @@
 import AppNav from "../../components/AppNav";
 import AIWorkspaceClient from "../../components/AIWorkspaceClient";
 import { getDashboardData } from "../../lib/live";
-import { aiSecurityConfigured, isAiAuthorized } from "../../lib/ai-auth";
-import { openAIConfigured, openAIModel } from "../../lib/openai";
 
 export const revalidate = 20;
 
-export default async function AIPage() {
+export default async function ChatGPTWorkspacePage() {
   const data = await getDashboardData();
-  const securityConfigured = aiSecurityConfigured();
-  const aiConfigured = openAIConfigured();
-  const authorized = securityConfigured ? await isAiAuthorized() : false;
 
   const queue = data.sports.flatMap((sport) =>
     sport.runs
@@ -38,7 +33,7 @@ export default async function AIPage() {
           <div className="logo">SVL</div>
           <div>
             <strong>Sports Value Lab</strong>
-            <span>PAPER_LIVE · AI Workspace</span>
+            <span>PAPER_LIVE · ChatGPT Workspace</span>
           </div>
         </div>
         <span className={"sync " + (data.live ? "liveSync" : "")}>
@@ -50,39 +45,33 @@ export default async function AIPage() {
 
       <section className="aiHero">
         <div>
-          <span className="eyebrow">STEP 9 · AI WORKSPACE</span>
-          <h1>Snapshot → análisis → revisión</h1>
+          <span className="eyebrow">CHATGPT PROJECT HANDOFF</span>
+          <h1>Snapshots listos para analizar</h1>
           <p>
-            Analiza snapshots P1/P2 desde la web usando OpenAI Responses + Conversations.
-            La primera versión es deliberadamente review-first: no registra picks ni cambia CONTINUITY automáticamente.
+            Sports Value Lab sigue viviendo en tu Project de ChatGPT. La web organiza el trabajo,
+            captura las odds y prepara el archivo; el análisis P1/P2, los modelos y sus mejoras siguen aquí.
           </p>
         </div>
         <div className="aiHeroStats">
           <div><span>Pendientes</span><strong>{queue.length}</strong></div>
-          <div><span>OpenAI</span><strong>{aiConfigured ? "Configurado" : "Pendiente"}</strong></div>
-          <div><span>Owner gate</span><strong>{securityConfigured ? "Configurado" : "Pendiente"}</strong></div>
-          <div><span>Modelo</span><strong>{openAIModel()}</strong></div>
+          <div><span>Análisis</span><strong>ChatGPT Project</strong></div>
+          <div><span>Formato</span><strong>CSV completo</strong></div>
+          <div><span>Auto-registro</span><strong>No</strong></div>
         </div>
       </section>
 
       <section className="safetyBanner">
-        <strong>Review-first</strong>
+        <strong>Una sola fuente intelectual</strong>
         <span>
-          La IA puede analizar y guardar su salida, pero no escribe picks, no altera stakes/cuotas y no cierra un handoff por sí sola.
-          Un deporte en ERROR/scope mismatch queda bloqueado.
+          La web no mantiene un modelo paralelo. CORE, playbooks, configs, histórico, validación,
+          prompts y evolución metodológica continúan en Sports Value Lab dentro de ChatGPT/Drive.
         </span>
       </section>
 
-      <AIWorkspaceClient
-        queue={queue}
-        authorized={authorized}
-        securityConfigured={securityConfigured}
-        openaiConfigured={aiConfigured}
-        model={openAIModel()}
-      />
+      <AIWorkspaceClient queue={queue} />
 
       <footer>
-        <p>AI Workspace V1 · Responses API + Conversations API · PAPER_LIVE.</p>
+        <p>ChatGPT Workspace · captura/exportación solamente. El análisis se ejecuta dentro del Project Sports Value Lab.</p>
       </footer>
     </main>
   );
