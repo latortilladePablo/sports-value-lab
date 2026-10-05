@@ -92,12 +92,6 @@ function doPost(e) {
     if (body.command === "snapshot") {
       return json_(readSnapshotForAnalysis_(body));
     }
-    if (body.command === "ai_log") {
-      return json_(appendAiLog_(body));
-    }
-    if (body.command === "ai_history") {
-      return json_(readAiHistory_(body));
-    }
 
     return json_({ ok: false, error: "unsupported_command" });
   } catch (err) {
@@ -188,59 +182,6 @@ function readSnapshotForAnalysis_(body) {
     generatedAt: Utilities.formatDate(new Date(), SVL.TZ, "yyyy-MM-dd HH:mm:ss 'CDMX'"),
     rows: data
   };
-}
-
-function aiLogSheet_() {
-  const ss = SpreadsheetApp.openById(SVL.REGISTER);
-  let sheet = ss.getSheetByName("AI_ANALYSIS_LOG");
-  if (!sheet) sheet = ss.insertSheet("AI_ANALYSIS_LOG");
-  if (sheet.getLastRow() === 0) {
-    sheet.appendRow([
-      "Timestamp CDMX", "Sport", "Run ID", "Mode", "Snapshot",
-      "Conversation ID", "Response ID", "Model", "Status", "Output"
-    ]);
-    sheet.setFrozenRows(1);
-    sheet.getRange(1, 1, 1, 10).setFontWeight("bold");
-  }
-  return sheet;
-}
-
-function appendAiLog_(body) {
-  const sport = String(body.sport || "");
-  if (!SVL.SPORTS[sport]) return { ok: false, error: "invalid_sport" };
-
-  const output = String(body.output || "").slice(0, 45000);
-  const sheet = aiLogSheet_();
-  sheet.appendRow([
-    Utilities.formatDate(new Date(), SVL.TZ, "yyyy-MM-dd HH:mm:ss"),
-    sport,
-    String(body.runId || ""),
-    String(body.mode || ""),
-    String(body.snapshot || ""),
-    String(body.conversationId || ""),
-    String(body.responseId || ""),
-    String(body.model || ""),
-    String(body.status || "COMPLETED"),
-    output
-  ]);
-
-  return { ok: true, row: sheet.getLastRow() };
-}
-
-function readAiHistory_(body) {
-  const sport = String(body.sport || "");
-  if (sport && !SVL.SPORTS[sport]) return { ok: false, error: "invalid_sport" };
-
-  const ss = SpreadsheetApp.openById(SVL.REGISTER);
-  const sheet = ss.getSheetByName("AI_ANALYSIS_LOG");
-  if (!sheet || sheet.getLastRow() < 2) return { ok: true, rows: [] };
-
-  const lastRow = sheet.getLastRow();
-  const start = Math.max(2, lastRow - 24);
-  const rows = sheet.getRange(start, 1, lastRow - start + 1, 10).getDisplayValues()
-    .filter(function(row) { return !sport || row[1] === sport; });
-
-  return { ok: true, rows: rows };
 }
 
 function readRunnerStatus_() {
