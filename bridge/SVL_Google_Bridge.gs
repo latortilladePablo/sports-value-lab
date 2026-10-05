@@ -56,6 +56,7 @@ function doGet(e) {
       generatedAt: Utilities.formatDate(new Date(), SVL.TZ, "yyyy-MM-dd HH:mm:ss 'CDMX'"),
       portfolio: readPortfolio_(),
       picks: readPicks_(),
+      runners: readRunnerStatus_(),
       sports: {},
     };
 
@@ -68,6 +69,91 @@ function doGet(e) {
   } catch (err) {
     return json_({ ok: false, error: String(err && err.message ? err.message : err) });
   }
+}
+
+
+function doPost(e) {
+  const props = PropertiesService.getScriptProperties();
+  const expected = props.getProperty("SVL_BRIDGE_TOKEN");
+  const supplied = (e && e.parameter && e.parameter.token) ? e.parameter.token : "";
+
+  if (!expected || supplied !== expected) {
+    return json_({ ok: false, error: "unauthorized" });
+  }
+
+  try {
+    const body = e && e.postData && e.postData.contents
+      ? JSON.parse(e.postData.contents)
+      : {};
+
+    if (body.command !== "scan") {
+      return json_({ ok: false, error: "unsupported_command" });
+    }
+
+    return json_(dispatchScan_(body));
+  } catch (err) {
+    return json_({ ok: false, error: String(err && err.message ? err.message : err) });
+  }
+}
+
+function readRunnerStatus_() {
+  const props = PropertiesService.getScriptProperties();
+  const out = {};
+  Object.keys(SVL.SPORTS).forEach((sport) => {
+    out[sport] = {
+      configured: !!props.getProperty("SVL_RUNNER_" + sport.toUpperCase() + "_URL")
+    };
+  });
+  return out;
+}
+
+function dispatchScan_(body) {
+  const props = PropertiesService.getScriptProperties();
+  const sport = String(body.sport || "");
+  const mode = String(body.mode || "");
+  const validModes = ["P1_COMPLETO", "P2_CHECK", "P2_AUTO", "P2_FORCE"];
+
+  if (!SVL.SPORTS[sport]) {
+    return { ok: false, error: "invalid_sport" };
+  }
+  if (validModes.indexOf(mode) === -1) {
+    return { ok: false, error: "invalid_mode" };
+  }
+
+  const url = props.getProperty("SVL_RUNNER_" + sport.toUpperCase() + "_URL");
+  const runnerToken = props.getProperty("SVL_RUNNER_TOKEN");
+  if (!url || !runnerToken) {
+    return { ok: false, error: "runner_not_configured", sport: sport };
+  }
+
+  const response = UrlFetchApp.fetch(url, {
+    method: "post",
+    contentType: "application/json",
+    muteHttpExceptions: true,
+    payload: JSON.stringify({
+      token: runnerToken,
+      sport: sport,
+      action: mode,
+      requestedAt: Utilities.formatDate(new Date(), SVL.TZ, "yyyy-MM-dd HH:mm:ss")
+    })
+  });
+
+  const code = response.getResponseCode();
+  const text = response.getContentText();
+  let payload;
+  try {
+    payload = JSON.parse(text);
+  } catch (err) {
+    payload = { ok: false, error: "runner_non_json", detail: text.slice(0, 500) };
+  }
+
+  return {
+    ok: code >= 200 && code < 300 && payload && payload.ok === true,
+    httpStatus: code,
+    sport: sport,
+    mode: mode,
+    runner: payload
+  };
 }
 
 function setBridgeToken() {
