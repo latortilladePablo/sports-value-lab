@@ -86,14 +86,161 @@ function doPost(e) {
       ? JSON.parse(e.postData.contents)
       : {};
 
-    if (body.command !== "scan") {
-      return json_({ ok: false, error: "unsupported_command" });
+    if (body.command === "scan") {
+      return json_(dispatchScan_(body));
+    }
+    if (body.command === "snapshot") {
+      return json_(readSnapshotForAnalysis_(body));
+    }
+    if (body.command === "ai_log") {
+      return json_(appendAiLog_(body));
+    }
+    if (body.command === "ai_history") {
+      return json_(readAiHistory_(body));
     }
 
-    return json_(dispatchScan_(body));
+    return json_({ ok: false, error: "unsupported_command" });
   } catch (err) {
     return json_({ ok: false, error: String(err && err.message ? err.message : err) });
   }
+}
+
+
+function readSnapshotForAnalysis_(body) {
+  const sport = String(body.sport || "");
+  const runId = String(body.runId || "");
+  const cfg = SVL.SPORTS[sport];
+
+  if (!cfg) return { ok: false, error: "invalid_sport" };
+
+  const ss = SpreadsheetApp.openById(cfg.id);
+  const continuity = ss.getSheetByName(cfg.continuity);
+  if (!continuity || continuity.getLastRow() < 2) {
+    return { ok: false, error: "continuity_not_found", sport: sport };
+  }
+
+  const width = Math.min(Math.max(continuity.getLastColumn(), 1), 25);
+  const rows = continuity.getRange(1, 1, continuity.getLastRow(), width).getDisplayValues();
+  const headers = rows[0];
+  const index = {};
+  headers.forEach(function(h, i) { if (h) index[h] = i; });
+
+  let selected = null;
+  for (let i = rows.length - 1; i >= 1; i--) {
+    const row = rows[i];
+    const id = String(row[index["Run ID"]] || "");
+    const analysis = String(row[index["Estado análisis"]] || "");
+    if (runId && id === runId) {
+      selected = row;
+      break;
+    }
+    if (!runId && /PENDING|DATA_READY|SNAPSHOT_READY/i.test(analysis)) {
+      selected = row;
+      break;
+    }
+  }
+
+  if (!selected) return { ok: false, error: "analysis_run_not_found", sport: sport, runId: runId };
+
+  const selectedRunId = String(selected[index["Run ID"]] || "");
+  const mode = String(selected[index["Modo"]] || "");
+  const snapshotName = String(selected[index["Snapshot/Salida"]] || "");
+  const analysisStatus = String(selected[index["Estado análisis"]] || "");
+
+  if (!snapshotName) {
+    return { ok: false, error: "snapshot_name_missing", sport: sport, runId: selectedRunId };
+  }
+
+  const snapshotSheet = ss.getSheetByName(snapshotName);
+  if (!snapshotSheet) {
+    return { ok: false, error: "snapshot_sheet_missing", sport: sport, runId: selectedRunId, snapshot: snapshotName };
+  }
+
+  const maxRows = 3000;
+  const maxCols = 20;
+  const lastRow = snapshotSheet.getLastRow();
+  const lastCol = snapshotSheet.getLastColumn();
+
+  if (lastRow > maxRows || lastCol > maxCols) {
+    return {
+      ok: false,
+      error: "snapshot_too_large",
+      sport: sport,
+      runId: selectedRunId,
+      snapshot: snapshotName,
+      rows: lastRow,
+      cols: lastCol,
+      limits: { rows: maxRows, cols: maxCols }
+    };
+  }
+
+  const data = snapshotSheet
+    .getRange(1, 1, Math.max(lastRow, 1), Math.max(lastCol, 1))
+    .getDisplayValues();
+
+  return {
+    ok: true,
+    sport: sport,
+    runId: selectedRunId,
+    mode: mode,
+    snapshot: snapshotName,
+    analysisStatus: analysisStatus,
+    generatedAt: Utilities.formatDate(new Date(), SVL.TZ, "yyyy-MM-dd HH:mm:ss 'CDMX'"),
+    rows: data
+  };
+}
+
+function aiLogSheet_() {
+  const ss = SpreadsheetApp.openById(SVL.REGISTER);
+  let sheet = ss.getSheetByName("AI_ANALYSIS_LOG");
+  if (!sheet) sheet = ss.insertSheet("AI_ANALYSIS_LOG");
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow([
+      "Timestamp CDMX", "Sport", "Run ID", "Mode", "Snapshot",
+      "Conversation ID", "Response ID", "Model", "Status", "Output"
+    ]);
+    sheet.setFrozenRows(1);
+    sheet.getRange(1, 1, 1, 10).setFontWeight("bold");
+  }
+  return sheet;
+}
+
+function appendAiLog_(body) {
+  const sport = String(body.sport || "");
+  if (!SVL.SPORTS[sport]) return { ok: false, error: "invalid_sport" };
+
+  const output = String(body.output || "").slice(0, 45000);
+  const sheet = aiLogSheet_();
+  sheet.appendRow([
+    Utilities.formatDate(new Date(), SVL.TZ, "yyyy-MM-dd HH:mm:ss"),
+    sport,
+    String(body.runId || ""),
+    String(body.mode || ""),
+    String(body.snapshot || ""),
+    String(body.conversationId || ""),
+    String(body.responseId || ""),
+    String(body.model || ""),
+    String(body.status || "COMPLETED"),
+    output
+  ]);
+
+  return { ok: true, row: sheet.getLastRow() };
+}
+
+function readAiHistory_(body) {
+  const sport = String(body.sport || "");
+  if (sport && !SVL.SPORTS[sport]) return { ok: false, error: "invalid_sport" };
+
+  const ss = SpreadsheetApp.openById(SVL.REGISTER);
+  const sheet = ss.getSheetByName("AI_ANALYSIS_LOG");
+  if (!sheet || sheet.getLastRow() < 2) return { ok: true, rows: [] };
+
+  const lastRow = sheet.getLastRow();
+  const start = Math.max(2, lastRow - 24);
+  const rows = sheet.getRange(start, 1, lastRow - start + 1, 10).getDisplayValues()
+    .filter(function(row) { return !sport || row[1] === sport; });
+
+  return { ok: true, rows: rows };
 }
 
 function readRunnerStatus_() {
