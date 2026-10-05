@@ -55,6 +55,7 @@ function doGet(e) {
       ok: true,
       generatedAt: Utilities.formatDate(new Date(), SVL.TZ, "yyyy-MM-dd HH:mm:ss 'CDMX'"),
       portfolio: readPortfolio_(),
+      picks: readPicks_(),
       sports: {},
     };
 
@@ -101,6 +102,26 @@ function readPortfolio_() {
     pending: num_(map["Picks pendientes"]),
     hitRate: num_(map["Acierto pleno"]),
   };
+}
+
+function readPicks_() {
+  const ss = SpreadsheetApp.openById(SVL.REGISTER);
+  const sheet = ss.getSheetByName("Picks");
+  if (!sheet) return [];
+
+  const headerRow = 5;
+  const lastRow = Math.max(sheet.getLastRow(), headerRow);
+  const width = 19; // A:S, esquema CURRENT verificado
+  const rows = sheet.getRange(headerRow, 1, lastRow - headerRow + 1, width).getDisplayValues();
+
+  if (!rows.length) return [];
+  const header = rows[0];
+
+  return [header].concat(
+    rows.slice(1).filter((row) =>
+      row.slice(0, 17).some((value) => String(value || "").trim() !== "")
+    )
+  );
 }
 
 function readSport_(cfg) {
