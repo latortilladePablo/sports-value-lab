@@ -66,7 +66,7 @@ function PickCard({ pick, active = false }) {
         <div>
           <span className="pickSport">{pick.sport} · {pick.league}</span>
           <h3>{pick.event}</h3>
-          <p>{pick.startCdmx} CDMX</p>
+          <p>{pick.startCdmx} CDMX · Alta: {pick.createdAt || "—"}</p>
         </div>
         <span className={"resultPill " + resultTone(pick.result)}>{pick.result || "Pendiente"}</span>
       </div>
@@ -131,7 +131,7 @@ export default async function PicksPage({ searchParams }) {
       if (!hay.includes(filters.q.toLowerCase())) return false;
     }
     return true;
-  }).reverse();
+  }).sort((a, b) => a.rowNumber - b.rowNumber);
 
   const openExposure = active.reduce((sum,p)=>sum+p.stake,0);
   const settledPnl = history.reduce((sum,p)=>sum+p.profit,0);
@@ -187,7 +187,7 @@ export default async function PicksPage({ searchParams }) {
             <span className="source">{data.picksLive ? "Registro_CURRENT · LIVE" : "Esperando puente"}</span>
           </div>
           {active.length ? (
-            <div className="pickList">{[...active].reverse().map((p)=><PickCard key={p.rowNumber} pick={p} active />)}</div>
+            <div className="pickList">{[...active].sort((a,b)=>a.rowNumber-b.rowNumber).map((p)=><PickCard key={p.rowNumber} pick={p} active />)}</div>
           ) : (
             <div className="emptyState largeEmpty">
               <strong>No hay picks pendientes.</strong>
