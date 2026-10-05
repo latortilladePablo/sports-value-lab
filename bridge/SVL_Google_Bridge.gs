@@ -156,6 +156,35 @@ function dispatchScan_(body) {
   };
 }
 
+function autorizarActionCenter() {
+  const props = PropertiesService.getScriptProperties();
+  const url = props.getProperty("SVL_RUNNER_NBA_URL");
+  const token = props.getProperty("SVL_RUNNER_TOKEN");
+
+  if (!url) throw new Error("Falta SVL_RUNNER_NBA_URL");
+  if (!token) throw new Error("Falta SVL_RUNNER_TOKEN");
+
+  const sep = url.indexOf("?") === -1 ? "?" : "&";
+  const response = UrlFetchApp.fetch(
+    url + sep + "token=" + encodeURIComponent(token),
+    {
+      method: "get",
+      muteHttpExceptions: true,
+      followRedirects: true,
+      headers: { "Accept": "application/json,text/plain,*/*" }
+    }
+  );
+
+  Logger.log("HTTP " + response.getResponseCode());
+  Logger.log(response.getContentText());
+
+  if (response.getResponseCode() < 200 || response.getResponseCode() >= 300) {
+    throw new Error("Runner NBA respondió HTTP " + response.getResponseCode());
+  }
+
+  return response.getContentText();
+}
+
 function setBridgeToken() {
   const ui = SpreadsheetApp.getUi();
   const response = ui.prompt(
