@@ -95,6 +95,31 @@ export async function POST(request) {
     const blocked = [];
     const runnable = [];
 
+    if (body.action === "RECOMMENDED") {
+      const recommended = selectedSports
+        .map((sport) => ({ sport, action: getRecommendedAction(sport) }))
+        .filter((item) => item.action);
+
+      const hasPaid = recommended.some((item) =>
+        ["P1_COMPLETO", "P2_AUTO", "P2_FORCE"].includes(item.action)
+      );
+      const hasForce = recommended.some((item) => item.action === "P2_FORCE");
+
+      if (hasPaid && !body.confirmPaid) {
+        return NextResponse.json({
+          ok: false,
+          error: "La recomendada incluye acciones que usan /odds. Confirma el consumo antes de ejecutar el lote.",
+        }, { status: 400 });
+      }
+
+      if (hasForce && !body.materialTrigger) {
+        return NextResponse.json({
+          ok: false,
+          error: "La recomendada incluye P2 FORCE. Confirma el gatillo material antes de ejecutar el lote.",
+        }, { status: 400 });
+      }
+    }
+
     for (const sport of selectedSports) {
       const runnerConfigured = !!data.runners?.[sport.name]?.configured;
       const resolvedAction = body.action === "RECOMMENDED"
