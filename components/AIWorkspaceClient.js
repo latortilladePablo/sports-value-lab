@@ -31,6 +31,12 @@ function promptFor(item) {
 
 export default function AIWorkspaceClient({ queue }) {
   const [copied, setCopied] = useState("");
+  const [handoffRun, setHandoffRun] = useState("");
+  const [nextAction, setNextAction] = useState("NINGUNA");
+  const [handoffNote, setHandoffNote] = useState("");
+  const [handoffConfirm, setHandoffConfirm] = useState(false);
+  const [handoffBusy, setHandoffBusy] = useState("");
+  const [handoffError, setHandoffError] = useState("");
 
   async function copyPrompt(item) {
     try {
@@ -39,6 +45,42 @@ export default function AIWorkspaceClient({ queue }) {
       window.setTimeout(() => setCopied(""), 1800);
     } catch {
       setCopied("");
+    }
+  }
+
+  function openHandoff(item) {
+    setHandoffRun(item.runId);
+    setNextAction("NINGUNA");
+    setHandoffNote("");
+    setHandoffConfirm(false);
+    setHandoffError("");
+  }
+
+  async function completeHandoff(item) {
+    setHandoffBusy(item.runId);
+    setHandoffError("");
+    try {
+      const response = await fetch("/api/chatgpt/complete", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          sport: item.sportId,
+          runId: item.runId,
+          nextAction,
+          note: handoffNote,
+          confirm: handoffConfirm,
+        }),
+      });
+      const data = await response.json();
+      if (!data.ok) {
+        setHandoffError(data.error || "No se pudo cerrar el análisis.");
+        return;
+      }
+      window.location.reload();
+    } catch {
+      setHandoffError("Error de conexión al cerrar el handoff.");
+    } finally {
+      setHandoffBusy("");
     }
   }
 
@@ -97,7 +139,56 @@ export default function AIWorkspaceClient({ queue }) {
               <button type="button" disabled={item.blocked} onClick={() => copyPrompt(item)}>
                 {copied === item.runId ? "✓ Copiado" : "Copiar prompt " + (String(item.mode).startsWith("P1") ? "P1" : "P2")}
               </button>
+              <button type="button" disabled={item.blocked} onClick={() => openHandoff(item)}>
+                Marcar análisis completado
+              </button>
             </div>
+
+            {handoffRun === item.runId ? (
+              <div className="chatgptHandoff">
+                <div>
+                  <span className="eyebrow">VUELTA DESDE CHATGPT</span>
+                  <strong>¿Qué acción te indicó el análisis?</strong>
+                  <p>Esto sólo cierra este Run ID y comunica el siguiente paso al motor CURRENT.</p>
+                </div>
+                <label>
+                  Siguiente acción
+                  <select value={nextAction} onChange={(e) => setNextAction(e.target.value)}>
+                    <option value="NINGUNA">NINGUNA / esperar</option>
+                    <option value="CHECK_P2">CHECK P2</option>
+                    <option value="P2_FORCE">P2 FORCE</option>
+                  </select>
+                </label>
+                <label>
+                  Nota / handoff opcional
+                  <textarea
+                    value={handoffNote}
+                    onChange={(e) => setHandoffNote(e.target.value)}
+                    placeholder="Ej.: FORCE por goalies/lesiones/contexto material; después CHECK mañana 10–12 CDMX."
+                    maxLength={1200}
+                  />
+                </label>
+                <label className="handoffConfirm">
+                  <input
+                    type="checkbox"
+                    checked={handoffConfirm}
+                    onChange={(e) => setHandoffConfirm(e.target.checked)}
+                  />
+                  Confirmo que este Run ID ya fue analizado en el Project Sports Value Lab.
+                </label>
+                {handoffError ? <div className="aiError">{handoffError}</div> : null}
+                <div className="handoffButtons">
+                  <button type="button" onClick={() => setHandoffRun("")}>Cancelar</button>
+                  <button
+                    type="button"
+                    disabled={!handoffConfirm || handoffBusy !== ""}
+                    onClick={() => completeHandoff(item)}
+                  >
+                    {handoffBusy === item.runId ? "Guardando…" : "Confirmar handoff"}
+                  </button>
+                </div>
+              </div>
+            ) : null}
 
             <details className="chatgptPromptPreview">
               <summary>Ver texto que debes pegar en ChatGPT</summary>
