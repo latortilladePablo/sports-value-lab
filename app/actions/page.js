@@ -2,12 +2,16 @@ import AppNav from "../../components/AppNav";
 import ActionCenterClient from "../../components/ActionCenterClient";
 import { getDashboardData } from "../../lib/live";
 import { getActionPolicy } from "../../lib/action-policy";
+import OwnerGate from "../../components/OwnerGate";
+import { isOwnerAuthorized, ownerSecurityConfigured } from "../../lib/owner-auth";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export default async function ActionsPage() {
   const data = await getDashboardData({ fresh: true });
+  const ownerConfigured = ownerSecurityConfigured();
+  const ownerAuthorized = ownerConfigured ? await isOwnerAuthorized() : false;
 
   const sports = data.sports.map((sport) => {
     const runnerConfigured = !!data.runners?.[sport.name]?.configured;
@@ -70,6 +74,11 @@ export default async function ActionsPage() {
         </span>
       </section>
 
+      {!ownerAuthorized ? (
+        <OwnerGate configured={ownerConfigured} />
+      ) : null}
+
+      {ownerAuthorized ? <>
       <section className="sectionHead">
         <div>
           <span className="eyebrow">5 DEPORTES</span>
@@ -90,6 +99,8 @@ export default async function ActionsPage() {
         </div>
         <strong>{connected}/5</strong>
       </section>
+
+      </> : null}
 
       <footer>
         <p>Action Center V1 · PAPER_LIVE. No ejecuta una acción bloqueada por el motor CURRENT.</p>
