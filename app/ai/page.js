@@ -59,7 +59,7 @@ export default async function ChatGPTWorkspacePage() {
           <div><span>Pendientes</span><strong>{queue.length}</strong></div>
           <div><span>Análisis</span><strong>ChatGPT Project</strong></div>
           <div><span>Formato</span><strong>CSV completo</strong></div>
-          <div><span>Auto-registro</span><strong>No</strong></div>
+          <div><span>Bridge</span><strong>{data.bridgeVersion}</strong></div>
         </div>
       </section>
 
