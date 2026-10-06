@@ -2,13 +2,14 @@ import AppNav from "../../components/AppNav";
 import AIWorkspaceClient from "../../components/AIWorkspaceClient";
 import { getDashboardData } from "../../lib/live";
 
-export const revalidate = 20;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default async function ChatGPTWorkspacePage() {
   const data = await getDashboardData({ fresh: true });
 
   const queue = data.sports.flatMap((sport) =>
-    sport.runs
+    (sport.runs || [])
       .filter((run) =>
         /^(P1|P2_AUTO|P2_FORCE)/.test(String(run.mode || "")) &&
         /PENDING|DATA_READY|SNAPSHOT_READY/i.test(run.analysisStatus || "")
