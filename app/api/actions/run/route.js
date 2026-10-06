@@ -2,10 +2,14 @@ import { revalidatePath, revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
 import { getDashboardData } from "../../../../lib/live";
 import { validateActionRequest } from "../../../../lib/action-policy";
+import { isOwnerAuthorized } from "../../../../lib/owner-auth";
 
 export const maxDuration = 60;
 
 export async function POST(request) {
+  if (!(await isOwnerAuthorized())) {
+    return NextResponse.json({ ok: false, error: "Owner session requerida" }, { status: 401 });
+  }
   try {
     const body = await request.json();
     const data = await getDashboardData({ fresh: true });
