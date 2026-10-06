@@ -1,12 +1,15 @@
 import AppNav from "../../components/AppNav";
 import AIWorkspaceClient from "../../components/AIWorkspaceClient";
 import { getDashboardData } from "../../lib/live";
+import { isOwnerAuthorized, ownerSecurityConfigured } from "../../lib/owner-auth";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export default async function ChatGPTWorkspacePage() {
   const data = await getDashboardData({ fresh: true });
+  const ownerConfigured = ownerSecurityConfigured();
+  const ownerAuthorized = ownerConfigured ? await isOwnerAuthorized() : false;
 
   const queue = data.sports.flatMap((sport) =>
     (sport.runs || [])
@@ -72,7 +75,7 @@ export default async function ChatGPTWorkspacePage() {
         </span>
       </section>
 
-      <AIWorkspaceClient queue={queue} handoffEnabled={data.bridgeVersion === "v1.2-chatgpt-handoff"} />
+      <AIWorkspaceClient queue={queue} handoffEnabled={data.bridgeVersion === "v1.2-chatgpt-handoff" && ownerAuthorized} />
 
       <footer>
         <p>ChatGPT Workspace · captura/exportación solamente. El análisis se ejecuta dentro del Project Sports Value Lab.</p>
