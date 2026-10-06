@@ -3,30 +3,59 @@
 import { useState } from "react";
 
 function promptFor(item) {
-  const prompt = String(item.mode || "").startsWith("P1") ? "P1" : "P2";
-  if (prompt === "P1") {
-    return [
-      "P1",
-      "",
-      "Analiza el snapshot adjunto siguiendo Sports Value Lab CURRENT.",
-      `Deporte: ${item.sport}`,
-      `Run ID: ${item.runId}`,
-      `Snapshot: ${item.snapshot}`,
-      "",
-      "Carga CORE v3.0, Prompt P1, Model Registry/Approval Protocol, playbook/config/modelo/dataset vigentes, Registro_CURRENT y continuity/handoff. Evalúa todo el universo autorizado del snapshot, no fuerces picks, registra sólo picks definitivos que superen el estándar y cierra con Próxima revisión P2 + Acción de captura."
-    ].join("\n");
-  }
+  const mode = String(item.mode || "");
+  const isP1 = mode.startsWith("P1");
+  const isForce = mode === "P2_FORCE";
+  const isAuto = mode === "P2_AUTO";
 
-  return [
-    "P2",
+  const common = [
+    isP1 ? "P1" : "P2",
     "",
-    "Analiza el snapshot adjunto siguiendo Sports Value Lab CURRENT y continúa desde el handoff vigente.",
+    isP1
+      ? "Analiza el snapshot adjunto siguiendo Sports Value Lab CURRENT."
+      : "Analiza el snapshot adjunto siguiendo Sports Value Lab CURRENT y continúa desde el handoff vigente.",
     `Deporte: ${item.sport}`,
     `Run ID: ${item.runId}`,
+    `Modo: ${mode}`,
     `Snapshot: ${item.snapshot}`,
     "",
-    "Carga CORE v3.0, Prompt P2, Model Registry/Approval Protocol, playbook/config/modelo/dataset vigentes, Registro_CURRENT y continuity/handoff. Reevalúa únicamente con información prepartido, no dupliques picks ya registrados y cierra con Próxima revisión P2 + Acción de captura."
-  ].join("\n");
+    "Carga y aplica la jerarquía CURRENT completa: CORE v3.0 > Prompt P1/P2 vigente > playbook vigente > Model Registry/Approval Protocol > config/modelo/dataset vigentes > Registro_CURRENT > CONTINUITY/handoff.",
+    "Usa únicamente información prepartido para la decisión. No inventes probabilidades, cuotas, lesiones, starters, resultados, disponibilidad local ni calibración.",
+    "Evalúa todas las líneas distintas y ambos lados de todos los mercados autorizados presentes en el snapshot; deduplica sólo repeticiones exactas.",
+    "No fuerces picks. Registra únicamente picks definitivos que superen el estándar CURRENT, con stake entero defendible y sin duplicar picks ya registrados.",
+    "Si faltan datos o contexto para defender p central/prudente, dilo y descarta o deja pendiente; no fabriques ventaja.",
+  ];
+
+  if (isP1) {
+    common.push(
+      "Audita primero la cobertura del snapshot frente a CONTINUITY/API_LOG y explica cualquier evento no materializable o diferencia de conteos sin inventar identidad ni precio."
+    );
+  }
+
+  if (isForce) {
+    common.push(
+      "Este run es P2 FORCE: usa el motivo material que dejó el handoff previo (por ejemplo goalies, lesiones, lineup, clima, QB/contexto o repricing) y recalcula sólo lo afectado; FORCE no sustituye CHECK para descubrir eventos nuevos."
+    );
+  }
+
+  if (isAuto) {
+    common.push(
+      "Este run es P2 AUTO: analiza las odds de eventos CURRENT nuevos detectados por el CHECK previo y evita reabrir eventos ya cubiertos salvo que el handoff lo exija explícitamente."
+    );
+  }
+
+  common.push(
+    "",
+    "Cierra obligatoriamente con:",
+    "1) Cobertura evaluada y descartes relevantes.",
+    "2) Picks definitivos, si existen; si no, di 0 picks.",
+    "3) Qué se registró o por qué no se registró.",
+    "4) Próxima revisión P2 con fecha/ventana CDMX cuando sea defendible.",
+    "5) Acción de captura exacta: NINGUNA | CHECK P2 | P2 AUTO | P2 FORCE.",
+    "6) Actualiza CONTINUITY/handoff con el cierre del análisis cuando tengas acceso; si no, deja el texto exacto que debe marcarse en la web."
+  );
+
+  return common.join("\n");
 }
 
 export default function AIWorkspaceClient({ queue, handoffEnabled }) {
