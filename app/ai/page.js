@@ -9,7 +9,10 @@ export default async function ChatGPTWorkspacePage() {
 
   const queue = data.sports.flatMap((sport) =>
     sport.runs
-      .filter((run) => /PENDING|DATA_READY|SNAPSHOT_READY/i.test(run.analysisStatus || ""))
+      .filter((run) =>
+        /^(P1|P2_AUTO|P2_FORCE)/.test(String(run.mode || "")) &&
+        /PENDING|DATA_READY|SNAPSHOT_READY/i.test(run.analysisStatus || "")
+      )
       .map((run) => ({
         sportId: sport.id,
         sport: sport.name,
