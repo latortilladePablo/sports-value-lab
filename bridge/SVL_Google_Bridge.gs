@@ -6,6 +6,7 @@
  */
 
 const SVL = {
+  BRIDGE_VERSION: "v1.1-snapshot-export",
   TZ: "America/Mexico_City",
   REGISTER: "10IF8B_kZJ2CECt4mJWR-7C-nNljQ3y4N2l4wiLtep6U",
   SPORTS: {
@@ -54,6 +55,7 @@ function doGet(e) {
     const payload = {
       ok: true,
       generatedAt: Utilities.formatDate(new Date(), SVL.TZ, "yyyy-MM-dd HH:mm:ss 'CDMX'"),
+      bridgeVersion: SVL.BRIDGE_VERSION,
       portfolio: readPortfolio_(),
       picks: readPicks_(),
       runners: readRunnerStatus_(),
@@ -180,6 +182,7 @@ function readSnapshotForAnalysis_(body) {
     snapshot: snapshotName,
     analysisStatus: analysisStatus,
     generatedAt: Utilities.formatDate(new Date(), SVL.TZ, "yyyy-MM-dd HH:mm:ss 'CDMX'"),
+    bridgeVersion: SVL.BRIDGE_VERSION,
     rows: data
   };
 }
