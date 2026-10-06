@@ -51,6 +51,10 @@ export async function GET(request) {
       return NextResponse.json({ ok: false, error: "Run no encontrado" }, { status: 404 });
     }
 
+    if (!/^(P1|P2_AUTO|P2_FORCE)/.test(String(run.mode || ""))) {
+      return NextResponse.json({ ok: false, error: "Sólo se exportan snapshots P1/P2 de odds" }, { status: 409 });
+    }
+
     if (!/PENDING|DATA_READY|SNAPSHOT_READY/i.test(run.analysisStatus || "")) {
       return NextResponse.json({ ok: false, error: "Ese run no está pendiente de análisis" }, { status: 409 });
     }
