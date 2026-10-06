@@ -2,8 +2,12 @@ import { revalidatePath, revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
 import { getDashboardData } from "../../../../lib/live";
 import { completeChatGPTAnalysis } from "../../../../lib/bridge-ai";
+import { isOwnerAuthorized } from "../../../../lib/owner-auth";
 
 export async function POST(request) {
+  if (!(await isOwnerAuthorized())) {
+    return NextResponse.json({ ok: false, error: "Owner session requerida" }, { status: 401 });
+  }
   try {
     const body = await request.json();
     if (!body?.confirm) {
