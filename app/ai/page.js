@@ -5,7 +5,7 @@ import { getDashboardData } from "../../lib/live";
 export const revalidate = 20;
 
 export default async function ChatGPTWorkspacePage() {
-  const data = await getDashboardData();
+  const data = await getDashboardData({ fresh: true });
 
   const queue = data.sports.flatMap((sport) =>
     sport.runs
