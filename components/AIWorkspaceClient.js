@@ -29,7 +29,7 @@ function promptFor(item) {
   ].join("\n");
 }
 
-export default function AIWorkspaceClient({ queue }) {
+export default function AIWorkspaceClient({ queue, handoffEnabled }) {
   const [copied, setCopied] = useState("");
   const [handoffRun, setHandoffRun] = useState("");
   const [nextAction, setNextAction] = useState("NINGUNA");
@@ -139,8 +139,13 @@ export default function AIWorkspaceClient({ queue }) {
               <button type="button" disabled={item.blocked} onClick={() => copyPrompt(item)}>
                 {copied === item.runId ? "✓ Copiado" : "Copiar prompt " + (String(item.mode).startsWith("P1") ? "P1" : "P2")}
               </button>
-              <button type="button" disabled={item.blocked} onClick={() => openHandoff(item)}>
-                Marcar análisis completado
+              <button
+                type="button"
+                disabled={item.blocked || !handoffEnabled}
+                title={handoffEnabled ? "Cerrar este Run ID tras analizarlo en ChatGPT" : "Publica bridge v1.2-chatgpt-handoff para habilitar este control"}
+                onClick={() => openHandoff(item)}
+              >
+                {handoffEnabled ? "Marcar análisis completado" : "Handoff web · requiere bridge v1.2"}
               </button>
             </div>
 
