@@ -2,6 +2,7 @@ import { revalidatePath, revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
 import { getDashboardData } from "../../../../lib/live";
 import { getRecommendedAction, validateActionRequest } from "../../../../lib/action-policy";
+import { isOwnerAuthorized } from "../../../../lib/owner-auth";
 
 export const maxDuration = 60;
 
@@ -71,6 +72,9 @@ async function dispatchSport({ sport, action }) {
 }
 
 export async function POST(request) {
+  if (!(await isOwnerAuthorized())) {
+    return NextResponse.json({ ok: false, error: "Owner session requerida" }, { status: 401 });
+  }
   try {
     const body = await request.json();
     const selectedIds = [...new Set(Array.isArray(body.sports) ? body.sports : [])].slice(0, 5);
