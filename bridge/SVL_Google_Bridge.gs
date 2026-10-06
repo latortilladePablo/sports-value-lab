@@ -6,7 +6,7 @@
  */
 
 const SVL = {
-  BRIDGE_VERSION: "v1.1-snapshot-export",
+  BRIDGE_VERSION: "v1.2-chatgpt-handoff",
   TZ: "America/Mexico_City",
   REGISTER: "10IF8B_kZJ2CECt4mJWR-7C-nNljQ3y4N2l4wiLtep6U",
   SPORTS: {
@@ -93,6 +93,9 @@ function doPost(e) {
     }
     if (body.command === "snapshot") {
       return json_(readSnapshotForAnalysis_(body));
+    }
+    if (body.command === "chatgpt_handoff") {
+      return json_(markChatGPTComplete_(body));
     }
 
     return json_({ ok: false, error: "unsupported_command" });
@@ -184,6 +187,97 @@ function readSnapshotForAnalysis_(body) {
     generatedAt: Utilities.formatDate(new Date(), SVL.TZ, "yyyy-MM-dd HH:mm:ss 'CDMX'"),
     bridgeVersion: SVL.BRIDGE_VERSION,
     rows: data
+  };
+}
+
+
+function markChatGPTComplete_(body) {
+  const sport = String(body.sport || "");
+  const runId = String(body.runId || "");
+  const nextAction = String(body.nextAction || "").toUpperCase();
+  const note = String(body.note || "").slice(0, 1200);
+  const cfg = SVL.SPORTS[sport];
+
+  if (!cfg) return { ok: false, error: "invalid_sport" };
+  if (!runId) return { ok: false, error: "run_id_required" };
+
+  const allowed = ["NINGUNA", "CHECK_P2", "P2_FORCE"];
+  if (allowed.indexOf(nextAction) === -1) {
+    return { ok: false, error: "invalid_next_action" };
+  }
+
+  const ss = SpreadsheetApp.openById(cfg.id);
+  const sheet = ss.getSheetByName(cfg.continuity);
+  if (!sheet || sheet.getLastRow() < 2) {
+    return { ok: false, error: "continuity_not_found" };
+  }
+
+  const width = Math.min(Math.max(sheet.getLastColumn(), 1), 25);
+  const values = sheet.getRange(1, 1, sheet.getLastRow(), width).getDisplayValues();
+  const headers = values[0];
+  const index = {};
+  headers.forEach(function(h, i) { if (h) index[h] = i; });
+
+  const requiredHeaders = ["Run ID", "Modo", "Estado análisis", "Próximo P2", "Notas/handoff"];
+  for (let h = 0; h < requiredHeaders.length; h++) {
+    if (index[requiredHeaders[h]] === undefined) {
+      return { ok: false, error: "continuity_schema_missing", header: requiredHeaders[h] };
+    }
+  }
+
+  let rowIndex = -1;
+  for (let i = values.length - 1; i >= 1; i--) {
+    if (String(values[i][index["Run ID"]] || "") === runId) {
+      rowIndex = i;
+      break;
+    }
+  }
+  if (rowIndex < 1) return { ok: false, error: "run_not_found" };
+
+  const row = values[rowIndex];
+  const mode = String(row[index["Modo"]] || "");
+  const analysisState = String(row[index["Estado análisis"]] || "");
+
+  if (!/^(P1|P2_AUTO|P2_FORCE)/.test(mode)) {
+    return { ok: false, error: "run_not_analysis_snapshot", mode: mode };
+  }
+
+  if (!/PENDING|DATA_READY|SNAPSHOT_READY/i.test(analysisState)) {
+    return {
+      ok: false,
+      error: "run_not_pending",
+      analysisStatus: analysisState
+    };
+  }
+
+  const nextText = nextAction === "P2_FORCE"
+    ? "P2 FORCE — confirmado tras análisis manual en ChatGPT Project."
+    : nextAction === "CHECK_P2"
+      ? "CHECK P2 — confirmado tras análisis manual en ChatGPT Project."
+      : "NINGUNA — análisis manual en ChatGPT Project cerrado sin captura inmediata.";
+
+  const statusText = nextAction === "P2_FORCE"
+    ? "ANALYZED_WEB_FORCE_RECOMMENDED"
+    : nextAction === "CHECK_P2"
+      ? "ANALYZED_WEB_CHECK_REQUIRED"
+      : "ANALYZED_WEB_NO_ACTION";
+
+  const sheetRow = rowIndex + 1;
+  sheet.getRange(sheetRow, index["Estado análisis"] + 1).setValue(statusText);
+  sheet.getRange(sheetRow, index["Próximo P2"] + 1).setValue(nextText);
+  sheet.getRange(sheetRow, index["Notas/handoff"] + 1).setValue(
+    note || "Marcado desde la web: el usuario confirma que este Run ID ya fue analizado en el Project Sports Value Lab."
+  );
+
+  SpreadsheetApp.flush();
+
+  return {
+    ok: true,
+    sport: sport,
+    runId: runId,
+    analysisStatus: statusText,
+    nextAction: nextAction,
+    nextP2: nextText
   };
 }
 
