@@ -3,10 +3,11 @@ import ActionCenterClient from "../../components/ActionCenterClient";
 import { getDashboardData } from "../../lib/live";
 import { getActionPolicy } from "../../lib/action-policy";
 
-export const revalidate = 20;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default async function ActionsPage() {
-  const data = await getDashboardData();
+  const data = await getDashboardData({ fresh: true });
 
   const sports = data.sports.map((sport) => {
     const runnerConfigured = !!data.runners?.[sport.name]?.configured;
