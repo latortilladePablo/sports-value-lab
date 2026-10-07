@@ -96,7 +96,7 @@ function generalPromptFor(queue) {
   return lines.join("\n");
 }
 
-export default function AIWorkspaceClient({ queue, history, handoffEnabled }) {
+export default function AIWorkspaceClient({ queue, history, handoffEnabled, largeExportEnabled }) {
   const [copied, setCopied] = useState("");
   const [handoffRun, setHandoffRun] = useState("");
   const [nextAction, setNextAction] = useState("NINGUNA");
@@ -231,6 +231,10 @@ export default function AIWorkspaceClient({ queue, history, handoffEnabled }) {
             <div className="chatgptActions">
               {item.blocked ? (
                 <button type="button" disabled>Descarga bloqueada</button>
+              ) : Number(item.oddsRows || 0) > 3000 && !largeExportEnabled ? (
+                <button type="button" disabled title="El bridge publicado limita snapshots grandes">
+                  Bridge v1.4 requerido
+                </button>
               ) : (
                 <a href={"/api/export/snapshot?sport=" + encodeURIComponent(item.sportId) + "&runId=" + encodeURIComponent(item.runId)}>
                   Descargar CSV
