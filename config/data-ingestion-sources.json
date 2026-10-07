@@ -156,9 +156,10 @@
       },
       "source": {
         "provider": "ESPN Soccer Scoreboard",
-        "endpoint_template": "https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/scoreboard?dates=YYYYMMDD",
+        "endpoint_template": "https://site.web.api.espn.com/apis/site/v2/sports/soccer/{league}/scoreboard?dates=YYYYMM",
         "format": "json",
-        "incremental_policy": "WEEKLY_INCREMENTAL with 7-day correction overlap; first run bootstraps from July 1 of current season cycle"
+        "incremental_policy": "WEEKLY_INCREMENTAL with 7-day correction overlap; first run bootstraps from July 1 of current season cycle",
+        "egress_note": "Apps Script uses ESPN alternate host plus a non-browser User-Agent because browser-like headers/site.api may return 403 from Google egress."
       },
       "league_codes": [
         "ENG.1",
@@ -219,7 +220,10 @@
       ],
       "incremental_policy": "8-day overlap from prior cutoff; no weekly uploads. Shared daily trigger accumulates ATP live/current results and refreshes WTA tournament/match window.",
       "integrity": "raw ATP/WTA CURRENT files + normalized CURRENT, content-addressed immutable SHA-256 snapshots, immutable run manifests, size/coverage/status",
-      "activation": "Sync SVL_Tennis_Data_Ingestion.gs plus latest SVL_Data_Ingestion.gs into central Bridge Apps Script and run svlActivateDataIngestion() once."
+      "activation": "Shared trigger may run in degraded mode so healthy sports/WTA continue automatically while ATP remains source-blocked.",
+      "atp_egress_status": "BLOCKED_FROM_APPS_SCRIPT_BY_CLOUDFLARE_403_AS_OF_2026-10-07",
+      "atp_official_api_note": "ATP ProTennisLive exposes official Results/Tournaments endpoints, but ATP documentation indicates data-feed tokens may be required. Do not treat that API as usable until a token is provisioned."
     }
-  }
+  },
+  "activation_policy": "svlActivateDataIngestion smoke-runs all configured sports; if at least one sport succeeds it installs/replaces the shared daily trigger and reports degraded=true when any sport is incomplete."
 }
