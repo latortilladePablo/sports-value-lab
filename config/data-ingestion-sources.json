@@ -181,9 +181,45 @@
       "activation": "Run svlActivateDataIngestion() once in the bound central Bridge Apps Script after syncing the updated shared ingestion file and Soccer adapter."
     },
     "Tennis": {
-      "automation": "NEEDS_SPORT_SPECIFIC_DISCOVERY_ADAPTER",
-      "p5_policy": "ATP Tour official results archive/current tournament results; WTA official tournament scores/matches; Flashscore cross-check",
-      "assessment": "Dynamic tournament discovery/identity makes this unsuitable for a simple recurring file fetch. It should still be automated, but with a dedicated ATP/WTA discovery + parser adapter rather than weekly uploads."
+      "automation": "IMPLEMENTED_PENDING_ONE_TIME_APPS_SCRIPT_DEPLOY",
+      "adapter": "bridge/SVL_Tennis_Data_Ingestion.gs",
+      "folders": {
+        "current": "1z3muy962WkKMdDbgiIv4zutyHbay4Y_3",
+        "snapshots": "17oFOX901s8-7teAHQb0O__uJizkMLsyG",
+        "manifests": "1WL7zQ4kWUwWFdq_Nxkg9r6dvzPOa2USI"
+      },
+      "sources": {
+        "ATP": {
+          "primary": [
+            "https://www.atptour.com/en/scores/results-archive?year={year}",
+            "https://www.atptour.com/-/ajax/Scores/GetInitialScores"
+          ],
+          "role": "Results Archive discovery + structured current-tournament results backend; daily trigger accumulates match results into CURRENT",
+          "scope": "ATP Singles"
+        },
+        "WTA": {
+          "primary": [
+            "https://api.wtatennis.com/tennis/tournaments/?page=0&pageSize=100&excludeLevels=ITF&from={YYYY-MM-DD}&to={YYYY-MM-DD}",
+            "https://api.wtatennis.com/tennis/tournaments/{tournamentGroup.id}/{year}/matches?from={YYYY-MM-DD}&to={YYYY-MM-DD}"
+          ],
+          "role": "Official tournament discovery + edition match results",
+          "scope": "WTA Singles"
+        }
+      },
+      "crosscheck": "Flashscore Tennis Results by tournament/week — verification only, never primary ingestion",
+      "normalized_schema": "TENNIS_EVENTS_CURRENT.json: tour, tournament_id/name/location, provider_match_id, event_id, round_raw/normalized, player ids/names, winner_side, status, status_raw/detail, set_scores, start_utc, source metadata",
+      "status_contract": [
+        "FINISHED",
+        "RETIRED",
+        "WALKOVER",
+        "CANCELLED",
+        "POSTPONED",
+        "LIVE",
+        "SCHEDULED"
+      ],
+      "incremental_policy": "8-day overlap from prior cutoff; no weekly uploads. Shared daily trigger accumulates ATP live/current results and refreshes WTA tournament/match window.",
+      "integrity": "raw ATP/WTA CURRENT files + normalized CURRENT, content-addressed immutable SHA-256 snapshots, immutable run manifests, size/coverage/status",
+      "activation": "Sync SVL_Tennis_Data_Ingestion.gs plus latest SVL_Data_Ingestion.gs into central Bridge Apps Script and run svlActivateDataIngestion() once."
     }
   }
 }
