@@ -226,7 +226,7 @@
         "provider": "Live Tennis API",
         "auth": "Script Property SVL_TENNIS_LIVE_API_KEY -> X-API-Key",
         "base": "https://api.livetennisapi.com/api/public/v1",
-        "discovery_endpoint": "/matches?status=upcoming&tour=atp&draw=singles&is_qualifying=false",
+        "discovery_endpoint": "/fixtures?tour=atp&draw=singles&is_qualifying=false",
         "detail_endpoint": "/matches/{matchId}",
         "tracked_current": "TENNIS_ATP_TRACKED_CURRENT.json",
         "strategy": "Prospectively capture stable ATP main-draw singles match IDs, then resolve those exact IDs individually after start/completion.",
@@ -240,7 +240,8 @@
         ],
         "role": "Structured operational fallback only when ATP Tour is blocked from Apps Script; ATP Tour remains official verification source.",
         "free_tier_constraints": "100 requests/day; completed-list history is paid, so CURRENT must persist pre-start IDs and resolve them individually.",
-        "quota_guard": "Max 90 Live Tennis API requests per ingestion run; fail closed rather than silently truncate."
+        "quota_guard": "Max 90 Live Tennis API requests per ingestion run; fail closed rather than silently truncate.",
+        "scope_note": "Do not server-filter by tier; provider may temporarily publish tier=null for newly discovered events. Enforce ATP singles main draw first, then reject known out-of-scope tiers locally."
       }
     }
   },
