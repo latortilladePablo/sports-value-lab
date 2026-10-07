@@ -230,10 +230,11 @@ function svlParseNFLCompletedGames_(csvText) {
 }
 
 function svlStoreSource_(args) {
-  const stamp = svlStamp_(new Date(args.retrievedAt));
   const ext = svlExtension_(args.fileName);
   const base = args.fileName.slice(0, args.fileName.length - ext.length);
-  const snapshotName = base + "__" + stamp + "__sha256_" + args.sha256.slice(0, 16) + ext;
+  // Immutable source snapshots are content-addressed: repeated daily refreshes
+  // do not duplicate identical bytes.
+  const snapshotName = base + "__sha256_" + args.sha256 + ext;
 
   const snapshotFolder = DriveApp.getFolderById(args.folders.snapshots);
   let snapshotFile = svlFindByName_(snapshotFolder, snapshotName);
@@ -260,12 +261,9 @@ function svlStoreSource_(args) {
 }
 
 function svlStoreJsonManifest_(folders, prefix, manifest, now) {
-  const text = JSON.stringify(manifest, null, 2);
-  const blob = Utilities.newBlob(text, "application/json", prefix + "_CURRENT.json");
-  const sha = svlSha256Bytes_(blob.getBytes());
-  manifest.manifest_sha256 = sha;
   const finalText = JSON.stringify(manifest, null, 2);
   const finalBlob = Utilities.newBlob(finalText, "application/json", prefix + "_CURRENT.json");
+  const sha = svlSha256Bytes_(finalBlob.getBytes());
 
   const manifestsFolder = DriveApp.getFolderById(folders.manifests);
   const stamp = svlStamp_(now);
