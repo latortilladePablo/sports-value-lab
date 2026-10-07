@@ -41,6 +41,13 @@ const SVL_INGESTION = {
       },
       seasonEndYear: 2027
     },
+    SOCCER: {
+      folders: {
+        current: "1_JTma3HjDDRbh7jhQdK335TCfDdkvfY1",
+        snapshots: "1bOR-ozBE4Z-y5oehJa5DiMZ4_tU8Cvpx",
+        manifests: "1MHy_dGz6dG-DR4VD7iLRljQGnYviZL3t"
+      }
+    },
     NHL: {
       folders: {
         current: "1J9Mtu1YYwb0808U9BntBSaOdfYxyS_HS",
@@ -58,7 +65,7 @@ function svlDataIngestionDispatch_(body) {
     return {
       ok: true,
       version: SVL_INGESTION.VERSION,
-      results: ["NFL", "NBA", "NHL"].map(function(s) {
+      results: ["NFL", "NBA", "NHL", "SOCCER"].map(function(s) {
         try { return svlIngestSport_(s); }
         catch (err) { return { ok: false, sport: s, error: String(err && err.message ? err.message : err) }; }
       })
@@ -71,6 +78,7 @@ function svlIngestSport_(sport) {
   if (sport === "NFL") return svlIngestNFL_();
   if (sport === "NBA") return svlIngestNBA_();
   if (sport === "NHL") return svlIngestNHL_();
+  if (sport === "SOCCER") return svlIngestSoccer_();
   return { ok: false, sport: sport, error: "adapter_not_configured" };
 }
 
