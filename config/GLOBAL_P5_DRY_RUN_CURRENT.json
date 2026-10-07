@@ -15,7 +15,8 @@
     "models": "PASS — manifests report model_modified=false",
     "features": "PASS where field exists; global layer treats absent as no mutation and ingestion code has no feature writer",
     "snapshots": "PASS — source snapshots are content-addressed SHA-256; manifest snapshots now also reuse full-content SHA names",
-    "p5_manual_uploads": "PASS by contract — P5 reads CURRENT manifests through p5_context/p5_preflight; no weekly upload step"
+    "p5_manual_uploads": "PASS by contract — P5 reads CURRENT manifests through p5_context/p5_preflight; no weekly upload step",
+    "source_minimization": "PASS in repository — NBA now refreshes schedule only; NHL refreshes required schedule/game_rosters/team_box/player_box/pbp_lite only; optional enrichment stays declared but not requested."
   },
   "matrix": [
     {
@@ -34,7 +35,7 @@
       "state": "PROVISIONAL_VALID",
       "blockers": [],
       "causes": [
-        "Required 2027 schedule present: 1206 rows / 1206 distinct game_ids; optional team/player/PBP/rosters assets return 404 and are non-blocking before publication"
+        "Required 2027 schedule present: 1206 rows / 1206 distinct game_ids; optional team/player/PBP/rosters assets are now NOT_REQUESTED until enabled/published."
       ],
       "current_manifest_id": "1WNJz3om7uLAhjxUVffc4Qo26ziSxl0Ey"
     },
@@ -44,7 +45,7 @@
       "state": "PROVISIONAL_VALID",
       "blockers": [],
       "causes": [
-        "All 7 configured sources persisted; required schedule, game rosters, team box, player box and PBP lite present; no failures"
+        "Required schedule, game rosters, team box, player box and PBP lite are the active refresh set; scratches/shifts remain optional and are no longer requested by default."
       ],
       "current_manifest_id": "1I4u_h3b4otYCZSLmuY9So2mR6f5DNsD2"
     },
@@ -89,6 +90,8 @@
     "global_preflight_commit": "3256ca2588c45e4dc303e6c980b6e29b2db279b5",
     "bridge_command_commit": "e5e141150b7ec48c871d90435450fc93ba2c4af1",
     "manifest_dedup_commit": "1d7453af0db2935c9285d9a243285beb5b0b4773",
-    "global_registry_commit": "7d3fa28c96562c283ddc4e16493e9e804ddf0a34"
+    "global_registry_commit": "7d3fa28c96562c283ddc4e16493e9e804ddf0a34",
+    "nba_required_only_commit": "6a53bb9fcda25122882090f871fb85be4c4da578",
+    "nhl_required_only_commit": "b31e8e8297bf5e124bc7c6aecd9c63115374d672"
   }
 }
