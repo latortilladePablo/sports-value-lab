@@ -14,11 +14,17 @@
  */
 
 const SVL_NBA_SOURCES = [
-  { key:"schedule", tag:"espn_nba_schedules", file:"nba_schedule_2027.csv", required:true },
-  { key:"team_box", tag:"espn_nba_team_boxscores", file:"team_box_2027.csv", required:false },
-  { key:"player_box", tag:"espn_nba_player_boxscores", file:"player_box_2027.csv", required:false },
-  { key:"pbp", tag:"espn_nba_pbp", file:"play_by_play_2027.csv", required:false },
-  { key:"game_rosters", tag:"espn_nba_game_rosters", file:"game_rosters_2027.csv", required:false }
+  { key:"schedule", tag:"espn_nba_schedules", file:"nba_schedule_2027.csv", required:true,
+    url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_schedules/nba_schedule_2027.csv",
+    sha256:"9e07665fb1e2982150baf305b4bf8fab20157f55a316225a2ef0fcbbe5d6eb68", size:1503859, updated_at:"2026-10-06T12:14:58Z" },
+  { key:"team_box", tag:"espn_nba_team_boxscores", file:"team_box_2027.csv", required:false,
+    url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_team_boxscores/team_box_2027.csv" },
+  { key:"player_box", tag:"espn_nba_player_boxscores", file:"player_box_2027.csv", required:false,
+    url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_player_boxscores/player_box_2027.csv" },
+  { key:"pbp", tag:"espn_nba_pbp", file:"play_by_play_2027.csv", required:false,
+    url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_pbp/play_by_play_2027.csv" },
+  { key:"game_rosters", tag:"espn_nba_game_rosters", file:"game_rosters_2027.csv", required:false,
+    url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_game_rosters/game_rosters_2027.csv" }
 ];
 
 function svlIngestNBA_() {
@@ -31,7 +37,7 @@ function svlIngestNBA_() {
 
   SVL_NBA_SOURCES.forEach(function(src) {
     try {
-      const rel = svlNBAReleaseAsset_(src.tag, src.file);
+      const rel = svlNBAReleaseAsset_(src);
       if (!rel) {
         unavailable.push({
           source_key:src.key,
@@ -153,21 +159,13 @@ function svlIngestNBA_() {
   };
 }
 
-function svlNBAReleaseAsset_(tag, fileName) {
-  const api = "https://api.github.com/repos/sportsdataverse/sportsdataverse-data/releases/tags/" + encodeURIComponent(tag);
-  const r = UrlFetchApp.fetch(api, {
-    method:"get",
-    followRedirects:true,
-    muteHttpExceptions:true,
-    headers:{
-      "Accept":"application/vnd.github+json",
-      "User-Agent":"SportsValueLab/1.0"
-    }
-  });
-  svlRequire2xx_(r, "NBA release metadata " + tag);
-  const j = JSON.parse(r.getContentText());
-  const a = (j.assets || []).filter(function(x){ return x.name === fileName; })[0];
-  return a || null;
+function svlNBAReleaseAsset_(src) {
+  return {
+    browser_download_url: src.url,
+    digest: src.sha256 ? "sha256:" + src.sha256 : null,
+    size: src.size || null,
+    updated_at: src.updated_at || null
+  };
 }
 
 function svlNBACoverage_(sourceKey, csvText) {
