@@ -6,7 +6,7 @@
  */
 
 const SVL = {
-  BRIDGE_VERSION: "v1.3-data-ingestion",
+  BRIDGE_VERSION: "v1.4-snapshot-export-large",
   TZ: "America/Mexico_City",
   REGISTER: "10IF8B_kZJ2CECt4mJWR-7C-nNljQ3y4N2l4wiLtep6U",
   SPORTS: {
@@ -167,8 +167,8 @@ function readSnapshotForAnalysis_(body) {
     return { ok: false, error: "snapshot_sheet_missing", sport: sport, runId: selectedRunId, snapshot: snapshotName };
   }
 
-  const maxRows = 3000;
-  const maxCols = 20;
+  const maxRows = 20000;
+  const maxCols = 26;
   const lastRow = snapshotSheet.getLastRow();
   const lastCol = snapshotSheet.getLastColumn();
 
