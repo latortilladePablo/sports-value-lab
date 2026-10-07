@@ -20,10 +20,10 @@ const SVL_NHL_SOURCES = [
   { key:"pbp_lite", tag:"nhl_pbp_lite", file:"play_by_play_lite_2027.csv", required:true,
     url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_pbp_lite/play_by_play_lite_2027.csv",
     sha256:"a442abdb6465f20af2bf14caefcb58d48f7093bebd760768444eccd6a53e687c", size:9597714, updated_at:"2026-10-07T08:03:42Z" },
-  { key:"scratches", tag:"nhl_scratches", file:"scratches_2027.csv", required:false,
+  { key:"scratches", tag:"nhl_scratches", file:"scratches_2027.csv", required:false, enabled:false,
     url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_scratches/scratches_2027.csv",
     sha256:"669694a46bacd93093b6a8d8d6d2268db35d2fec51d600dc2a06e1b2bc102ec5", size:9253, updated_at:"2026-10-07T08:02:57Z" },
-  { key:"shifts", tag:"nhl_shifts", file:"shifts_2027.csv", required:false,
+  { key:"shifts", tag:"nhl_shifts", file:"shifts_2027.csv", required:false, enabled:false,
     url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_shifts/shifts_2027.csv",
     sha256:"6546c1d2b5aaeb6df177f5e10d0ef5f2e84c3893028055c70bddaa7dbc03b909", size:4049982, updated_at:"2026-10-07T08:02:29Z" }
 ];
@@ -36,6 +36,7 @@ function svlIngestNHL_() {
   const failures = [];
 
   SVL_NHL_SOURCES.forEach(function(src) {
+    if (src.enabled === false) return;
     try {
       const rel = svlNHLReleaseAsset_(src);
       const resp = UrlFetchApp.fetch(rel.browser_download_url, {
