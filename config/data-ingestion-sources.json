@@ -223,14 +223,24 @@
       "activation": "Shared trigger may run in degraded mode so healthy sports/WTA continue automatically while ATP remains source-blocked.",
       "atp_official_api_note": "ATP ProTennisLive exposes official Results/Tournaments endpoints, but ATP documentation indicates data-feed tokens may be required. Do not treat that API as usable until a token is provisioned.",
       "atp_structured_fallback": {
-        "provider": "SportsAPI365 Direct Tennis API",
-        "auth": "Script Property SVL_TENNIS_API_KEY -> X-Gravitee-Api-Key",
-        "base": "https://api.sportsapi365.com/v1/tennis",
-        "discovery_endpoint": "/atp/fixtures/{startDate}/{endDate}",
-        "results_endpoint": "/atp/tournament/results/{seasonId}",
-        "scope_filter": "PlayerGroup:singles; TourRank 2,3,4,7",
-        "role": "Structured operational fallback only when ATP Tour is blocked from Apps Script; ATP Tour remains official verification source",
-        "quota_guard": "Max 45 SportsAPI365 requests per ingestion run to stay within 50/day Basic plan."
+        "provider": "Live Tennis API",
+        "auth": "Script Property SVL_TENNIS_LIVE_API_KEY -> X-API-Key",
+        "base": "https://api.livetennisapi.com/api/public/v1",
+        "discovery_endpoint": "/matches?status=upcoming&tour=atp&draw=singles&is_qualifying=false",
+        "detail_endpoint": "/matches/{matchId}",
+        "tracked_current": "TENNIS_ATP_TRACKED_CURRENT.json",
+        "strategy": "Prospectively capture stable ATP main-draw singles match IDs, then resolve those exact IDs individually after start/completion.",
+        "scope_tiers": [
+          "grand_slam",
+          "atp_finals",
+          "atp_1000",
+          "atp_500",
+          "atp_250",
+          "next_gen_finals"
+        ],
+        "role": "Structured operational fallback only when ATP Tour is blocked from Apps Script; ATP Tour remains official verification source.",
+        "free_tier_constraints": "100 requests/day; completed-list history is paid, so CURRENT must persist pre-start IDs and resolve them individually.",
+        "quota_guard": "Max 90 Live Tennis API requests per ingestion run; fail closed rather than silently truncate."
       }
     }
   },
