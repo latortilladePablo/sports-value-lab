@@ -27,7 +27,7 @@ const SVL_P5_GLOBAL = {
     },
     TENNIS: {
       manifest:"TENNIS_INGESTION_CURRENT.json",
-      required_sources:["atp_official","wta_official","normalized_events"]
+      required_sources:["atp","wta","normalized_events"]
     }
   }
 };
