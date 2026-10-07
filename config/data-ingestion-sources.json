@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "timezone": "America/Mexico_City",
+  "storage_policy": {
+    "season_data": "DATA/<sport>/ingestion",
+    "market_prices": "ODDS_ARCHIVE only when prospectively used",
+    "immutable_source_snapshots": "content-addressed by SHA-256",
+    "current_copy": "replaceable pointer/copy under CURRENT",
+    "execution_manifests": "immutable manifest per ingestion run"
+  },
+  "states": ["CURRENT_VALID", "PROVISIONAL_VALID", "INCOMPLETE"],
+  "sports": {
+    "NFL": {
+      "automation": "IMPLEMENTED_PENDING_ONE_TIME_APPS_SCRIPT_DEPLOY",
+      "adapter": "bridge/SVL_Data_Ingestion.gs",
+      "sources": [
+        {
+          "key": "schedule",
+          "provider": "nflverse/nfldata",
+          "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
+          "format": "csv",
+          "required_for_p5": true
+        },
+        {
+          "key": "pbp",
+          "provider": "nflverse/nflverse-data",
+          "release_api": "https://api.github.com/repos/nflverse/nflverse-data/releases/tags/pbp",
+          "asset_pattern": "play_by_play_<season>.csv.gz",
+          "format": "csv.gz",
+          "required_for_feature_refresh": true,
+          "integrity": "provider SHA-256 + size + completed-game-id coverage"
+        }
+      ]
+    },
+    "NBA": {
+      "automation": "NEEDS_ADAPTER",
+      "p5_policy": "Basketball-Reference operational reconciliation; ESPN cross-check; NBA.com official discrepancy verification; SportsDataverse structured enrichment",
+      "assessment": "No recurring user upload should be necessary, but CURRENT docs do not pin one canonical machine-download endpoint/artifact for the weekly structured refresh."
+    },
+    "NHL": {
+      "automation": "NEEDS_ADAPTER",
+      "p5_policy": "SportsDataverse fastRhockey pipeline for schedules/rosters/boxscores/PBP/scratches/shifts; Hockey-Reference reconciliation; ESPN cross-check; NHL.com official verification",
+      "assessment": "Suitable for the same persistent-fetch pattern once exact current artifact URLs are pinned."
+    },
+    "Soccer": {
+      "automation": "NEEDS_ADAPTER",
+      "p5_policy": "ESPN Soccer Scoreboard by CURRENT league/date; official competition site for discrepancies",
+      "league_codes": ["ENG.1", "ESP.1", "ESP.2", "GER.1", "ITA.1", "MEX.1"],
+      "assessment": "HTTP/date-window adapter is feasible; exact endpoint/schema and official discrepancy routing must be frozen before calling it automatic."
+    },
+    "Tennis": {
+      "automation": "NEEDS_SPORT_SPECIFIC_DISCOVERY_ADAPTER",
+      "p5_policy": "ATP Tour official results archive/current tournament results; WTA official tournament scores/matches; Flashscore cross-check",
+      "assessment": "Dynamic tournament discovery/identity makes this unsuitable for a simple recurring file fetch. It should still be automated, but with a dedicated ATP/WTA discovery + parser adapter rather than weekly uploads."
+    }
+  }
+}
