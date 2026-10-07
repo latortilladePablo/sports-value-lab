@@ -221,15 +221,16 @@
       "incremental_policy": "8-day overlap from prior cutoff; no weekly uploads. Shared daily trigger accumulates ATP live/current results and refreshes WTA tournament/match window.",
       "integrity": "raw ATP/WTA CURRENT files + normalized CURRENT, content-addressed immutable SHA-256 snapshots, immutable run manifests, size/coverage/status",
       "activation": "Shared trigger may run in degraded mode so healthy sports/WTA continue automatically while ATP remains source-blocked.",
-      "atp_egress_status": "BLOCKED_FROM_APPS_SCRIPT_BY_CLOUDFLARE_403_AS_OF_2026-10-07",
       "atp_official_api_note": "ATP ProTennisLive exposes official Results/Tournaments endpoints, but ATP documentation indicates data-feed tokens may be required. Do not treat that API as usable until a token is provisioned.",
       "atp_structured_fallback": {
-        "provider": "Tennis API - ATP WTA ITF via RapidAPI",
-        "endpoint": "https://tennis-api-atp-wta-itf.p.rapidapi.com/tennis/v2/atp/results/{startDate}/{endDate}",
-        "auth": "Script Property SVL_TENNIS_API_KEY -> X-RapidAPI-Key",
-        "host_header": "tennis-api-atp-wta-itf.p.rapidapi.com",
-        "scope_filter": "PlayerGroup:singles; adapter retains TourRank 2,3,4,7 only",
-        "role": "Structured operational fallback only when ATP Tour is blocked from Apps Script; ATP Tour remains official verification source"
+        "provider": "SportsAPI365 Direct Tennis API",
+        "auth": "Script Property SVL_TENNIS_API_KEY -> X-Gravitee-Api-Key",
+        "base": "https://api.sportsapi365.com/v1/tennis",
+        "discovery_endpoint": "/atp/fixtures/{startDate}/{endDate}",
+        "results_endpoint": "/atp/tournament/results/{seasonId}",
+        "scope_filter": "PlayerGroup:singles; TourRank 2,3,4,7",
+        "role": "Structured operational fallback only when ATP Tour is blocked from Apps Script; ATP Tour remains official verification source",
+        "quota_guard": "Max 45 SportsAPI365 requests per ingestion run to stay within 50/day Basic plan."
       }
     }
   },
