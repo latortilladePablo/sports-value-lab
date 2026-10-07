@@ -1,12 +1,12 @@
 {
   "schema": "SVL Global P5 Dry Run v1",
-  "generated_at": "2026-10-07",
+  "generated_at": "2026-10-07T10:19:49Z",
   "mode": "READ_ONLY_CURRENT_MANIFESTS",
   "writes_performed": false,
   "network_source_refresh": false,
   "notes": [
-    "This dry-run evaluates the latest persisted CURRENT manifests in Drive; it does not execute Apps Script source fetches.",
-    "Soccer and Tennis manifests predate the latest egress/fallback code changes, so they remain BLOCKED until one runtime refresh proves the new paths."
+    "Read-only verification of latest persisted CURRENT manifests in Drive.",
+    "Tennis ATP fallback succeeded through SportsAPI365 Direct; all five sports now satisfy the global P5 readiness gates."
   ],
   "policy_verification": {
     "season_data": "PASS — ingestion config routes season data to per-sport DATA ingestion folders",
@@ -51,47 +51,41 @@
     },
     {
       "sport": "Soccer",
-      "readiness": "BLOCKED",
-      "state": "INCOMPLETE",
-      "blockers": [
-        "Latest persisted manifest has 0/12 successful ESPN requests and 0 events across all six CURRENT leagues",
-        "Latest Drive manifest still reflects the pre-remediation ESPN host; rerun required to prove alternate-host egress fix"
-      ],
+      "readiness": "READY",
+      "state": "CURRENT_VALID",
+      "blockers": [],
       "causes": [
-        "HTTP 403 on all 12 month/league requests in persisted run"
+        "12/12 ESPN requests successful; 443 distinct CURRENT events; 215 final; verification_queue=0."
       ],
-      "current_manifest_id": "10uKfwL90XJ06JaM_84EAahA1axRRl5Zw"
+      "current_manifest_id": "135ZqsyC-atGXXjMmxaqjGfPiIi-NdZ1u"
     },
     {
       "sport": "Tennis",
-      "readiness": "BLOCKED",
-      "state": "INCOMPLETE",
-      "blockers": [
-        "ATP coverage is 0 in latest persisted manifest",
-        "ATP Tour returned Cloudflare HTTP 403 in persisted run",
-        "RapidAPI fallback code is now installed in repository but has not yet produced a persisted CURRENT run; SVL_TENNIS_API_KEY Script Property cannot be verified from Drive"
-      ],
+      "readiness": "READY",
+      "state": "PROVISIONAL_VALID",
+      "blockers": [],
       "causes": [
-        "WTA side is healthy: 212 events, 194 final, 9 retired, 2 postponed"
+        "ATP fallback succeeded: 147 ATP events current; WTA official: 212 events current; normalized total 359; failures=0."
       ],
-      "current_manifest_id": "1EIwYXoHQ_kWTM6UzZA9GEf0hRGMmVu7V"
+      "current_manifest_id": "1_hGLysNPMTpAbKLwXwB7Xc4Pk6p4369N"
     }
   ],
   "ready_sports": [
     "NFL",
     "NBA",
-    "NHL"
-  ],
-  "blocked_sports": [
+    "NHL",
     "Soccer",
     "Tennis"
   ],
+  "blocked_sports": [],
   "repository": {
     "global_preflight_commit": "3256ca2588c45e4dc303e6c980b6e29b2db279b5",
     "bridge_command_commit": "e5e141150b7ec48c871d90435450fc93ba2c4af1",
     "manifest_dedup_commit": "1d7453af0db2935c9285d9a243285beb5b0b4773",
     "global_registry_commit": "7d3fa28c96562c283ddc4e16493e9e804ddf0a34",
     "nba_required_only_commit": "6a53bb9fcda25122882090f871fb85be4c4da578",
-    "nhl_required_only_commit": "b31e8e8297bf5e124bc7c6aecd9c63115374d672"
-  }
+    "nhl_required_only_commit": "b31e8e8297bf5e124bc7c6aecd9c63115374d672",
+    "tennis_sportsapi365_commit": "72d47ed083c20ec9758140049e4618c0e38efea9"
+  },
+  "final_status": "READY_5_OF_5"
 }
