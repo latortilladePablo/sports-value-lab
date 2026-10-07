@@ -11,7 +11,7 @@ The source of truth is the repository version of:
 3. Replace the bridge file with the current repository `SVL_Google_Bridge.gs`.
 4. Set the Apps Script project timezone to `America/Mexico_City`.
 5. Save and deploy a new Web App version.
-6. Run `svlInstallDailyIngestionTrigger_()` once from the editor and grant UrlFetch + Drive permissions.
+6. Run `svlInstallDailyIngestionTrigger()` once from the editor and grant UrlFetch + Drive permissions.
 
 The daily trigger runs around 11:00 in the script timezone. It is idempotent at the source-byte level: identical source hashes reuse the same immutable snapshot while CURRENT and run manifests are refreshed.
 
