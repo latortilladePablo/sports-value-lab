@@ -50,7 +50,7 @@ function svlDataIngestionDispatch_(body) {
     return {
       ok: true,
       version: SVL_INGESTION.VERSION,
-      results: ["NFL", "NHL"].map(function(s) {
+      results: ["NFL", "NBA", "NHL"].map(function(s) {
         try { return svlIngestSport_(s); }
         catch (err) { return { ok: false, sport: s, error: String(err && err.message ? err.message : err) }; }
       })
