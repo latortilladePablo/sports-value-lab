@@ -11,12 +11,9 @@ export default async function ChatGPTWorkspacePage() {
   const ownerConfigured = ownerSecurityConfigured();
   const ownerAuthorized = ownerConfigured ? await isOwnerAuthorized() : false;
 
-  const queue = data.sports.flatMap((sport) =>
+  const snapshots = data.sports.flatMap((sport) =>
     (sport.runs || [])
-      .filter((run) =>
-        /^(P1|P2_AUTO|P2_FORCE)/.test(String(run.mode || "")) &&
-        /PENDING|DATA_READY|SNAPSHOT_READY/i.test(run.analysisStatus || "")
-      )
+      .filter((run) => /^(P1|P2_AUTO|P2_FORCE)/.test(String(run.mode || "")))
       .map((run) => ({
         sportId: sport.id,
         sport: sport.name,
@@ -25,12 +22,27 @@ export default async function ChatGPTWorkspacePage() {
         snapshot: run.snapshot,
         analysisStatus: run.analysisStatus,
         executed: run.executedDisplay,
+        executedAt: run.executedAt,
         events: run.events,
         oddsRows: run.oddsRows,
         credits: run.credits,
+        modelConfig: run.modelConfig,
+        eventsEvaluated: run.eventsEvaluated,
+        optionsEvaluated: run.optionsEvaluated,
+        picksRegistered: run.picksRegistered,
+        nextP2: run.nextP2,
+        handoff: run.handoff,
         blocked: sport.status === "ERROR",
         blockReason: sport.status === "ERROR" ? sport.reason : "",
       }))
+      .sort((a, b) => String(b.executedAt || "").localeCompare(String(a.executedAt || "")));
+
+  const queue = snapshots.filter((run) =>
+    /PENDING|DATA_READY|SNAPSHOT_READY/i.test(run.analysisStatus || "")
+  );
+
+  const history = snapshots.filter((run) =>
+    !/PENDING|DATA_READY|SNAPSHOT_READY/i.test(run.analysisStatus || "")
   );
 
   return (
@@ -75,7 +87,11 @@ export default async function ChatGPTWorkspacePage() {
         </span>
       </section>
 
-      <AIWorkspaceClient queue={queue} handoffEnabled={data.bridgeVersion === "v1.2-chatgpt-handoff" && ownerAuthorized} />
+      <AIWorkspaceClient
+        queue={queue}
+        history={history}
+        handoffEnabled={data.bridgeVersion === "v1.2-chatgpt-handoff" && ownerAuthorized}
+      />
 
       <footer>
         <p>ChatGPT Workspace · captura/exportación solamente. El análisis se ejecuta dentro del Project Sports Value Lab.</p>
