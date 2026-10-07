@@ -48,6 +48,13 @@ const SVL_INGESTION = {
         manifests: "1MHy_dGz6dG-DR4VD7iLRljQGnYviZL3t"
       }
     },
+    TENNIS: {
+      folders: {
+        current: "1z3muy962WkKMdDbgiIv4zutyHbay4Y_3",
+        snapshots: "17oFOX901s8-7teAHQb0O__uJizkMLsyG",
+        manifests: "1WL7zQ4kWUwWFdq_Nxkg9r6dvzPOa2USI"
+      }
+    },
     NHL: {
       folders: {
         current: "1J9Mtu1YYwb0808U9BntBSaOdfYxyS_HS",
@@ -65,7 +72,7 @@ function svlDataIngestionDispatch_(body) {
     return {
       ok: true,
       version: SVL_INGESTION.VERSION,
-      results: ["NFL", "NBA", "NHL", "SOCCER"].map(function(s) {
+      results: ["NFL", "NBA", "NHL", "SOCCER", "TENNIS"].map(function(s) {
         try { return svlIngestSport_(s); }
         catch (err) { return { ok: false, sport: s, error: String(err && err.message ? err.message : err) }; }
       })
@@ -79,6 +86,7 @@ function svlIngestSport_(sport) {
   if (sport === "NBA") return svlIngestNBA_();
   if (sport === "NHL") return svlIngestNHL_();
   if (sport === "SOCCER") return svlIngestSoccer_();
+  if (sport === "TENNIS") return svlIngestTennis_();
   return { ok: false, sport: sport, error: "adapter_not_configured" };
 }
 
