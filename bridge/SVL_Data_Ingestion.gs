@@ -69,13 +69,14 @@ const SVL_INGESTION = {
 function svlDataIngestionDispatch_(body) {
   const sport = String((body && body.sport) || "NFL").toUpperCase();
   if (sport === "ALL") {
+    const results = ["NFL", "NBA", "NHL", "SOCCER", "TENNIS"].map(function(s) {
+      try { return svlIngestSport_(s); }
+      catch (err) { return { ok: false, sport: s, error: String(err && err.message ? err.message : err) }; }
+    });
     return {
-      ok: true,
+      ok: results.every(function(r) { return r && r.ok === true; }),
       version: SVL_INGESTION.VERSION,
-      results: ["NFL", "NBA", "NHL", "SOCCER", "TENNIS"].map(function(s) {
-        try { return svlIngestSport_(s); }
-        catch (err) { return { ok: false, sport: s, error: String(err && err.message ? err.message : err) }; }
-      })
+      results: results
     };
   }
   return svlIngestSport_(sport);
@@ -423,8 +424,9 @@ function svlInstallDailyIngestionTrigger() {
     .timeBased()
     .everyDays(1)
     .atHour(11)
+    .inTimezone(SVL_INGESTION.TZ)
     .create();
-  return { ok: true, handler: "svlRunIngestionNow", cadence: "daily", hour_script_tz: 11 };
+  return { ok: true, handler: "svlRunIngestionNow", cadence: "daily", hour_local: 11, timezone: SVL_INGESTION.TZ };
 }
 
 
