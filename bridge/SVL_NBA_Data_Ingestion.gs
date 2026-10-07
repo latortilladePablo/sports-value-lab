@@ -17,13 +17,13 @@ const SVL_NBA_SOURCES = [
   { key:"schedule", tag:"espn_nba_schedules", file:"nba_schedule_2027.csv", required:true,
     url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_schedules/nba_schedule_2027.csv",
     sha256:"9e07665fb1e2982150baf305b4bf8fab20157f55a316225a2ef0fcbbe5d6eb68", size:1503859, updated_at:"2026-10-06T12:14:58Z" },
-  { key:"team_box", tag:"espn_nba_team_boxscores", file:"team_box_2027.csv", required:false,
+  { key:"team_box", tag:"espn_nba_team_boxscores", file:"team_box_2027.csv", required:false, enabled:false,
     url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_team_boxscores/team_box_2027.csv" },
-  { key:"player_box", tag:"espn_nba_player_boxscores", file:"player_box_2027.csv", required:false,
+  { key:"player_box", tag:"espn_nba_player_boxscores", file:"player_box_2027.csv", required:false, enabled:false,
     url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_player_boxscores/player_box_2027.csv" },
-  { key:"pbp", tag:"espn_nba_pbp", file:"play_by_play_2027.csv", required:false,
+  { key:"pbp", tag:"espn_nba_pbp", file:"play_by_play_2027.csv", required:false, enabled:false,
     url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_pbp/play_by_play_2027.csv" },
-  { key:"game_rosters", tag:"espn_nba_game_rosters", file:"game_rosters_2027.csv", required:false,
+  { key:"game_rosters", tag:"espn_nba_game_rosters", file:"game_rosters_2027.csv", required:false, enabled:false,
     url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_game_rosters/game_rosters_2027.csv" }
 ];
 
@@ -36,6 +36,13 @@ function svlIngestNBA_() {
   const failures = [];
 
   SVL_NBA_SOURCES.forEach(function(src) {
+    if (src.enabled === false) {
+      unavailable.push({
+        source_key:src.key, required:false, status:"NOT_REQUESTED",
+        reason:"optional_source_not_required_for_current_P5_refresh"
+      });
+      return;
+    }
     try {
       const rel = svlNBAReleaseAsset_(src);
       if (!rel) {
