@@ -143,7 +143,7 @@ function svlIngestSoccer_() {
   const currentEvents = Object.keys(merged).map(function(k){ return merged[k]; })
     .sort(function(a,b){ return String(a.date_utc).localeCompare(String(b.date_utc)); });
 
-  const officialEvidence = svlSoccerFetchOfficialEvidence_(verification, retrievedAt);
+  const officialEvidence = svlSoccerFetchOfficialEvidence_(cfg.folders, verification, retrievedAt);
 
   const rawObj = {
     schema:"SVL Soccer ESPN Incremental Raw v1",
@@ -342,7 +342,7 @@ function svlSoccerVerificationReasons_(old, cur) {
   return out;
 }
 
-function svlSoccerFetchOfficialEvidence_(queue, retrievedAt) {
+function svlSoccerFetchOfficialEvidence_(folders, queue, retrievedAt) {
   const byLeague = {};
   queue.forEach(function(q){ byLeague[q.league] = true; });
   const out = {};
@@ -350,17 +350,27 @@ function svlSoccerFetchOfficialEvidence_(queue, retrievedAt) {
     try {
       const r = UrlFetchApp.fetch(lg.official,{method:"get",followRedirects:true,muteHttpExceptions:true,headers:{"User-Agent":"SportsValueLab/1.0"}});
       const blob = r.getBlob();
-      out[lg.code] = {
-        official_url:lg.official,
-        http_code:r.getResponseCode(),
-        retrieved_at:retrievedAt,
-        sha256:svlSha256Bytes_(blob.getBytes()),
-        size_bytes:blob.getBytes().length,
-        parsed_resolution:false,
-        note:"Official page captured as verification evidence. Automatic score promotion is not attempted from heterogeneous HTML; unresolved discrepancies remain in verification_queue."
-      };
+      const bytes = blob.getBytes();
+      const sha = svlSha256Bytes_(bytes);
+      const fileName = "SOCCER_OFFICIAL_" + lg.code.replace(/\./g,"_") + "_CURRENT.html";
+      const stored = svlStoreSource_({
+        folders:folders,
+        sport:"SOCCER",
+        sourceKey:"official_" + lg.code,
+        fileName:fileName,
+        blob:blob.copyBlob().setName(fileName),
+        sha256:sha,
+        retrievedAt:retrievedAt,
+        updatedAt:svlHeader_(r,"Last-Modified"),
+        sourceUrl:lg.official,
+        state:(r.getResponseCode() >= 200 && r.getResponseCode() < 300) ? "PROVISIONAL_VALID" : "INCOMPLETE",
+        coverage:{verification_events:queue.filter(function(q){return q.league===lg.code;}).length}
+      });
+      out[lg.code] = stored.manifest;
+      out[lg.code].parsed_resolution = false;
+      out[lg.code].note = "Official page captured as immutable evidence. Heterogeneous HTML is not auto-promoted into results; discrepancies remain queued until P5/official review resolves them.";
     } catch (err) {
-      out[lg.code] = {official_url:lg.official,retrieved_at:retrievedAt,error:String(err),parsed_resolution:false};
+      out[lg.code] = {official_url:lg.official,retrieved_at:retrievedAt,error:String(err),status:"INCOMPLETE",parsed_resolution:false};
     }
   });
   return out;
