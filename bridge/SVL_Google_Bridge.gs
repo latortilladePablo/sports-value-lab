@@ -100,6 +100,15 @@ function doPost(e) {
     if (body.command === "ingest") {
       return json_(svlDataIngestionDispatch_(body));
     }
+    if (body.command === "p5_preflight") {
+      return json_(svlGlobalP5Preflight());
+    }
+    if (body.command === "p5_context") {
+      return json_(svlP5ManifestContext());
+    }
+    if (body.command === "p5_dry_run") {
+      return json_(svlGlobalP5DryRun());
+    }
 
     return json_({ ok: false, error: "unsupported_command" });
   } catch (err) {
