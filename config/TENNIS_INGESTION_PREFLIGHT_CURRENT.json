@@ -62,7 +62,7 @@
   },
   "repository": {
     "adapter_commit": "dca8ad1ae86b2c66a8415337f986dfba51c41c59",
-    "dispatcher_commit": "e85704305f9445a90fe28434fe69a935db98c4de",
+    "dispatcher_commit": "ceaeb2204b65fd86a0b3c56de094899f09c82214",
     "registry_commit": "5e02c397d1a93d498ec04aee8dbc2778fad237fd"
   },
   "storage_before_activation": {
@@ -81,7 +81,10 @@
       "NHL",
       "SOCCER",
       "TENNIS"
-    ]
+    ],
+    "timezone": "America/Mexico_City",
+    "hour_local": 11,
+    "smoke_gate": "svlActivateDataIngestion installs/replaces trigger only when every configured sport returns ok=true"
   },
   "controls": {
     "models_changed": false,
