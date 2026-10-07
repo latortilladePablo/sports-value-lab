@@ -327,8 +327,9 @@ function svlStoreJsonManifest_(folders, prefix, manifest, now) {
   const sha = svlSha256Bytes_(finalBlob.getBytes());
 
   const manifestsFolder = DriveApp.getFolderById(folders.manifests);
-  const stamp = svlStamp_(now);
-  const snapshotName = prefix + "__" + stamp + "__sha256_" + sha.slice(0, 16) + ".json";
+  // Manifest snapshots are content-addressed too: identical bytes reuse the
+  // same immutable object instead of creating timestamp-only duplicates.
+  const snapshotName = prefix + "__sha256_" + sha + ".json";
   let snap = svlFindByName_(manifestsFolder, snapshotName);
   if (!snap) snap = manifestsFolder.createFile(finalBlob.copyBlob().setName(snapshotName));
 
