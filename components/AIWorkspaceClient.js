@@ -58,7 +58,7 @@ function promptFor(item) {
   return common.join("\n");
 }
 
-export default function AIWorkspaceClient({ queue, handoffEnabled }) {
+export default function AIWorkspaceClient({ queue, history, handoffEnabled }) {
   const [copied, setCopied] = useState("");
   const [handoffRun, setHandoffRun] = useState("");
   const [nextAction, setNextAction] = useState("NINGUNA");
@@ -230,6 +230,55 @@ export default function AIWorkspaceClient({ queue, handoffEnabled }) {
             </details>
           </article>
         ))}
+      </section>
+
+      <section className="snapshotHistory">
+        <div className="sectionHead">
+          <div>
+            <span className="eyebrow">AUDITORÍA DE CAPTURAS</span>
+            <h2>Historial de snapshots</h2>
+          </div>
+          <span className="source">{history.length} snapshot(s) cerrados · más reciente primero</span>
+        </div>
+
+        {history.length ? (
+          <div className="snapshotHistoryList">
+            {history.map((item) => (
+              <article className="snapshotHistoryCard" key={item.runId}>
+                <div className="snapshotHistoryTop">
+                  <div>
+                    <span className="eyebrow">{item.sport}</span>
+                    <h3>{item.mode} · {item.snapshot}</h3>
+                    <code>{item.runId}</code>
+                  </div>
+                  <span className="snapshotStatus">{item.analysisStatus || "SIN ESTADO"}</span>
+                </div>
+
+                <div className="snapshotHistoryMeta">
+                  <div><span>Ejecutado</span><b>{item.executed}</b></div>
+                  <div><span>Eventos</span><b>{item.events}</b></div>
+                  <div><span>Filas odds</span><b>{item.oddsRows}</b></div>
+                  <div><span>Créditos</span><b>{item.credits}</b></div>
+                  <div><span>Picks</span><b>{item.picksRegistered || "0"}</b></div>
+                </div>
+
+                {(item.modelConfig || item.nextP2 || item.handoff) ? (
+                  <details className="snapshotHistoryDetails">
+                    <summary>Ver cierre / handoff</summary>
+                    {item.modelConfig ? <p><strong>Modelo:</strong> {item.modelConfig}</p> : null}
+                    {item.nextP2 ? <p><strong>Próximo P2:</strong> {item.nextP2}</p> : null}
+                    {item.handoff ? <p><strong>Handoff:</strong> {item.handoff}</p> : null}
+                  </details>
+                ) : null}
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div className="aiEmpty">
+            <strong>Aún no hay snapshots cerrados en la ventana visible.</strong>
+            <span>Los P1/P2 completados aparecerán aquí automáticamente.</span>
+          </div>
+        )}
       </section>
     </>
   );
