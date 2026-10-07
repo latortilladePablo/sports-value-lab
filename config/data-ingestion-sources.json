@@ -37,9 +37,54 @@
       ]
     },
     "NBA": {
-      "automation": "NEEDS_ADAPTER",
-      "p5_policy": "Basketball-Reference operational reconciliation; ESPN cross-check; NBA.com official discrepancy verification; SportsDataverse structured enrichment",
-      "assessment": "No recurring user upload should be necessary, but CURRENT docs do not pin one canonical machine-download endpoint/artifact for the weekly structured refresh."
+      "automation": "IMPLEMENTED_PENDING_ONE_TIME_APPS_SCRIPT_DEPLOY",
+      "adapter": "bridge/SVL_NBA_Data_Ingestion.gs",
+      "season_end_year": 2027,
+      "folders": {
+        "current": "1q9OJjX1kGgHkRzn3AMDNY7eI3rYc7L3r",
+        "snapshots": "1p_cNfdVWpcRLW_ez97a0TcpRRgDpGsNl",
+        "manifests": "1gSzolztYB7GjxH12nHIllsuqObSQ7Up8"
+      },
+      "sources": [
+        {
+          "key": "schedule",
+          "provider": "SportsDataverse/hoopR ESPN NBA",
+          "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_schedules/nba_schedule_2027.csv",
+          "required": true
+        },
+        {
+          "key": "team_box",
+          "provider": "SportsDataverse/hoopR ESPN NBA",
+          "release_tag": "espn_nba_team_boxscores",
+          "asset": "team_box_2027.csv",
+          "required": false
+        },
+        {
+          "key": "player_box",
+          "provider": "SportsDataverse/hoopR ESPN NBA",
+          "release_tag": "espn_nba_player_boxscores",
+          "asset": "player_box_2027.csv",
+          "required": false
+        },
+        {
+          "key": "pbp",
+          "provider": "SportsDataverse/hoopR ESPN NBA",
+          "release_tag": "espn_nba_pbp",
+          "asset": "play_by_play_2027.csv",
+          "required": false
+        },
+        {
+          "key": "game_rosters",
+          "provider": "SportsDataverse/hoopR ESPN NBA",
+          "release_tag": "espn_nba_game_rosters",
+          "asset": "game_rosters_2027.csv",
+          "required": false
+        }
+      ],
+      "current_resolution": "Schedule 2027 is canonical required weekly P5 source. Enrichment assets are auto-promoted when SportsDataverse publishes 2027 files.",
+      "reconciliation": "Basketball-Reference operational reconciliation; ESPN Scoreboard cross-check; NBA.com official verification for discrepancies/OT/corrections",
+      "integrity": "provider SHA-256 + size + nonempty schema/game-id coverage; immutable content-addressed snapshots",
+      "activation": "Run svlActivateDataIngestion() once in the bound Apps Script project after syncing bridge files."
     },
     "NHL": {
       "automation": "IMPLEMENTED_PENDING_ONE_TIME_APPS_SCRIPT_DEPLOY",
