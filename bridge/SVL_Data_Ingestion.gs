@@ -334,14 +334,29 @@ function svlScheduledIngestion_() {
   return result;
 }
 
-function svlInstallDailyIngestionTrigger_() {
+/**
+ * PUBLIC — visible in the Apps Script function selector.
+ * Run this once to smoke-test ingestion immediately.
+ */
+function svlRunIngestionNow() {
+  return svlScheduledIngestion_();
+}
+
+/**
+ * PUBLIC — visible in the Apps Script function selector.
+ * Run this once to install/replace the daily ingestion trigger.
+ */
+function svlInstallDailyIngestionTrigger() {
   ScriptApp.getProjectTriggers().forEach(function(t) {
-    if (t.getHandlerFunction() === "svlScheduledIngestion_") ScriptApp.deleteTrigger(t);
+    const handler = t.getHandlerFunction();
+    if (handler === "svlRunIngestionNow" || handler === "svlScheduledIngestion_") {
+      ScriptApp.deleteTrigger(t);
+    }
   });
-  ScriptApp.newTrigger("svlScheduledIngestion_")
+  ScriptApp.newTrigger("svlRunIngestionNow")
     .timeBased()
     .everyDays(1)
     .atHour(11)
     .create();
-  return { ok: true, handler: "svlScheduledIngestion_", cadence: "daily", hour_script_tz: 11 };
+  return { ok: true, handler: "svlRunIngestionNow", cadence: "daily", hour_script_tz: 11 };
 }
