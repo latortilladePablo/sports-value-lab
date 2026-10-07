@@ -35,7 +35,7 @@ export default async function ChatGPTWorkspacePage() {
         blocked: sport.status === "ERROR",
         blockReason: sport.status === "ERROR" ? sport.reason : "",
       }))
-      .sort((a, b) => String(b.executedAt || "").localeCompare(String(a.executedAt || "")));
+  ).sort((a, b) => String(b.executedAt || "").localeCompare(String(a.executedAt || "")));
 
   const queue = snapshots.filter((run) =>
     /PENDING|DATA_READY|SNAPSHOT_READY/i.test(run.analysisStatus || "")
