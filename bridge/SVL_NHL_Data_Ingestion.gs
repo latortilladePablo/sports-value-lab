@@ -5,13 +5,27 @@
  */
 
 const SVL_NHL_SOURCES = [
-  { key:"schedule", tag:"nhl_schedules", file:"nhl_schedule_2027.csv", required:true },
-  { key:"game_rosters", tag:"nhl_game_rosters", file:"game_rosters_2027.csv", required:true },
-  { key:"team_box", tag:"nhl_team_boxscores", file:"team_box_2027.csv", required:true },
-  { key:"player_box", tag:"nhl_player_boxscores", file:"player_box_2027.csv", required:true },
-  { key:"pbp_lite", tag:"nhl_pbp_lite", file:"play_by_play_lite_2027.csv", required:true },
-  { key:"scratches", tag:"nhl_scratches", file:"scratches_2027.csv", required:false },
-  { key:"shifts", tag:"nhl_shifts", file:"shifts_2027.csv", required:false }
+  { key:"schedule", tag:"nhl_schedules", file:"nhl_schedule_2027.csv", required:true,
+    url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_schedules/nhl_schedule_2027.csv",
+    sha256:"dbf51b08466532eab8e37b42437701e60a4cc311fbd672666aa463be3393760f", size:267412, updated_at:"2026-10-07T08:04:01Z" },
+  { key:"game_rosters", tag:"nhl_game_rosters", file:"game_rosters_2027.csv", required:true,
+    url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_game_rosters/game_rosters_2027.csv",
+    sha256:"4f2367a7ebc64a80b1fb122b2fa9fbcd1f719c9d541f09c137bcd9a2c5e0721f", size:168943, updated_at:"2026-10-07T08:02:20Z" },
+  { key:"team_box", tag:"nhl_team_boxscores", file:"team_box_2027.csv", required:true,
+    url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_team_boxscores/team_box_2027.csv",
+    sha256:"b8268afccc5f2fccc3fcaa452d4d7c434cb4563c5b375a5fb285c5d29495b97b", size:9519, updated_at:"2026-10-07T08:02:02Z" },
+  { key:"player_box", tag:"nhl_player_boxscores", file:"player_box_2027.csv", required:true,
+    url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_player_boxscores/player_box_2027.csv",
+    sha256:"c9e488281d1f374a2662289e853d7d45d38aeb5b514677dbfac242063ebcc91d", size:243788, updated_at:"2026-10-07T08:03:52Z" },
+  { key:"pbp_lite", tag:"nhl_pbp_lite", file:"play_by_play_lite_2027.csv", required:true,
+    url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_pbp_lite/play_by_play_lite_2027.csv",
+    sha256:"a442abdb6465f20af2bf14caefcb58d48f7093bebd760768444eccd6a53e687c", size:9597714, updated_at:"2026-10-07T08:03:42Z" },
+  { key:"scratches", tag:"nhl_scratches", file:"scratches_2027.csv", required:false,
+    url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_scratches/scratches_2027.csv",
+    sha256:"669694a46bacd93093b6a8d8d6d2268db35d2fec51d600dc2a06e1b2bc102ec5", size:9253, updated_at:"2026-10-07T08:02:57Z" },
+  { key:"shifts", tag:"nhl_shifts", file:"shifts_2027.csv", required:false,
+    url:"https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_shifts/shifts_2027.csv",
+    sha256:"6546c1d2b5aaeb6df177f5e10d0ef5f2e84c3893028055c70bddaa7dbc03b909", size:4049982, updated_at:"2026-10-07T08:02:29Z" }
 ];
 
 function svlIngestNHL_() {
@@ -23,7 +37,7 @@ function svlIngestNHL_() {
 
   SVL_NHL_SOURCES.forEach(function(src) {
     try {
-      const rel = svlNHLReleaseAsset_(src.tag, src.file);
+      const rel = svlNHLReleaseAsset_(src);
       const resp = UrlFetchApp.fetch(rel.browser_download_url, {
         method:"get", followRedirects:true, muteHttpExceptions:true,
         headers:{"User-Agent":"SportsValueLab/1.0"}
@@ -84,17 +98,13 @@ function svlIngestNHL_() {
   return {ok:overall!=="INCOMPLETE",sport:"NHL",status:overall,manifest:m,source_count:Object.keys(stored).length,failures:failures};
 }
 
-function svlNHLReleaseAsset_(tag, fileName) {
-  const api = "https://api.github.com/repos/sportsdataverse/sportsdataverse-data/releases/tags/" + encodeURIComponent(tag);
-  const r = UrlFetchApp.fetch(api, {
-    method:"get", followRedirects:true, muteHttpExceptions:true,
-    headers:{"Accept":"application/vnd.github+json","User-Agent":"SportsValueLab/1.0"}
-  });
-  svlRequire2xx_(r, "NHL release metadata " + tag);
-  const j = JSON.parse(r.getContentText());
-  const a = (j.assets || []).filter(function(x){ return x.name === fileName; })[0];
-  if (!a) throw new Error("asset_not_found " + tag + "/" + fileName);
-  return a;
+function svlNHLReleaseAsset_(src) {
+  return {
+    browser_download_url: src.url,
+    digest: "sha256:" + src.sha256,
+    size: src.size,
+    updated_at: src.updated_at
+  };
 }
 
 function svlNHLCoverage_(sourceKey, csvText) {
