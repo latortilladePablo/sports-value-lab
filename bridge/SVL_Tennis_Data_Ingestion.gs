@@ -15,6 +15,12 @@ const SVL_TENNIS = {
     tournamentsUrl: "https://api.wtatennis.com/tennis/tournaments/",
     matchesTemplate: "https://api.wtatennis.com/tennis/tournaments/{id}/{year}/matches"
   },
+  ATP_FALLBACK: {
+    host: "tennis-api-atp-wta-itf.p.rapidapi.com",
+    base: "https://tennis-api-atp-wta-itf.p.rapidapi.com",
+    scriptProperty: "SVL_TENNIS_API_KEY",
+    allowedRankIds: [2,3,4,7]
+  },
   crosscheck: "Flashscore Tennis Results by tournament/week; verification only"
 };
 
@@ -89,7 +95,26 @@ function svlIngestTennis_() {
       });
     });
   } catch (e) {
-    failures.push({tour:"ATP",stage:"current_scores",error:String(e)});
+    const officialError = String(e);
+    try {
+      const fb = svlTennisFetchATPFallback_(fromIso, toIso, retrievedAt);
+      raw.atp = {
+        source: "RapidAPI Tennis API fallback",
+        official_atp_error: officialError,
+        fallback: fb.raw
+      };
+      fb.events.forEach(function(ev){ pulled.push(ev); });
+      if (!fb.events.length) {
+        failures.push({tour:"ATP",stage:"fallback_empty",error:"RapidAPI fallback returned zero in-scope ATP completed results for window " + fromIso + ".." + toIso, official_error:officialError});
+      }
+    } catch (fallbackErr) {
+      failures.push({
+        tour:"ATP",
+        stage:"official_and_fallback",
+        official_error:officialError,
+        fallback_error:String(fallbackErr && fallbackErr.message ? fallbackErr.message : fallbackErr)
+      });
+    }
   }
 
   // WTA official API: discover tournaments in the date window, then pull matches per edition.
@@ -199,10 +224,11 @@ function svlIngestTennis_() {
     },
     contract:{
       atp_primary:["ATP Tour Results Archive","ATP Tour current scores JSON backend"],
+      atp_structured_fallback:"RapidAPI Tennis API results-by-date-range, ATP main tour/Masters/Grand Slam/Tour Finals only; used only when ATP Tour is blocked from Apps Script",
       wta_primary:["WTA official tournament calendar API","WTA official tournament matches API"],
       crosscheck:SVL_TENNIS.crosscheck,
       scope:"ATP Singles + WTA Singles",
-      statuses:["FINISHED","RETIRED","WALKOVER","CANCELLED","POSTPONED","LIVE","SCHEDULED"],
+      statuses:["FINISHED","RETIRED","WALKOVER","DEFAULT","CANCELLED","POSTPONED","LIVE","SCHEDULED"],
       settlement_note:"Retirement/walkover/cancelled remain explicit; set scores are never converted into completed-match results."
     },
     coverage:coverage,
@@ -211,6 +237,127 @@ function svlIngestTennis_() {
   };
   const ms = svlStoreJsonManifest_(cfg.folders,"TENNIS_INGESTION",manifest,now);
   return {ok:state!=="INCOMPLETE",sport:"Tennis",status:state,manifest:ms,coverage:coverage,failures:failures};
+}
+
+function svlTennisFetchATPFallback_(fromIso,toIso,retrievedAt) {
+  const key = PropertiesService.getScriptProperties().getProperty(SVL_TENNIS.ATP_FALLBACK.scriptProperty);
+  if (!key) throw new Error("missing_script_property_" + SVL_TENNIS.ATP_FALLBACK.scriptProperty);
+
+  const all = [];
+  const rawPages = [];
+  let pageNo = 1;
+  let more = true;
+  while (more && pageNo <= 10) {
+    const url = SVL_TENNIS.ATP_FALLBACK.base +
+      "/tennis/v2/atp/results/" + encodeURIComponent(fromIso) + "/" + encodeURIComponent(toIso) +
+      "?pageSize=500&pageNo=" + pageNo + "&filter=" + encodeURIComponent("PlayerGroup:singles");
+    const r = UrlFetchApp.fetch(url, {
+      method:"get", followRedirects:true, muteHttpExceptions:true,
+      headers:{
+        "X-RapidAPI-Key":key,
+        "X-RapidAPI-Host":SVL_TENNIS.ATP_FALLBACK.host,
+        "Accept":"application/json",
+        "User-Agent":"SportsValueLab/1.0"
+      }
+    });
+    svlRequire2xx_(r, "ATP RapidAPI fallback");
+    const j = JSON.parse(r.getContentText());
+    rawPages.push({
+      pageNo:pageNo,
+      sha256:svlSha256Bytes_(r.getBlob().getBytes()),
+      size_bytes:r.getBlob().getBytes().length,
+      payload:j
+    });
+    (j.data || []).forEach(function(row){ all.push(row); });
+    more = j.hasNextPage === true;
+    pageNo += 1;
+  }
+
+  const allowed = {};
+  SVL_TENNIS.ATP_FALLBACK.allowedRankIds.forEach(function(x){ allowed[String(x)] = true; });
+  const events = all.filter(function(row){
+    const t = row.tournament || {};
+    const rankId = t.rankId !== undefined && t.rankId !== null ? t.rankId : (t.rank && t.rank.id);
+    return allowed[String(rankId)] === true;
+  }).map(function(row){ return svlTennisNormalizeATPFallback_(row,retrievedAt); }).filter(Boolean);
+
+  return {
+    events:events,
+    raw:{
+      provider:"Tennis API - ATP WTA ITF via RapidAPI",
+      endpoint:"/tennis/v2/atp/results/{startDate}/{endDate}",
+      window:{from:fromIso,to:toIso},
+      filter:"PlayerGroup:singles",
+      in_scope_rank_ids:SVL_TENNIS.ATP_FALLBACK.allowedRankIds,
+      pages:rawPages
+    }
+  };
+}
+
+function svlTennisNormalizeATPFallback_(row,retrievedAt) {
+  const p1=row.player1||{}, p2=row.player2||{}, t=row.tournament||{};
+  const mid=String(row.matchId || row.id || "");
+  const tid=String(row.tournamentId || t.id || "");
+  if (!mid || !tid || !p1.id || !p2.id) return null;
+
+  const rt=String(row.result_type || "completed").toLowerCase();
+  let status="FINISHED";
+  if (rt==="retired") status="RETIRED";
+  else if (rt==="walkover") status="WALKOVER";
+  else if (rt==="default") status="DEFAULT";
+
+  return {
+    event_id:"ATP:RAPID:"+tid+":"+mid,
+    tour:"ATP",
+    tournament_id:"ATP:RAPID:"+tid,
+    tournament_name:t.name||null,
+    tournament_location:t.countryAcr||null,
+    tournament_rank_id:t.rankId!==undefined?t.rankId:(t.rank?t.rank.id:null),
+    provider_match_id:mid,
+    round_raw:row.roundId===undefined||row.roundId===null?null:String(row.roundId),
+    round_normalized:svlTennisRapidRound_(row.roundId),
+    player_a_id:"ATP:RAPID:"+String(p1.id),
+    player_a_name:p1.name||null,
+    player_b_id:"ATP:RAPID:"+String(p2.id),
+    player_b_name:p2.name||null,
+    winner_side:"A",
+    status:status,
+    status_raw:rt,
+    status_detail:row.result||null,
+    set_scores:svlTennisParseScoreString_(row.result||""),
+    start_utc:row.date||null,
+    source_name:"RapidAPI Tennis API ATP fallback",
+    source_url:SVL_TENNIS.ATP_FALLBACK.base + "/tennis/v2/atp/results",
+    source_role:"structured_fallback_when_ATP_Tour_blocked",
+    retrieved_at:retrievedAt
+  };
+}
+
+function svlTennisRapidRound_(roundId) {
+  const n=Number(roundId);
+  if (!isFinite(n)) return null;
+  if (n===12) return "F";
+  if (n===10) return "SF";
+  if (n===9) return "QF";
+  if (n===8) return "R16";
+  if (n===7) return "R32";
+  if (n===6) return "R64";
+  if (n===5) return "R128";
+  if (n>=0 && n<=3) return "Q";
+  return null;
+}
+
+function svlTennisParseScoreString_(score) {
+  const clean=String(score||"").replace(/\b(ret\.?|retired|w\/o|walkover|default)\b/ig," ").trim();
+  if (!clean) return [];
+  const tokens=clean.split(/\s+/);
+  const sets=[];
+  tokens.forEach(function(tok,i){
+    const m=tok.match(/^(\d+)-(\d+)(?:\((\d+)\))?$/);
+    if (!m) return;
+    sets.push({set:sets.length+1,a:Number(m[1]),b:Number(m[2]),tiebreak_loser:m[3]?Number(m[3]):null});
+  });
+  return sets;
 }
 
 function svlTennisNormalizeATP_(t,m,retrievedAt) {
