@@ -1,12 +1,7 @@
-name: NFL PBP Refresh
+name: NFL PBP Refresh (Fallback)
 
 on:
   workflow_dispatch:
-  schedule:
-    # Tuesdays 19:30 UTC = 13:30 America/Mexico_City.
-    # Fallback run Wednesday 07:30 UTC = 01:30 America/Mexico_City.
-    - cron: "30 19 * * 2"
-    - cron: "30 7 * * 3"
 
 permissions:
   contents: read
