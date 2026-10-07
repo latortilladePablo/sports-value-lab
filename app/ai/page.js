@@ -6,12 +6,16 @@ import { isOwnerAuthorized, ownerSecurityConfigured } from "../../lib/owner-auth
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-function bridgeSupportsHandoff(version) {
+function bridgeVersionAtLeast(version, minMajor, minMinor) {
   const m = String(version || "").match(/^v(\d+)\.(\d+)/i);
   if (!m) return false;
   const major = Number(m[1]);
   const minor = Number(m[2]);
-  return major > 1 || (major === 1 && minor >= 2);
+  return major > minMajor || (major === minMajor && minor >= minMinor);
+}
+
+function bridgeSupportsHandoff(version) {
+  return bridgeVersionAtLeast(version, 1, 2);
 }
 
 function runTimeValue(value) {
@@ -115,6 +119,7 @@ export default async function ChatGPTWorkspacePage() {
         queue={queue}
         history={history}
         handoffEnabled={bridgeSupportsHandoff(data.bridgeVersion) && ownerAuthorized}
+        largeExportEnabled={bridgeVersionAtLeast(data.bridgeVersion, 1, 4)}
       />
 
       <footer>
