@@ -16,9 +16,10 @@ const SVL_TENNIS = {
     matchesTemplate: "https://api.wtatennis.com/tennis/tournaments/{id}/{year}/matches"
   },
   ATP_FALLBACK: {
-    host: "tennis-api-atp-wta-itf.p.rapidapi.com",
-    base: "https://tennis-api-atp-wta-itf.p.rapidapi.com",
+    provider: "SportsAPI365 Direct",
+    base: "https://api.sportsapi365.com/v1/tennis",
     scriptProperty: "SVL_TENNIS_API_KEY",
+    authHeader: "X-Gravitee-Api-Key",
     allowedRankIds: [2,3,4,7]
   },
   crosscheck: "Flashscore Tennis Results by tournament/week; verification only"
@@ -224,7 +225,7 @@ function svlIngestTennis_() {
     },
     contract:{
       atp_primary:["ATP Tour Results Archive","ATP Tour current scores JSON backend"],
-      atp_structured_fallback:"RapidAPI Tennis API results-by-date-range, ATP main tour/Masters/Grand Slam/Tour Finals only; used only when ATP Tour is blocked from Apps Script",
+      atp_structured_fallback:"SportsAPI365 Direct Tennis API results-by-date-range, ATP main tour/Masters/Grand Slam/Tour Finals only; used only when ATP Tour is blocked from Apps Script",
       wta_primary:["WTA official tournament calendar API","WTA official tournament matches API"],
       crosscheck:SVL_TENNIS.crosscheck,
       scope:"ATP Singles + WTA Singles",
@@ -249,18 +250,17 @@ function svlTennisFetchATPFallback_(fromIso,toIso,retrievedAt) {
   let more = true;
   while (more && pageNo <= 10) {
     const url = SVL_TENNIS.ATP_FALLBACK.base +
-      "/tennis/v2/atp/results/" + encodeURIComponent(fromIso) + "/" + encodeURIComponent(toIso) +
+      "/atp/results/" + encodeURIComponent(fromIso) + "/" + encodeURIComponent(toIso) +
       "?pageSize=500&pageNo=" + pageNo + "&filter=" + encodeURIComponent("PlayerGroup:singles");
     const r = UrlFetchApp.fetch(url, {
       method:"get", followRedirects:true, muteHttpExceptions:true,
       headers:{
-        "X-RapidAPI-Key":key,
-        "X-RapidAPI-Host":SVL_TENNIS.ATP_FALLBACK.host,
+        "X-Gravitee-Api-Key":key,
         "Accept":"application/json",
         "User-Agent":"SportsValueLab/1.0"
       }
     });
-    svlRequire2xx_(r, "ATP RapidAPI fallback");
+    svlRequire2xx_(r, "ATP SportsAPI365 fallback");
     const j = JSON.parse(r.getContentText());
     rawPages.push({
       pageNo:pageNo,
@@ -284,8 +284,8 @@ function svlTennisFetchATPFallback_(fromIso,toIso,retrievedAt) {
   return {
     events:events,
     raw:{
-      provider:"Tennis API - ATP WTA ITF via RapidAPI",
-      endpoint:"/tennis/v2/atp/results/{startDate}/{endDate}",
+      provider:"SportsAPI365 Direct Tennis API",
+      endpoint:"/atp/results/{startDate}/{endDate}",
       window:{from:fromIso,to:toIso},
       filter:"PlayerGroup:singles",
       in_scope_rank_ids:SVL_TENNIS.ATP_FALLBACK.allowedRankIds,
@@ -307,18 +307,18 @@ function svlTennisNormalizeATPFallback_(row,retrievedAt) {
   else if (rt==="default") status="DEFAULT";
 
   return {
-    event_id:"ATP:RAPID:"+tid+":"+mid,
+    event_id:"ATP:SPORTSAPI365:"+tid+":"+mid,
     tour:"ATP",
-    tournament_id:"ATP:RAPID:"+tid,
+    tournament_id:"ATP:SPORTSAPI365:"+tid,
     tournament_name:t.name||null,
     tournament_location:t.countryAcr||null,
     tournament_rank_id:t.rankId!==undefined?t.rankId:(t.rank?t.rank.id:null),
     provider_match_id:mid,
     round_raw:row.roundId===undefined||row.roundId===null?null:String(row.roundId),
     round_normalized:svlTennisRapidRound_(row.roundId),
-    player_a_id:"ATP:RAPID:"+String(p1.id),
+    player_a_id:"ATP:SPORTSAPI365:"+String(p1.id),
     player_a_name:p1.name||null,
-    player_b_id:"ATP:RAPID:"+String(p2.id),
+    player_b_id:"ATP:SPORTSAPI365:"+String(p2.id),
     player_b_name:p2.name||null,
     winner_side:"A",
     status:status,
@@ -326,8 +326,8 @@ function svlTennisNormalizeATPFallback_(row,retrievedAt) {
     status_detail:row.result||null,
     set_scores:svlTennisParseScoreString_(row.result||""),
     start_utc:row.date||null,
-    source_name:"RapidAPI Tennis API ATP fallback",
-    source_url:SVL_TENNIS.ATP_FALLBACK.base + "/tennis/v2/atp/results",
+    source_name:"SportsAPI365 Direct ATP fallback",
+    source_url:SVL_TENNIS.ATP_FALLBACK.base + "/atp/results",
     source_role:"structured_fallback_when_ATP_Tour_blocked",
     retrieved_at:retrievedAt
   };
