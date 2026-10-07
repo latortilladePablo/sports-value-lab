@@ -8,7 +8,7 @@
 const SVL_TENNIS = {
   overlapDays: 8,
   ATP: {
-    currentScoresUrl: "https://www.atptour.com/-/ajax/Scores/GetInitialScores",
+    currentScoresUrl: "https://www.atptour.com/en/-/ajax/Scores/GetInitialScores",
     archiveTemplate: "https://www.atptour.com/en/scores/results-archive?year={year}"
   },
   WTA: {
@@ -48,7 +48,10 @@ function svlIngestTennis_() {
     const archiveUrl = SVL_TENNIS.ATP.archiveTemplate.replace("{year}", String(year));
     const ar = UrlFetchApp.fetch(archiveUrl, {
       method:"get", followRedirects:true, muteHttpExceptions:true,
-      headers:{"User-Agent":"Mozilla/5.0 SportsValueLab/1.0"}
+      headers:{
+        "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/129.0 Safari/537.36",
+        "Referer":"https://www.atptour.com/en/scores/results-archive"
+      }
     });
     const acode = ar.getResponseCode();
     atpArchive = {
@@ -66,7 +69,12 @@ function svlIngestTennis_() {
   try {
     const r = UrlFetchApp.fetch(SVL_TENNIS.ATP.currentScoresUrl, {
       method:"get", followRedirects:true, muteHttpExceptions:true,
-      headers:{"Accept":"application/json","User-Agent":"Mozilla/5.0 SportsValueLab/1.0"}
+      headers:{
+        "Accept":"application/json, text/javascript, */*; q=0.01",
+        "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/129.0 Safari/537.36",
+        "X-Requested-With":"XMLHttpRequest",
+        "Referer":"https://www.atptour.com/en/scores/current"
+      }
     });
     svlRequire2xx_(r, "ATP current scores");
     const txt = r.getContentText();
