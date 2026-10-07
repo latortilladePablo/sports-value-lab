@@ -32,6 +32,14 @@ const SVL_INGESTION = {
         releaseApi: "https://api.github.com/repos/nflverse/nflverse-data/releases/tags/pbp",
         directBase: "https://github.com/nflverse/nflverse-data/releases/download/pbp/"
       }
+    },
+    NHL: {
+      folders: {
+        current: "1J9Mtu1YYwb0808U9BntBSaOdfYxyS_HS",
+        snapshots: "16rfKOBakcPY0wosyVCmdfK1qNmjsr8Bo",
+        manifests: "19fEQRV5L2x-zH1PBKVHjTWlHHy7DPzDp"
+      },
+      seasonEndYear: 2027
     }
   }
 };
@@ -42,7 +50,7 @@ function svlDataIngestionDispatch_(body) {
     return {
       ok: true,
       version: SVL_INGESTION.VERSION,
-      results: ["NFL"].map(function(s) {
+      results: ["NFL", "NHL"].map(function(s) {
         try { return svlIngestSport_(s); }
         catch (err) { return { ok: false, sport: s, error: String(err && err.message ? err.message : err) }; }
       })
@@ -374,6 +382,12 @@ function svlRunIngestionNow() {
  * PUBLIC — visible in the Apps Script function selector.
  * Run this once to install/replace the daily ingestion trigger.
  */
+function svlActivateDataIngestion() {
+  const smoke = svlScheduledIngestion_();
+  if (!smoke || smoke.ok !== true) throw new Error("Ingestion smoke test failed: " + JSON.stringify(smoke));
+  return svlInstallDailyIngestionTrigger();
+}
+
 function svlInstallDailyIngestionTrigger() {
   ScriptApp.getProjectTriggers().forEach(function(t) {
     const handler = t.getHandlerFunction();
