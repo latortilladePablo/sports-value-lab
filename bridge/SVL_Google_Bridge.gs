@@ -6,7 +6,7 @@
  */
 
 const SVL = {
-  BRIDGE_VERSION: "v1.2-chatgpt-handoff",
+  BRIDGE_VERSION: "v1.3-data-ingestion",
   TZ: "America/Mexico_City",
   REGISTER: "10IF8B_kZJ2CECt4mJWR-7C-nNljQ3y4N2l4wiLtep6U",
   SPORTS: {
@@ -96,6 +96,9 @@ function doPost(e) {
     }
     if (body.command === "chatgpt_handoff") {
       return json_(markChatGPTComplete_(body));
+    }
+    if (body.command === "ingest") {
+      return json_(svlDataIngestionDispatch_(body));
     }
 
     return json_({ ok: false, error: "unsupported_command" });
