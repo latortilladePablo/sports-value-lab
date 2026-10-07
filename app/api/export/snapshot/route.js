@@ -2,6 +2,23 @@ import { NextResponse } from "next/server";
 import { getDashboardData } from "../../../../lib/live";
 import { getAnalysisSnapshot } from "../../../../lib/bridge-ai";
 
+export const maxDuration = 60;
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function getSnapshotWithRetry(sport, runId) {
+  let last = null;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    last = await getAnalysisSnapshot(sport, runId);
+    const rows = Array.isArray(last?.rows) ? last.rows : [];
+    if (rows.length) return last;
+    if (attempt < 2) await sleep(900 * (attempt + 1));
+  }
+  return last;
+}
+
 function csvCell(value) {
   const s = String(value ?? "");
   return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
@@ -59,7 +76,7 @@ export async function GET(request) {
       return NextResponse.json({ ok: false, error: "Ese run no está pendiente de análisis" }, { status: 409 });
     }
 
-    const snapshot = await getAnalysisSnapshot(sport.name, runId);
+    const snapshot = await getSnapshotWithRetry(sport.name, runId);
     const rows = Array.isArray(snapshot.rows) ? snapshot.rows : [];
     if (!rows.length) {
       return NextResponse.json({ ok: false, error: "Snapshot vacío" }, { status: 409 });
@@ -81,9 +98,13 @@ export async function GET(request) {
       },
     });
   } catch (err) {
-    return NextResponse.json({
-      ok: false,
-      error: err instanceof Error ? err.message : "No se pudo exportar el snapshot",
-    }, { status: 500 });
+    const message = err instanceof Error ? err.message : "No se pudo exportar el snapshot";
+    if (message === "snapshot_too_large") {
+      return NextResponse.json({
+        ok: false,
+        error: "Este snapshot supera el límite del bridge publicado. Actualiza el bridge de exportación y vuelve a intentar.",
+      }, { status: 409 });
+    }
+    return NextResponse.json({ ok: false, error: message }, { status: 500 });
   }
 }
