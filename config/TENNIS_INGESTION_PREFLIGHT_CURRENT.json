@@ -1,0 +1,93 @@
+{
+  "schema": "SVL Tennis ingestion preflight v1",
+  "generated_at_cdmx": "2026-10-07",
+  "sport": "Tennis",
+  "status": "IMPLEMENTED_PENDING_ONE_TIME_APPS_SCRIPT_DEPLOY",
+  "source_contract": {
+    "ATP": {
+      "results_archive": "https://www.atptour.com/en/scores/results-archive?year={year}",
+      "structured_current_scores": "https://www.atptour.com/-/ajax/Scores/GetInitialScores",
+      "scope": "ATP Singles",
+      "identity": "ATP:{year}:{EventId}:{match.Id}",
+      "special_status_detection": "provider Status + MatchInfo keywords for retirement/walkover/cancelled; set scores preserved from TeamOne/TeamTwo.Scores"
+    },
+    "WTA": {
+      "tournaments": "https://api.wtatennis.com/tennis/tournaments/?page=0&pageSize=100&excludeLevels=ITF&from={YYYY-MM-DD}&to={YYYY-MM-DD}",
+      "matches": "https://api.wtatennis.com/tennis/tournaments/{tournamentGroup.id}/{year}/matches?from={YYYY-MM-DD}&to={YYYY-MM-DD}",
+      "scope": "WTA Singles",
+      "identity": "WTA:{year}:{tournamentGroup.id}:{MatchID}",
+      "special_status_detection": "MatchState F/C/U/W/X/P; ResultString Ret'd/walkover; ScoreSet1..5 preserved"
+    },
+    "crosscheck": "Flashscore Tennis Results by tournament/week — verification only"
+  },
+  "real_week_validation": {
+    "window": "2026-09-30..2026-10-06",
+    "ATP": {
+      "status": "PASS_SOURCE_DISCOVERY",
+      "evidence": [
+        "ATP Results Archive 2026 lists China Open, Beijing, 30 Sep–6 Oct 2026",
+        "ATP Results Archive 2026 lists Kinoshita Group Japan Open Tennis Championships, Tokyo, 30 Sep–6 Oct 2026",
+        "ATP tournament overview confirms China Open 32 singles / 16 doubles and hard surface"
+      ],
+      "limitation": "Full match-level byte ingestion from the bound Apps Script has not run yet."
+    },
+    "WTA": {
+      "status": "PASS_SOURCE_DISCOVERY",
+      "evidence": [
+        "WTA official Tournament Calendar lists China Open, Beijing, Sep 30–Oct 11 2026",
+        "WTA official China Open scores page exposes day tabs including Sep 30–Oct 6 and current match status views",
+        "Official WTA public API tournament + tournament-edition matches schema is frozen in adapter"
+      ],
+      "limitation": "Full match-level byte ingestion from the bound Apps Script has not run yet."
+    }
+  },
+  "persistence": {
+    "current_files_expected": [
+      "TENNIS_ATP_RAW_CURRENT.json",
+      "TENNIS_WTA_RAW_CURRENT.json",
+      "TENNIS_EVENTS_CURRENT.json",
+      "TENNIS_INGESTION_CURRENT.json"
+    ],
+    "snapshots": "content-addressed SHA-256 immutable",
+    "manifests": "immutable per-run + CURRENT manifest",
+    "fields": [
+      "source_url",
+      "retrieved_at",
+      "updated_at",
+      "sha256",
+      "size_bytes",
+      "coverage",
+      "status"
+    ]
+  },
+  "repository": {
+    "adapter_commit": "dca8ad1ae86b2c66a8415337f986dfba51c41c59",
+    "dispatcher_commit": "e85704305f9445a90fe28434fe69a935db98c4de",
+    "registry_commit": "5e02c397d1a93d498ec04aee8dbc2778fad237fd"
+  },
+  "storage_before_activation": {
+    "current_files": 0,
+    "snapshot_files": 0,
+    "manifest_files": 0
+  },
+  "full_execution_status": "PENDING_ONE_TIME_APPS_SCRIPT_ACTIVATION",
+  "trigger": {
+    "activation_function": "svlActivateDataIngestion",
+    "scheduled_handler": "svlRunIngestionNow",
+    "cadence": "daily",
+    "shared_scope": [
+      "NFL",
+      "NBA",
+      "NHL",
+      "SOCCER",
+      "TENNIS"
+    ]
+  },
+  "controls": {
+    "models_changed": false,
+    "features_changed": false,
+    "picks_changed": false,
+    "odds_requested": false,
+    "register_written": false
+  }
+}
