@@ -1,0 +1,86 @@
+{
+  "schema": "SVL NHL ingestion preflight v1",
+  "generated_at_cdmx": "2026-10-07",
+  "sport": "NHL",
+  "season_end_year": 2027,
+  "adapter_commit": "6c4dbab146aa06d272c8027a75ce8655800cb7f6",
+  "dispatch_commit": "9e5a15cf0f96f233a24c7fcd88e70640a2ef2e99",
+  "source_registry_commit": "ce4647e6f54f7dc8d15b3b28c911592d22375190",
+  "source_contract": "SportsDataverse fastRhockey releases; Hockey-Reference reconcile; ESPN cross-check; NHL.com official verification",
+  "metadata_execution": {
+    "status": "PASS",
+    "independent_reads": 2,
+    "idempotent": true,
+    "pinned_assets": {
+      "schedule": {
+        "name": "nhl_schedule_2027.csv",
+        "size": 267412,
+        "sha256": "dbf51b08466532eab8e37b42437701e60a4cc311fbd672666aa463be3393760f",
+        "updated_at": "2026-10-07T08:04:01Z"
+      },
+      "game_rosters": {
+        "name": "game_rosters_2027.csv",
+        "size": 168943,
+        "sha256": "4f2367a7ebc64a80b1fb122b2fa9fbcd1f719c9d541f09c137bcd9a2c5e0721f",
+        "updated_at": "2026-10-07T08:02:20Z"
+      },
+      "team_box": {
+        "name": "team_box_2027.csv",
+        "size": 9519,
+        "sha256": "b8268afccc5f2fccc3fcaa452d4d7c434cb4563c5b375a5fb285c5d29495b97b",
+        "updated_at": "2026-10-07T08:02:02Z"
+      },
+      "player_box": {
+        "name": "player_box_2027.csv",
+        "size": 243788,
+        "sha256": "c9e488281d1f374a2662289e853d7d45d38aeb5b514677dbfac242063ebcc91d",
+        "updated_at": "2026-10-07T08:03:52Z"
+      },
+      "pbp_lite": {
+        "name": "play_by_play_lite_2027.csv",
+        "size": 9597714,
+        "sha256": "a442abdb6465f20af2bf14caefcb58d48f7093bebd760768444eccd6a53e687c",
+        "updated_at": "2026-10-07T08:03:42Z"
+      },
+      "scratches": {
+        "name": "scratches_2027.csv",
+        "size": 9253,
+        "sha256": "669694a46bacd93093b6a8d8d6d2268db35d2fec51d600dc2a06e1b2bc102ec5",
+        "updated_at": "2026-10-07T08:02:57Z"
+      },
+      "shifts": {
+        "name": "shifts_2027.csv",
+        "size": 4049982,
+        "sha256": "6546c1d2b5aaeb6df177f5e10d0ef5f2e84c3893028055c70bddaa7dbc03b909",
+        "updated_at": "2026-10-07T08:02:29Z"
+      }
+    }
+  },
+  "drive_state_before_activation": {
+    "current_files": 0,
+    "snapshot_files": 0,
+    "manifest_files": 0
+  },
+  "full_byte_ingestion": {
+    "status": "PENDING_ONE_TIME_APPS_SCRIPT_ACTIVATION",
+    "reason": "Connected runtime cannot execute the bound Apps Script project or stream GitHub release binaries into the configured Drive folders directly.",
+    "expected_after_activation": [
+      "DATA/NHL/ingestion/CURRENT source files",
+      "content-addressed immutable snapshots",
+      "NHL_INGESTION_CURRENT.json",
+      "immutable run manifest"
+    ]
+  },
+  "trigger": {
+    "handler": "svlRunIngestionNow",
+    "installer": "svlActivateDataIngestion",
+    "cadence": "daily",
+    "hour_script_tz": 11
+  },
+  "controls": {
+    "models_changed": false,
+    "picks_changed": false,
+    "odds_requested": false,
+    "register_written": false
+  }
+}
