@@ -1,0 +1,94 @@
+{
+  "schema": "SVL Global P5 Dry Run v1",
+  "generated_at": "2026-10-07",
+  "mode": "READ_ONLY_CURRENT_MANIFESTS",
+  "writes_performed": false,
+  "network_source_refresh": false,
+  "notes": [
+    "This dry-run evaluates the latest persisted CURRENT manifests in Drive; it does not execute Apps Script source fetches.",
+    "Soccer and Tennis manifests predate the latest egress/fallback code changes, so they remain BLOCKED until one runtime refresh proves the new paths."
+  ],
+  "policy_verification": {
+    "season_data": "PASS — ingestion config routes season data to per-sport DATA ingestion folders",
+    "odds": "PASS — ingestion manifests report odds_requested=false; ODDS_ARCHIVE remains separate",
+    "picks": "PASS — ingestion manifests report pick_register_modified=false; no ingestion code path targets Sports_Value_Lab_Registro_CURRENT",
+    "models": "PASS — manifests report model_modified=false",
+    "features": "PASS where field exists; global layer treats absent as no mutation and ingestion code has no feature writer",
+    "snapshots": "PASS — source snapshots are content-addressed SHA-256; manifest snapshots now also reuse full-content SHA names",
+    "p5_manual_uploads": "PASS by contract — P5 reads CURRENT manifests through p5_context/p5_preflight; no weekly upload step"
+  },
+  "matrix": [
+    {
+      "sport": "NFL",
+      "readiness": "READY",
+      "state": "PROVISIONAL_VALID",
+      "blockers": [],
+      "causes": [
+        "64/64 completed games present through week 4; schedule and PBP required sources present"
+      ],
+      "current_manifest_id": "1hiMxsadM-zs5yXiFkJa4NiU7nMlCFekI"
+    },
+    {
+      "sport": "NBA",
+      "readiness": "READY",
+      "state": "PROVISIONAL_VALID",
+      "blockers": [],
+      "causes": [
+        "Required 2027 schedule present: 1206 rows / 1206 distinct game_ids; optional team/player/PBP/rosters assets return 404 and are non-blocking before publication"
+      ],
+      "current_manifest_id": "1WNJz3om7uLAhjxUVffc4Qo26ziSxl0Ey"
+    },
+    {
+      "sport": "NHL",
+      "readiness": "READY",
+      "state": "PROVISIONAL_VALID",
+      "blockers": [],
+      "causes": [
+        "All 7 configured sources persisted; required schedule, game rosters, team box, player box and PBP lite present; no failures"
+      ],
+      "current_manifest_id": "1I4u_h3b4otYCZSLmuY9So2mR6f5DNsD2"
+    },
+    {
+      "sport": "Soccer",
+      "readiness": "BLOCKED",
+      "state": "INCOMPLETE",
+      "blockers": [
+        "Latest persisted manifest has 0/12 successful ESPN requests and 0 events across all six CURRENT leagues",
+        "Latest Drive manifest still reflects the pre-remediation ESPN host; rerun required to prove alternate-host egress fix"
+      ],
+      "causes": [
+        "HTTP 403 on all 12 month/league requests in persisted run"
+      ],
+      "current_manifest_id": "10uKfwL90XJ06JaM_84EAahA1axRRl5Zw"
+    },
+    {
+      "sport": "Tennis",
+      "readiness": "BLOCKED",
+      "state": "INCOMPLETE",
+      "blockers": [
+        "ATP coverage is 0 in latest persisted manifest",
+        "ATP Tour returned Cloudflare HTTP 403 in persisted run",
+        "RapidAPI fallback code is now installed in repository but has not yet produced a persisted CURRENT run; SVL_TENNIS_API_KEY Script Property cannot be verified from Drive"
+      ],
+      "causes": [
+        "WTA side is healthy: 212 events, 194 final, 9 retired, 2 postponed"
+      ],
+      "current_manifest_id": "1EIwYXoHQ_kWTM6UzZA9GEf0hRGMmVu7V"
+    }
+  ],
+  "ready_sports": [
+    "NFL",
+    "NBA",
+    "NHL"
+  ],
+  "blocked_sports": [
+    "Soccer",
+    "Tennis"
+  ],
+  "repository": {
+    "global_preflight_commit": "3256ca2588c45e4dc303e6c980b6e29b2db279b5",
+    "bridge_command_commit": "e5e141150b7ec48c871d90435450fc93ba2c4af1",
+    "manifest_dedup_commit": "1d7453af0db2935c9285d9a243285beb5b0b4773",
+    "global_registry_commit": "7d3fa28c96562c283ddc4e16493e9e804ddf0a34"
+  }
+}
