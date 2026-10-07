@@ -3,7 +3,7 @@
  * CURRENT leagues: ENG.1, ESP.1, ESP.2, GER.1, ITA.1, MEX.1.
  *
  * Machine-readable source:
- * https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/scoreboard?dates=YYYYMMDD
+ * https://site.web.api.espn.com/apis/site/v2/sports/soccer/{league}/scoreboard?dates=YYYYMMDD
  *
  * P5 keeps 90m regulation score separate from extra time / penalties.
  * Official competition sites are captured for discrepancies, postponements,
@@ -50,7 +50,7 @@ function svlIngestSoccer_() {
       specs.push({
         league:lg,
         ymd:ymd,
-        url:"https://site.api.espn.com/apis/site/v2/sports/soccer/" + lg.espn + "/scoreboard?dates=" + ymd
+        url:"https://site.web.api.espn.com/apis/site/v2/sports/soccer/" + lg.espn + "/scoreboard?dates=" + ymd
       });
     });
   });
@@ -66,7 +66,7 @@ function svlIngestSoccer_() {
         method:"get",
         followRedirects:true,
         muteHttpExceptions:true,
-        headers:{"User-Agent":"Mozilla/5.0 (compatible; SportsValueLab/1.0)","Accept":"application/json,text/plain,*/*","Referer":"https://www.espn.com/"}
+        headers:{"User-Agent":"python-requests/2.32.3","Accept":"application/json"}
       };
     });
     const responses = UrlFetchApp.fetchAll(reqs);
@@ -150,7 +150,7 @@ function svlIngestSoccer_() {
     from_ymd:svlSoccerYmd_(from),
     to_ymd:svlSoccerYmd_(to),
     retrieved_at:retrievedAt,
-    endpoint_template:"https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/scoreboard?dates=YYYYMMDD",
+    endpoint_template:"https://site.web.api.espn.com/apis/site/v2/sports/soccer/{league}/scoreboard?dates=YYYYMMDD",
     responses:responseRecords
   };
   const rawBlob = Utilities.newBlob(JSON.stringify(rawObj), "application/json", "SOCCER_ESPN_INCREMENTAL_CURRENT.json");
