@@ -41,12 +41,12 @@ function svlIngestSoccer_() {
     if (d > seasonStart) from = d;
   }
   const to = svlSoccerTodayUtcDate_(now);
-  const dates = svlSoccerDateRange_(from, to);
+  const dates = svlSoccerMonthRange_(from, to);
 
   const specs = [];
   SVL_SOCCER.leagues.forEach(function(lg) {
     dates.forEach(function(d) {
-      const ymd = svlSoccerYmd_(d);
+      const ymd = Utilities.formatDate(d, "UTC", "yyyyMM");
       specs.push({
         league:lg,
         ymd:ymd,
@@ -66,7 +66,7 @@ function svlIngestSoccer_() {
         method:"get",
         followRedirects:true,
         muteHttpExceptions:true,
-        headers:{"User-Agent":"SportsValueLab/1.0","Accept":"application/json"}
+        headers:{"User-Agent":"Mozilla/5.0 (compatible; SportsValueLab/1.0)","Accept":"application/json,text/plain,*/*","Referer":"https://www.espn.com/"}
       };
     });
     const responses = UrlFetchApp.fetchAll(reqs);
@@ -410,6 +410,17 @@ function svlSoccerParseYmd_(s) {
 
 function svlSoccerYmd_(d) {
   return Utilities.formatDate(d, "UTC", "yyyyMMdd");
+}
+
+function svlSoccerMonthRange_(from,to) {
+  const arr = [];
+  let d = new Date(Date.UTC(from.getUTCFullYear(), from.getUTCMonth(), 1));
+  const end = new Date(Date.UTC(to.getUTCFullYear(), to.getUTCMonth(), 1));
+  while (d <= end) {
+    arr.push(new Date(d.getTime()));
+    d = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 1));
+  }
+  return arr;
 }
 
 function svlSoccerDateRange_(from,to) {
