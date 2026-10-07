@@ -509,7 +509,7 @@ function svlDiagnoseNFLIngestion() {
     };
   });
 
-  const pbpDownloadUrl = pbpDownloadUrl || directUrl;
+  const pbpDownloadUrl = releaseData.browser_download_url || directUrl;
 
   const pbpData = stage_("pbp_binary_fetch", function() {
     const r = UrlFetchApp.fetch(pbpDownloadUrl, {
