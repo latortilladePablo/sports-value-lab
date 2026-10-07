@@ -28,8 +28,9 @@ const SVL_INGESTION = {
         url: "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv"
       },
       pbp: {
-        name: "play_by_play_2026.csv.gz",
-        releaseApi: "https://api.github.com/repos/nflverse/nflverse-data/releases/tags/pbp"
+        filePattern: "play_by_play_<season>.csv.gz",
+        releaseApi: "https://api.github.com/repos/nflverse/nflverse-data/releases/tags/pbp",
+        directBase: "https://github.com/nflverse/nflverse-data/releases/download/pbp/"
       }
     }
   }
@@ -75,36 +76,59 @@ function svlIngestNFL_() {
   const scheduleText = scheduleBlob.getDataAsString("UTF-8");
   const scheduleMeta = svlParseNFLCompletedGames_(scheduleText);
 
-  const releaseResp = UrlFetchApp.fetch(cfg.pbp.releaseApi, {
-    method: "get",
-    muteHttpExceptions: true,
-    headers: {
-      "Accept": "application/vnd.github+json",
-      "User-Agent": "SportsValueLab/1.0"
-    }
-  });
-  svlRequire2xx_(releaseResp, "NFL PBP release metadata");
-  const release = JSON.parse(releaseResp.getContentText());
-  const asset = (release.assets || []).filter(function(a) { return a.name === cfg.pbp.name; })[0];
-  if (!asset) throw new Error("PBP release asset not found: " + cfg.pbp.name);
+  const pbpName = cfg.pbp.filePattern.replace("<season>", String(scheduleMeta.season));
+  const pbpUrl = cfg.pbp.directBase + encodeURIComponent(pbpName);
 
-  const pbpResp = UrlFetchApp.fetch(asset.browser_download_url, {
+  // GitHub release API metadata is optional because Apps Script egress IPs can
+  // hit GitHub's unauthenticated shared-IP rate limit. Direct official release
+  // download remains authoritative for the bytes.
+  let releaseMeta = null;
+  try {
+    const releaseResp = UrlFetchApp.fetch(cfg.pbp.releaseApi, {
+      method: "get",
+      followRedirects: true,
+      muteHttpExceptions: true,
+      headers: {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "SportsValueLab/1.0"
+      }
+    });
+    if (releaseResp.getResponseCode() >= 200 && releaseResp.getResponseCode() < 300) {
+      const release = JSON.parse(releaseResp.getContentText());
+      const asset = (release.assets || []).filter(function(a) { return a.name === pbpName; })[0];
+      if (asset) {
+        releaseMeta = {
+          size: Number(asset.size || 0) || null,
+          digest: String(asset.digest || "").replace(/^sha256:/i, "").toLowerCase() || null,
+          updated_at: asset.updated_at || null,
+          browser_download_url: asset.browser_download_url || pbpUrl
+        };
+      }
+    }
+  } catch (metaErr) {
+    console.log("NFL PBP release metadata optional fetch failed: " + metaErr);
+  }
+
+  const downloadUrl = releaseMeta && releaseMeta.browser_download_url
+    ? releaseMeta.browser_download_url
+    : pbpUrl;
+
+  const pbpResp = UrlFetchApp.fetch(downloadUrl, {
     method: "get",
     followRedirects: true,
     muteHttpExceptions: true,
     headers: { "User-Agent": "SportsValueLab/1.0" }
   });
   svlRequire2xx_(pbpResp, "NFL PBP asset");
-  const pbpBlob = pbpResp.getBlob().setName(cfg.pbp.name);
+  const pbpBlob = pbpResp.getBlob().setName(pbpName);
   const pbpBytes = pbpBlob.getBytes();
   const pbpSha = svlSha256Bytes_(pbpBytes);
-  const expectedDigest = String(asset.digest || "").replace(/^sha256:/i, "").toLowerCase();
 
-  if (expectedDigest && pbpSha !== expectedDigest) {
-    throw new Error("PBP SHA256 mismatch: got " + pbpSha + " expected " + expectedDigest);
+  if (releaseMeta && releaseMeta.digest && pbpSha !== releaseMeta.digest) {
+    throw new Error("PBP SHA256 mismatch: got " + pbpSha + " expected " + releaseMeta.digest);
   }
-  if (Number(asset.size || 0) && pbpBytes.length !== Number(asset.size)) {
-    throw new Error("PBP size mismatch: got " + pbpBytes.length + " expected " + asset.size);
+  if (releaseMeta && releaseMeta.size && pbpBytes.length !== releaseMeta.size) {
+    throw new Error("PBP size mismatch: got " + pbpBytes.length + " expected " + releaseMeta.size);
   }
 
   const pbpText = Utilities.ungzip(pbpBlob).getDataAsString("UTF-8");
@@ -148,12 +172,12 @@ function svlIngestNFL_() {
     folders: cfg.folders,
     sport: "NFL",
     sourceKey: "pbp",
-    fileName: cfg.pbp.name,
+    fileName: pbpName,
     blob: pbpBlob,
     sha256: pbpSha,
     retrievedAt: retrievedIso,
-    updatedAt: asset.updated_at || release.updated_at || null,
-    sourceUrl: asset.browser_download_url,
+    updatedAt: (releaseMeta && releaseMeta.updated_at) || svlHeader_(pbpResp, "Last-Modified") || null,
+    sourceUrl: downloadUrl,
     state: pbpState,
     coverage: coverage
   });
@@ -437,7 +461,10 @@ function svlDiagnoseNFLIngestion() {
     };
   });
 
-  const releaseData = stage_("github_release_metadata", function() {
+  const pbpName = cfg.pbp.filePattern.replace("<season>", String(scheduleMeta.season));
+  const directUrl = cfg.pbp.directBase + encodeURIComponent(pbpName);
+
+  const releaseData = stage_("github_release_metadata_optional", function() {
     const r = UrlFetchApp.fetch(cfg.pbp.releaseApi, {
       method: "get",
       followRedirects: true,
@@ -448,48 +475,57 @@ function svlDiagnoseNFLIngestion() {
       }
     });
     const code = r.getResponseCode();
-    const text = r.getContentText();
     if (code < 200 || code >= 300) {
-      return { code: code, body: text.slice(0, 500) };
+      return {
+        code: code,
+        optional: true,
+        fallback: "direct_release_download",
+        browser_download_url: directUrl
+      };
     }
-    const release = JSON.parse(text);
+    const release = JSON.parse(r.getContentText());
     const asset = (release.assets || []).filter(function(a) {
-      return a.name === cfg.pbp.name;
+      return a.name === pbpName;
     })[0];
     if (!asset) {
       return {
         code: code,
+        optional: true,
         assetFound: false,
-        available: (release.assets || []).map(function(a) { return a.name; }).slice(0, 50)
+        fallback: "direct_release_download",
+        browser_download_url: directUrl
       };
     }
     return {
       code: code,
+      optional: true,
       assetFound: true,
       id: asset.id,
       name: asset.name,
       size: asset.size,
       digest: asset.digest || null,
       updated_at: asset.updated_at || null,
-      browser_download_url: asset.browser_download_url
+      browser_download_url: asset.browser_download_url || directUrl
     };
   });
-  if (!releaseData.assetFound) throw new Error("pbp_asset_not_found");
+
+  const pbpDownloadUrl = pbpDownloadUrl || directUrl;
 
   const pbpData = stage_("pbp_binary_fetch", function() {
-    const r = UrlFetchApp.fetch(releaseData.browser_download_url, {
+    const r = UrlFetchApp.fetch(pbpDownloadUrl, {
       method: "get",
       followRedirects: true,
       muteHttpExceptions: true,
       headers: { "User-Agent": "SportsValueLab/1.0" }
     });
-    const blob = r.getBlob().setName(cfg.pbp.name);
+    const blob = r.getBlob().setName(pbpName);
     const bytes = blob.getBytes();
     return {
       code: r.getResponseCode(),
       contentType: blob.getContentType(),
       bytes: bytes.length,
-      sha256: svlSha256Bytes_(bytes)
+      sha256: svlSha256Bytes_(bytes),
+      lastModified: svlHeader_(r, "Last-Modified")
     };
   });
   if (pbpData.code < 200 || pbpData.code >= 300) {
@@ -499,22 +535,23 @@ function svlDiagnoseNFLIngestion() {
   stage_("pbp_integrity", function() {
     const expectedDigest = String(releaseData.digest || "").replace(/^sha256:/i, "").toLowerCase();
     return {
-      sizeMatches: Number(releaseData.size) === Number(pbpData.bytes),
+      providerMetadataAvailable: !!(releaseData.assetFound),
+      sizeMatches: !releaseData.size || Number(releaseData.size) === Number(pbpData.bytes),
       shaMatches: !expectedDigest || expectedDigest === pbpData.sha256,
-      expectedSize: releaseData.size,
+      expectedSize: releaseData.size || null,
       actualSize: pbpData.bytes,
       expectedSha: expectedDigest || null,
       actualSha: pbpData.sha256
     };
   });
 
-  const pbpResp = UrlFetchApp.fetch(releaseData.browser_download_url, {
+  const pbpResp = UrlFetchApp.fetch(pbpDownloadUrl, {
     method: "get",
     followRedirects: true,
     muteHttpExceptions: true,
     headers: { "User-Agent": "SportsValueLab/1.0" }
   });
-  const pbpBlob = pbpResp.getBlob().setName(cfg.pbp.name);
+  const pbpBlob = pbpResp.getBlob().setName(pbpName);
   const pbpText = stage_("pbp_gunzip", function() {
     const text = Utilities.ungzip(pbpBlob).getDataAsString("UTF-8");
     return { chars: text.length, head: text.slice(0, 120) };
