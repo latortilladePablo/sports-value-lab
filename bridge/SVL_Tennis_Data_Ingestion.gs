@@ -225,7 +225,7 @@ function svlIngestTennis_() {
     },
     contract:{
       atp_primary:["ATP Tour Results Archive","ATP Tour current scores JSON backend"],
-      atp_structured_fallback:"SportsAPI365 Direct Tennis API: fixture range discovery + tournament results, ATP main tour/Masters/Grand Slam/Tour Finals only; used only when ATP Tour is blocked from Apps Script",
+      atp_structured_fallback:"SportsAPI365 Direct Tennis API results-by-date-range, ATP main tour/Masters/Grand Slam/Tour Finals only; used only when ATP Tour is blocked from Apps Script",
       wta_primary:["WTA official tournament calendar API","WTA official tournament matches API"],
       crosscheck:SVL_TENNIS.crosscheck,
       scope:"ATP Singles + WTA Singles",
@@ -247,18 +247,21 @@ function svlTennisFetchATPFallback_(fromIso,toIso,retrievedAt) {
   const allowed = {};
   SVL_TENNIS.ATP_FALLBACK.allowedRankIds.forEach(function(x){ allowed[String(x)] = true; });
 
-  // 1) Discover in-scope tournament editions from fixtures in the requested window.
-  // Direct docs use /v1/tennis/{type}/fixtures/{startDate}/{endDate}.
-  const fixturePages = [];
-  const tournaments = {};
+  // SportsAPI365 Direct exposes completed/historical results by date range.
+  // This is the correct P5 fallback family; fixtures may legitimately be empty
+  // for already-completed matches and must not gate historical result ingestion.
+  const rawPages = [];
+  const all = [];
   let pageNo = 1;
   let more = true;
+
   while (more && pageNo <= 5) {
     const url = SVL_TENNIS.ATP_FALLBACK.base +
-      "/atp/fixtures/" + encodeURIComponent(fromIso) + "/" + encodeURIComponent(toIso) +
-      "?include=" + encodeURIComponent("tournament,tournament.rank") +
+      "/atp/results/" + encodeURIComponent(fromIso) + "/" + encodeURIComponent(toIso) +
+      "?include=" + encodeURIComponent("tournament") +
       "&filter=" + encodeURIComponent("PlayerGroup:singles;TourRank:2,3,4,7") +
       "&pageSize=500&pageNo=" + pageNo;
+
     const r = UrlFetchApp.fetch(url, {
       method:"get", followRedirects:true, muteHttpExceptions:true,
       headers:{
@@ -267,67 +270,34 @@ function svlTennisFetchATPFallback_(fromIso,toIso,retrievedAt) {
         "User-Agent":"SportsValueLab/1.0"
       }
     });
-    svlRequire2xx_(r, "ATP SportsAPI365 fixture discovery");
+    svlRequire2xx_(r, "ATP SportsAPI365 results range");
     const j = JSON.parse(r.getContentText());
-    fixturePages.push({
+
+    let rows = [];
+    if (Array.isArray(j.data)) rows = j.data;
+    else if (j.data && Array.isArray(j.data.singles)) rows = j.data.singles;
+    else if (Array.isArray(j.results)) rows = j.results;
+
+    rawPages.push({
       pageNo:pageNo,
       sha256:svlSha256Bytes_(r.getBlob().getBytes()),
       size_bytes:r.getBlob().getBytes().length,
-      item_count:(j.data || []).length
+      item_count:rows.length
     });
-    (j.data || []).forEach(function(row) {
-      const t = row.tournament || {};
-      const tid = String(row.tournamentId || t.id || "");
-      const rankId = t.rankId !== undefined && t.rankId !== null ? t.rankId : (t.rank && t.rank.id);
-      if (tid && allowed[String(rankId)] === true) {
-        tournaments[tid] = {
-          id:tid,
-          name:t.name || null,
-          rankId:rankId,
-          countryAcr:t.countryAcr || null
-        };
-      }
-    });
+    rows.forEach(function(row){ all.push(row); });
+
     more = j.hasNextPage === true;
     pageNo += 1;
   }
-  if (more) throw new Error("sportsapi365_fixture_discovery_pagination_exceeded");
+  if (more) throw new Error("sportsapi365_results_pagination_exceeded");
 
-  const tournamentIds = Object.keys(tournaments);
-  // Free plan is 50/day. Reserve calls for discovery/other diagnostics rather than silently truncating.
-  if (tournamentIds.length + fixturePages.length > 45) {
-    throw new Error("sportsapi365_daily_quota_guard:tournaments=" + tournamentIds.length + ",fixture_pages=" + fixturePages.length);
-  }
-
-  // 2) Fetch authoritative completed-result draw for each discovered tournament edition.
-  const resultCalls = [];
-  const rows = [];
-  tournamentIds.forEach(function(tid) {
-    const url = SVL_TENNIS.ATP_FALLBACK.base + "/atp/tournament/results/" + encodeURIComponent(tid);
-    const r = UrlFetchApp.fetch(url, {
-      method:"get", followRedirects:true, muteHttpExceptions:true,
-      headers:{
-        "X-Gravitee-Api-Key":key,
-        "Accept":"application/json",
-        "User-Agent":"SportsValueLab/1.0"
-      }
-    });
-    svlRequire2xx_(r, "ATP SportsAPI365 tournament results " + tid);
-    const j = JSON.parse(r.getContentText());
-    const singles = j && j.data && Array.isArray(j.data.singles) ? j.data.singles : [];
-    resultCalls.push({
-      tournament_id:tid,
-      sha256:svlSha256Bytes_(r.getBlob().getBytes()),
-      size_bytes:r.getBlob().getBytes().length,
-      singles_count:singles.length
-    });
-    singles.forEach(function(row) {
-      const d = row.date ? String(row.date).slice(0,10) : "";
-      if (d >= fromIso && d <= toIso) rows.push(row);
-    });
+  const scoped = all.filter(function(row) {
+    const t = row.tournament || {};
+    const rankId = t.rankId !== undefined && t.rankId !== null ? t.rankId : (t.rank && t.rank.id);
+    return allowed[String(rankId)] === true;
   });
 
-  const events = rows.map(function(row){
+  const events = scoped.map(function(row){
     return svlTennisNormalizeATPFallback_(row,retrievedAt);
   }).filter(Boolean);
 
@@ -335,14 +305,13 @@ function svlTennisFetchATPFallback_(fromIso,toIso,retrievedAt) {
     events:events,
     raw:{
       provider:"SportsAPI365 Direct Tennis API",
-      discovery_endpoint:"/atp/fixtures/{startDate}/{endDate}",
-      results_endpoint:"/atp/tournament/results/{seasonId}",
+      endpoint:"/atp/results/{startDate}/{endDate}",
       window:{from:fromIso,to:toIso},
       filter:"PlayerGroup:singles;TourRank:2,3,4,7",
       in_scope_rank_ids:SVL_TENNIS.ATP_FALLBACK.allowedRankIds,
-      fixture_pages:fixturePages,
-      tournaments:tournaments,
-      result_calls:resultCalls,
+      pages:rawPages,
+      raw_rows:all.length,
+      scoped_rows:scoped.length,
       matches_in_window:events.length
     }
   };
