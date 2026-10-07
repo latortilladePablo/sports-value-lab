@@ -16,11 +16,13 @@ const SVL_TENNIS = {
     matchesTemplate: "https://api.wtatennis.com/tennis/tournaments/{id}/{year}/matches"
   },
   ATP_FALLBACK: {
-    provider: "SportsAPI365 Direct",
-    base: "https://api.sportsapi365.com/v1/tennis",
-    scriptProperty: "SVL_TENNIS_API_KEY",
-    authHeader: "X-Gravitee-Api-Key",
-    allowedRankIds: [2,3,4,7]
+    provider: "Live Tennis API",
+    base: "https://api.livetennisapi.com/api/public/v1",
+    scriptProperty: "SVL_TENNIS_LIVE_API_KEY",
+    authHeader: "X-API-Key",
+    trackedFile: "TENNIS_ATP_TRACKED_CURRENT.json",
+    maxCallsPerRun: 90,
+    allowedTiers: ["grand_slam","atp_finals","atp_1000","atp_500","atp_250","next_gen_finals"]
   },
   crosscheck: "Flashscore Tennis Results by tournament/week; verification only"
 };
@@ -100,13 +102,13 @@ function svlIngestTennis_() {
     try {
       const fb = svlTennisFetchATPFallback_(fromIso, toIso, retrievedAt);
       raw.atp = {
-        source: "RapidAPI Tennis API fallback",
+        source: "Live Tennis API fallback",
         official_atp_error: officialError,
         fallback: fb.raw
       };
       fb.events.forEach(function(ev){ pulled.push(ev); });
       if (!fb.events.length) {
-        failures.push({tour:"ATP",stage:"fallback_empty",error:"RapidAPI fallback returned zero in-scope ATP completed results for window " + fromIso + ".." + toIso, official_error:officialError});
+        failures.push({tour:"ATP",stage:"fallback_empty",error:"Live Tennis API fallback returned zero in-scope ATP rows for window " + fromIso + ".." + toIso, official_error:officialError});
       }
     } catch (fallbackErr) {
       failures.push({
@@ -225,7 +227,7 @@ function svlIngestTennis_() {
     },
     contract:{
       atp_primary:["ATP Tour Results Archive","ATP Tour current scores JSON backend"],
-      atp_structured_fallback:"SportsAPI365 Direct Tennis API results-by-date-range, ATP main tour/Masters/Grand Slam/Tour Finals only; used only when ATP Tour is blocked from Apps Script",
+      atp_structured_fallback:"Live Tennis API FREE: prospectively capture ATP main-draw singles match IDs from /matches?status=upcoming and later resolve those same stable IDs with /matches/{matchId}; used only when ATP Tour is blocked from Apps Script. No SportsAPI365 dependency.",
       wta_primary:["WTA official tournament calendar API","WTA official tournament matches API"],
       crosscheck:SVL_TENNIS.crosscheck,
       scope:"ATP Singles + WTA Singles",
@@ -244,113 +246,258 @@ function svlTennisFetchATPFallback_(fromIso,toIso,retrievedAt) {
   const key = PropertiesService.getScriptProperties().getProperty(SVL_TENNIS.ATP_FALLBACK.scriptProperty);
   if (!key) throw new Error("missing_script_property_" + SVL_TENNIS.ATP_FALLBACK.scriptProperty);
 
-  const allowed = {};
-  SVL_TENNIS.ATP_FALLBACK.allowedRankIds.forEach(function(x){ allowed[String(x)] = true; });
+  const cfg = SVL_INGESTION.SPORTS.TENNIS;
+  const priorTrackedObj = svlTennisReadJson_(cfg.folders, SVL_TENNIS.ATP_FALLBACK.trackedFile) || {};
+  const tracked = priorTrackedObj.matches || {};
+  const calls = [];
+  const nowMs = new Date(retrievedAt).getTime();
 
-  // SportsAPI365 Direct exposes completed/historical results by date range.
-  // This is the correct P5 fallback family; fixtures may legitimately be empty
-  // for already-completed matches and must not gate historical result ingestion.
-  const rawPages = [];
-  const all = [];
-  let pageNo = 1;
-  let more = true;
+  // FREE plan strategy: discover ATP main-draw singles prospectively, persist stable
+  // match IDs, then resolve those exact IDs after they start/finish. This avoids
+  // relying on the paid completed-match listing and preserves pre-event identity.
+  const tiers = SVL_TENNIS.ATP_FALLBACK.allowedTiers.join(",");
+  const discoveryUrl = SVL_TENNIS.ATP_FALLBACK.base +
+    "/matches?status=upcoming&tour=atp&draw=singles&is_qualifying=false&tier=" +
+    encodeURIComponent(tiers) + "&limit=100&offset=0";
 
-  while (more && pageNo <= 5) {
-    const url = SVL_TENNIS.ATP_FALLBACK.base +
-      "/atp/results/" + encodeURIComponent(fromIso) + "/" + encodeURIComponent(toIso) +
-      "?include=" + encodeURIComponent("tournament") +
-      "&filter=" + encodeURIComponent("PlayerGroup:singles;TourRank:2,3,4,7") +
-      "&pageSize=500&pageNo=" + pageNo;
+  const discovery = svlTennisLiveGet_(discoveryUrl, key, "ATP Live Tennis discovery");
+  calls.push({kind:"discovery",url:discoveryUrl,http_code:discovery.code,bytes:discovery.bytes});
+  const discovered = Array.isArray(discovery.json.data) ? discovery.json.data : [];
 
-    const r = UrlFetchApp.fetch(url, {
-      method:"get", followRedirects:true, muteHttpExceptions:true,
-      headers:{
-        "X-Gravitee-Api-Key":key,
-        "Accept":"application/json",
-        "User-Agent":"SportsValueLab/1.0"
-      }
-    });
-    svlRequire2xx_(r, "ATP SportsAPI365 results range");
-    const j = JSON.parse(r.getContentText());
-
-    let rows = [];
-    if (Array.isArray(j.data)) rows = j.data;
-    else if (j.data && Array.isArray(j.data.singles)) rows = j.data.singles;
-    else if (Array.isArray(j.results)) rows = j.results;
-
-    rawPages.push({
-      pageNo:pageNo,
-      sha256:svlSha256Bytes_(r.getBlob().getBytes()),
-      size_bytes:r.getBlob().getBytes().length,
-      item_count:rows.length
-    });
-    rows.forEach(function(row){ all.push(row); });
-
-    more = j.hasNextPage === true;
-    pageNo += 1;
-  }
-  if (more) throw new Error("sportsapi365_results_pagination_exceeded");
-
-  const scoped = all.filter(function(row) {
-    const t = row.tournament || {};
-    const rankId = t.rankId !== undefined && t.rankId !== null ? t.rankId : (t.rank && t.rank.id);
-    return allowed[String(rankId)] === true;
+  discovered.forEach(function(row) {
+    if (!svlTennisLiveInScope_(row)) return;
+    const id = String(row.id || "");
+    if (!id) return;
+    const old = tracked[id] || {};
+    tracked[id] = {
+      match_id:id,
+      first_seen_at:old.first_seen_at || retrievedAt,
+      last_seen_at:retrievedAt,
+      scheduled_time:row.scheduled_time || old.scheduled_time || null,
+      tournament_id:row.tournament_id || old.tournament_id || null,
+      tournament:row.tournament || old.tournament || null,
+      tier:row.tier || old.tier || null,
+      round:row.round || old.round || null,
+      round_code:row.round_code || old.round_code || null,
+      surface:row.surface || old.surface || null,
+      player1_id:svlTennisLivePlayerId_(row,1) || old.player1_id || null,
+      player1_name:svlTennisLivePlayerName_(row,1) || old.player1_name || null,
+      player2_id:svlTennisLivePlayerId_(row,2) || old.player2_id || null,
+      player2_name:svlTennisLivePlayerName_(row,2) || old.player2_name || null,
+      status:row.status || old.status || "upcoming",
+      outcome:row.outcome || old.outcome || null,
+      result_version:row.result_version || old.result_version || null,
+      terminal:old.terminal === true,
+      last_checked_at:old.last_checked_at || null,
+      normalized_event:old.normalized_event || null
+    };
   });
 
-  const events = scoped.map(function(row){
-    return svlTennisNormalizeATPFallback_(row,retrievedAt);
-  }).filter(Boolean);
+  // Resolve due/non-terminal IDs. Terminal rows get one inexpensive recheck after
+  // 24h when they are still recent, allowing result_version corrections to land.
+  const due = Object.keys(tracked).map(function(k){return tracked[k];}).filter(function(x){
+    const t = x.scheduled_time ? Date.parse(x.scheduled_time) : NaN;
+    if (!isFinite(t)) return !x.terminal;
+    if (t > nowMs + 6*3600000) return false;
+    if (!x.terminal) return true;
+    const lc = x.last_checked_at ? Date.parse(x.last_checked_at) : 0;
+    return nowMs - lc >= 24*3600000 && nowMs - t <= 3*86400000;
+  }).sort(function(a,b){
+    return String(a.scheduled_time || "").localeCompare(String(b.scheduled_time || ""));
+  });
+
+  const available = SVL_TENNIS.ATP_FALLBACK.maxCallsPerRun - calls.length;
+  if (due.length > available) {
+    throw new Error("livetennisapi_quota_guard_due=" + due.length + "_available=" + available);
+  }
+
+  const events = [];
+  discovered.forEach(function(row){
+    const ev = svlTennisNormalizeLiveTennis_(row,retrievedAt);
+    if (ev) events.push(ev);
+  });
+
+  due.forEach(function(x) {
+    const url = SVL_TENNIS.ATP_FALLBACK.base + "/matches/" + encodeURIComponent(String(x.match_id));
+    const rr = svlTennisLiveGet_(url, key, "ATP Live Tennis match " + x.match_id);
+    calls.push({kind:"match",match_id:String(x.match_id),url:url,http_code:rr.code,bytes:rr.bytes});
+    const row = rr.json;
+    if (!svlTennisLiveInScope_(row)) return;
+    const ev = svlTennisNormalizeLiveTennis_(row,retrievedAt);
+    if (ev) {
+      events.push(ev);
+      x.normalized_event = ev;
+    }
+    x.last_checked_at = retrievedAt;
+    x.status = row.status || x.status || null;
+    x.outcome = row.outcome || null;
+    x.result_version = row.result_version || x.result_version || null;
+    x.terminal = ["completed","cancelled"].indexOf(String(row.status || "").toLowerCase()) >= 0 ||
+                 ["completed","retired","walkover","default","abandoned","unresolved"].indexOf(String(row.outcome || "").toLowerCase()) >= 0;
+    x.last_seen_at = retrievedAt;
+  });
+
+  // Carry forward tracked normalized rows so a match that disappeared from the
+  // upcoming list remains represented until/after resolution.
+  Object.keys(tracked).forEach(function(k){
+    const ev = tracked[k].normalized_event;
+    if (ev) events.push(ev);
+  });
+
+  const dedup = {};
+  events.forEach(function(ev){ if (ev && ev.event_id) dedup[ev.event_id] = ev; });
+  const finalEvents = Object.keys(dedup).map(function(k){return dedup[k];});
+
+  const trackedObj = {
+    schema:"SVL Tennis ATP Live Tennis tracked ids v1",
+    provider:"Live Tennis API",
+    strategy:"prospective_id_capture_then_single_match_resolution",
+    updated_at:retrievedAt,
+    matches:tracked
+  };
+  const tb = Utilities.newBlob(JSON.stringify(trackedObj),"application/json",SVL_TENNIS.ATP_FALLBACK.trackedFile);
+  const trackedStored = svlStoreSource_({
+    folders:cfg.folders,sport:"TENNIS",sourceKey:"atp_live_tracked",
+    fileName:SVL_TENNIS.ATP_FALLBACK.trackedFile,blob:tb,sha256:svlSha256Bytes_(tb.getBytes()),
+    retrievedAt:retrievedAt,updatedAt:null,sourceUrl:SVL_TENNIS.ATP_FALLBACK.base + "/matches",
+    state:"CURRENT_VALID",
+    coverage:{
+      tracked_ids:Object.keys(tracked).length,
+      discovered_upcoming:discovered.length,
+      resolved_this_run:due.length,
+      api_calls_this_run:calls.length
+    }
+  });
 
   return {
-    events:events,
+    events:finalEvents,
     raw:{
-      provider:"SportsAPI365 Direct Tennis API",
-      endpoint:"/atp/results/{startDate}/{endDate}",
+      provider:"Live Tennis API",
+      base:SVL_TENNIS.ATP_FALLBACK.base,
+      auth:"X-API-Key via Script Property " + SVL_TENNIS.ATP_FALLBACK.scriptProperty,
+      strategy:"prospective_id_capture_then_single_match_resolution",
+      discovery_endpoint:"/matches?status=upcoming&tour=atp&draw=singles&is_qualifying=false",
+      detail_endpoint:"/matches/{matchId}",
+      free_plan_note:"No completed-list dependency; stable IDs are captured before start and resolved individually.",
       window:{from:fromIso,to:toIso},
-      filter:"PlayerGroup:singles;TourRank:2,3,4,7",
-      in_scope_rank_ids:SVL_TENNIS.ATP_FALLBACK.allowedRankIds,
-      pages:rawPages,
-      raw_rows:all.length,
-      scoped_rows:scoped.length,
-      matches_in_window:events.length
+      allowed_tiers:SVL_TENNIS.ATP_FALLBACK.allowedTiers,
+      discovered_upcoming:discovered.length,
+      tracked_ids:Object.keys(tracked).length,
+      resolved_this_run:due.length,
+      calls:calls,
+      tracked_manifest:trackedStored.manifest
     }
   };
 }
 
-function svlTennisNormalizeATPFallback_(row,retrievedAt) {
-  const p1=row.player1||{}, p2=row.player2||{}, t=row.tournament||{};
-  const mid=String(row.matchId || row.id || "");
-  const tid=String(row.tournamentId || t.id || "");
-  if (!mid || !tid || !p1.id || !p2.id) return null;
+function svlTennisLiveGet_(url,key,label) {
+  const r = UrlFetchApp.fetch(url,{
+    method:"get",followRedirects:true,muteHttpExceptions:true,
+    headers:{
+      "X-API-Key":key,
+      "Accept":"application/json",
+      "User-Agent":"SportsValueLab/1.0"
+    }
+  });
+  const code = r.getResponseCode();
+  if (code < 200 || code >= 300) {
+    throw new Error(label + " HTTP " + code + ": " + r.getContentText().slice(0,500));
+  }
+  const txt = r.getContentText();
+  return {code:code,json:JSON.parse(txt),bytes:r.getBlob().getBytes().length};
+}
 
-  const rt=String(row.result_type || "completed").toLowerCase();
-  let status="FINISHED";
-  if (rt==="retired") status="RETIRED";
-  else if (rt==="walkover") status="WALKOVER";
-  else if (rt==="default") status="DEFAULT";
+function svlTennisLiveInScope_(row) {
+  if (!row) return false;
+  if (String(row.tour || "").toLowerCase() !== "atp") return false;
+  if (String(row.draw || "").toLowerCase() !== "singles") return false;
+  if (row.is_qualifying !== false) return false;
+  return SVL_TENNIS.ATP_FALLBACK.allowedTiers.indexOf(String(row.tier || "").toLowerCase()) >= 0;
+}
+
+function svlTennisLivePlayerObj_(row,n) {
+  const p = row && row.players ? row.players : {};
+  return p["p"+n] || p["player"+n] || p[String(n)] || row["player"+n] || {};
+}
+
+function svlTennisLivePlayerId_(row,n) {
+  const p=svlTennisLivePlayerObj_(row,n);
+  return p.id || row["player"+n+"_id"] || row["p"+n+"_id"] || null;
+}
+
+function svlTennisLivePlayerName_(row,n) {
+  const p=svlTennisLivePlayerObj_(row,n);
+  return p.name || row["player"+n+"_name"] || row["p"+n+"_name"] || null;
+}
+
+function svlTennisLiveSetScores_(score) {
+  if (!score || !Array.isArray(score.games) || score.games.length < 2) return [];
+  const a=score.games[0] || [], b=score.games[1] || [];
+  const out=[];
+  const n=Math.max(a.length,b.length);
+  for (let i=0;i<n;i++) {
+    if (a[i]===undefined && b[i]===undefined) continue;
+    out.push({set:i+1,a:a[i]===undefined?null:Number(a[i]),b:b[i]===undefined?null:Number(b[i])});
+  }
+  return out;
+}
+
+function svlTennisNormalizeLiveTennis_(row,retrievedAt) {
+  if (!svlTennisLiveInScope_(row)) return null;
+  const mid=String(row.id || "");
+  if (!mid) return null;
+  const tid=String(row.tournament_id || row.tournament || "UNKNOWN");
+  const p1id=svlTennisLivePlayerId_(row,1);
+  const p2id=svlTennisLivePlayerId_(row,2);
+  const p1name=svlTennisLivePlayerName_(row,1);
+  const p2name=svlTennisLivePlayerName_(row,2);
+
+  const rawStatus=String(row.status || "").toLowerCase();
+  const outcome=String(row.outcome || "").toLowerCase();
+  let status="SCHEDULED";
+  if (rawStatus==="live") status="LIVE";
+  if (rawStatus==="completed" || outcome==="completed") status="FINISHED";
+  if (outcome==="retired") status="RETIRED";
+  else if (outcome==="walkover") status="WALKOVER";
+  else if (outcome==="default") status="DEFAULT";
+  else if (outcome==="abandoned" || rawStatus==="cancelled") status="CANCELLED";
+  else if (outcome==="unresolved") status="POSTPONED";
+
+  let winnerSide=null;
+  const winner=Number(row.winner);
+  if (winner===1) winnerSide="A";
+  else if (winner===2) winnerSide="B";
 
   return {
-    event_id:"ATP:SPORTSAPI365:"+tid+":"+mid,
+    event_id:"ATP:LIVETENNIS:"+mid,
     tour:"ATP",
-    tournament_id:"ATP:SPORTSAPI365:"+tid,
-    tournament_name:t.name||null,
-    tournament_location:t.countryAcr||null,
-    tournament_rank_id:t.rankId!==undefined?t.rankId:(t.rank?t.rank.id:null),
+    tournament_id:"ATP:LIVETENNIS:"+tid,
+    tournament_name:row.tournament||null,
+    tournament_location:null,
+    tournament_rank_id:null,
+    tournament_tier:row.tier||null,
+    surface:row.surface||null,
+    indoor:row.indoor===undefined?null:row.indoor,
+    format:row.format||null,
     provider_match_id:mid,
-    round_raw:row.roundId===undefined||row.roundId===null?null:String(row.roundId),
-    round_normalized:svlTennisRapidRound_(row.roundId),
-    player_a_id:"ATP:SPORTSAPI365:"+String(p1.id),
-    player_a_name:p1.name||null,
-    player_b_id:"ATP:SPORTSAPI365:"+String(p2.id),
-    player_b_name:p2.name||null,
-    winner_side:String(row.match_winner)===String(p1.id)?"A":(String(row.match_winner)===String(p2.id)?"B":null),
+    round_raw:row.round||null,
+    round_normalized:row.round_code||svlTennisRound_(row.round),
+    player_a_id:p1id?"ATP:LIVETENNIS:"+String(p1id):null,
+    player_a_name:p1name||null,
+    player_b_id:p2id?"ATP:LIVETENNIS:"+String(p2id):null,
+    player_b_name:p2name||null,
+    winner_side:winnerSide,
     status:status,
-    status_raw:rt,
-    status_detail:row.result||null,
-    set_scores:svlTennisParseScoreString_(row.result||""),
-    start_utc:row.date||null,
-    source_name:"SportsAPI365 Direct ATP fallback",
-    source_url:SVL_TENNIS.ATP_FALLBACK.base + "/atp/tournament/results/{seasonId}",
+    status_raw:rawStatus||null,
+    status_detail:outcome||row.event_status||null,
+    outcome:outcome||null,
+    withdrew:row.withdrew===undefined?null:row.withdrew,
+    result_version:row.result_version||null,
+    result_restated_at:row.result_restated_at||null,
+    set_scores:svlTennisLiveSetScores_(row.score),
+    start_utc:row.scheduled_time||null,
+    source_name:"Live Tennis API ATP fallback",
+    source_url:SVL_TENNIS.ATP_FALLBACK.base + "/matches/" + mid,
     source_role:"structured_fallback_when_ATP_Tour_blocked",
     retrieved_at:retrievedAt
   };
