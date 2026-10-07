@@ -233,5 +233,37 @@
       }
     }
   },
-  "activation_policy": "svlActivateDataIngestion smoke-runs all configured sports; if at least one sport succeeds it installs/replaces the shared daily trigger and reports degraded=true when any sport is incomplete."
+  "activation_policy": "svlActivateDataIngestion smoke-runs all configured sports; if at least one sport succeeds it installs/replaces the shared daily trigger and reports degraded=true when any sport is incomplete.",
+  "global_p5_layer": {
+    "version": "v1.0",
+    "adapter": "bridge/SVL_Global_P5_Preflight.gs",
+    "bridge_commands": [
+      "p5_preflight",
+      "p5_context",
+      "p5_dry_run"
+    ],
+    "sports": [
+      "NFL",
+      "NBA",
+      "NHL",
+      "SOCCER",
+      "TENNIS"
+    ],
+    "source_refresh_rule": "Each sport refreshes only its declared sources. P5 reads CURRENT manifests; weekly uploads are not part of steady state.",
+    "status_contract": [
+      "CURRENT_VALID",
+      "PROVISIONAL_VALID",
+      "INCOMPLETE"
+    ],
+    "readiness_contract": "READY only when required sources and sport-specific coverage gates pass.",
+    "snapshot_dedup": "svlStoreSource_ uses content-addressed SHA-256 snapshots and reuses an existing identical snapshot.",
+    "boundaries": {
+      "season_data": "DATA/<sport>/ingestion",
+      "odds": "ODDS_ARCHIVE only when separately/prospectively used; ingestion does not request odds",
+      "picks": "untouched",
+      "models": "unchanged",
+      "features": "unchanged"
+    },
+    "manual_uploads_required": false
+  }
 }
