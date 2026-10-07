@@ -143,8 +143,12 @@ function svlIngestNFL_() {
     latest_completed_week: scheduleMeta.latestCompletedWeek
   };
 
-  const ageHours = asset.updated_at
-    ? (retrieved.getTime() - new Date(asset.updated_at).getTime()) / 3600000
+  const pbpUpdatedAt =
+    (releaseMeta && releaseMeta.updated_at) ||
+    svlHeader_(pbpResp, "Last-Modified") ||
+    null;
+  const ageHours = pbpUpdatedAt
+    ? (retrieved.getTime() - new Date(pbpUpdatedAt).getTime()) / 3600000
     : null;
   const pbpState = missingIds.length
     ? "INCOMPLETE"
@@ -176,7 +180,7 @@ function svlIngestNFL_() {
     blob: pbpBlob,
     sha256: pbpSha,
     retrievedAt: retrievedIso,
-    updatedAt: (releaseMeta && releaseMeta.updated_at) || svlHeader_(pbpResp, "Last-Modified") || null,
+    updatedAt: pbpUpdatedAt,
     sourceUrl: downloadUrl,
     state: pbpState,
     coverage: coverage
