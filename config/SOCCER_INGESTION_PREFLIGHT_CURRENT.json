@@ -1,0 +1,97 @@
+{
+  "schema": "SVL Soccer ingestion preflight v1",
+  "generated_at_cdmx": "2026-10-07",
+  "sport": "Soccer",
+  "status": "IMPLEMENTED_PENDING_ONE_TIME_APPS_SCRIPT_DEPLOY",
+  "scope": [
+    "ENG.1",
+    "ESP.1",
+    "ESP.2",
+    "GER.1",
+    "ITA.1",
+    "MEX.1"
+  ],
+  "source_contract": {
+    "provider": "ESPN Soccer Scoreboard",
+    "endpoint_template": "https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/scoreboard?dates=YYYYMMDD",
+    "schema_boundary": [
+      "leagues",
+      "events",
+      "events[].id",
+      "events[].date",
+      "events[].status.type",
+      "events[].competitions[0].competitors[].homeAway",
+      "competitors[].team",
+      "competitors[].score",
+      "competitors[].linescores",
+      "competitors[].shootoutScore"
+    ],
+    "incremental": "current season cycle from July 1 on first run; subsequent runs use prior cutoff with 7-day correction overlap"
+  },
+  "official_verification": {
+    "ENG.1": "https://www.premierleague.com/en/matches/premier-league/",
+    "ESP.1": "https://www.laliga.com/laliga-easports/resultados",
+    "ESP.2": "https://www.laliga.com/laliga-hypermotion/resultados",
+    "GER.1": "https://www.bundesliga.com/en/bundesliga/matchday",
+    "ITA.1": "https://www.legaseriea.it/serie-a/calendario-risultati",
+    "MEX.1": "https://ligamx.net/cancha/partidos"
+  },
+  "normalization": {
+    "output": "SOCCER_EVENTS_CURRENT.json",
+    "regulation_fields": [
+      "regulation_90_home",
+      "regulation_90_away"
+    ],
+    "post_regulation_fields": [
+      "post_regulation_home",
+      "post_regulation_away"
+    ],
+    "penalties_fields": [
+      "penalty_shootout_home",
+      "penalty_shootout_away"
+    ],
+    "rule": "Extra time and penalties never replace the 90m result."
+  },
+  "repository": {
+    "adapter_commit_initial": "ce899fea8327763627615447d3a32c9b27264984",
+    "adapter_commit_final": "d1297ae09024d220829b95d58f3c80d42220aa9f",
+    "dispatcher_commit": "32369f4ce4c2060b20af9822950f1e06e5cfedda",
+    "registry_commit": "fe4e4d6707d00466054c94d5aa678d4539874e1f"
+  },
+  "source_probe": {
+    "status": "PASS",
+    "evidence": "Current 2026 documentation/search evidence confirms the ESPN soccer site API scoreboard pattern, date=YYYYMMDD behavior, eng.1/esp.1/mex.1 league slugs, and current-season event schema with homeAway, score and status fields.",
+    "full_bound_appscript_execution": "PENDING_ONE_TIME_APPS_SCRIPT_ACTIVATION"
+  },
+  "storage_before_activation": {
+    "current_files": 0,
+    "snapshot_files": 0,
+    "manifest_files": 0
+  },
+  "expected_outputs": [
+    "SOCCER_ESPN_INCREMENTAL_CURRENT.json",
+    "SOCCER_EVENTS_CURRENT.json",
+    "SOCCER_INGESTION_CURRENT.json",
+    "content-addressed immutable source snapshots",
+    "immutable run manifests",
+    "official-site immutable evidence snapshots when verification queue is nonempty"
+  ],
+  "trigger": {
+    "shared_activation": "svlActivateDataIngestion",
+    "scheduled_handler": "svlRunIngestionNow",
+    "cadence": "daily",
+    "shared_scope": [
+      "NFL",
+      "NBA",
+      "NHL",
+      "SOCCER"
+    ]
+  },
+  "controls": {
+    "models_changed": false,
+    "features_changed": false,
+    "picks_changed": false,
+    "odds_requested": false,
+    "register_written": false
+  }
+}
