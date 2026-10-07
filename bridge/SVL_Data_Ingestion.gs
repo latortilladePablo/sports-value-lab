@@ -360,3 +360,182 @@ function svlInstallDailyIngestionTrigger() {
     .create();
   return { ok: true, handler: "svlRunIngestionNow", cadence: "daily", hour_script_tz: 11 };
 }
+
+
+/**
+ * PUBLIC diagnostic — visible in Apps Script selector.
+ * Does not write files. Logs each NFL ingestion stage separately.
+ */
+function svlDiagnoseNFLIngestion() {
+  const cfg = SVL_INGESTION.SPORTS.NFL;
+  const report = { ok: false, stages: [] };
+
+  function stage_(name, fn) {
+    try {
+      const value = fn();
+      const item = { stage: name, ok: true, value: value };
+      report.stages.push(item);
+      console.log(JSON.stringify(item));
+      return value;
+    } catch (err) {
+      const item = {
+        stage: name,
+        ok: false,
+        error: String(err && err.stack ? err.stack : (err && err.message ? err.message : err))
+      };
+      report.stages.push(item);
+      console.error(JSON.stringify(item));
+      throw err;
+    }
+  }
+
+  stage_("drive_current_folder", function() {
+    const f = DriveApp.getFolderById(cfg.folders.current);
+    return { id: f.getId(), name: f.getName() };
+  });
+  stage_("drive_snapshots_folder", function() {
+    const f = DriveApp.getFolderById(cfg.folders.snapshots);
+    return { id: f.getId(), name: f.getName() };
+  });
+  stage_("drive_manifests_folder", function() {
+    const f = DriveApp.getFolderById(cfg.folders.manifests);
+    return { id: f.getId(), name: f.getName() };
+  });
+
+  const scheduleResp = stage_("schedule_fetch", function() {
+    const r = UrlFetchApp.fetch(cfg.schedule.url, {
+      method: "get",
+      followRedirects: true,
+      muteHttpExceptions: true,
+      headers: { "User-Agent": "SportsValueLab/1.0" }
+    });
+    return {
+      code: r.getResponseCode(),
+      bytes: r.getBlob().getBytes().length,
+      text: r.getContentText().slice(0, 120)
+    };
+  });
+  if (scheduleResp.code < 200 || scheduleResp.code >= 300) {
+    throw new Error("schedule_fetch_http_" + scheduleResp.code);
+  }
+
+  const scheduleRaw = UrlFetchApp.fetch(cfg.schedule.url, {
+    method: "get",
+    followRedirects: true,
+    muteHttpExceptions: true,
+    headers: { "User-Agent": "SportsValueLab/1.0" }
+  });
+  const scheduleText = scheduleRaw.getContentText();
+  const scheduleMeta = stage_("schedule_parse", function() {
+    const m = svlParseNFLCompletedGames_(scheduleText);
+    return {
+      season: m.season,
+      latestCompletedWeek: m.latestCompletedWeek,
+      completedGameCount: m.completedGameIds.length,
+      firstGameId: m.completedGameIds[0],
+      lastGameId: m.completedGameIds[m.completedGameIds.length - 1]
+    };
+  });
+
+  const releaseData = stage_("github_release_metadata", function() {
+    const r = UrlFetchApp.fetch(cfg.pbp.releaseApi, {
+      method: "get",
+      followRedirects: true,
+      muteHttpExceptions: true,
+      headers: {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "SportsValueLab/1.0"
+      }
+    });
+    const code = r.getResponseCode();
+    const text = r.getContentText();
+    if (code < 200 || code >= 300) {
+      return { code: code, body: text.slice(0, 500) };
+    }
+    const release = JSON.parse(text);
+    const asset = (release.assets || []).filter(function(a) {
+      return a.name === cfg.pbp.name;
+    })[0];
+    if (!asset) {
+      return {
+        code: code,
+        assetFound: false,
+        available: (release.assets || []).map(function(a) { return a.name; }).slice(0, 50)
+      };
+    }
+    return {
+      code: code,
+      assetFound: true,
+      id: asset.id,
+      name: asset.name,
+      size: asset.size,
+      digest: asset.digest || null,
+      updated_at: asset.updated_at || null,
+      browser_download_url: asset.browser_download_url
+    };
+  });
+  if (!releaseData.assetFound) throw new Error("pbp_asset_not_found");
+
+  const pbpData = stage_("pbp_binary_fetch", function() {
+    const r = UrlFetchApp.fetch(releaseData.browser_download_url, {
+      method: "get",
+      followRedirects: true,
+      muteHttpExceptions: true,
+      headers: { "User-Agent": "SportsValueLab/1.0" }
+    });
+    const blob = r.getBlob().setName(cfg.pbp.name);
+    const bytes = blob.getBytes();
+    return {
+      code: r.getResponseCode(),
+      contentType: blob.getContentType(),
+      bytes: bytes.length,
+      sha256: svlSha256Bytes_(bytes)
+    };
+  });
+  if (pbpData.code < 200 || pbpData.code >= 300) {
+    throw new Error("pbp_fetch_http_" + pbpData.code);
+  }
+
+  stage_("pbp_integrity", function() {
+    const expectedDigest = String(releaseData.digest || "").replace(/^sha256:/i, "").toLowerCase();
+    return {
+      sizeMatches: Number(releaseData.size) === Number(pbpData.bytes),
+      shaMatches: !expectedDigest || expectedDigest === pbpData.sha256,
+      expectedSize: releaseData.size,
+      actualSize: pbpData.bytes,
+      expectedSha: expectedDigest || null,
+      actualSha: pbpData.sha256
+    };
+  });
+
+  const pbpResp = UrlFetchApp.fetch(releaseData.browser_download_url, {
+    method: "get",
+    followRedirects: true,
+    muteHttpExceptions: true,
+    headers: { "User-Agent": "SportsValueLab/1.0" }
+  });
+  const pbpBlob = pbpResp.getBlob().setName(cfg.pbp.name);
+  const pbpText = stage_("pbp_gunzip", function() {
+    const text = Utilities.ungzip(pbpBlob).getDataAsString("UTF-8");
+    return { chars: text.length, head: text.slice(0, 120) };
+  });
+
+  const fullPbpText = Utilities.ungzip(pbpBlob).getDataAsString("UTF-8");
+  stage_("completed_game_coverage", function() {
+    const m = svlParseNFLCompletedGames_(scheduleText);
+    const missing = m.completedGameIds.filter(function(id) {
+      return fullPbpText.indexOf(id) === -1;
+    });
+    return {
+      season: m.season,
+      expected: m.completedGameIds.length,
+      present: m.completedGameIds.length - missing.length,
+      missing_count: missing.length,
+      missing_game_ids: missing.slice(0, 50)
+    };
+  });
+
+  report.ok = report.stages.every(function(x) { return x.ok; });
+  console.log("SVL_DIAG_FINAL " + JSON.stringify(report));
+  return report;
+}
