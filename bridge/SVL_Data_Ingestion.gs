@@ -33,6 +33,14 @@ const SVL_INGESTION = {
         directBase: "https://github.com/nflverse/nflverse-data/releases/download/pbp/"
       }
     },
+    NBA: {
+      folders: {
+        current: "1q9OJjX1kGgHkRzn3AMDNY7eI3rYc7L3r",
+        snapshots: "1p_cNfdVWpcRLW_ez97a0TcpRRgDpGsNl",
+        manifests: "1gSzolztYB7GjxH12nHIllsuqObSQ7Up8"
+      },
+      seasonEndYear: 2027
+    },
     NHL: {
       folders: {
         current: "1J9Mtu1YYwb0808U9BntBSaOdfYxyS_HS",
@@ -60,10 +68,10 @@ function svlDataIngestionDispatch_(body) {
 }
 
 function svlIngestSport_(sport) {
-  if (sport !== "NFL") {
-    return { ok: false, sport: sport, error: "adapter_not_configured" };
-  }
-  return svlIngestNFL_();
+  if (sport === "NFL") return svlIngestNFL_();
+  if (sport === "NBA") return svlIngestNBA_();
+  if (sport === "NHL") return svlIngestNHL_();
+  return { ok: false, sport: sport, error: "adapter_not_configured" };
 }
 
 function svlIngestNFL_() {
