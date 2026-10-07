@@ -1,33 +1,38 @@
 # NFL PBP Weekly Automation
 
-This repository refreshes the current-season nflverse play-by-play asset automatically for the Quiniela Brewers NFL model pipeline.
+## Primary path — Google Apps Script / Drive
 
-## Workflow
-- Workflow: `.github/workflows/nfl-pbp-refresh.yml`
-- Upstream: `nflverse/nflverse-data`, release tag `pbp`
-- Asset: `play_by_play_2026.csv.gz`
-- Scheduled runs:
-  - Tuesday 19:30 UTC (13:30 America/Mexico_City)
-  - Wednesday 07:30 UTC (01:30 America/Mexico_City) fallback
-- Manual trigger: `workflow_dispatch`
+The canonical ingestion source for the Quiniela Brewers NFL model pipeline is the existing Sports Value Lab Google Apps Script output in Drive:
 
-Each run:
-1. downloads the current 2026 PBP asset;
-2. checks gzip integrity;
-3. reads the release metadata;
-4. verifies SHA-256 when the upstream digest is published;
-5. writes `manifest.json`;
-6. publishes GitHub Actions artifact `nfl-pbp-current-2026`.
+`Sports Value Lab / NFL / ingestion / CURRENT`
 
-## ChatGPT / Drive bridge
-A recurring ChatGPT condition-watch checks Tuesday/Wednesday for a new successful workflow artifact. When a new SHA appears, it downloads the artifact and syncs it into:
+Canonical files:
+- `play_by_play_2026.csv.gz`
+- `games.csv`
+- `NFL_INGESTION_CURRENT.json`
 
-`Sports Value Lab/MODELS/NFL/v2/live/NFL_PBP_CURRENT_artifact.zip`
+The manifest must prove:
+- current season = 2026;
+- latest completed week is sufficient for the target week;
+- completed-games coverage is complete;
+- `missing_game_ids=[]`;
+- PBP SHA-256 is persisted;
+- immutable snapshot is also written under `ingestion/snapshots`.
 
-The weekly QB0/QB1 model-readiness gate should use that Drive artifact rather than ask for a manual upload.
+QB0/QB1 MODEL READINESS should read this Drive manifest first. If valid, use the CURRENT Drive PBP directly to build the target-week feature snapshot. Do not ask the user to upload the file manually.
 
-## Safety
+## Fallback path — GitHub Actions
+
+Workflow:
+`.github/workflows/nfl-pbp-refresh.yml`
+
+This is now **manual fallback only** via `workflow_dispatch`.
+It downloads the same nflverse asset, verifies gzip integrity and SHA-256, then publishes `nfl-pbp-current-2026` as an Actions artifact.
+
+Use fallback only if the Apps Script / Drive ingestion is stale, incomplete, missing, or fails hash/coverage checks.
+
+## Model rules
 - No model refit.
 - PBP is lagged only: completed games may feed future games, never the target game's own PBP.
 - `P_ML` remains the frozen Elo component.
-- `P_MARGIN` is generated only after the exact Week-X feature snapshot passes schema/leakage checks.
+- `P_MARGIN` is generated only after the exact Week-X feature snapshot passes schema/leakage/home-away/timestamp checks.
