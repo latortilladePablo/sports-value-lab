@@ -1,0 +1,79 @@
+name: NFL PBP Refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Tuesdays 19:30 UTC = 13:30 America/Mexico_City.
+    # Fallback run Wednesday 07:30 UTC = 01:30 America/Mexico_City.
+    - cron: "30 19 * * 2"
+    - cron: "30 7 * * 3"
+
+permissions:
+  contents: read
+
+env:
+  NFL_SEASON: "2026"
+  ASSET_NAME: "play_by_play_2026.csv.gz"
+  RELEASE_API: "https://api.github.com/repos/nflverse/nflverse-data/releases/tags/pbp"
+  ASSET_URL: "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2026.csv.gz"
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Download current nflverse PBP
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p out
+          curl -fL --retry 5 --retry-delay 5 "$ASSET_URL" -o "out/$ASSET_NAME"
+          gzip -t "out/$ASSET_NAME"
+
+      - name: Verify release metadata and hash
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL "$RELEASE_API" -o out/release.json
+          EXPECTED_DIGEST="$(jq -r --arg N "$ASSET_NAME" '.assets[] | select(.name==$N) | .digest // empty' out/release.json)"
+          RELEASE_UPDATED="$(jq -r '.updated_at' out/release.json)"
+          ASSET_UPDATED="$(jq -r --arg N "$ASSET_NAME" '.assets[] | select(.name==$N) | .updated_at' out/release.json)"
+          ACTUAL_SHA="$(sha256sum "out/$ASSET_NAME" | awk '{print $1}')"
+          SIZE_BYTES="$(stat -c%s "out/$ASSET_NAME")"
+
+          if [[ -n "$EXPECTED_DIGEST" && "$EXPECTED_DIGEST" != "null" ]]; then
+            EXPECTED_SHA="${EXPECTED_DIGEST#sha256:}"
+            if [[ "$EXPECTED_SHA" != "$ACTUAL_SHA" ]]; then
+              echo "SHA mismatch: expected=$EXPECTED_SHA actual=$ACTUAL_SHA"
+              exit 1
+            fi
+          fi
+
+          cat > out/manifest.json <<EOF
+          {
+            "season": $NFL_SEASON,
+            "source": "nflverse/nflverse-data",
+            "release_tag": "pbp",
+            "asset_name": "$ASSET_NAME",
+            "asset_url": "$ASSET_URL",
+            "release_updated_at_utc": "$RELEASE_UPDATED",
+            "asset_updated_at_utc": "$ASSET_UPDATED",
+            "downloaded_at_utc": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "sha256": "$ACTUAL_SHA",
+            "size_bytes": $SIZE_BYTES,
+            "gzip_integrity": "PASS"
+          }
+          EOF
+          rm out/release.json
+          cat out/manifest.json
+
+      - name: Upload reusable PBP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-pbp-current-2026
+          path: |
+            out/play_by_play_2026.csv.gz
+            out/manifest.json
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0
