@@ -409,8 +409,22 @@ function svlRunIngestionNow() {
  */
 function svlActivateDataIngestion() {
   const smoke = svlScheduledIngestion_();
-  if (!smoke || smoke.ok !== true) throw new Error("Ingestion smoke test failed: " + JSON.stringify(smoke));
-  return svlInstallDailyIngestionTrigger();
+  if (!smoke || !Array.isArray(smoke.results)) {
+    throw new Error("Ingestion smoke test did not execute correctly: " + JSON.stringify(smoke));
+  }
+  const successful = smoke.results.filter(function(r){ return r && r.ok === true; }).map(function(r){ return r.sport; });
+  if (!successful.length) {
+    throw new Error("Ingestion activation aborted: no configured sport completed successfully. " + JSON.stringify(smoke));
+  }
+  const trigger = svlInstallDailyIngestionTrigger();
+  return {
+    ok: smoke.ok === true,
+    degraded: smoke.ok !== true,
+    successful_sports: successful,
+    failed_sports: smoke.results.filter(function(r){ return !r || r.ok !== true; }).map(function(r){ return r && r.sport ? r.sport : "UNKNOWN"; }),
+    smoke: smoke,
+    trigger: trigger
+  };
 }
 
 function svlInstallDailyIngestionTrigger() {
