@@ -227,7 +227,7 @@ function svlIngestTennis_() {
     },
     contract:{
       atp_primary:["ATP Tour Results Archive","ATP Tour current scores JSON backend"],
-      atp_structured_fallback:"Live Tennis API FREE: prospectively capture ATP main-draw singles match IDs from /matches?status=upcoming and later resolve those same stable IDs with /matches/{matchId}; used only when ATP Tour is blocked from Apps Script. No SportsAPI365 dependency.",
+      atp_structured_fallback:"Live Tennis API FREE: prospectively capture ATP main-draw singles match IDs from /matches?status=upcoming and later resolve those same stable IDs with /matches/{matchId}; used only when ATP Tour is blocked from Apps Script.",
       wta_primary:["WTA official tournament calendar API","WTA official tournament matches API"],
       crosscheck:SVL_TENNIS.crosscheck,
       scope:"ATP Singles + WTA Singles",
