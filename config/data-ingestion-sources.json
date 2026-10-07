@@ -147,8 +147,19 @@
       "activation": "Run svlActivateDataIngestion() once in the bound Apps Script project after syncing bridge files."
     },
     "Soccer": {
-      "automation": "NEEDS_ADAPTER",
-      "p5_policy": "ESPN Soccer Scoreboard by CURRENT league/date; official competition site for discrepancies",
+      "automation": "IMPLEMENTED_PENDING_ONE_TIME_APPS_SCRIPT_DEPLOY",
+      "adapter": "bridge/SVL_Soccer_Data_Ingestion.gs",
+      "folders": {
+        "current": "1_JTma3HjDDRbh7jhQdK335TCfDdkvfY1",
+        "snapshots": "1bOR-ozBE4Z-y5oehJa5DiMZ4_tU8Cvpx",
+        "manifests": "1MHy_dGz6dG-DR4VD7iLRljQGnYviZL3t"
+      },
+      "source": {
+        "provider": "ESPN Soccer Scoreboard",
+        "endpoint_template": "https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/scoreboard?dates=YYYYMMDD",
+        "format": "json",
+        "incremental_policy": "WEEKLY_INCREMENTAL with 7-day correction overlap; first run bootstraps from July 1 of current season cycle"
+      },
       "league_codes": [
         "ENG.1",
         "ESP.1",
@@ -157,7 +168,17 @@
         "ITA.1",
         "MEX.1"
       ],
-      "assessment": "HTTP/date-window adapter is feasible; exact endpoint/schema and official discrepancy routing must be frozen before calling it automatic."
+      "official_verification": {
+        "ENG.1": "https://www.premierleague.com/en/matches/premier-league/",
+        "ESP.1": "https://www.laliga.com/laliga-easports/resultados",
+        "ESP.2": "https://www.laliga.com/laliga-hypermotion/resultados",
+        "GER.1": "https://www.bundesliga.com/en/bundesliga/matchday",
+        "ITA.1": "https://www.legaseriea.it/serie-a/calendario-risultati",
+        "MEX.1": "https://ligamx.net/cancha/partidos"
+      },
+      "normalized_schema": "SOCCER_EVENTS_CURRENT.json stores event_id, league, competition, date_utc, teams, status, regulation_90_home/away, post_regulation_home/away, penalty_shootout_home/away, ESPN final score, source metadata, official verification routing",
+      "integrity": "per league/date HTTP status + SHA-256 + size + event count; merged CURRENT content-addressed SHA snapshots; failures => INCOMPLETE; verification queue => PROVISIONAL_VALID",
+      "activation": "Run svlActivateDataIngestion() once in the bound central Bridge Apps Script after syncing the updated shared ingestion file and Soccer adapter."
     },
     "Tennis": {
       "automation": "NEEDS_SPORT_SPECIFIC_DISCOVERY_ADAPTER",
