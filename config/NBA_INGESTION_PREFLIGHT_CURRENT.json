@@ -1,0 +1,92 @@
+{
+  "schema": "SVL NBA ingestion preflight v1",
+  "generated_at_cdmx": "2026-10-07",
+  "sport": "NBA",
+  "season_end_year": 2027,
+  "status": "IMPLEMENTED_PENDING_ONE_TIME_APPS_SCRIPT_DEPLOY",
+  "source_resolution": {
+    "status": "PASS",
+    "canonical_required_weekly_source": "SportsDataverse sportsdataverse-data / espn_nba_schedules / nba_schedule_2027.csv",
+    "upstream": "ESPN NBA API via hoopR-nba-raw -> hoopR-nba-data",
+    "reconciliation": "Basketball-Reference Schedule and Results",
+    "crosscheck": "ESPN NBA Scoreboard",
+    "official_verification": "NBA.com Schedule/Game/Box Score"
+  },
+  "code": {
+    "adapter_commit": "4c0ea4a4f5cbced712194cc5bf64f572f6e4e75c",
+    "dispatcher_commit": "0b9fd9f5a45a8befe523a30579747158a72e18b0",
+    "source_registry_commit": "ed326aa2e10cdd39d4f33cd1f27b95fc34687287"
+  },
+  "provider_execution": {
+    "status": "PASS",
+    "independent_metadata_reads": 2,
+    "idempotent": true,
+    "schedule_2027": {
+      "file": "nba_schedule_2027.csv",
+      "size_bytes": 1503859,
+      "sha256": "9e07665fb1e2982150baf305b4bf8fab20157f55a316225a2ef0fcbbe5d6eb68",
+      "updated_at": "2026-10-06T12:14:58Z",
+      "source_url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_schedules/nba_schedule_2027.csv"
+    },
+    "enrichment_2027": {
+      "team_box": "NOT_YET_PUBLISHED",
+      "player_box": "NOT_YET_PUBLISHED",
+      "pbp": "NOT_YET_PUBLISHED",
+      "game_rosters": "NOT_YET_PUBLISHED",
+      "blocking": false,
+      "reason": "P5 contract prefers schedule; enrichment is used when needed and auto-promoted once 2027 assets exist."
+    }
+  },
+  "storage": {
+    "current_folder": "1q9OJjX1kGgHkRzn3AMDNY7eI3rYc7L3r",
+    "snapshots_folder": "1p_cNfdVWpcRLW_ez97a0TcpRRgDpGsNl",
+    "manifests_folder": "1gSzolztYB7GjxH12nHIllsuqObSQ7Up8",
+    "current_files_before_activation": 0,
+    "snapshot_files_before_activation": 0,
+    "manifest_files_before_activation": 0,
+    "snapshot_policy": "content-addressed SHA-256; identical source bytes do not create duplicate immutable snapshots"
+  },
+  "full_byte_ingestion": {
+    "status": "PENDING_ONE_TIME_APPS_SCRIPT_ACTIVATION",
+    "reason": "Current connector cannot execute/sync the bound Apps Script deployment or stream the release asset into the configured Drive folders.",
+    "expected_outputs": [
+      "nba_schedule_2027.csv under CURRENT",
+      "immutable SHA-addressed schedule snapshot",
+      "NBA_INGESTION_CURRENT.json",
+      "immutable run manifest"
+    ]
+  },
+  "preflight_contract": {
+    "required": [
+      "schedule present",
+      "schedule status != INCOMPLETE",
+      "provider SHA/size verified by adapter",
+      "nonempty CSV with game/event id coverage"
+    ],
+    "optional": [
+      "team_box",
+      "player_box",
+      "pbp",
+      "game_rosters"
+    ],
+    "zero_results_rule": "If NBA regular season has not begun, zero P5 result updates is valid."
+  },
+  "trigger": {
+    "activation_function": "svlActivateDataIngestion",
+    "scheduled_handler": "svlRunIngestionNow",
+    "cadence": "daily",
+    "hour_script_timezone": 11,
+    "shared_scope": [
+      "NFL",
+      "NBA",
+      "NHL"
+    ]
+  },
+  "controls": {
+    "models_changed": false,
+    "features_changed": false,
+    "picks_changed": false,
+    "odds_requested": false,
+    "register_written": false
+  }
+}
