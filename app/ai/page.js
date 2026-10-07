@@ -6,6 +6,19 @@ import { isOwnerAuthorized, ownerSecurityConfigured } from "../../lib/owner-auth
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
+function runTimeValue(value) {
+  const m = String(value || "").match(/(\d{4})-(\d{1,2})-(\d{1,2})\s+(\d{1,2}):(\d{1,2})(?::(\d{1,2}))?/);
+  if (!m) return 0;
+  return Date.UTC(
+    Number(m[1]),
+    Number(m[2]) - 1,
+    Number(m[3]),
+    Number(m[4]),
+    Number(m[5]),
+    Number(m[6] || 0)
+  );
+}
+
 export default async function ChatGPTWorkspacePage() {
   const data = await getDashboardData({ fresh: true });
   const ownerConfigured = ownerSecurityConfigured();
@@ -13,7 +26,10 @@ export default async function ChatGPTWorkspacePage() {
 
   const snapshots = data.sports.flatMap((sport) =>
     (sport.runs || [])
-      .filter((run) => /^(P1|P2_AUTO|P2_FORCE)/.test(String(run.mode || "")))
+      .filter((run) =>
+        /^(P1|P2_AUTO|P2_FORCE)/.test(String(run.mode || "")) &&
+        Number(run.oddsRows || 0) > 0
+      )
       .map((run) => ({
         sportId: sport.id,
         sport: sport.name,
@@ -35,7 +51,7 @@ export default async function ChatGPTWorkspacePage() {
         blocked: sport.status === "ERROR",
         blockReason: sport.status === "ERROR" ? sport.reason : "",
       }))
-  ).sort((a, b) => String(b.executedAt || "").localeCompare(String(a.executedAt || "")));
+  ).sort((a, b) => runTimeValue(b.executedAt) - runTimeValue(a.executedAt));
 
   const queue = snapshots.filter((run) =>
     /PENDING|DATA_READY|SNAPSHOT_READY/i.test(run.analysisStatus || "")
