@@ -227,7 +227,7 @@ function svlIngestTennis_() {
     },
     contract:{
       atp_primary:["ATP Tour Results Archive","ATP Tour current scores JSON backend"],
-      atp_structured_fallback:"Live Tennis API FREE: prospectively capture ATP main-draw singles match IDs from /matches?status=upcoming and later resolve those same stable IDs with /matches/{matchId}; used only when ATP Tour is blocked from Apps Script.",
+      atp_structured_fallback:"Live Tennis API FREE: prospectively capture ATP main-draw singles match IDs from /fixtures and later resolve those same stable IDs with /matches/{matchId}; used only when ATP Tour is blocked from Apps Script.",
       wta_primary:["WTA official tournament calendar API","WTA official tournament matches API"],
       crosscheck:SVL_TENNIS.crosscheck,
       scope:"ATP Singles + WTA Singles",
@@ -255,12 +255,13 @@ function svlTennisFetchATPFallback_(fromIso,toIso,retrievedAt) {
   // FREE plan strategy: discover ATP main-draw singles prospectively, persist stable
   // match IDs, then resolve those exact IDs after they start/finish. This avoids
   // relying on the paid completed-match listing and preserves pre-event identity.
-  const tiers = SVL_TENNIS.ATP_FALLBACK.allowedTiers.join(",");
+  // Do not server-filter by tier: the provider documents that a newly discovered
+  // tournament may temporarily publish tier=null. tour=atp + singles + main draw
+  // is the authoritative scope gate; known non-main-tour tiers are rejected locally.
   const discoveryUrl = SVL_TENNIS.ATP_FALLBACK.base +
-    "/matches?status=upcoming&tour=atp&draw=singles&is_qualifying=false&tier=" +
-    encodeURIComponent(tiers) + "&limit=100&offset=0";
+    "/fixtures?tour=atp&draw=singles&is_qualifying=false&limit=100&offset=0";
 
-  const discovery = svlTennisLiveGet_(discoveryUrl, key, "ATP Live Tennis discovery");
+  const discovery = svlTennisLiveGet_(discoveryUrl, key, "ATP Live Tennis fixture discovery");
   calls.push({kind:"discovery",url:discoveryUrl,http_code:discovery.code,bytes:discovery.bytes});
   const discovered = Array.isArray(discovery.json.data) ? discovery.json.data : [];
 
@@ -376,7 +377,7 @@ function svlTennisFetchATPFallback_(fromIso,toIso,retrievedAt) {
       base:SVL_TENNIS.ATP_FALLBACK.base,
       auth:"X-API-Key via Script Property " + SVL_TENNIS.ATP_FALLBACK.scriptProperty,
       strategy:"prospective_id_capture_then_single_match_resolution",
-      discovery_endpoint:"/matches?status=upcoming&tour=atp&draw=singles&is_qualifying=false",
+      discovery_endpoint:"/fixtures?tour=atp&draw=singles&is_qualifying=false",
       detail_endpoint:"/matches/{matchId}",
       free_plan_note:"No completed-list dependency; stable IDs are captured before start and resolved individually.",
       window:{from:fromIso,to:toIso},
@@ -412,7 +413,10 @@ function svlTennisLiveInScope_(row) {
   if (String(row.tour || "").toLowerCase() !== "atp") return false;
   if (String(row.draw || "").toLowerCase() !== "singles") return false;
   if (row.is_qualifying !== false) return false;
-  return SVL_TENNIS.ATP_FALLBACK.allowedTiers.indexOf(String(row.tier || "").toLowerCase()) >= 0;
+  const tier = row.tier === null || row.tier === undefined ? "" : String(row.tier).toLowerCase();
+  // tier=null is allowed prospectively because the provider can publish a new event
+  // before its season tier has been resolved. Once present, the tier must be in scope.
+  return !tier || SVL_TENNIS.ATP_FALLBACK.allowedTiers.indexOf(tier) >= 0;
 }
 
 function svlTennisLivePlayerObj_(row,n) {
