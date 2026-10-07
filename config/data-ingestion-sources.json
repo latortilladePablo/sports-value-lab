@@ -8,7 +8,11 @@
     "current_copy": "replaceable pointer/copy under CURRENT",
     "execution_manifests": "immutable manifest per ingestion run"
   },
-  "states": ["CURRENT_VALID", "PROVISIONAL_VALID", "INCOMPLETE"],
+  "states": [
+    "CURRENT_VALID",
+    "PROVISIONAL_VALID",
+    "INCOMPLETE"
+  ],
   "sports": {
     "NFL": {
       "automation": "IMPLEMENTED_PENDING_ONE_TIME_APPS_SCRIPT_DEPLOY",
@@ -38,14 +42,76 @@
       "assessment": "No recurring user upload should be necessary, but CURRENT docs do not pin one canonical machine-download endpoint/artifact for the weekly structured refresh."
     },
     "NHL": {
-      "automation": "NEEDS_ADAPTER",
-      "p5_policy": "SportsDataverse fastRhockey pipeline for schedules/rosters/boxscores/PBP/scratches/shifts; Hockey-Reference reconciliation; ESPN cross-check; NHL.com official verification",
-      "assessment": "Suitable for the same persistent-fetch pattern once exact current artifact URLs are pinned."
+      "automation": "IMPLEMENTED_PENDING_ONE_TIME_APPS_SCRIPT_DEPLOY",
+      "adapter": "bridge/SVL_NHL_Data_Ingestion.gs",
+      "season_end_year": 2027,
+      "folders": {
+        "current": "1J9Mtu1YYwb0808U9BntBSaOdfYxyS_HS",
+        "snapshots": "16rfKOBakcPY0wosyVCmdfK1qNmjsr8Bo",
+        "manifests": "19fEQRV5L2x-zH1PBKVHjTWlHHy7DPzDp"
+      },
+      "sources": [
+        {
+          "key": "schedule",
+          "provider": "SportsDataverse/fastRhockey",
+          "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_schedules/nhl_schedule_2027.csv",
+          "required": true
+        },
+        {
+          "key": "game_rosters",
+          "provider": "SportsDataverse/fastRhockey",
+          "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_game_rosters/game_rosters_2027.csv",
+          "required": true
+        },
+        {
+          "key": "team_box",
+          "provider": "SportsDataverse/fastRhockey",
+          "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_team_boxscores/team_box_2027.csv",
+          "required": true
+        },
+        {
+          "key": "player_box",
+          "provider": "SportsDataverse/fastRhockey",
+          "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_player_boxscores/player_box_2027.csv",
+          "required": true
+        },
+        {
+          "key": "pbp_lite",
+          "provider": "SportsDataverse/fastRhockey",
+          "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_pbp_lite/play_by_play_lite_2027.csv",
+          "required": true
+        },
+        {
+          "key": "scratches",
+          "provider": "SportsDataverse/fastRhockey",
+          "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_scratches/scratches_2027.csv",
+          "required": false
+        },
+        {
+          "key": "shifts",
+          "provider": "SportsDataverse/fastRhockey",
+          "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/nhl_shifts/shifts_2027.csv",
+          "required": false
+        }
+      ],
+      "optional_unavailable": [
+        "nhl_rosters/rosters_2027.* not published; CURRENT roster coverage uses game_rosters_2027"
+      ],
+      "reconciliation": "Hockey-Reference operational reconciliation; ESPN cross-check; NHL.com official verification",
+      "integrity": "provider SHA-256 + size + nonempty schema/game-id coverage; immutable content-addressed snapshots",
+      "activation": "Run svlActivateDataIngestion() once in the bound Apps Script project after syncing bridge files."
     },
     "Soccer": {
       "automation": "NEEDS_ADAPTER",
       "p5_policy": "ESPN Soccer Scoreboard by CURRENT league/date; official competition site for discrepancies",
-      "league_codes": ["ENG.1", "ESP.1", "ESP.2", "GER.1", "ITA.1", "MEX.1"],
+      "league_codes": [
+        "ENG.1",
+        "ESP.1",
+        "ESP.2",
+        "GER.1",
+        "ITA.1",
+        "MEX.1"
+      ],
       "assessment": "HTTP/date-window adapter is feasible; exact endpoint/schema and official discrepancy routing must be frozen before calling it automatic."
     },
     "Tennis": {
