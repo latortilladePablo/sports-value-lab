@@ -1,0 +1,57 @@
+{
+  "status": "PASS_READY_FOR_SCORER",
+  "validated_at_cdmx": "2026-10-07T01:55:28-06:00",
+  "ingestion_manifest_status": "PROVISIONAL_VALID",
+  "source_current": {
+    "schedule_sha256": "9bdfc976b30fcf410ec7451e5ea40d68959d49c7d9434a1b6713be899f64d8ef",
+    "pbp_sha256": "50cfbb09885794b9a24c03e15b55e10fb64bfd63cde0267eab1a736efe055ccb",
+    "pbp_size_bytes": 4380228,
+    "week4_completed_games_expected": 64,
+    "week4_completed_games_present": 64,
+    "week4_missing_game_ids": []
+  },
+  "pbp_emitter_regression": {
+    "week3_rows": 12,
+    "columns": 93,
+    "mismatch_columns_at_1e12": [],
+    "max_abs_diff": 7.105427357601002e-15,
+    "status": "PASS_NUMERIC_EXACT_1E-12"
+  },
+  "week5_pbp_pregame": {
+    "target_games": 15,
+    "team_rows": 30,
+    "columns": 93,
+    "nan_cells": 0,
+    "sha256": "f159aeb6e55ffef9187508341b7264a8395d248627070fa3230dd4f0c852a7e8"
+  },
+  "week5_model_inputs": {
+    "rows": 15,
+    "columns_total": 354,
+    "feature_count": 344,
+    "feature_order_exact": true,
+    "feature_order_sha256": "b05b047cc881b45b81da939dbe8d8de9c3b5f9f0cc0db8be8bba5ef7ec28ee3e",
+    "duplicate_game_ids": 0,
+    "nan_cells": 0,
+    "sha256": "ea999d579ce85af7af4977af2c0911600522b4cfc51ddfb55bb7c55d07989aa8"
+  },
+  "home_away": {"status": "PASS_EXACT"},
+  "leakage": {
+    "target_game_ids_in_current_pbp": [],
+    "target_results_known": false,
+    "status": "PASS"
+  },
+  "timestamp_gate": {
+    "as_of_cdmx": "2026-10-07T01:45:13-06:00",
+    "all_kickoffs_after_asof": true,
+    "earliest_kickoff": ["2026_05_TB_DAL","2026-10-08T18:15:00-06:00",true]
+  },
+  "controls": {
+    "scorer_executed": false,
+    "p1_executed": false,
+    "odds_used": false,
+    "model_changed": false,
+    "refit": false,
+    "recalibration": false,
+    "imputation": false
+  }
+}
