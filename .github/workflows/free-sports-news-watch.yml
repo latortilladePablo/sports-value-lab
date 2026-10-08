@@ -1,0 +1,29 @@
+name: Free Sports Headlines Watch
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: free-sports-headlines
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch public RSS signals (no API keys or LLM)
+        run: python3 scripts/news_watch.py
+      - name: Publish inspection artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: news-watch-${{ github.run_id }}
+          path: public/news-watch.json
+          retention-days: 2
+          if-no-files-found: error
