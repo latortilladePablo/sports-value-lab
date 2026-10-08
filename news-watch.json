@@ -23,5 +23,11 @@
       "status": "NOT_RUN",
       "articles": []
     }
+  },
+  "publication_test": {
+    "kind": "CONTROLLED_WRITE_TEST",
+    "source": "manual-connector",
+    "is_live_news": false,
+    "note": "No se consultaron RSS; no presentar como noticias actuales"
   }
 }
