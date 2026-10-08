@@ -1,3 +1,5 @@
+import NewsWatchPanel from "../../components/NewsWatchPanel";
+import { getNewsWatch } from "../../lib/news-watch";
 import AppNav from "../../components/AppNav";
 import ActionCenterClient from "../../components/ActionCenterClient";
 import { getDashboardData } from "../../lib/live";
@@ -10,6 +12,7 @@ export const revalidate = 0;
 
 export default async function ActionsPage() {
   const data = await getDashboardData({ fresh: true });
+  const news = await getNewsWatch(data.sports);
   const ownerConfigured = ownerSecurityConfigured();
   const ownerAuthorized = ownerConfigured ? await isOwnerAuthorized() : false;
 
@@ -65,6 +68,8 @@ export default async function ActionsPage() {
           <div><span>Paid gates</span><strong>Confirmación</strong></div>
         </div>
       </section>
+
+      <NewsWatchPanel news={news} />
 
       <section className="safetyBanner">
         <strong>Dos capas de seguridad</strong>

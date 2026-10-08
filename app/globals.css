@@ -46,3 +46,20 @@
 
 .multiSnapshotPrompt{margin:18px 0 22px;padding:16px;border:1px solid #315b78;background:#0a1a28;border-radius:16px;display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.multiSnapshotPrompt h2{margin:4px 0 6px;font-size:17px;color:#dbeaf6}.multiSnapshotPrompt p{margin:0;color:#91a8ba;font-size:10px;line-height:1.5;max-width:760px}.multiSnapshotActions{display:grid;gap:8px;min-width:230px}.multiSnapshotActions>button{border:1px solid #2a6656;background:#123429;color:#dffef3;border-radius:10px;padding:10px 12px;font-size:10px;font-weight:850;cursor:pointer}.multiSnapshotActions details{border:1px solid #27445d;background:#071521;border-radius:10px;padding:8px}.multiSnapshotActions summary{cursor:pointer;color:#9cc5dd;font-size:9px;font-weight:800}.multiSnapshotActions pre{white-space:pre-wrap;word-break:break-word;color:#aac0d1;font-size:9px;line-height:1.45;margin:10px 0 0;max-height:360px;overflow:auto}
 @media(max-width:760px){.multiSnapshotPrompt{flex-direction:column}.multiSnapshotActions{min-width:0;width:100%}}
+
+
+/* Read-only free sports news panel */
+.newsWatchPanel{margin:22px 0;padding:20px;border:1px solid #243b50;border-radius:16px;background:#0b1b2d}
+.newsWatchHead{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.newsWatchHead h2{margin:4px 0 0;font-size:20px}
+.newsWatchDisclaimer{color:#9badc1;font-size:13px;line-height:1.5;max-width:920px}
+.newsWatchGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:15px}
+.newsWatchCard{border:1px solid #294158;background:#0c2033;border-radius:12px;padding:14px;min-width:0}
+.newsWatchCard h3{font-size:15px;margin:0 0 9px}
+.newsWatchCard strong{color:#b8d9ff;font-size:12px}
+.newsWatchCard ul{padding-left:17px;font-size:12px;line-height:1.5}
+.newsWatchCard li{margin:7px 0}
+.newsWatchCard a{color:#8dcafa;overflow-wrap:anywhere}
+.newsWatchCard p{color:#9eb3c9;font-size:12px;line-height:1.55}
+.newsWatchCard .newsNextStep{border-top:1px solid #294158;padding-top:10px;color:#e4edf8;margin-top:12px}
+@media(max-width:650px){.newsWatchHead{flex-direction:column}.newsWatchPanel{padding:14px}}

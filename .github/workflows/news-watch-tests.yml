@@ -1,0 +1,49 @@
+name: Free News Watch Tests
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/news_watch.py'
+      - 'scripts/validate_news_watch.py'
+      - 'lib/news-watch.js'
+      - 'tests/test_news_snapshot.py'
+      - 'tests/news-watch-ui.mjs'
+      - 'app/page.js'
+      - 'app/actions/page.js'
+      - 'tests/test_news_watch.py'
+      - '.github/workflows/free-sports-news-watch.yml'
+      - '.github/workflows/news-watch-tests.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and unit tests without network or paid APIs
+        run: |
+          python3 -m py_compile scripts/news_watch.py scripts/validate_news_watch.py
+          python3 -m unittest discover -s tests -p 'test_news*.py' -v
+      - name: Validate Hoy and Actions news states without paid APIs
+        run: node tests/news-watch-ui.mjs
+
+  rss-integration-smoke:
+    # Real RSS fetch on PR, read-only token; never writes data or deploys.
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Fetch current RSS headlines (no paid services)
+        run: python3 scripts/news_watch.py
+      - name: Check generated JSON freshness, schema and all sports
+        run: python3 scripts/validate_news_watch.py public/news-watch.json
+      - name: Ensure no publication happens on PR
+        run: |
+          test -s public/news-watch.json
+          echo "RSS checked, JSON validated; publication intentionally not attempted"

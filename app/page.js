@@ -1,3 +1,5 @@
+import NewsWatchPanel from "../components/NewsWatchPanel";
+import { getNewsWatch } from "../lib/news-watch";
 import AppNav from "../components/AppNav";
 import { getDashboardData } from "../lib/live";
 
@@ -64,6 +66,7 @@ function SportCard({ sport, statusMeta }) {
 
 export default async function Home() {
   const data = await getDashboardData();
+  const news = await getNewsWatch(data.sports);
   const p = data.portfolio;
   const primary = data.primary;
   const primaryMeta = data.statusMeta[primary.status];
@@ -113,6 +116,8 @@ export default async function Home() {
           <small>{primary.window}</small>
         </div>
       </section>
+
+      <NewsWatchPanel news={news} />
 
       <section className="metrics" aria-label="Portfolio">
         <Metric label="Bank" value={Number(p.bank).toFixed(2) + "u"} sub="Inicial 200u" />
