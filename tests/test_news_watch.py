@@ -37,7 +37,7 @@ class NewsWatchTests(unittest.TestCase):
     def test_insecure_links_filtered(self):
         now = format_datetime(datetime.now(timezone.utc))
         with patch.object(news.urllib.request,"urlopen",return_value=FakeResponse(feed(
-            [("NFL injury","http://example.org/no",now)
+            [("NFL injury","http://example.org/no",now)]
         ))):
             self.assertEqual(news.read_feed("NFL"),[])
 
