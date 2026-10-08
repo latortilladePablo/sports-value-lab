@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": null,
+  "method": "Free RSS headline screening",
+  "sports": {
+    "nba": {
+      "status": "NOT_RUN",
+      "articles": []
+    },
+    "nfl": {
+      "status": "NOT_RUN",
+      "articles": []
+    },
+    "nhl": {
+      "status": "NOT_RUN",
+      "articles": []
+    },
+    "soccer": {
+      "status": "NOT_RUN",
+      "articles": []
+    },
+    "tennis": {
+      "status": "NOT_RUN",
+      "articles": []
+    }
+  }
+}
