@@ -38,7 +38,7 @@ def read_feed(q):
 
 def main():
  now=datetime.now(timezone.utc)
- output={"checked_at_utc":now.isoformat(),"method":"Google News RSS headline screening (unverified)","sports":{}}
+ output={"schema_version":1,"checked_at_utc":now.isoformat(),"method":"Google News RSS headline screening (unverified)","sports":{}}
  for sport,query in QUERIES.items():
   try:
    articles=read_feed(query)
