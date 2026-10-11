@@ -1,11 +1,41 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-10-10T23:32:27.769938+00:00",
+  "checked_at_utc": "2026-10-11T05:44:23.154955+00:00",
   "method": "Google News RSS headline screening (unverified)",
   "sports": {
     "nba": {
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
+        {
+          "title": "Kings lose Maxime Raynaud to apparent serious knee injury - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPcXB2YkJoLXpqeXJEbWtFcjlBLUo1NmRzRGtFSkl6c2hiYi1NLVA3VUNzRkpqTFFkR3AybEFiXzhUclFaVEItaGcxeGRUcVl6SDgxVmRRcGQ2S0dtbEdydTJ0LWUwZTJicUNjY1BkWldLbEZPdVVISXRfcjBERXBpSTFRdG1XTEtCbWVZTkZzTDJsT3N0NnZQbUl6alBMb1VV?oc=5",
+          "published_at": "2026-10-11T02:44:00+00:00"
+        },
+        {
+          "title": "Pelle Larsson Injury: Won't return Saturday - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOUjhwY2Z6QzM4THVkdVZwd0MtZWRLWnBhb3M1TWNSRDYyN21meFU0OWFTRXYtOTI2RldWd1N2dFRTZU9Sd3VtaWZsZ2pFQzdHOER3UGxlNEVjdWc2NkZoXzQtMFBtSEdSeFFyY3lMZllwakRpS3dxd1VLYm5GMTZ1ZUFmcHJ4UFBtMFB0YkNtLVd1Qnd2NGlES2lB?oc=5",
+          "published_at": "2026-10-11T01:59:03+00:00"
+        },
+        {
+          "title": "De'Aaron Fox Injury: Won't play against Phoenix - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNdHpJVi11WW84RW5wODRtNUpHY2trQU80Z1lPS0ZfMDlock1qZ1pfOWlVLU1TSjNJS0Y1TXEwLWUwMEFzTmQxY0JyX3VMZkZ4T0xpZmVSNUI1YWhPWU5xOVRNU1pNRTM4RTJ6VGh6X0NnbGx4Y3E2OHN2bDVwVl9ZTzNQQXdINkNOR1ZGb3V3T3BUZ0xpTmhpN1ZwUmdhZw?oc=5",
+          "published_at": "2026-10-11T02:09:37+00:00"
+        },
+        {
+          "title": "Miles Bridges Injury: Ruled out for Saturday - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRWhRYld2X2hfQzV1aVBpMFRKVkZvVEdaNzZXa0NqdFdsbmlwbHZDOWFYSWJvNHdpcTVEVGgzcmpXa3huQjY1SHU4SHlXM3ZNazdhM0d2aFh6bHRpNFFFZ1lTaFZvc2dyLWktaFFhbHMwZ0ZCWGpVVEpvcmI1SEd3MEtvejdjYWhKY21oYm1ENlJSN3RFR2k1MTFuTmg?oc=5",
+          "published_at": "2026-10-11T00:52:35+00:00"
+        },
+        {
+          "title": "Maxime Raynaud Injury: Injures knee vs. Golden State - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPY1dCSFZRQWNUTVZaQnpJMDUwWmpMRWU4aFp0ZVpZS0pGSVpsdk5EeDdCV1ZYT0VCemlTMDNLNEd1NlJ6Y0s1MjhfbUtja1dxXy1DaUxLRTEzZW5pSll4cWpYX2t2eU9sZGNmTUY3dHNYSHYzSnFhMWZiel9yeXpPUk9LTXhCbHg2blJOa2xid3k0VUNVbFNfcWpzc2ZVemJRbXVsM1h3?oc=5",
+          "published_at": "2026-10-11T01:46:55+00:00"
+        },
+        {
+          "title": "Domantas Sabonis Injury: Won't play Saturday - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPeWx4VTVpMHZlZHRoYTBudWszbFBzZHVLWGJUS3RIWG9COUE3M1k1bTR5SzJreFdOQU1LemNGLTZnbl8zcnpzV3FjVlFKSkJfWFBZUVh2UFhzWndYUEtLdHNqV25Ub29teEhWRmRIdHVkcXF1cXAybmxTaS1GUER5MXp5RlBYTEx2OWVGWjJnalAyQzRjc2ZoaHRjbw?oc=5",
+          "published_at": "2026-10-10T23:08:25+00:00"
+        },
         {
           "title": "Jaylen Brown News: Ruled out for Saturday - RotoWire",
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWHM4bFRrQk1VZUlsSi0wRTdrTlE2NW85Mk9tVHNBSnd5SWdYb0dfd2h1bGJyb1RaZ0F2TnZDd3dVMkVndko2bnpRTHV1RG02WGw1QXZtTDBjbWFqanFiNS1rUXBQN0hSRGxVX0Rfc1p1eU1EUHZ0MWwzYmozenFmY1VOUXc2MFJISTY3eWFfTzVhVk1jWHJOVg?oc=5",
@@ -15,36 +45,6 @@
           "title": "Luguentz Dort News: Not listed on injury report - RotoWire",
           "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQLWFzSlEyY0tKNnloTlp5LUE1emZTVkE1dERVaVY2M1FwYXV3N2VRVVFUNW55RkRtdnhtMWowbnFjM3k4M1BIRlJuOE9XU3gwUS0zREZyS2hYaG1fa1J2d3ZSeDVmSzRZOTFhZnROSHZnWnBNeUVpV00yQWpWRXdjY0hCZVlYSGgxT1NvS3ZOckNYM0ExVnNPYUJYOXFkekw5?oc=5",
           "published_at": "2026-10-10T21:37:20+00:00"
-        },
-        {
-          "title": "Domantas Sabonis Injury: Won't play Saturday - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPeWx4VTVpMHZlZHRoYTBudWszbFBzZHVLWGJUS3RIWG9COUE3M1k1bTR5SzJreFdOQU1LemNGLTZnbl8zcnpzV3FjVlFKSkJfWFBZUVh2UFhzWndYUEtLdHNqV25Ub29teEhWRmRIdHVkcXF1cXAybmxTaS1GUER5MXp5RlBYTEx2OWVGWjJnalAyQzRjc2ZoaHRjbw?oc=5",
-          "published_at": "2026-10-10T23:08:25+00:00"
-        },
-        {
-          "title": "Jalen Duren News: Ruled out for Saturday - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPMVJRZUNiRUp4ZWxvZ1kwWGI4Q1hvSzY2dFJiN1kxT0R1a0djTWZRSXRjOWVMU0dJRnJQaFlTNndlRVF3RHRYbHJQcHVLS056Y0VIVmZEenc4OHF6ZkFzUk55WUp1SmM5U2FueGVxRHlLb2d1enVJU0VucjdGb3RYNjFERFZGT0J2bkcwX0Vka1VxdTE4WU1z?oc=5",
-          "published_at": "2026-10-10T21:44:12+00:00"
-        },
-        {
-          "title": "Collin Sexton Injury: Day-to-day with lower-leg injury - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVG1uaTgtWTVYTDUtZFkyYVhQLTVuMWhkTk9iV29GbVFvTGpsZmhkQkNVdlZDQlA3Z0wweTl4d3o5TzJURGNiTDM0YUVIVDUwQlBSMmhDSlgzWW01ajlhcHBZMFFKSVJuaUFmcVpQU2VFYWlVWG4xVTR4T2hqZTVwVzJYQnBnV2R0Ni1Na3Zhc05JelN2cnVHMnMwallTN1ZVc2UwUEYzNUptdw?oc=5",
-          "published_at": "2026-10-10T19:50:22+00:00"
-        },
-        {
-          "title": "Tyrese Haliburton Injury: Won't play Saturday with right ankle injury - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQOWE4MzRXOU40Z3hmR1VHRGZ5R29YTzVpamRpN2xZT3h1MndHRko0UlM5aV9iZnY5WDhWSzNCTFg2TUtncDREYlN2VzAzSXlOanFCejJrVllfZ1FiTW5tU1NaaHA3TXVodXdfQ0dGampyZDFBSHpHZVM3RXdZN3E4OTlHV2JKbVFGcEt0bnRoNTVLN09oSzhUNGtHZFhlZlAxOTBnMXF6S1ktRnoxaGswNzR2N3NCM0o0UVZYWQ?oc=5",
-          "published_at": "2026-10-10T21:25:16+00:00"
-        },
-        {
-          "title": "Alex Sarr Injury: Will make preseason debut Saturday - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPanFXNGRaVldQR3dGLWxBT0x0b3ZMN1NBOEx0V3JoV05SdnFkYU4tUHpQMTVrSm4zSXZXaEhKU1FHaUVKNzdvMkptcFhUSmxOdWtfWHZ6b1lOaGU3Vzc3SC1uVmJGNjdSX2RIbUI1a19zWUdGa1VXUWZhWGRVdkZtMWo5cWYxQ05RM2g2QVlrLWRzWmFXd2hmeW5fekZRWnkwaW1iQVF4QQ?oc=5",
-          "published_at": "2026-10-10T21:20:09+00:00"
-        },
-        {
-          "title": "De'Aaron Fox Injury: Game-time decision Saturday - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQM1dOUXpmajJOdmlwMFQ5cERzaS1nOEwxNk9SSnp5QVoxRGg2UEcwUEwzSmtKVzZicGRNR2RXenI3akNOZGc0VWwtd1ctSHdtZU1OQV9zRkdsSGZKVVM1Y0FBcUloeXM2UklwcHNVNmZCdWllWVVkWnY3OE1DZDVMb0huaElCR1lSYmhhM3JqQTZQeEJpOVk4bEVSdXpRVG90?oc=5",
-          "published_at": "2026-10-10T21:07:11+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -52,6 +52,11 @@
     "nfl": {
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
+        {
+          "title": "Latest Week 5 NFL Injury Report: Lamar Jackson Out, Caleb Williams Now ‘Questionable’ - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBPSFU5YTY5RU1SVTl5b1drZXMxQlFILVMxdVM5NmRzZHBrLWUxR093VFRRUzBHTjN4S3RZa01zNjA4VnZiajduTDk2RGw3aVVkSUc1WDFHQVRJaXVmcDkzMkE1U3E3UzBkSTNOTHFCWGVJcG13Wi1oYU5nZTludw?oc=5",
+          "published_at": "2026-10-10T22:31:27+00:00"
+        },
         {
           "title": "Updated Weather Forecasts for Giants, Steelers, NFL Games Impacted by Hurricane Isaias Remnants - Bleacher Report",
           "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQbWZSS2hGY1hyWXpMOHM5dWNyUlNITlhXUjB1R2FxY0tBWW8yX21peDJ1SjhZTzhLX3E3aGdleHJTakpISnk0eTBGS0RFT3BZWjhIdUUyanY0aXd5cGVHVHRESmZDZWxuNV9wVXBmdFRZdkhHVmk3ZnFReUpVRU9NRVNua1QtelpvYWkxR1dKNi1kUHBMaFRuYlI4TEJRdEdkNkxyY3JzblBjWG93NFRVdUo4VVlCbGZOMmNCNmV0Vl9rSzNGYTJjT2ZqRQ?oc=5",
@@ -61,11 +66,6 @@
           "title": "Patriots place veteran WR Mack Hollins on IR with calf injury - ESPN",
           "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUkU0bVpXaFM3QjlGTV8wY1dudXJ3ejRMUW4xbE5icTladVZWUE9Kc0NnSTRMSmEtSTJwTzNMU2trMk9HOUxwcDcwaERzU1M0QjVCbTZ0c0Z6V1U4VHJZaTdEcWlRbllMYjhMNDAtZEJyMlRCck1QLXFoRVZ5cUpzanBwNkhlbngtSjBOOUxqaVNROGlNVzZnX01NOXJBeG8?oc=5",
           "published_at": "2026-10-10T20:36:00+00:00"
-        },
-        {
-          "title": "Latest Week 5 NFL Injury Report: Lamar Jackson Out, Caleb Williams Now ‘Questionable’ - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBPSFU5YTY5RU1SVTl5b1drZXMxQlFILVMxdVM5NmRzZHBrLWUxR093VFRRUzBHTjN4S3RZa01zNjA4VnZiajduTDk2RGw3aVVkSUc1WDFHQVRJaXVmcDkzMkE1U3E3UzBkSTNOTHFCWGVJcG13Wi1oYU5nZTludw?oc=5",
-          "published_at": "2026-10-09T19:08:55+00:00"
         },
         {
           "title": "Injury-riddled Bengals secondary finding hope with fresh faces, new roles - Spectrum News",
@@ -83,9 +83,9 @@
           "published_at": "2026-10-10T17:10:00+00:00"
         },
         {
-          "title": "Hurricane Isaias NFL Week 5 weather impacts across the country - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxORm5kbHNSMUVxQlFHN0xmQnl0RXVJLWNDQUhrMS1lMXljbjV4eURZVXIydHlodkQ4QnkwMHZrc29QNWVCVENmVWxhbUR4WmNZVmFfUkJRWm14SzY4QVZaRnJoMkhyRUR2WmgzV20zdk94bzlKNFV4MUtldFVvb2VtTTFR?oc=5",
-          "published_at": "2026-10-09T17:35:00+00:00"
+          "title": "Saints Friday Injury Report: 2026 Week 5 vs. Minnesota Vikings - New Orleans Saints",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOX0pXejNXc1FDU2xRNFBmc2tnMUoxN2NaTHJtMUdNR1NvSDlIcl9WQWRkZE9LVHB5Y3lQZ1pPcEhnUnpCREJKWGJ1WkJvNE9WdzcyUl9LTGtVem1lcTNuYXRxTm1XeG5KazJNWnB4ZENjdWRoblNmUXpid2FDaGJxRk5MZ3p1Sm1wU1I5MmRRbEk4WWljcW9saHZYRzZTWTJjdndRc0V0WXlxUVFyUWRpUGRlcTc?oc=5",
+          "published_at": "2026-10-10T00:32:53+00:00"
         },
         {
           "title": "Arsenal’s Piero Hincapie appears to sustain an injury during cool down after Leeds United victory - The New York Times",
@@ -109,24 +109,9 @@
           "published_at": "2026-10-10T21:17:05+00:00"
         },
         {
-          "title": "New York Rangers goalie Igor Shesterkin out for season with lower-body injury - The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNN1dQLTJRM3BhX3Rzc3EwTWkzQVJqY1pJSWIxT2U5NVYwS1JzQU43YTdfYXVYTjdHOHJDVGZEVW85aW1na2RqR3RTWjF0TmI4Ni1HOWZFbFc0N3QyUUptajRUcmY2ZExSZzBJTzNRMEJpeEQ1cjRmenp2MVc0TWxnYnRGQ2VIclBvbVJJRFFvNkx0TjZi?oc=5",
-          "published_at": "2026-10-10T17:21:44+00:00"
-        },
-        {
-          "title": "Rangers' Igor Shesterkin out for season with right knee injury - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPNkxjRlZoZXptZGp4RjdiU1BiVS1XcHNTR2JFU0gzZ1hFZ21zUnpQaFZEQl9iMDZXNHZoaWRVUlBQWGY5Ulo5YXV4MG5VelR2YXE1WC1zbWlrcU5NeXI0NE4xTExLR1VHN1loODhxeU8xcWpvYWh5TFdGeUh5Rm5oTGl5eE1hS0s5SnlDQ3lqTk5sMWpEaGc?oc=5",
-          "published_at": "2026-10-10T17:01:57+00:00"
-        },
-        {
           "title": "Projected Lineup: Wild at Panthers - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1VLWJ0MEZuLVlmWTNWUGE0cnV2NElWbkRoSFdhcGoySXZJRHl3TWpLNkVxeng1b1dwYlFQaGtObFQzQWx4ZHA1d0szc0xQN2ktYkpBQ0tLTUs0WE50d21odFRoQjJZZ3NGczVyUl9TVHI3ODQ?oc=5",
-          "published_at": "2026-10-10T20:12:57+00:00"
-        },
-        {
-          "title": "Projected Lineup: Oct. 10 vs. Columbus | St. Louis Blues - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNajc5NjdkY2F2SWRXNGE4UDRSLXRYUW8za2lQa2lNVE5EUFZWSm1leWFZODZjVDlHVWJoWVJPMXI2RGpsbkhYanZfWjByeWFVa1pkYXhwc21IMHIzMzJDRy1xQWptNnNUMDROLTJ6Q1VWeVdh?oc=5",
-          "published_at": "2026-10-10T17:43:54+00:00"
+          "published_at": "2026-10-10T23:08:06+00:00"
         },
         {
           "title": "Dube sidelined 8 weeks with neck injury - NHL.com",
@@ -134,9 +119,24 @@
           "published_at": "2026-10-10T15:38:23+00:00"
         },
         {
-          "title": "Shesterkin helped off ice for Rangers with lower-body injury - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeHd5T01RXzlieFA4ZjRxTEo5RU1ybHdUZWxpMVg2bTczUk5IZnByR1R6MzNiNWFXRVRkbnpfYW84NjltQzQ1MTd2Zl9QTUdwODdDWFp6Wk00R2hJdnZHY2VKN0g5LUV5eXBCa2tIc1g5ZmpURk4wdnRCb0kyaWtnQkRWZmNzWjZDWmhOLUZCT281bXgyYUVmeg?oc=5",
-          "published_at": "2026-10-10T03:48:20+00:00"
+          "title": "Projected Lineup: Oct. 10 vs. Columbus | St. Louis Blues - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNajc5NjdkY2F2SWRXNGE4UDRSLXRYUW8za2lQa2lNVE5EUFZWSm1leWFZODZjVDlHVWJoWVJPMXI2RGpsbkhYanZfWjByeWFVa1pkYXhwc21IMHIzMzJDRy1xQWptNnNUMDROLTJ6Q1VWeVdh?oc=5",
+          "published_at": "2026-10-10T17:43:54+00:00"
+        },
+        {
+          "title": "Projected Lineup - Flames vs. Ducks - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1BLXhuR3JzZmd5SUFZVkRwMTBFalNQdUxBam1zbkt0Yy1hVTU5LVpOczVxVnRKM0ZxbGF1TjJIeVY0dDBDTi1sSl84OGx3emZUWGtEX1hBUVhQWDFlazZKZlA2WlFkQ0JVaktST09LX0FuZS1UbWdpR0JMUGZCdw?oc=5",
+          "published_at": "2026-10-11T02:28:56+00:00"
+        },
+        {
+          "title": "Hurricanes at Blackhawks projected lineups - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPWURKanFubExNLW8wZU5HY0tLLWNDSjZYOV9CUTVTMHRiVVlhX3JiQ0dnaEtvdXNYcmhJLXMzNHkyUTRIZEkxcHlXZzkyMEtMSnlEMDFSaF81WlMwLVNfQzViYmczcUxzaEpMenM5UmZfTFo2cTJzdGNVenVRWGtEZFlSTFNmNlRoVnU0WWY0dVIxVE41a0ZF?oc=5",
+          "published_at": "2026-10-10T16:24:29+00:00"
+        },
+        {
+          "title": "Stars at Penguins projected lineups - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQaVVHRFZPcDRnWmNJVTFWWThUampGUm92MlF3MHQ5TUo3THlPNVZwR1VhT05feERQTVlFR2ZpY0NFejRGbE9CN29fYzBNVTBxMzhKeUtSZENxTGlwREtGNE92OTAyNWM3MDZDZV9WSWVJRjBNZWVoY0ZCU05uQl8wcG16aEFfNFJVWml6Nm1SNA?oc=5",
+          "published_at": "2026-10-10T16:32:18+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -145,19 +145,19 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
-          "title": "USWNT vs. Spain: Starting XI & Lineup Notes on Saturday, October 10 in Washington, D.C. - U.S. Soccer",
+          "title": "Rams Injury Report, Week 5 vs. Bills: Aaron Donald, Colby Parkinson and Jaylen Watson good to go for Monday Night Football; Quentin Lake questionable but 'trending in the right direction' - Rams",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNNjNFZ19XSFFkZ0t6WmtfTUljV0lKc3B6QmJnU3hjTS1nay15bFhUemRNc3ZGMGUtVHJJRDNWWnZJcTJHS3d5NkljdVkwNFl3S3AwVnE5VzgyRndWOEFjaXJfMG10eUg5dURzbURscTFaaWJtYWQwY3F4TWR4dnJmUjgxUzlDNUpCNlhmVVdFZ2p5dmo5OENYSmlmRHFCcFZ5RV9pblNJUkJYemxDamxOQTlMWWVTZEh1VGtPcExobzl2Rm1UdDdVaG5MX2ZIWlQyMDI0VUE3VG5IUElMMUxnaGgwcDdySEk?oc=5",
+          "published_at": "2026-10-10T21:52:56+00:00"
+        },
+        {
+          "title": "USWNT vs. Spain: Starting XI & Lineup Notes on Saturday, October 10 in Washington, D.C. - US Soccer",
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPbXpQeTgzRWRLQ0tIODQ0NWJoRVZzcTFVdFZXOC1OaV9EZm52dFBjd3FTdHhHOFJMd2lGTE5DREptWUJnNE9sQ0xKeTVUc3B1MlF2WDZXcl9IdDNFNjdha1I3RjJyQTNQaGJIZUp6M3p5RHdBd3AtcGotSm9uNTVPbnJCMTBoMHd3ZTVxbWpFZkFsNVVSNGZWNUxSaFdRZk9KbGhtYQ?oc=5",
           "published_at": "2026-10-10T17:37:09+00:00"
         },
         {
-          "title": "Kansas State vs Houston injury report: Who's in, who's out? - The Topeka Capital-Journal",
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNRkpiMDNRVlZWcnZwSFVjZDBtMzlBZnIyTDVXYk5US1gxaExjWmZMWkZ3SExjdDdNNEJ5MFFtOFhrcGtMbS1wdTBBRllEYUJYNHVNUklSQVN2aXFwaUxtS0U3cUtqLXcxV1FmV2xyTGlVdXhLSXN4S1ozZUNTajRBbEhFMkNnUXJvcmN5NzBaUl9rNnQtYzhmNThESHpHZ3Z2UlFHa1F5S2xDR3FOYTV1b3NGQnJ1UUJ6NG5ieE5aSk1MeEFjMVNjMFFR?oc=5",
-          "published_at": "2026-10-10T18:00:00+00:00"
-        },
-        {
-          "title": "Missouri football injury report Texas A&M: Tigers make 11 players available - Columbia Daily Tribune",
-          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQT2h4blYyVTkyVThCcTF5TlpaZHN2NW0wMTk0YThLNU5iTHhxVVUzeU90MFJURk5TaHRld3pGSkhCTldhOGpUallkWElldjZXNXlQMjFYM05URDRMbTY2TXNnbnlEOVE2UVZoQmZqY2VvbW9KWEdQdVdfVE5lbVc1YTNLS2sxbGVqalJFZlFaX1NHMzBEUHV0ZkpKM1h1NjlZTzFvLWtBTzZrSzN5SmZMLWRpbU5ZVFAxM0ZuNzNrbjlvSWQyV09Bd09GeGNKU0dZN3NtaDA0N2w2dWJNcWphMEtoc1FzOGVCZUxjdGI1WVYwRjRF?oc=5",
-          "published_at": "2026-10-10T14:36:00+00:00"
+          "title": "Illinois football injury update on quarterback Katin Houser - Writing Illini",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSVM5QTUyNW5QS1N4cnpDaDBobnZ3bVBURlBXUXBpNVI3aVcxdUlfSGktNF8yVUpUcFNFSldKYzFLYkxFS0pNODdBaW1zRWhZOGNSNzh5OXhFOFNCVG9sS1VaWlhQRjRQT1hRb1lQNjRQR08zSFhEVy1DakdYUm4zVkp3Y1JsTUQwcmpaZzFR?oc=5",
+          "published_at": "2026-10-10T22:59:50+00:00"
         },
         {
           "title": "Final Alabama vs Georgia injury report released: Full list - The Tuscaloosa News",
@@ -165,19 +165,19 @@
           "published_at": "2026-10-10T22:06:00+00:00"
         },
         {
+          "title": "Kansas State vs Houston injury report: Who's in, who's out? - The Topeka Capital-Journal",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNRkpiMDNRVlZWcnZwSFVjZDBtMzlBZnIyTDVXYk5US1gxaExjWmZMWkZ3SExjdDdNNEJ5MFFtOFhrcGtMbS1wdTBBRllEYUJYNHVNUklSQVN2aXFwaUxtS0U3cUtqLXcxV1FmV2xyTGlVdXhLSXN4S1ozZUNTajRBbEhFMkNnUXJvcmN5NzBaUl9rNnQtYzhmNThESHpHZ3Z2UlFHa1F5S2xDR3FOYTV1b3NGQnJ1UUJ6NG5ieE5aSk1MeEFjMVNjMFFR?oc=5",
+          "published_at": "2026-10-10T18:52:00+00:00"
+        },
+        {
+          "title": "Missouri football injury report Texas A&M: Tigers make 11 players available - Columbia Daily Tribune",
+          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQT2h4blYyVTkyVThCcTF5TlpaZHN2NW0wMTk0YThLNU5iTHhxVVUzeU90MFJURk5TaHRld3pGSkhCTldhOGpUallkWElldjZXNXlQMjFYM05URDRMbTY2TXNnbnlEOVE2UVZoQmZqY2VvbW9KWEdQdVdfVE5lbVc1YTNLS2sxbGVqalJFZlFaX1NHMzBEUHV0ZkpKM1h1NjlZTzFvLWtBTzZrSzN5SmZMLWRpbU5ZVFAxM0ZuNzNrbjlvSWQyV09Bd09GeGNKU0dZN3NtaDA0N2w2dWJNcWphMEtoc1FzOGVCZUxjdGI1WVYwRjRF?oc=5",
+          "published_at": "2026-10-10T14:36:00+00:00"
+        },
+        {
           "title": "Ohio State injury report: 10 players ruled out for Maryland game - 10TV",
           "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPcDRwbFNyNHdsYWFOd3o2ZGREWDBJOVI1dmhBRHpGQzU2WTZqeExMcjIwOHV4OF9kZ0ppOVdLZkprS1R1eFBDMm1idHZkMU5NcUpPdDVCcERYR1FDV1l1dUh4YTl3MTFsQVE1R1VGTVdEbmIwcHFQdXBBSldKTC1qdWhLZ1RTOHp2VllZb3FpMHlBNG12eXI5YVNoOXR3QVFLejVLN0pnV0NzbW95WW9TZXNrMWRzYnhTYWV1ZWJySjVkV0JsYlBaQkQzaTFiRHNsT0REakh2T1FvNkxW?oc=5",
           "published_at": "2026-10-10T18:19:00+00:00"
-        },
-        {
-          "title": "Indiana football vs. Nebraska injury report: A.J. Harris, Daniel Ndukwe continue to trend toward playing - 247Sports",
-          "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOMFJGbzByRXhEMXdfQXFrb0JHNHNpaFNvdmxwMG1IcmxiWVFOMVA5dWhMNXAyQ29EQ3d4eG5fTXRVYk1WMjY3N2VLS0RXbUZwWGZDZUY2NVJfMmxfYWtPVkpubkg4R1k3dF9yNGQ1VkJKY0JvUUllcEF2OFdLeVgxdDN0a3g0X3FEbkk2YkR2bU5pckplOEdiOFRrUFRSNnVuZERKQzgwYWUtNGd2Q3k1OWJLeUljQndlTWpJOV9HdXBmUkY4TGpRVXM4d2pUNXBGWXMwUHRoQVE5SzdHS0VkNmdJOGo3M1doOERIS29BODlVR01pbzFtblFGZmNLZVQzdDROWUpB?oc=5",
-          "published_at": "2026-10-10T16:48:51+00:00"
-        },
-        {
-          "title": "Alabama Football Injury Updates Against Georgia - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPN3VqSFNDTndvSlZnUzFrdG5WWTA5UXVQUV9QaUdsWmdCNHVJaWp6RzdscmlmcnlnamQwR2xaLUJrdXZheFNKWG1Md2YyVEZpdUlnbEVZeHpzdHRpRXVTbTB3bkVid3pFLXB6a290UmctLWlCOUFMMEE2NHpYcHZNS3dfVHhULTNUaGFYVmY3LUgtMVdrWVE?oc=5",
-          "published_at": "2026-10-10T22:01:29+00:00"
         },
         {
           "title": "Michigan State football vs Illinois injury update: Key LB returns - Detroit Free Press",
@@ -194,11 +194,6 @@
           "title": "Arthur Fils points to ATP calendar as injury problem: “It’s very, very intense” - TennisTemple",
           "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxON1RyZ0xXS19rNWU0UFcxVDFnYWhTeDNIbHY4LVBYNnRtSXpZU2QxOGhPOC1rU3RlZDVMeEdnZnBNa0JVNU9TT2FBdkpjVS1LUkIwS01sZ0N6b0RPaXNudk52bzlrWHpNakJYTmFfT3VjLWtscTZvSlJfN3lDRmtYMDFaMTdZMjJXcmc?oc=5",
           "published_at": "2026-10-10T15:36:38+00:00"
-        },
-        {
-          "title": "Wuhan Open Loses Rybakina and Gauff as Withdrawals Pile Up - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOOWliSGxRX0dwc3EwYzcyQzRRTHhkUS1qNlpZc3hOQXlGSVpmdWxacmVObDlDeWY3ZDNxNjVpTDhrblZ0QkJweWczempYNUhveUVCOUdaYUVtX0VUR25mUGxpMEgwV0owS21HemJxQmc2Q01jZVNUamlmRGQxVXhvMm16TjNoUGV3NkJUdUJPb1FVZk5IMm5DMkpRWnQ1SktF?oc=5",
-          "published_at": "2026-10-09T13:06:00+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
