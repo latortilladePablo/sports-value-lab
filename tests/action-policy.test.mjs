@@ -83,8 +83,9 @@ test("P1 manual no cambia la lógica del botón 'Ejecutar recomendada'", () => {
 
 test("Estado desconocido no evade el gate de runner y confirmación", () => {
   assert.equal(getActionPolicy(sport("OTRO"), false).P1_COMPLETO.allowed, false);
+  assert.equal(getActionPolicy(sport("OTRO"), true).P1_COMPLETO.allowed, false);
   assert.equal(validateActionRequest({
     sport: sport("OTRO"), action: "P1_COMPLETO", runnerConfigured: true,
-    confirmPaid: false,
+    confirmPaid: true,
   }).ok, false);
 });
