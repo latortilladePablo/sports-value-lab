@@ -201,7 +201,8 @@ export default function ActionCenterClient({ sports }) {
               <button
                 key={id}
                 type="button"
-                disabled={!selectedIds.length || bulkBusy !== ""}
+                disabled={!selectedIds.length || bulkBusy !== "" || eligible === 0}
+                title={eligible === 0 ? "Ningún deporte seleccionado está habilitado para esta acción" : `${eligible} deporte(s) elegible(s)`}
                 className={"batchAction " + (id === "P2_CHECK" ? "free" : "paid")}
                 onClick={() => runBatch(id)}
               >
