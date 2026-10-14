@@ -72,6 +72,15 @@ export default async function ActionsPage() {
       <NewsWatchPanel news={news} />
 
       <section className="safetyBanner">
+        <strong>P1 manual cuando tú lo decidas</strong>
+        <span>
+          Puedes comenzar un nuevo P1 sin haber completado P2 ni esperar al siguiente ciclo.
+          Se exige confirmar el consumo de cuotas; no se omiten bloqueos reales de scope CURRENT
+          ni se borran snapshots previos.
+        </span>
+      </section>
+
+      <section className="safetyBanner">
         <strong>Dos capas de seguridad</strong>
         <span>
           La web aplica el gate operativo antes del POST y el bridge sólo llama runners configurados.
