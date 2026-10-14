@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const ACTIONS = [
-  ["P1_COMPLETO", "P1 COMPLETO"],
+  ["P1_COMPLETO", "P1 COMPLETO · MANUAL"],
   ["P2_CHECK", "CHECK P2"],
   ["P2_AUTO", "P2 AUTO"],
   ["P2_FORCE", "P2 FORCE"],
@@ -164,6 +164,12 @@ export default function ActionCenterClient({ sports }) {
             <p>
               Ejecuta la misma acción en varios deportes o usa Recomendada para que cada deporte
               ejecute su propia acción CURRENT. Los gates se vuelven a validar justo antes del POST.
+            </p>
+            <p>
+              P1 COMPLETO es manual y se puede iniciar a demanda sin haber ejecutado P2.
+              Captura un nuevo snapshot y puede consumir créditos. Los snapshots anteriores
+              permanecen para auditoría. Un error de scope CURRENT o un runner desconectado
+              sigue bloqueando la captura.
             </p>
           </div>
           <div className="batchCount">
