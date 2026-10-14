@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export default async function ActionsPage() {
-  const data = await getDashboardData({ fresh: true });
+  const data = await getDashboardData();
   const news = await getNewsWatch(data.sports);
   const ownerConfigured = ownerSecurityConfigured();
   const ownerAuthorized = ownerConfigured ? await isOwnerAuthorized() : false;
