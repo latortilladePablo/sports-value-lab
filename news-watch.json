@@ -1,30 +1,20 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-10-14T07:36:40.073972+00:00",
+  "checked_at_utc": "2026-10-14T13:42:55.268617+00:00",
   "method": "Google News RSS headline screening (unverified)",
   "sports": {
     "nba": {
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
-          "title": "Otega Oweh injury update: OKC Thunder rookie hurts leg in NBA preseason game vs Pacers - The Oklahoman",
-          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOVmE0dVQ2VnIydk9JRHlzTUVHSG1NYUFRNlM1VTFYU2NPQUFWS0k4QXNOXzN1QVlMNVJjcTVvcjBYaldfTnpaV2R2dkZTcDV1VFpxWHZ2ZGxMTTZ5T0pnaW9zRVhFdXNPbTF5dVM4U2U3MHhGUjJKOUxkbzRJbENIS0ZfZ0ZFN2k5U0NiSUpCNEVNSkpCeDNTT3BGaHFSaGk4S1I4SEpNbm8tM0JIRXd5ZGt6MmZNSEdtMk1vc0hacVVTY3BDX0ZYZnc3VjFuSFZHYkItc3pfTjhfV3E2M0J3TE45ZTFXdw?oc=5",
-          "published_at": "2026-10-14T04:13:55+00:00"
-        },
-        {
           "title": "Domantas Sabonis Injury: Unavailable Tuesday - RotoWire",
           "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQ2MtenQzNVF5cHUxeTNtc090UURCblcydXFGbHN6UWxwSU1wTkw1N0JHM3hnVkp5ZXVDWDJMOW1GLW5JVnZOOTZJaFZUcGhUU21VVHB2TTRzd0ZiR1RfREJvRGZnTUFQYk5yVWZTd0Z0LXctanZBc0d1enRmalIyQ01jYnVJVm9jNldneGcyelhSb3R1OV9nakdYRkc?oc=5",
           "published_at": "2026-10-14T00:59:18+00:00"
         },
         {
-          "title": "Andrew Nembhard News: Not listed in starting lineup - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaU9nZkU4NVNPSVBYZ3ZFSU8tT1d0cl90WGt0akZrZmpwRXVLOE9ReHhOblFRbV96SnYtckVSRFdsMDk1ZF9ycEN1eFVzbm1fZmstalpOOGFBa1dwUzEyekNERVNVQk1seW55dWhsZTlzcnVWc1d5V3c3YXN3VV9HeHR4Tm9qM2FVb29aUS1qcUprRHEycGJ0LVhyWWc2dE5JQ2NDaTJR?oc=5",
-          "published_at": "2026-10-13T23:54:54+00:00"
-        },
-        {
-          "title": "Anthony Black Injury: Won't play Tuesday - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPUU11bkV6Qlo5UWVSUkMxdHB2X240RFpYR3lwX0NIRDJTaElkMWxFUEFaWjgxU285bE1fQmdENzFpbVkzNF9Sb3ZXVjZNU0M3OEtSQndDdkpuSktKdHJ4WHN1dk9sVGlMYXRyQTU0REFfUlJ1OVJBVEZhNWJ3dDNMeGlqQ2JsckJEdW5KZHFyV0pjN0lNeFE?oc=5",
-          "published_at": "2026-10-13T21:28:57+00:00"
+          "title": "Otega Oweh injury update: OKC Thunder rookie hurts leg in NBA preseason game vs Pacers - The Oklahoman",
+          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOVmE0dVQ2VnIydk9JRHlzTUVHSG1NYUFRNlM1VTFYU2NPQUFWS0k4QXNOXzN1QVlMNVJjcTVvcjBYaldfTnpaV2R2dkZTcDV1VFpxWHZ2ZGxMTTZ5T0pnaW9zRVhFdXNPbTF5dVM4U2U3MHhGUjJKOUxkbzRJbENIS0ZfZ0ZFN2k5U0NiSUpCNEVNSkpCeDNTT3BGaHFSaGk4S1I4SEpNbm8tM0JIRXd5ZGt6MmZNSEdtMk1vc0hacVVTY3BDX0ZYZnc3VjFuSFZHYkItc3pfTjhfV3E2M0J3TE45ZTFXdw?oc=5",
+          "published_at": "2026-10-14T04:13:55+00:00"
         },
         {
           "title": "Jaylin Williams Injury: Out Tuesday - RotoWire",
@@ -32,14 +22,24 @@
           "published_at": "2026-10-13T22:35:03+00:00"
         },
         {
-          "title": "Robert Williams News: Off injury report - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPaUZwekRBcFFZTzBjZ0xnTmp4UTkxYkNPdFAxMnNTNndsdDl5dDQtT1dWQ3NvWHZsR0w1d1pVVmJadGswQkRzUGZwanFBazBBekNwOUgxZ21VNXRGWVNZeEYzNFhmZmM3Rno4aHd1UDM4SjI4QjV4RnlLX2YwZnF1T1VjYzZaYUdPdGpjMUJ3UkFtMXRUUEE?oc=5",
-          "published_at": "2026-10-13T19:45:25+00:00"
+          "title": "Chet Holmgren Injury: Won't play Tuesday - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNMEctZlVlUDg4VDhnaFNvb0xDQmdjeVQxWUZRZVVoLXkxZVk0TEVPNU1qSWVTYnhTNExiNm1oUDJaN0FBc0lUTUlpTUx5VFB5ZHRsX0NFMzVtYjgzU0V5a19ISWwyNVcwRGFVNjlhSmJxb3l4MmhjTlQyejRVVlczZU50V241elVjajNXR0wzeEtsMjV4ZHc?oc=5",
+          "published_at": "2026-10-13T22:32:48+00:00"
         },
         {
-          "title": "Zach Collins Injury: Remains out for Wednesday - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxORm5aODkzaXB2Zmc2THRCSU1HWGxiX3RaczlIdTNRUUoyMmhXYlJ0bmJKY3AwbE53eG5pNkZ5WEcxTkJFTk1CRzZVRExVdnVQR0dDbXhWZEJSbEJ1S2FtXzNuMmFfQTZ4N0Q1NkJpV0NISUljTzVDRk12ZHFMeVFXMTUyb0RCQkdjZ2ZGWEtrQkROaUUtbG4ydkR4T3M0bDA?oc=5",
-          "published_at": "2026-10-13T19:11:26+00:00"
+          "title": "Anthony Black Injury: Won't play Tuesday - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPUU11bkV6Qlo5UWVSUkMxdHB2X240RFpYR3lwX0NIRDJTaElkMWxFUEFaWjgxU285bE1fQmdENzFpbVkzNF9Sb3ZXVjZNU0M3OEtSQndDdkpuSktKdHJ4WHN1dk9sVGlMYXRyQTU0REFfUlJ1OVJBVEZhNWJ3dDNMeGlqQ2JsckJEdW5KZHFyV0pjN0lNeFE?oc=5",
+          "published_at": "2026-10-13T21:28:57+00:00"
+        },
+        {
+          "title": "Andrew Nembhard News: Not listed in starting lineup - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaU9nZkU4NVNPSVBYZ3ZFSU8tT1d0cl90WGt0akZrZmpwRXVLOE9ReHhOblFRbV96SnYtckVSRFdsMDk1ZF9ycEN1eFVzbm1fZmstalpOOGFBa1dwUzEyekNERVNVQk1seW55dWhsZTlzcnVWc1d5V3c3YXN3VV9HeHR4Tm9qM2FVb29aUS1qcUprRHEycGJ0LVhyWWc2dE5JQ2NDaTJR?oc=5",
+          "published_at": "2026-10-13T23:54:54+00:00"
+        },
+        {
+          "title": "Sam Merrill Injury: Ruled out Tuesday - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWFJLT0dKQWl2Q1gwcEMyVnBqR0h5VGE4VXh3Nm80b2Flb0FRUVh5WDkxeU9tdTktWWtUYWNtU2FSbm9ubGF6OFowamFwdkh3bVV6UzVSV2d5bUo5NzN5aDVIT0ctak9Ka3FhSnl3dlh5Z1ptT3dJS01WR2dzQVNMX3otZEp4U25KSXBKWnh3d3FPTms?oc=5",
+          "published_at": "2026-10-13T22:09:06+00:00"
         },
         {
           "title": "Jonathan Isaac Injury: Won't play Tuesday - RotoWire",
@@ -53,29 +53,34 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
-          "title": "NFL Injury Report, Week 6: Latest news, updates, fantasy football analysis for Lamar Jackson, Caleb Williams, more players - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNQ0NqMGRPa3pNNWdYUmh3UG4zNjY2TFpqM0xXQ1JJS0kyLVZucGtWVnBtRVd2c2tCcW9ORWcyd2xpUFNxUXZLQjhuTnFxVzJRRWJDbFlvXzM1STVSZi1GZHVaYXZ0bzYxdUVIalFrV3VLM2pjQS1JUnpwT1ZnUUN2TDAtei1MRWFuU0VVRVZsbExQRFptc3hhSm51djJFblBpUUthNDk1WGxiT2w1NFRuT3pvUmItWVctZkE1cFV3dml5RWp4aVhucmhQaE5ueFdYMHdFTWNRdjJfYWVvZGprRkJ4WEtCNXc5Tmw0T20tWU5CMks5XzVfTTYwZVhCZ2xtVVE?oc=5",
-          "published_at": "2026-10-13T16:14:42+00:00"
-        },
-        {
           "title": "2026 NFL Week 6 Injury Report: Updates on Lamar Jackson, David Montgomery, TreVeyon Henderson, and more - NBC Sports",
           "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQOWFjaUN1blExYW9pU19hcGxSMkVtUDVrS1Q4SVl2MnZrN2dDaFotN3JJcThVaDJteExCbVI4Sl9xZnNyVWt0Ty00eWJSVVpHaUJ3Qk1PSTBDQjlURmZVNjBMazA2U1ExbkZjMmRONjV0REpUbkZ0RUY2NXJUYi1pcTBzLXhSSW5veVRlcm51di12MnNMVnNIYUJIWC04aTlVd09UTDlxcENoOEZFWUs1V0xXQy13aUl6Zy1zUVNIM0x5cjFFcktGZkRzVHBNYS1uQURfb1hpcUpBOU0tQnltSQ?oc=5",
           "published_at": "2026-10-13T19:19:57+00:00"
         },
         {
+          "title": "NFL Injury Report, Week 6: Latest news, updates, fantasy football analysis for Lamar Jackson, Caleb Williams, more players - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNQ0NqMGRPa3pNNWdYUmh3UG4zNjY2TFpqM0xXQ1JJS0kyLVZucGtWVnBtRVd2c2tCcW9ORWcyd2xpUFNxUXZLQjhuTnFxVzJRRWJDbFlvXzM1STVSZi1GZHVaYXZ0bzYxdUVIalFrV3VLM2pjQS1JUnpwT1ZnUUN2TDAtei1MRWFuU0VVRVZsbExQRFptc3hhSm51djJFblBpUUthNDk1WGxiT2w1NFRuT3pvUmItWVctZkE1cFV3dml5RWp4aVhucmhQaE5ueFdYMHdFTWNRdjJfYWVvZGprRkJ4WEtCNXc5Tmw0T20tWU5CMks5XzVfTTYwZVhCZ2xtVVE?oc=5",
+          "published_at": "2026-10-13T16:14:42+00:00"
+        },
+        {
+          "title": "Latest NFL Odds and Picks Factoring in New Weather Forecasts for Week 6 Schedule - Bleacher Report",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPYzFtaVZDUUtPZnEtS3g0Y3JZc1lPZV80QWVROWRSOUtSdGhodTBLZ1Y1VlZOSWZ1czNwT2o0c1RPcjBVd0hCOW5NbXNqNXMxTUJheXJBNXNEcGU1UVZwb0ZDNzRGbV9zamYwWW1EQnQwYW53YU1iOEQwMmNRanllVGlsWUtUS3cwTVNXMm5GWGdGOWE0Rm11NVBQelBCcUdleXMyRGY0MHEwRGV1Z2stQVNtYjU0X0c1WlE?oc=5",
+          "published_at": "2026-10-14T12:15:57+00:00"
+        },
+        {
           "title": "As injuries stack up, are Patriots the most injured team in the NFL? - NBC Sports Boston",
           "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQdkhoWjg4dzNMLWpxVTlIMEhFRjFkdzhkTV93VFVRTnNMTkFoM0Z2LTU0MExoLVAxaWtSN20ydHJpd1AxdnNkRmtIclNuTThaSGJRSUZxc2VXYWRzb0dNcGNoMnZNdzdISUlfODFFU2FFV1lUZlphZVdvNkoxeUR4SUw5b0tGZWpRa3A2SUc2OGpLTVl6anB5V1NvUWZkaW5LbTZ4Ym1CNUhsdjdPbG5kaFFpblB4RFV5NVY3dlp1MTUxSTItRGxKcnJIOXY5UdIB1gFBVV95cUxPdGNBX3NxcTdndnQwMmFTa3NxOWRPaUxtNG90MXl3WEtUU2xhMEM0LVhqUUlOX2xMeGVxSGdQRUY2SjZRbEJNa1p0Y25WVUR6TmxTdU9NNVNuUWtsYzYwVGZDSTRraWZBbmY1ZFpUZHp4ZEZ5bVAxY3RoTm1SLVdvdklrQUowbUVlcWU3dlN3RXhkUkRJUHp1NnBhand0Tjh6VVluSUdtbFI5NzRtdGtENTRJb1JwUWZYVnk4OGpPNzllSUpEd19BN2pjVGJmRFM3UkN1Nldn?oc=5",
-          "published_at": "2026-10-13T23:24:30+00:00"
+          "published_at": "2026-10-13T19:24:42+00:00"
         },
         {
-          "title": "NFL Weather Today: Forecast & Betting Impact for Every Game - Sharp Football Analysis",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5TLUJ1eFZUd21RNHh4U213eV9uQm1MTGxvaGNMT2hJOUV5SlQtVnhpSURyUElINmNVSUpEd21SWmVsUjJvRk5BMlZtbVg2cFVwWFVsNW1EMEpGWVRhTmFLSmVNaEtJb1F5c1FSTHpOcXFvOVNM?oc=5",
-          "published_at": "2026-10-13T23:15:02+00:00"
+          "title": "Nick Wright thinks there's a quarterback in the NFL who 'hasn't been an elite player in four years' - HITC",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOYVNRbWRfaFF5RVZfT2dOT3loWE1TUVRnWk9HZnVRTkNDeHpUcGRoUXB2NHk0X1Q5WkRBRnRsbnl3RmJHMjNnOUlZU2lGWTFRajVHMjY0S0VlSndWR2plblAyNjVJaWc1N3JId3FvMEdKOWNVUV9jMklVOG5oRU1wNDVCVVlrV2ZIaVlZbzVKbGhQYnJqaWJaZ2I4VXJldGxOS3ljd29aajJ5RjVkQmNVam9JR001ZGF1?oc=5",
+          "published_at": "2026-10-14T10:45:00+00:00"
         },
         {
-          "title": "Seahawks announce Tuesday afternoon injury report for Week 6 - Seahawks Wire",
-          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNMU9TNTdCWkQzTFk3QjAyTEM2aG5XYWdYR3NERTdYTV9lUmctWWVfcmdhS3NRYk9xUDhwNXllXzNlWExFNWprc2dabEdKY2lwOS1nRVJKRjFVU1JUVnB5a1hRNmRyVml1dGM3Qk5Ka085OXprelVtQkticXhWSl9oWmY4ZzVEY1VJLWNOVFJxMy01TjZ0ZUxBUFo0enllVi1aSGs0VjFsZ0tfUWhCLTNKUGFENXVqS3JxdDVuamRmNUhiU0NraWdsWkdFS05WMkFmbHFXeVU4RG14QW9ITTVHMjlPOA?oc=5",
-          "published_at": "2026-10-13T22:36:00+00:00"
+          "title": "What NFL Scouts Said About UNC's Melkart Abou Jaoude Despite Injury - Tar Heel Times",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9mMTV6cm52NTlkVHBST0lHcFRyNUw1NmlnV0pITjlPLUVrbVV6SnZ2RFFvSWE4YVdvbWI1N1ZYN1pJT3Q4OFRDRENzVzNfQlFWbS0zTVRLUk9Ybzg?oc=5",
+          "published_at": "2026-10-14T10:50:10+00:00"
         },
         {
           "title": "Matthew Stafford Did What No NFL Quarterback Ever Has - Yahoo Sports",
@@ -83,14 +88,9 @@
           "published_at": "2026-10-13T19:21:04+00:00"
         },
         {
-          "title": "Chicago Bears NFL Draft needs: backup quarterback - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQS0FvVDBfVnNFdkR3VTY3bjNqMlFSaDlrM3RBRUZMUFdFMFR5RGp6Sm1IeFB2S0NROVN4aE5tN054U0dsRU5zVDlDYjRpWWhNNW1ScUs5RjdYWXNwQndUT1h0SmFqdEtUY0tJUk00dnpuaDNBRzlySFpYRk5pOWpncjVvWXc?oc=5",
-          "published_at": "2026-10-13T16:07:23+00:00"
-        },
-        {
-          "title": "Patriots RB TreVeyon Henderson to miss multiple weeks with injury, per report - CBS Sports",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTUpudTl0a0Q1clBzcmg0cGVLTmoxZWMxVWxlRXYyUlRWTm4wNWNPVURTSUg5X1ltcVJESHRpQjZpemJVbnJIOGxfaE51ODFlcGI5NDdPWlBtUGJWalFNZWdnS1Babi1mTzZCclZxa1R4bHdhZzVObEJ4SU1QTUt1dTZvN1VjSzQ?oc=5",
-          "published_at": "2026-10-13T15:28:30+00:00"
+          "title": "Lamar Jackson Injury Update, Latest Rumors on Ravens QB's Status for NFL Week 6 vs. Browns - Bleacher Report",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQeElqSHdsR1g1UVdFbk5XWm41NWotRGZadFlVN0ktRlJQVndyTnNCVW9VWTBZeGZSNllrdU1weml5ZG1Da1FUYlJSUXRJZG5mYWRtaEhzVm1oakNZcDJOb3FCRjNiZ0hPak95MzlFN0tiV3pCWHhObzBycTdwNWI2VFh1VzJHWW9vQW9qbFlCbWtyS3VLakVqZkxCRjU3aS1WdnJBbnE5bkVLT1BLNFkwZk5BWVRjWHBWX0ZMa2xKWU1pR2s?oc=5",
+          "published_at": "2026-10-14T13:39:50+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -129,14 +129,14 @@
           "published_at": "2026-10-13T16:06:27+00:00"
         },
         {
-          "title": "Maple Leafs at Mammoth projected lineups - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPYmpPaVB2N0pzMVYwOENTQ2UyZVNpSzkwUGpUa2pTTWFjOTMxMVZrcnRzMGZUZ2czNmhyOTV2TUg2b2J2V2h5OUc5X3E2RHhJWmFfX2Jwckpwa0RhY01EbXVPNXd0VndoRDVGWTRSVWcwUVpqZ2xwb1V1VzEzcUp0UDZMdzVVUUppN3c3RnF6TQ?oc=5",
-          "published_at": "2026-10-13T18:27:27+00:00"
-        },
-        {
           "title": "Penguins at Blackhawks projected lineups - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNNmFETVpQNUFDNkNhRG1JalVnb05sYTYzZnUxSFZZX3NWdnFST1NPOVlCLUgwVHB5ZU5xaUtWWFJJNEtEQ3V0OHltWktCYjUtM1VpQVBjOW1tMkFiZWNOV19IeDNzS3hNUDYyV0JrVnRmMU10MnRldndVWlZycmVVUGNYRzRPSGtKVnV0OVlFajhDZmdyLTFR?oc=5",
           "published_at": "2026-10-13T18:14:20+00:00"
+        },
+        {
+          "title": "Projected Lineup - Flames @ Ducks - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBBM29xN2RyUnJWdGJfSXdUS29IZFFGLVB3ajcxdU0xbC1BS3k1S2MwTy0yeFNURmh5RGZwLWMwNW1jd0pMVE91SmMyVjRDdEs3QU1nTTdrLU1BLXRqOTVvTkxBNy15aERaY0tZOVpkdVNIbThSVGZOVkZR?oc=5",
+          "published_at": "2026-10-14T09:58:49+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -150,14 +150,14 @@
           "published_at": "2026-10-13T21:58:00+00:00"
         },
         {
-          "title": "Week 5 Fantasy Football Injury Recap - Fantasy Footballers Podcast",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNMU9fZm9XZHVzV0tqMDZuX1FCMVNKZkx5UlV2b1F5MWhVQzY5Mml2VWFtY0FYTVNUUmhfeTRnRm9NMXg2T1VKLUxXU2xteVR2R1QzcFlVeTlzYlJueEp3clpDeFlkQjdDTzhESkFwTUZ6bndITTUxSVdUdW8teThKQWs0SUQ3TGZ2cW95dkRIaw?oc=5",
-          "published_at": "2026-10-13T13:17:29+00:00"
+          "title": "Fantasy football injury report: Latest Week 6 updates on Jackson, Barkley, Lamb - USA Today",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRVJtS1lOUXNaZHFVMGFQNlRZZVlHU3dCRXpIbnRoUVEtTm5nRTRHT2pCbHlYZnN0cUMzZ09pa3pnVnBtOFNEZ1FyWjlkUnhFX3VVbEtuYnFSVWFCb1l0clh4NzFOQkc3X0lRdllYVUdvanFrbFdnSnpYMW1GNTFoSW5zUE44YVoya1lSeXdDQ3BULXdTc2RNSDg0QS1QdU5BcEtQZ01LTVg5NWpqdWotNC1oX29DYkZyRkdDbWE3cjdnQQ?oc=5",
+          "published_at": "2026-10-14T10:08:00+00:00"
         },
         {
-          "title": "Injury report for Colorado State vs Texas State football game - The Coloradoan",
-          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOYUc3UDhEdlliNVNfWk01TEdnT0tmc3NWSk1QcmV4ZkE4R21tZ25LSF9zY3JRam93cUN5N0JXak5zWHRVdFBOdXdtQnFJZnRERG5ZN3huTzBpdjRLcTNHOHF2bGQtbkstVll2SGFNSEViempxZXV4VV9zektZREU5WGhjaUVPc05zU05aWm50SzloOV9mcjNVSmlDX0pWaGhld2pkTG02bUV5Wko3TDUtdWVtcTdwTHBxcHFTS1ppX1hkUmJNVEJJT2VDa1BEZWpfVFhIQWpB?oc=5",
-          "published_at": "2026-10-13T17:21:00+00:00"
+          "title": "Out-of-Door Academy football star finds perspective after injury - Your Observer",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOdXFhM2xjUG1pdzNzRDIzZmdSYkJHQlZ5cnZpMnB5N25TelkwV3FpSWMzUlEwSUVJN0U2Zm9Ka1lzSFdoM0FoNlZHQVd4NHVWTGJSeWx4Y1lRd001bWp5WmNNV2lLQmhkZ1FKYmUtRGNUSjZGR0lDTWJRNDdhNDlDV1VPRzQ1ckNGVl9F?oc=5",
+          "published_at": "2026-10-14T09:00:00+00:00"
         },
         {
           "title": "Penn State Football Linebacker Alex Tatsch Out For Season With Injury - Onward State",
@@ -165,24 +165,24 @@
           "published_at": "2026-10-13T22:47:09+00:00"
         },
         {
+          "title": "Injury report for Colorado State vs Texas State football game - The Coloradoan",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOYUc3UDhEdlliNVNfWk01TEdnT0tmc3NWSk1QcmV4ZkE4R21tZ25LSF9zY3JRam93cUN5N0JXak5zWHRVdFBOdXdtQnFJZnRERG5ZN3huTzBpdjRLcTNHOHF2bGQtbkstVll2SGFNSEViempxZXV4VV9zektZREU5WGhjaUVPc05zU05aWm50SzloOV9mcjNVSmlDX0pWaGhld2pkTG02bUV5Wko3TDUtdWVtcTdwTHBxcHFTS1ppX1hkUmJNVEJJT2VDa1BEZWpfVFhIQWpB?oc=5",
+          "published_at": "2026-10-13T17:21:00+00:00"
+        },
+        {
           "title": "Week 6 Injury Report: Seahawks at Broncos - Seattle Seahawks",
           "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBYa1NFTWpmYjBLc2xkZ0Q2WmtPSWhLOXVEbXdnSFNXLVFXZkt6UXppZWNrQ1VnWDMzT3I0bVNEUUlTS1hMUmdiWTVSUGMyUThfaG9QN0NVQ1FOWXZmc2RUVHZxZDNFLVk1cy1JRnBUYk9PRlFPRnlIZHB3?oc=5",
           "published_at": "2026-10-14T00:01:30+00:00"
         },
         {
-          "title": "NOTRE DAME FOOTBALL: Injury report and depth charts for BYU Cougars - One Foot Down",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNUGc1aVhtWmtjRE9qSjBYeGlHUFJaZ3RaMTRuMHlnNVoxMWpvQ2xXZjBITEVpb05LbFRqUUc5S2ZiOTUzcTFheEo0VFI0YlNLNTVTVEIyWFJWbFlkSGtOeGdEelF4bzMwLTdIWjdxbXViSVVCSWtOMWVucDV1SU5Idi1iYzBMQ0tHOE9PUHpNZlA2dS02aUhZWUpITGtDLUhJdk10VjI3MDQ3dHFtcWFVQ3ZMYXdpbTI1cXRlaXRCS25PYWZqNzNVbkhSR2NYazRN?oc=5",
-          "published_at": "2026-10-12T19:59:05+00:00"
+          "title": "Tennessee Football Receives a Positive Faizon Brandon Injury Update - Sports Illustrated",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOWU5BWU9mNmdnQXlhU3JkWDBaZ3VoUVY2Sl9va1RSWHJ3Umc5R2gzRFNOS0dtX09KOHpoTy12YmMtMmtpNk5FZkt6WkZOWDNJaUhHdVZpclRSWlNRMEV0aWdqN0Z6Y0xxVm83S25lZjNzbE83S1BCcUlMMzhrS1ZNYXQ4R2Rxdkw2Wk10RDRzRk9kU2pPRWFHbmN0OU90ZGUxZU1RYzJmYUs0dU5VQ19mcG1XeEU3aXRWNFUwYjJLU21BSk1f?oc=5",
+          "published_at": "2026-10-13T19:48:59+00:00"
         },
         {
-          "title": "IU football RB Khobie Martin getting close to return from injury - The Daily Hoosier",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPRWhHbVRCTFg1bHJmckNNVzJuNkhkZXptWllXVXJwSnhPM0w4dzU4SEVCWkRfU2JxWEVXRFIweWJSekN6Yy1fak9VWko2cEtkaTdFZXZwbEV4UUVSUW1nOS1WZVU3RnRScHpxM196SGtpZldsT3NqQzhNcUpfaGxSczNGV0tNcVNZbHJrTjdYalhZdWZmTjVrOXNGeDgzdw?oc=5",
-          "published_at": "2026-10-13T02:17:05+00:00"
-        },
-        {
-          "title": "Notre Dame Football Injury Report: Marcus Freeman Updates Key Players - Irish Sports Daily",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOYWRLWnh0NjEwYTVCSWsxOWQ1NHFaY3RkUHhmNS1XQjVkQVh6M1JEX1hJMDY1cHIyMjZJQUZqSGlEdU9SVjVpR2xYRFBBOFRNTy1MSVBWd1ZsNXRYX3BsZzgyZkFxWUdQdUtwbnVQQXJZaDBhTWplYVpHS0kwbDZaR3BlaHRpYlJoTWczV2xpN1l1VTQ2b0J5cWNpTWV4X2xidzlDTXhVanA?oc=5",
-          "published_at": "2026-10-13T13:11:57+00:00"
+          "title": "Start? Sit? Craft your best Week 6 fantasy football lineup with our tool - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRUtaeWUyaWs1VjRzTENFd0xvZnNESV9QbnROdUN2VEtpMlJDdFRPWUlHM3ZSVVRDeW9NT3lwR1dDY3dXbFFuMFdfbGJ3cV95MU1nSnRINE1PREdjSUpnV3BweUx1Vkk4VXdTNTVFRVI5Q2kyODBEaVB2dHlWWHJYZEM3LS1iQkVwWE1Ua3VpUldfMXNZTF96Mk9QZWJjT05nZEJZakpWeXlxbmlyTTdTSmtrTks?oc=5",
+          "published_at": "2026-10-14T12:30:32+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -190,6 +190,26 @@
     "tennis": {
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
+        {
+          "title": "Highlights: Ruud advances after Auger-Aliassime retires due to knee injury - ATP Tour",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNMkw4a0ktUXlOaWFiUEJUc09XeW9MOFdaZUE1Wkx6UXViSGNxZnZQdkxrczNvd3JkT0FCelFuaUY4QUxGaXVZMlEwYWpvZGlLbmZaak5WSnlUZ0pKcW5ibzB6UnRpaTEtVUJjdkRrSFpXVV9RcXZqbFo2RTBuaGZsY0djS1JDQWNnQ0kyTmRicGVoMS1yYUpDejZXc1lQaHlpbnJwdkoyV1Q2WTVtaGxMZWRDc1hTMzFsSVoyXw?oc=5",
+          "published_at": "2026-10-14T09:00:47+00:00"
+        },
+        {
+          "title": "ITIA: Gael Monfils is Officially Retired - Tennis Now",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE93dktUQlJ1WmFfQkR2aTdYWHVqMFllZnp0ZXkxRjJ3V0c5SVRYX05mV3lGdjV4T0ViVXRfM0x0U0dqMExWcjRIYURRdGpZWnl6bFVUQzVKaUFsNDRwX2FDeEc2VE1oaWtrSTlqX3B5dw?oc=5",
+          "published_at": "2026-10-14T13:23:17+00:00"
+        },
+        {
+          "title": "Canada's Felix Auger-Aliassime retires with knee injury vs. Ruud in Shanghai - Sportsnet.ca",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNV1lwMWFLRHBxUVh5QVFHRlBzRGs0aVZnNUtiX0ZPdTM4djU3QXBoSm94QXU3aThjOGtQZzlMQ2N6VGNoMXRvWkZ0Yk5FV0xjN0drNmpTVWQ5X3BBNEd0TG15ZFItb1RWRy11V2p3aW80UjZDQlRRUUlXWFZRTldobnJ1NHJVM3FuT0RQUTNfWkVDdFlhc3BtUTNKVW5RM09KR2VCSmprUnlxcTdhWExmR2x3?oc=5",
+          "published_at": "2026-10-14T12:18:00+00:00"
+        },
+        {
+          "title": "Tiafoe withdraws from Lyon with leg injury, a fresh blow to his ATP Finals hopes - TennisTemple",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQYWd1REFNbmJYOEktbl9URlRZM2Jma19OSlZVcHpwbTdsUXEzSUhqbUJaZHhiSkduX3dGNF9aTldaenFxZXB2b2FuUDZad3ppX0hqM1h2TzdSVTlJa19RcUdGdExodlhkQUFlTm9EOGxqQ2lPcm5vNkwxb1NpbU81TzVJMDZNOEJ5elRjd000c250dw?oc=5",
+          "published_at": "2026-10-13T15:52:43+00:00"
+        },
         {
           "title": "Cobolli Replaces Injured Tiafoe in Lyon Field - Tennis Now",
           "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE10UXpzWnF5TXNDbGVoTVFZLTNWUFlxSENYUVdXX21EcGhOZ054VGMxNGZHd3JGX2hVWUJ3VHpvcmpta2l6MTctU0R2NGhzWU5HekRLRWpoTkhiRzlxbkF6VTM0dWZRSExzaGRpV1FrYXdhWVVQTXo0?oc=5",
