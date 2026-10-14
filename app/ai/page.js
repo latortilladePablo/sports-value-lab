@@ -32,7 +32,7 @@ function runTimeValue(value) {
 }
 
 export default async function ChatGPTWorkspacePage() {
-  const data = await getDashboardData({ fresh: true });
+  const data = await getDashboardData();
   const ownerConfigured = ownerSecurityConfigured();
   const ownerAuthorized = ownerConfigured ? await isOwnerAuthorized() : false;
 
