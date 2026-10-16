@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export default async function ActionsPage() {
-  const data = await getDashboardData({ fresh: true });
+  const data = await getDashboardData();
   const news = await getNewsWatch(data.sports);
   const ownerConfigured = ownerSecurityConfigured();
   const ownerAuthorized = ownerConfigured ? await isOwnerAuthorized() : false;
@@ -70,6 +70,15 @@ export default async function ActionsPage() {
       </section>
 
       <NewsWatchPanel news={news} />
+
+      <section className="safetyBanner">
+        <strong>P1 manual cuando tú lo decidas</strong>
+        <span>
+          Puedes comenzar un nuevo P1 sin haber completado P2 ni esperar al siguiente ciclo.
+          Se exige confirmar el consumo de cuotas; no se omiten bloqueos reales de scope CURRENT
+          ni se borran snapshots previos.
+        </span>
+      </section>
 
       <section className="safetyBanner">
         <strong>Dos capas de seguridad</strong>
