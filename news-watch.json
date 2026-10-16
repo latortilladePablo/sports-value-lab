@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-10-16T16:37:30.432631+00:00",
+  "checked_at_utc": "2026-10-16T19:56:46.636469+00:00",
   "method": "Google News RSS headline screening (unverified)",
   "sports": {
     "nba": {
@@ -22,14 +22,14 @@
           "published_at": "2026-10-16T14:55:06+00:00"
         },
         {
-          "title": "Josh Hart Injury: Downgraded to out - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOVkpXNUNRT3g3dFRlNUZCVlYyT3NaODdUYW1KbDVZSFROOV9Xc1A5VzVoY2FiNDlMNlBfWGJaemhISDJkSmtBeTViQlk4dzViQlE3SFlBVlZqLWRyQlVRY00yNnpYU1ZzWG83UWFtVXBiU3ZUQnBQY1MxV1lzX3JDNmU5NEZnbUlFRFU5a05XbEw?oc=5",
-          "published_at": "2026-10-15T23:29:58+00:00"
-        },
-        {
           "title": "Josh Hart Injury: On track for opener - RotoWire",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPeE42M0ZHQ19wMk5wZ0pEOHQ0WEZUZkFUZ0pJX0JIbkdPbDJ3WGxBYVIyMHJtVlJzUzdpX2hPWFY1RERXeXltR09KT0dkQk5HeUdIZG1kbXJuSEFWRnBlTU9jSm5RVVNTd1M1eWxabm1SMWhpbEVrZkRSZTl6SGFpQXlKc1NOVGVuUzJ6cGVLWHRKd28?oc=5",
           "published_at": "2026-10-16T03:42:28+00:00"
+        },
+        {
+          "title": "Josh Hart Injury: Downgraded to out - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOVkpXNUNRT3g3dFRlNUZCVlYyT3NaODdUYW1KbDVZSFROOV9Xc1A5VzVoY2FiNDlMNlBfWGJaemhISDJkSmtBeTViQlk4dzViQlE3SFlBVlZqLWRyQlVRY00yNnpYU1ZzWG83UWFtVXBiU3ZUQnBQY1MxV1lzX3JDNmU5NEZnbUlFRFU5a05XbEw?oc=5",
+          "published_at": "2026-10-15T23:29:58+00:00"
         },
         {
           "title": "Josh Hart News: Not listed in starting lineup - RotoWire",
@@ -43,19 +43,24 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
+          "title": "Lamar Jackson Injury Update, Latest News on Ravens QB's Status for NFL Week 6 vs. Browns - Bleacher Report",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOGVmbldJU1duWlFtWVJ2RnNqNkNnTmNhQVY4YnNDRHpCSWpBWWVJbFVWV3V0Q2x3X2RfSUhIYnBHNWtsSlN0eGZCSGJfZUhUM1VjVDFFTHE0M3JCZTZqclVWMU5vczh2WUJtZjJGSmp5UkJqRUo0RTk3RF9YeEtENFpUR3JBbURnNUI0R1lNU21DcTJyb1lJTFJrc3VPUW8tNW9FMzhOWXJKVkhmRWh4QUhfOE41R0kyWHJqWlYtVVQ?oc=5",
+          "published_at": "2026-10-16T17:34:15+00:00"
+        },
+        {
           "title": "Eagles steal QB from Cowboys: Joe Milton expected to sign with Philadelphia after injury to Jalen Hurts - CBS Sports",
           "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOS0YtYlEzVUs2RXFodks4VXBPdEZ5ckVjTGdSTjJEVHJaNnR2MV9uWWFMQUlOMk9HNi10Zk5Kd2xBcHdnMUl3U21TSzVYTUh3dUlDR19EMG00a0VJZHRKbkR4SDNOVl9zaUJpS0JhcGdCdFdmTTROWk5taFVxRTJVTEVlV01OTDNnTEktR2VjSWhwZw?oc=5",
           "published_at": "2026-10-16T16:02:34+00:00"
         },
         {
-          "title": "Panthers vs. Eagles Injury Report - Philadelphia Eagles",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZndmM0RzQ0xPUGtlMWQzaXhxbXpidXd1SF9RVGFaMi1fZDY5Zmp2eU5sZTJCTlk1VkxhclJIcWpubzkxdmkwbDlndXE3cjJlOHZVSlV4MnY3ZzBkTDBsMlZSS01VazNNWUxWc2J6REZLaVYyRnVhdFU4NHU2UWU3amxWX0Q4cmx2Nk9hVUlFMkw5ejFHVGRSQlgzV1g4THJyczhIUmpaQkFBQzZVdU1wakNQeVI4MTBs?oc=5",
-          "published_at": "2026-10-15T22:39:37+00:00"
+          "title": "Which NFL Teams Have Been Most and Least Affected By Injuries in 2026 - Sports Info Solutions",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOU0tNQy0zWU4yUWY0b2V5b2lNZzdpOEhZQXhBa3FIXzNLOWk3NUJBVkdZd1RLcmNHOW4yTjQ2R0VwZlQ1NWtXalVtbFI2cnJ2WGlBNkVHSG9WRFlMX3J6VXplWTVIb25iRWFhWmRWdHhXTGFqN1IweEJ5Q05aNVcyYWxZR3pmU0M0a0FGZmJRTnZVNHA5T3JtcEM2ZzZtSTNSMkJYYmhkN2tQcUI5WmZUS3NqUDl6eDlR?oc=5",
+          "published_at": "2026-10-16T14:36:44+00:00"
         },
         {
-          "title": "NFL Weather Today: Forecast & Betting Impact for Every Game - Sharp Football Analysis",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5TLUJ1eFZUd21RNHh4U213eV9uQm1MTGxvaGNMT2hJOUV5SlQtVnhpSURyUElINmNVSUpEd21SWmVsUjJvRk5BMlZtbVg2cFVwWFVsNW1EMEpGWVRhTmFLSmVNaEtJb1F5c1FSTHpOcXFvOVNM?oc=5",
-          "published_at": "2026-10-16T10:49:28+00:00"
+          "title": "Steelers have perfect trade candidate as NFL quarterback injuries pile up - Steelers Wire",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQNUhuanJnb1dDd05KTWxMckNqRW5FeE40aklVQ3g1blNhMDJUQng2dzFmdmJkVEZENVlsQTZDYTRfSXFZVVFvSi0zTDRFREdwbXRoTWduRHY2V29mQzRuck9Cb0R5V3Z1SHlKSUpKMUgzWExqMzg0X0xYVURTN2RmbjE0Ukp6dFFXbFh3cVZwNUhpbVFuLVcxelVPc2hxMzlhMEFVbEV1cGpGU1hkQ1Q3VE1rWW82bXBvdlJhR2FGZ2lQUzU5aG5lU0hWcXV3MU9ka0RNX2JfVDdXQzE0RzBBS09MdFNxOHc?oc=5",
+          "published_at": "2026-10-16T17:16:00+00:00"
         },
         {
           "title": "The Week 6 QB shuffle: Six quarterbacks to pick up if yours is underperforming - ESPN",
@@ -63,14 +68,9 @@
           "published_at": "2026-10-16T10:40:00+00:00"
         },
         {
-          "title": "Bold quarterback predictions for NFL Week 6: Josh Allen, Justin Herbert & more - The Big Lead",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPZmk1Ym5PMVhtajlpQmVKT2FqbVl0V3N5SkFVTGRjMXlFa1pUMEgwclMzX20yc3dpMmp5aXVFdWZPU1FIZlVJVmpiMWFHRHQ0RU5FNFFnU3k3RVM4LTliSm8yRXNUNjRFQ2hlYUI5dU5ZUjRQaUlSNTcwX3NkUE5XT2hlMGJ4dzdDWjVqcVk0QjdPRWctWkFHbg?oc=5",
-          "published_at": "2026-10-16T13:01:29+00:00"
-        },
-        {
-          "title": "Browns’ Injury Problems Could Spell Trouble Against Ravens - 247Sports",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQdjZOS0pVblYyUzh1Nkt1amFqS3UxbF9ucVBpUmtvX3duOVZvNGx0RjFMTzMyeVRLeEp5MzFTVWpuLVByVVVqbkVpOU5oQkIzV2JMNW05VFdSWjVpeVp4SGxOQU1rZ2MwaHZPcHpkTGNCS1NtTDVQVEVjM0JXbEh3V2ppVk95REg3YVhCb0ZmSlIwNmROcmxTZFZUOXRaMTFSaldvZUQzNVIwNlM5THozMA?oc=5",
-          "published_at": "2026-10-16T14:49:48+00:00"
+          "title": "NFL Weather Today: Forecast & Betting Impact for Every Game - Sharp Football Analysis",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5TLUJ1eFZUd21RNHh4U213eV9uQm1MTGxvaGNMT2hJOUV5SlQtVnhpSURyUElINmNVSUpEd21SWmVsUjJvRk5BMlZtbVg2cFVwWFVsNW1EMEpGWVRhTmFLSmVNaEtJb1F5c1FSTHpOcXFvOVNM?oc=5",
+          "published_at": "2026-10-16T10:49:28+00:00"
         },
         {
           "title": "Patriots vs. Jets weather forecast for NFL Week 6 - Yahoo Sports",
@@ -78,9 +78,9 @@
           "published_at": "2026-10-16T10:00:34+00:00"
         },
         {
-          "title": "Ryan Fitzpatrick rips Broncos’ Bo Nix: ‘Almost disrespectful to the quarterback position’ - The Athletic - The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNV3pEbU5iV1NyT2hJRXVaS3A4LVc1ZUZRYWFhRmtCRmJnNUxpbnBkc3I3WThoMFUtZVpXOGc2WTNIa0JKbmpTQ1JWMTZzUVk0OElhLU9QQkVCVkZlSlpoSHRyU2drcFAxVU9SRnk2VHRtcElzdVVJX0F3Z2g3RFJ2aGtSX295X09YbXN4NA?oc=5",
-          "published_at": "2026-10-16T10:27:00+00:00"
+          "title": "Mike Macdonald shuts down potential Seahawks quarterback change, sticking with Sam Darnold - CBS Sports",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMnM5UUR3cmRwUXlMSUdnNXIyeFJ4eHdaXzJ4akxoUHhwcFRMdGFfUGp2bFprYnAwLWdJaWtvbDRmWlVnYi1IeTRnTVhjQnYtbXNTdVdPaUltRUVjZ2hkMEdHUkwwdnVfOHBTd0E4YjItbTR5dTNpQ3FHQ0hNSVhZZVJiX1pLdzN0N0NnSzl2dVc2UQ?oc=5",
+          "published_at": "2026-10-16T17:47:56+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -89,14 +89,19 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
-          "title": "Hall week to week for Hurricanes because of upper-body injury - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSVVKN3FUbC16S3RJZmo2RmFua1g0SkppN2tjTXJaVmhDeUJ3UW9KMmVVbjYyaW52ZktUMlh6cWZUWjlQM0NoRmMwOTl3RDVHSlBrZ0x4V2pIZi1McFlxUjBqbnY4TGxhZkF6ZWtBc19BZGtYenRIZ2xfSUNGdEpwM3RDcTBZUzJoOHhQMHZaN0dJaDJaZ0pJaw?oc=5",
-          "published_at": "2026-10-16T16:21:19+00:00"
+          "title": "Injury Report: Hall Out 'Week-to-Week'; Jarvis Nearing Return - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPdXctQ2dNN3NjcXA0eC1PVFMxa203SWtaYXRMazZUcVRpNVh3bzdxdEdmdVdOeE8yREVlNTVudTd3aHY0d0xkZkl0Wm5ESkR5ZjFwekc5Ti03dHVEOUt3S3RpTjFjR3E5cmdPTF9YOVhFeTJxSmFPRzNKS0hwT3ZyQlhkVnNzb3FERWN6bVBscEl1SUdLYUhtXw?oc=5",
+          "published_at": "2026-10-16T18:11:15+00:00"
         },
         {
           "title": "NHL rule changes debate: Goalie fights, soccer-style penalty shots and broken sticks - The Athletic - The New York Times",
           "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQUVlaVjk1X002T1pQaUxnMENGZ3BZRlNwY193R21kVzQ5RE1JYVFMNThsTEdLY3R0YmdBeWg4Rkdlck16WTRkaS15YlhMR1Q5UVRjSGtTdElELXR1ZFdsS3FSOFlPQzlsVHIxZWxYUEJmOE1fLXdOODcxOVdPZjBTZ0pOMk81UlIwQ01zTFJB?oc=5",
           "published_at": "2026-10-16T14:26:10+00:00"
+        },
+        {
+          "title": "Bruins at Ducks projected lineups - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQOFEyREdzWU5GTWltOVMyNG1IT0lvcjVhSURWSHNRRjJGV09wckhzdWU2Y3VrSEIwNzJjM3FjN3AwZUNHZnhzWmp1ZWQtcVhxemg4RGVRbjlrQXk1TGlWVEpfUVB4dnZhVmM2Ql9mSDF2ekVfVFI5OUZSbzFpenRVM0dnTC1aZFJs?oc=5",
+          "published_at": "2026-10-16T18:43:32+00:00"
         },
         {
           "title": "Projected Lineup: Oct. 15 at Minnesota | St. Louis Blues - NHL.com",
@@ -114,19 +119,14 @@
           "published_at": "2026-10-16T09:29:58+00:00"
         },
         {
-          "title": "STL@MIN: McTavish slips one past the goalie | St. Louis Blues - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWWE2R3JxOFR6d1RpSFIwTmtUS2VUeGNxdEdBSE9FUXN1b25IRTMtYTZBZ1VuZjlONWNPRi1QRDZXTExXcjNqRUJFN0FSNjVtdm5Yal84STdtUG1lMEl4ZFdVZTRNV1B5UVg1UldRRk1UMlNOOVNPczVzNHZUSzIyc1BqcmtTVXIyUFpwVDVnNzlEeGh2NUljYXFDU1d5ekVf?oc=5",
-          "published_at": "2026-10-16T01:59:16+00:00"
-        },
-        {
-          "title": "Sharks at Predators projected lineups - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNMWNfMDI2ZHotQ20zUEoxeW5ueHdXb0kxdGlKSFhYTVlYTTBhVkYtMW1HSWd5eEM2aVFBbkRkN3RmdG1PTnF0R3NpY0pnSWlleDl0RS1VNlZlYTNfT29KcUZ1OEE3U1ljM25XY3pjTFdLSjBrYzBOZ0xpOG1ERVdwU2lxaGJwSERaRHZwc3VmWnUzd0k?oc=5",
-          "published_at": "2026-10-15T18:06:47+00:00"
-        },
-        {
           "title": "Unmasked: New EBUG rules helping regular goalies with load management - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPS05ZaDI4U0RJcHZzdXVxOV9RQUVETTg2NlNmUUtGSDZqbjk1cDFWZzdfcWthWlk2VjNfTWJmdjhGYWVvdkVCTmRVZ0xFX3B2MlhPU0lqYlpjVjZraUs2dDhUS0dkMDJJZ2YxYXJZYkE2MEMxYWlWMDFOMHVGcnptQmZaT1hic1pxcDM1REV6WlhjUQ?oc=5",
           "published_at": "2026-10-16T04:15:54+00:00"
+        },
+        {
+          "title": "Hurricanes at Jets projected lineups - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNb2pfay1nSnpEN0VmQy0weEhoLWJSazJwbXRBc3JXZ3ZNWEFBb1NhTW1yYWdYczZ6NmRPMXlySlg2NDVNR3M3QjJkMklsN3VuQWpDNFpFbktlc0FSRm1xdWZnUmtaTS1WUFZKcUVlcDJ5RHhocGR5b2ctLWo5UUY4TE5oQnZLYmdIU3JGZjRqMGM?oc=5",
+          "published_at": "2026-10-16T19:44:04+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -135,44 +135,44 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
-          "title": "College Football Player, 21, Dies 5 Days After Suffering a ‘Traumatic Injury’ During Game - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMVd2bDdpcFduZHo2blAtTTJ5YXhkZFE4QUh4eWE0ZEQyWTJxZ3JkYURXbXMwdzFjNDBSUWllRnQ0NXloeDJDMnpEaUprcWhoTzFNRmxzUXlJbzJxRzZwMTZMZUlRNlpOMmE3OElEX214TGdBd2lIcldqMmdsYmtORnhLZjVpSms?oc=5",
-          "published_at": "2026-10-16T14:48:10+00:00"
-        },
-        {
-          "title": "Oklahoma college football player dies days after being critically injured during game - KCRA",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMHR2cWl6NjloaFpSV3Axa2kyaVhLWjN2R3ZCeWNmcHI4cVlFWlg2eEtLZy1LbFQ0MU1KNWNPU3o0d2JtbjZTMHVsQy1pc2UxVURUZElTZnhwT1N1OGhCR2hBZldUSkxEamI2RTFBZWdKSG1iVEFHZmEzY00xM0Y5OF9YMy00ZWdkZVRCZEtweVo1ZGo2cUFnbjRoajRpNkdhcm5F?oc=5",
-          "published_at": "2026-10-16T09:55:00+00:00"
-        },
-        {
-          "title": "Indiana football vs. Ohio State injury report: Khobie Martin remains doubtful, Barker questionable - 247Sports",
-          "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOcHYtSVhjMkNmSFVxOXFSXzNTVFlDRWtEUXBCb3pObjBMS2d5aVloalhRVzU1Q2dvR3FsNm9BWnEyVExLdzFpQUM4b0doUFhJdnE0aDNUTjB4dWQwaE1TN3hTdlFyTldqS0JxRVJaRDBLWWVrazFEZmRlRHBlSDE4dE5YODRFd01udnNaRUZaSENuM1EwalExUXIxMC1zZEVROVBYUUF1dENhMDJZUXk2c2ZlWDFrSm9uZWFPUE1vUGRpLXB2Q3l2cW12UVJBbklwOTRfOU9idFFWNkxJcExIQ3lUU3hlaFdEUmt6NXhzS0ExdXc3MDNJSWlONkg?oc=5",
-          "published_at": "2026-10-16T16:26:23+00:00"
-        },
-        {
-          "title": "Azle football standout Tyler Ulrich dies after injury during Arkansas game - NBC 5 Dallas-Fort Worth",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOM0RCZjYyMmRFLVdxaW9GMkNMVkVFeEhFRGtrNl9ncDFiUGdWSE02NmtJWmZZV1NXTFd0UmFQVTFYcTN3RHVGXzhNN25SMUJuaEdERHp0Q18zOVVlTXNvdERXeThKLXV1dVQyTmlmTElHN1ByZDQxZ0tXbHN2eTRFbjh5ZW51LUtxQklhVlltXzZyZnFXNkxMNG56VdIBowFBVV95cUxQNURHZGhxdXZZUVhvUkYyMzJkeEVFN0hidzJNeDNsd0xxc2VzLWJCdDJtTVpTeUFJd0pZd2JVLWNNYmZNT0xhaDYtZy0xMkY3bWtFcGFOSVM3amRMa0VRTWV4M1ZwdTJPR2wxQ1hPQkIzSmdaM2VxM3Z5bHRWbVduOWlNY3k1NHI3OUpDM2gzLWdhaWUzNmJvVEpPOE5PeHladUxR?oc=5",
-          "published_at": "2026-10-15T23:45:30+00:00"
-        },
-        {
-          "title": "Georgia football injury report: KJ Bolden downgraded heading into Auburn game - DawgNation",
-          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOQk1JT2l3R3g4bWlqX040NVlOMUx0OTNoOFNCMXZzTVR4SzU2U2d5XzVfWjBiUS1iclZPRk1VTFc4SFdVYmFTRkhuREc5TGxPRndrQ3NzamNDTEgwTXVKRFhLSUpjQlNuaDRLN2Q3YnFpRE92N3FubWZzTTgyYUNRTFFKdzlNUmNoR2FYa295NFlCM0lpZVJUaUtvTHhycnFTYWF6aHd3VkoycGswbDFCR2JRU0hGcHY5ZmxJb2lUeFZJV3dPZWo4cDdZUGFmbHprTnA4bGJSWQ?oc=5",
-          "published_at": "2026-10-15T22:30:00+00:00"
-        },
-        {
           "title": "Former North Texas high school football standout dies after injury during college game - CBS News",
           "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOb0lCTTh3WV9XTjhkWkhHXzZicndUT3FzOUQyVWNCVll5S0I1U1VobUR5MUxDMmhtWUZNeWUwUUFjcWVOaUlWRTVselEtLXpwR2trODY0bnNuM1E0cVZJS0c0NkFBMVpnVUtqeUVQT3NGVmtHd2xqV0ZRcEc2TTAtQ0pHaG5WdkMxajh4TVdwaGFjcklQUllBa1hRTmtuWFJjTEJDYk4yQmhYRmk1U2I3cg?oc=5",
           "published_at": "2026-10-16T00:44:00+00:00"
         },
         {
-          "title": "Duke Football Injury Report: Latest Updates and Potential Replacements - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbTJYRlcyRXRaeVV0ZTJLOEE0OTBnckZiNVV6VDc5cjlzNDlaV2pYNDA0a1ZrUEZiT05YR1lBaTAwRDVQNmhObTJVYUdaSVpQeEFtVF90RUZMdDlVN3FBN1d3SkVWYVVuNkRxbjg5VmtMdllSaTdaVHB0R21neFJmZ2F5NWYwYmluMlRzLUlJSE9CdTJnX054OTJpOEwya2VYLXVCS3ZUdw?oc=5",
-          "published_at": "2026-10-16T12:00:02+00:00"
+          "title": "NAIA football players suspended for alleged assault of teammate - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbEt2NzhvSHpzNDVwcUdyZGg2QkNnYUp6aVBzWk0xZG5UNkpKRExtNmo5OFQzTUVLeUtpQUpLdTkxWHpXUXk5S2xXcjZ6VkhmbE02MnVMcmM1cjE0RlZtU0lYWnpmRlduLTJTMXNkNVp5ZGZSZHd4eXlSQnZpVnJvVVdnWFg1NHF0U1BFR2lLTERPM0p2MTJGMGhWb0Nod0o1NlFYaHpyQXdld25WaFhqeDdodXQ?oc=5",
+          "published_at": "2026-10-16T18:02:00+00:00"
         },
         {
-          "title": "Fantasy football injury report: Smart pivots and Plan Bs for Week 6 - The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQWFpNUG1zcDNkSnJyVVZGOHk5TTMtMGlvTVdrTGx6OHlJRC1NWlQzc3JvYWtVQ3E2eXVHeTh0SHhES1gxR0xTWTRSQXBSZXluWWJRLVh6eWFPeHpFTTRNVWd4cHhmWjBndkk1UzVmcllzVnZBbW05UEY2U1U2YVNrVkRMcDhTYy1maE1VdHlVNVJ6NTBSbTZIaFVSMGdDWng0dnpNZTNXdlRHSjV3MW96ZmhrYmp3NkMwSGpN?oc=5",
-          "published_at": "2026-10-15T21:40:39+00:00"
+          "title": "College football player dies days after suffering traumatic brain injury during game: School - ABC News - Breaking News, Latest News and Videos",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPM3lPalUtdVZVWHYxazFUTUNvUmVoeWlZZ2pDTDJjVlNET2NtSDlkRWlSTF9QVFJkczRnbHowR0c1NnkwbjBkQzJrZm1vS0hXeFlQaXh0cV9GNmJJcnVCUDl4dkZ5d01mbERKSmNRQ1pwSUcwQXUwU2gzOFh6UEp1YklrdWlHYldsNllUNmJ3ME53TXNaa2N3bWk2LV80bUMtQWRPNdIBqgFBVV95cUxOcW9qMTBINWtxQkRjNjczVUY4MElSbFlDRkpSTnBkY3lFZXlDWVg5cVNnSHJxM3lPX3ZFcDJXd001UUExUk5XdVliRjkzLVJLdmI3WkNWLUMxaVdFZmtPd21JcC1RYVRDVnlNeHdyQWwxa0o1dy1jOXZEdlhMb19uVkxmWUY3Mm15SmdIaEJFVHp3Q201YUpfTjdqR21aUW8yR3lXWFBpNzJrQQ?oc=5",
+          "published_at": "2026-10-16T17:33:16+00:00"
+        },
+        {
+          "title": "College Football Player, 21, Dies 5 Days After Suffering a ‘Traumatic Injury’ During Game - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMVd2bDdpcFduZHo2blAtTTJ5YXhkZFE4QUh4eWE0ZEQyWTJxZ3JkYURXbXMwdzFjNDBSUWllRnQ0NXloeDJDMnpEaUprcWhoTzFNRmxzUXlJbzJxRzZwMTZMZUlRNlpOMmE3OElEX214TGdBd2lIcldqMmdsYmtORnhLZjVpSms?oc=5",
+          "published_at": "2026-10-16T14:48:10+00:00"
+        },
+        {
+          "title": "Oklahoma football player Tyler Ulrich dies after injury during Ouachita Baptist University game in Arkansas - KARK",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPeTBhUFBYdDRrUldKRVZHekp5X2h0aGFoc0VyMTRuRXAwQWFmQmFRdm40RlBuSENoQ28tX29SQmlYWlhZcWwyMk9CQkRlTUZ2bV9ydEZodW9RUk55QVFHVjFPT0tBM01kRjZDNURBT0ZINmdrMzdZUnVUdEFkeVctNFpMU1Rka2xETVpjVloxR2Y2NWYxUTJCQ0VpdGItV2dnVjZRbjFQUTM2aEVhZTJuVlVmOHh5VERYY3kyeW9UYWQ5R2lHT1BPVUU0N0Z3elRUZk5BaVFhNHU4QXJDMjViXzZ3?oc=5",
+          "published_at": "2026-10-16T16:07:23+00:00"
+        },
+        {
+          "title": "Georgia football injury report vs. Auburn - 247Sports",
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOUGtrQlpQckwzWENLQ0lmWnBEcUhvSXhYOFRKVUQ1MkFub0lPWkFkZnpEN0FUOWFwZFEtZ0FVN2lFczlibWJMMTZnaVFRWlpMcm5iNWoyQTAxNVozb0pfaGc5UVdPbmhhaTg1NWZ4YU5VWXVuTUpLMU9NbkFIYXBvYmtFcWo0eTRfTjhMQkhGWGRueDR0VW9MdVRlSi11UTNRRXpjS0l6Wk53ZmMybmUydUJHcmN0c2ZNd3dpT2V4dmE5OFN0RTE3U2FKeUlPX2Y3elNJbUJMYWQzWkpjLU9rTGpGNjRqOXE4M21LT3Z6N01aTk1taHc?oc=5",
+          "published_at": "2026-10-16T15:39:24+00:00"
+        },
+        {
+          "title": "'One of the sweetest young men': SNU football player Tyler Ulrich dies after game injury - KOCO",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxONUNyM0hrM1FYWjlxZXR6SGQtbzZMcWZ4VXpGS2ZoemRwX1ZxSHllcm9ZRFp5NnNaYkp3NUo2MFRVbWRmRjJQV0I1S0N4Rkp6UmxzUjZ5QkVtZkdBU0FjazBlVU5kRWExM0lVN1NWTUdyOWZBc0d3Y0F3S3JxWmo4Y3FQVmlpTEl0SWNhWm50bEV1eHoxU3dhbUNPbW9fWVRfWWg4?oc=5",
+          "published_at": "2026-10-16T14:24:00+00:00"
+        },
+        {
+          "title": "Georgia football injury report: KJ Bolden downgraded heading into Auburn game - DawgNation",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOQk1JT2l3R3g4bWlqX040NVlOMUx0OTNoOFNCMXZzTVR4SzU2U2d5XzVfWjBiUS1iclZPRk1VTFc4SFdVYmFTRkhuREc5TGxPRndrQ3NzamNDTEgwTXVKRFhLSUpjQlNuaDRLN2Q3YnFpRE92N3FubWZzTTgyYUNRTFFKdzlNUmNoR2FYa295NFlCM0lpZVJUaUtvTHhycnFTYWF6aHd3VkoycGswbDFCR2JRU0hGcHY5ZmxJb2lUeFZJV3dPZWo4cDdZUGFmbHprTnA4bGJSWQ?oc=5",
+          "published_at": "2026-10-16T00:17:11+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -191,19 +191,24 @@
           "published_at": "2026-10-16T00:00:00+00:00"
         },
         {
-          "title": "ATP Tour proposes rule changes designed to reduce overplaying after injuries to Alcaraz and Sinner - Japan Today",
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPM09XTjRlNm5vdXE4Y1I5MXBjYWIyU3ZTVi1QRzFmTkJyN1V6TlpmamtXdFBaUWNVSHpRVzNNV0ZyZkJ3QjBCQXZCemxsYlRva0RmUU1TRmdlZ0RTRHVmVGtPaVBGT1d2LUw1RmxCWFVHeEQ1NlA3TmtRMjFGTUhPUTRVY1BYX3NBMHJnZjdBWExscU9YYnVKdno0bll0MGFZTDFGckJVa1BlWV9qemR5cTItYzJCZGc0bE5iZ2gxQ2lLWDVtOE5qMFNWcC1WQi0wNS1N?oc=5",
-          "published_at": "2026-10-15T20:35:00+00:00"
-        },
-        {
-          "title": "Highlights: Davidovich Fokina into Shanghai SFs after Gea retirement - ATP Tour",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPYmEzbmdOaTlxQ0FaZVliVmZDM2JwNXBFUnVkRFF1ZVhIMXBXOG9HX1BqY2ZldTR2RHJxYXBhcEVJcUdTSFV0bEhPNWhEeS1oUTh0Q3RSaWFyclR1Y0dwejJkZU9Ma0JDd3BHZDVuaExpUDMwM3RseG5xdXBXQ1F6eTlERDR6ZS1RLUFzSUtPcEM5S0lHTjhwaExRbC1nck5keFowdnJRNTk?oc=5",
-          "published_at": "2026-10-15T07:36:24+00:00"
+          "title": "The future of the Wuhan Open is called into question after big names withdraw from 2026 tournament - Tennishead",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxObWdyX1V6Y041UGxpS3ItOUZkaDNyREhNN2k0b1NSV2tkMUxZVk1Nc0t2SXJtMDRETzJxQ2NCQk1zNndJQXRrajZ6RWN2aWdGc1VnZkVWbVZueERBMWYtNDZHUkFicEZqT2w0UnlvNTdXbk9yZktFbWp5eXlRUk9XVS1kQ3U3ejJMTEZVMFY4ZUdzaEVkX2wxVkNteHV0RUw2UDRDLTZKOFVaclljM21TMWJsbkJYSFAxaF9wMXE0dw?oc=5",
+          "published_at": "2026-10-16T18:00:00+00:00"
         },
         {
           "title": "ATP Tour proposes rule changes designed to reduce overplaying after injuries to Alcaraz and Sinner - Bozeman Daily Chronicle",
           "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQemFMQlY5NTJiaktFT1ZYSlVySTREZ2xYZk9PdHVRUDBkRHFkeG9pTWJQWmRSMFdlbktVNWx4WUZWRl8tY0puQnNyYXVrdk5XTzRhcFVkY1RoNlh2TjYyLXpkNXF1elJjNUMxbmk4djA3bDNHaHdMcTZMZGFXdnhYdmNIWld2NjA2c05zaHQtdEVkQ05JenZaSjN2aUNSQXJjN3F4MGFXUHpMSjBMOVRoaFFidEZnUjF1MnZ1RF9KNXlORXFLNXV1akRDMGx2MGhzN1NCMkxSQXVwS3Zpc0F1c3NyaEJIMjhNbHMtY1BKa1Bfa3MwMDVVcDRiLWNfdndHbHBWdUwyRXRrbTdkeUdCNHA1QTNpXy1hNGlOS1FRRDBwYzJV?oc=5",
           "published_at": "2026-10-15T14:54:58+00:00"
+        },
+        {
+          "title": "She was one set away from being world number one but retired without winning a Grand Slam title - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5zR0duWHQxYXJBdGZCTjczNjBLemM4bDY0azlyREdiTXgtWmwwVUVsYXhURGllUndwQXBvODktdFByaGRHVDdlNU53ZDI5VDZtUG5aSENtNW1rRFFURmZIc29QbmhsVFQ1OVFsRFhIdDRaVW5oMGViMTE5aw?oc=5",
+          "published_at": "2026-10-15T23:00:00+00:00"
+        },
+        {
+          "title": "ATP Tour proposes rule changes designed to reduce overplaying after injuries to Alcaraz and Sinner - Japan Today",
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPM09XTjRlNm5vdXE4Y1I5MXBjYWIyU3ZTVi1QRzFmTkJyN1V6TlpmamtXdFBaUWNVSHpRVzNNV0ZyZkJ3QjBCQXZCemxsYlRva0RmUU1TRmdlZ0RTRHVmVGtPaVBGT1d2LUw1RmxCWFVHeEQ1NlA3TmtRMjFGTUhPUTRVY1BYX3NBMHJnZjdBWExscU9YYnVKdno0bll0MGFZTDFGckJVa1BlWV9qemR5cTItYzJCZGc0bE5iZ2gxQ2lLWDVtOE5qMFNWcC1WQi0wNS1N?oc=5",
+          "published_at": "2026-10-15T20:35:00+00:00"
         },
         {
           "title": "ATP Tour proposes rule changes designed to reduce overplaying after injuries to Alcaraz and Sinner - Ottumwa Courier",
@@ -214,11 +219,6 @@
           "title": "ATP Tour proposes rule changes designed to reduce overplaying after injuries to Alcaraz and Sinner - Toronto Star",
           "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPdkk0NWd1MzhCY0s3bG9ZM1Nqb09kbkpTaUp0VEF5Z3Q3Z1lZcUZ3TWU3bFY0YUlKUTI3MU5TaExKMGtKaV9meTBibjZVNmlUMVlXUGJReDhPZ2hfM1FjM2hvMENFUjZ5Z1E5Vlh4b3ROV25xM3dFeENnNzBkbjNFVmxGUWp3OTBNTDF6LXJfYVp3STNKMl9ieEpsRTYwSG9YeEFhN2NQbC1uMkVYOElyNW01eTBnMEJDVFNjY1d2TXZ1OU1aVUY4dDd5SVpydTFIQWhyb1lZUVpmWVRFRkNWZXRwbnhhbVVKRlhTWFZiQXB1Q0NkQnFLYmdDY0pvQlE1Y1p0QUxNT2FHRjRIMXVpQWFoaFM?oc=5",
           "published_at": "2026-10-15T14:56:09+00:00"
-        },
-        {
-          "title": "ATP Tour proposes rule changes designed to reduce overplaying after injuries to Alcaraz and Sinner - The Daily Gazette",
-          "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxNYmhjUXBOV1AweWgwZGY3ODhrUml6R3djLTFfQXZvR1IxS3I2UkFxZDNsYnZuZlBoVF9qcDg3clJ2YVg4dGxJUDlpSFhqdG1OOHh4UUl6ZDFZdEFfVzE5TUNEQXc3bUhrMFltM01xbGNmcEJqWEpyTU5LNWxVd1NwOHE4RFpnOFVweTFEcUpCVnp0NEtEQ2dqY0RUUmRuTGhKR0R4MGJ1aGV2MGxWaGp5aWIwY1VQUmtWbVQ0UGJhQ2YyUHpRMDl3cnhfOVJKT1lMV20zZ2pxWDJQUXBWd1Y5NjdHZU1JQ0ljeU8wUk5mYS1MSExvTTlsNHdjb3QtMEZ2WTZVWEFFamlwQUZrMm91X2pNYWl3SXBhaWkzUmhR?oc=5",
-          "published_at": "2026-10-15T14:54:00+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
