@@ -1,16 +1,11 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-10-17T06:55:47.414407+00:00",
+  "checked_at_utc": "2026-10-17T11:36:24.261647+00:00",
   "method": "Google News RSS headline screening (unverified)",
   "sports": {
     "nba": {
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
-        {
-          "title": "Gui Santos Injury: Suffers left knee injury - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPV2tlQ2lYQlhJUDlfTDh6U0VvUzBmZndhamM2c1pHVlZYMG5QZjNWQXAzNEVtMXNwblZ2cVkzdnJtckRSQUpUbDBDWW5pNmpMZ2ExdE91cWF4anppQ0RRZ3lwX1M4eTRTc1Z2ZG5PTnlZUGNBRFRWSXZ0LUcwWVF1MnBJQnRiUVUtazZJSEpzMWhCNjBxMDBuV29nVQ?oc=5",
-          "published_at": "2026-10-17T02:35:38+00:00"
-        },
         {
           "title": "Jrue Holiday Injury: Won't play Friday - RotoWire",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPV2xfYjBrUjMtWHNIX2FCVC1QQ1FYdk5PN053eEFTNlNJd0VkdzdIVm9VbHZUd19jaG1TdnpSQm95YklWM2dnWXV2VktCLTFNb2xGeTNWU2ZxVElpV0JXQTZ3UW1QOUNWTGV4ZWdUYlcxLVd0X0lTRzN3azNoVThFNXpaSXhSQ0xKVDVDaXNtLUZrTm8?oc=5",
@@ -20,6 +15,11 @@
           "title": "Collin Sexton Injury: Ruled out Friday - RotoWire",
           "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbTJ2YzhJbDFqWXQwamFjVU16WkE1dVdfMnBraWJRd21udWdZYm1EYjFWblFpSHVScXNFQVVoVTJTbE9ZcjRIWENfVUowclZ3OUYtYTJxdWZ1MjhRXzBrOEpYajhqTjA3Nk5WQ0xrNzRHckxjaXJGcWI4S0pacGlWSnlBZmppSWtwTS1paVhLcjRfYk9F?oc=5",
           "published_at": "2026-10-17T00:57:35+00:00"
+        },
+        {
+          "title": "Gui Santos Injury: Suffers left knee injury - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPV2tlQ2lYQlhJUDlfTDh6U0VvUzBmZndhamM2c1pHVlZYMG5QZjNWQXAzNEVtMXNwblZ2cVkzdnJtckRSQUpUbDBDWW5pNmpMZ2ExdE91cWF4anppQ0RRZ3lwX1M4eTRTc1Z2ZG5PTnlZUGNBRFRWSXZ0LUcwWVF1MnBJQnRiUVUtazZJSEpzMWhCNjBxMDBuV29nVQ?oc=5",
+          "published_at": "2026-10-17T02:35:38+00:00"
         },
         {
           "title": "Franz Wagner Injury: Exits with right shoulder soreness - RotoWire",
@@ -42,9 +42,9 @@
           "published_at": "2026-10-16T22:56:28+00:00"
         },
         {
-          "title": "Daniel Gafford News: Not listed on injury report - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPWllQNG54LXMxbUNRbWUwMmJFTUhYTUZpNmc2Y012cFo4bE80V21Eejl6amtXamlMb0w2MWVLU18yUUlEM3Y3di1ZRHBsaTBPaXNyQlBzMHNfeGh5Y09yMTZHQ0VjY0FzUDloRGlHUGpMaDN3bFJINlI2MEExX1M0THFVclFoUFlBOG50MzFlZE10Z213bjlRSUN5d1hhdXVscWc?oc=5",
-          "published_at": "2026-10-16T22:31:34+00:00"
+          "title": "Isaac Okoro Injury: Won't play Friday - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdjNRV1Q5TWxSTllEb05hZHhnaWx0MkNFTmNNMTExUGZDWVJPN0c4cG90YVZIclJFWk4ydnZUTDBwejgyYnpXOC1RVFhlYmdGUDhmWHBaZmJLNE5qQ2tYWTM0RHlKSTgtQUhEaktsS2ZYUFdmaXhQc01JeVNKYmxEWmwxVHRaV0dwN2FEY0tuMXpnZw?oc=5",
+          "published_at": "2026-10-16T22:54:39+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -63,9 +63,9 @@
           "published_at": "2026-10-16T22:03:11+00:00"
         },
         {
-          "title": "Steelers have perfect trade candidate as NFL quarterback injuries pile up | See link below ⬇️ 📸 Mark Konezny, IMAGN IMAGES via Reuters Connect - Facebook",
-          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNNUxYQ2oxX0xfc1FydkVXdDhOcXp5bXFUNW84Z1ZGaDRVa19Pd0lrWDBMemoySEtQX3IzeFY4eUItM1ZGelg5T2QteHVEUUI2U3kyUzU2WEp2LVI5dDNsa1N6Y0FfWkdDa3dNd1dHcEVKWVl0RW1NQWE2aERhcEloOE00SzNhX2E0MHU2dFdkamtaYk5NaEZYdGgza1pVWV9DT3UzOTdLMDIybkZTaEVpdGVadTVtOS1PdFZKem1oS0N1cGNDRnl6LWJqN2g3NENrckpBMUQ4TkFhZw?oc=5",
-          "published_at": "2026-10-17T01:54:18+00:00"
+          "title": "Ex-NFL quarterback reaches tentative settlement after alleged 2025 assault - Broncos Wire",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNWN6YUdVRnFqTnNIMTVCYi1FRHNraUUtajA5QUdPTEYxNDdPM3kxWjRDbFd4a0U5RWw4YTFyVkZtZkVodWFpUDBYOWRrb2NLT2N1TVRHOWNvMnpHV0tKQUJEX0VFTk5EOG1EUEZmTXdCNmlUSmhMeFF5ZzVRT20xemRmZnNqVHlhR21JWnpDaDBhVy1EQXVJTmtqbFpQT1dyMjFTTlduU2hFbTd2RGJ6R0FPSUEzdlY1WnhzZmsxaldlU3htVDZF?oc=5",
+          "published_at": "2026-10-17T11:30:00+00:00"
         },
         {
           "title": "Which NFL Teams Have Been Most and Least Affected By Injuries in 2026 - Sports Info Solutions",
@@ -73,14 +73,9 @@
           "published_at": "2026-10-16T14:36:44+00:00"
         },
         {
-          "title": "Steelers have perfect trade candidate as NFL quarterback injuries pile up - Steelers Wire",
-          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQNUhuanJnb1dDd05KTWxMckNqRW5FeE40aklVQ3g1blNhMDJUQng2dzFmdmJkVEZENVlsQTZDYTRfSXFZVVFvSi0zTDRFREdwbXRoTWduRHY2V29mQzRuck9Cb0R5V3Z1SHlKSUpKMUgzWExqMzg0X0xYVURTN2RmbjE0Ukp6dFFXbFh3cVZwNUhpbVFuLVcxelVPc2hxMzlhMEFVbEV1cGpGU1hkQ1Q3VE1rWW82bXBvdlJhR2FGZ2lQUzU5aG5lU0hWcXV3MU9ka0RNX2JfVDdXQzE0RzBBS09MdFNxOHc?oc=5",
-          "published_at": "2026-10-16T17:16:00+00:00"
-        },
-        {
-          "title": "The Week 6 QB shuffle: Six quarterbacks to pick up if yours is underperforming - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPT1pyZTdBdjlVaktXVVpQMHlIR1JYYnJuM0hxaXFUMUVBd2VfU1pudUhpV2FXUHJEZGFFY3ZCN3Rab2dOSUdYLVlHNW1waG55ZjdmTi1FWW1HU1RJY1BnQlg2SDB3U2tTVDU4WkpnQVhnRG9qZERJVnptZ1NNY3o0QV9URERCRUs3dl9CSU5yY2FkbC1GWGt3Y0lqV2VXR1Y4eVNoTHZ0Zw?oc=5",
-          "published_at": "2026-10-16T10:40:00+00:00"
+          "title": "Steelers have perfect trade candidate as NFL quarterback injuries pile up | See link below ⬇️ 📸 Mark Konezny, IMAGN IMAGES via Reuters Connect - Facebook",
+          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNNUxYQ2oxX0xfc1FydkVXdDhOcXp5bXFUNW84Z1ZGaDRVa19Pd0lrWDBMemoySEtQX3IzeFY4eUItM1ZGelg5T2QteHVEUUI2U3kyUzU2WEp2LVI5dDNsa1N6Y0FfWkdDa3dNd1dHcEVKWVl0RW1NQWE2aERhcEloOE00SzNhX2E0MHU2dFdkamtaYk5NaEZYdGgza1pVWV9DT3UzOTdLMDIybkZTaEVpdGVadTVtOS1PdFZKem1oS0N1cGNDRnl6LWJqN2g3NENrckpBMUQ4TkFhZw?oc=5",
+          "published_at": "2026-10-16T20:00:22+00:00"
         },
         {
           "title": "Eagles steal QB from Cowboys: Joe Milton expected to sign with Philadelphia after injury to Jalen Hurts - CBS Sports",
@@ -91,6 +86,11 @@
           "title": "Patriots vs. Jets weather forecast for NFL Week 6 - Yahoo Sports",
           "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNVVdEWmlfWE1NMEhEMGlVVjQybzZfUVY5VVNBZDFDTDZXOWs3TXFUb1pRZXFxS1U4NUNwajFYUkJNejJYM1Fhcm1JYVNneV90VXRYYkZkTDlpUThwUFkySEVYeWMxTG1yXzJyS3k2Smh4dmZhcXlDMWxFcVJmaF9SdnZGWHBxNkJfNFE?oc=5",
           "published_at": "2026-10-16T10:00:34+00:00"
+        },
+        {
+          "title": "The NFL Report gives a Week 6 injury update - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1FVlFhUEVOd1hxUG8zS2lHcE16VzFtR0xhOV9UOFNEQ2xCUUNTeG9saG1Fck40WlMxVVpDUklFVEtKT1RRWnkyWWpvZjhRWEFTbzJuMjRsVUQ5T0YzM19Zc0RRRmRQbFI3dW5XVkRBMjhDU2pwR0d0NFdn?oc=5",
+          "published_at": "2026-10-16T23:18:05+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -124,19 +124,19 @@
           "published_at": "2026-10-16T18:34:11+00:00"
         },
         {
-          "title": "Canucks at Lightning projected lineups - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPRllfMlBtN1lNaUNKeFhCRU1pYkNneWxvUTA0TmJZZnZSeF9nYlRoZ1Jwa1M2QU1wRWdMeGdjcGV4R2h4cGtWREhCbG9YMnFxZU5wOHV2eHQ0SFk5am5TQjlmZE1nVnBJMGZqODJ2b3plcUc3T0xQMFdxX1VveFYweVBadE12Z3ZjT0NvRU1SMnM5aV9CY3c?oc=5",
-          "published_at": "2026-10-16T22:26:56+00:00"
-        },
-        {
           "title": "Projected Lineup: Oct. 15 at Minnesota | St. Louis Blues - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1QRXR1YVdJYnZwRm00amFtLUJ4cnZ5MUJzNEVhM2pZYnJWQzNYb0lZLW9OeFZXYjRMUjBFRHh2T1JLa2RBUUd5QlZYY0czUWZMakUyX0c4OVJSWldYN1BKMjVvYjNCbGpuVWlPTGxKUTg4d0w1YWc?oc=5",
           "published_at": "2026-10-15T23:58:16+00:00"
         },
         {
-          "title": "Projected Lineup: Blues vs. Wild - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4ySmd1cHRITzhJRGNmVTU1QlJvT0x5XzdKSi10WUdkanZjS2dvWS1Rc2paV2pxMGNCV0RDMU1HU3dWZVRBT1VRdXhONmVfQzl0amVDRURCLXdqOUUtR05INUIwNk14N1F2ZzhtOWVIMUZodHI0Q3c?oc=5",
-          "published_at": "2026-10-15T22:37:07+00:00"
+          "title": "Canucks at Lightning projected lineups - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPRllfMlBtN1lNaUNKeFhCRU1pYkNneWxvUTA0TmJZZnZSeF9nYlRoZ1Jwa1M2QU1wRWdMeGdjcGV4R2h4cGtWREhCbG9YMnFxZU5wOHV2eHQ0SFk5am5TQjlmZE1nVnBJMGZqODJ2b3plcUc3T0xQMFdxX1VveFYweVBadE12Z3ZjT0NvRU1SMnM5aV9CY3c?oc=5",
+          "published_at": "2026-10-16T22:26:56+00:00"
+        },
+        {
+          "title": "Unmasked: New EBUG rules helping regular goalies with load management - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPS05ZaDI4U0RJcHZzdXVxOV9RQUVETTg2NlNmUUtGSDZqbjk1cDFWZzdfcWthWlk2VjNfTWJmdjhGYWVvdkVCTmRVZ0xFX3B2MlhPU0lqYlpjVjZraUs2dDhUS0dkMDJJZ2YxYXJZYkE2MEMxYWlWMDFOMHVGcnptQmZaT1hic1pxcDM1REV6WlhjUQ?oc=5",
+          "published_at": "2026-10-16T04:15:54+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -145,8 +145,8 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
-          "title": "Tyler Ulrich injury: SNU college football player dies after suffering 'traumatic injury' during game against Ouachita Baptist - ABC7 Chicago",
-          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPREMwVy02WkZhclM1U2dXVnNmeWRVOGhFbVlsbG5fOGJ4eFA3ZTdGSERGS1JGbmJ0UWJvQUxOeUVPWW5pSGpOeEFoUFc3dnZRamRVYUlGQmlvZ2t5ekt2NkI3Q0Exekx1cVB3ZGcxSUlqZ0VLZlVwQjhxMXJwQXNURGZmZW5rZlRfMEZERHI0WFR4S0lDbHVsV05KMnA5OTV4SVRyM1FNTjBsRWg5SjM3d3p2MUZmRTdRcmhQYXlQR3lkMUxOUjJ3ZEg1ODBTa2FKRHpHSmMtb9IB3AFBVV95cUxQQ3BWMU5VUk5RMEp5RGNSOExkM2F0bEU3THZKbXJrOEFMTFFiVUk2VFRRbkl4aElTUUY3RWloejVfdmdGQ0hCWWZIdWh2NjBpSEFnc2xRa3RWYzJJU2pHQmRMTmNGUjZGdS1uakNmQm9ReTJnbnluTTlFaWJFMTdib1BGdGJqZV96eW13US11MHpXTy1zWk1vRE9XY1JibXYtSk5NM1pUcHhfRXZPRURWdTE1U1JfLUlCdG9WTkg2U01qR1BEMDcwSmZ1UjM3RlRPQ0JBaDNEOGUzRG5n?oc=5",
+          "title": "Oklahoma college football player dies days after suffering 'traumatic injury' during game - ABC7 Chicago",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPREMwVy02WkZhclM1U2dXVnNmeWRVOGhFbVlsbG5fOGJ4eFA3ZTdGSERGS1JGbmJ0UWJvQUxOeUVPWW5pSGpOeEFoUFc3dnZRamRVYUlGQmlvZ2t5ekt2NkI3Q0Exekx1cVB3ZGcxSUlqZ0VLZlVwQjhxMXJwQXNURGZmZW5rZlRfMEZERHI0WFR4S0lDbHVsV05KMnA5OTV4SVRyM1FNTjBsRWg5SjM3d3p2MUZmRTdRcmhQYXlQR3lkMUxOUjJ3ZEg1ODBTa2FKRHpHSmMtbw?oc=5",
           "published_at": "2026-10-16T20:50:49+00:00"
         },
         {
@@ -170,19 +170,19 @@
           "published_at": "2026-10-16T18:02:00+00:00"
         },
         {
-          "title": "College football player dies days after suffering traumatic injury during game: School - ABC News - Breaking News, Latest News and Videos",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPM3lPalUtdVZVWHYxazFUTUNvUmVoeWlZZ2pDTDJjVlNET2NtSDlkRWlSTF9QVFJkczRnbHowR0c1NnkwbjBkQzJrZm1vS0hXeFlQaXh0cV9GNmJJcnVCUDl4dkZ5d01mbERKSmNRQ1pwSUcwQXUwU2gzOFh6UEp1YklrdWlHYldsNllUNmJ3ME53TXNaa2N3bWk2LV80bUMtQWRPNdIBqgFBVV95cUxOcW9qMTBINWtxQkRjNjczVUY4MElSbFlDRkpSTnBkY3lFZXlDWVg5cVNnSHJxM3lPX3ZFcDJXd001UUExUk5XdVliRjkzLVJLdmI3WkNWLUMxaVdFZmtPd21JcC1RYVRDVnlNeHdyQWwxa0o1dy1jOXZEdlhMb19uVkxmWUY3Mm15SmdIaEJFVHp3Q201YUpfTjdqR21aUW8yR3lXWFBpNzJrQQ?oc=5",
-          "published_at": "2026-10-16T17:33:16+00:00"
-        },
-        {
           "title": "Kentucky vs. Oklahoma Injury Report: CJ Baxter questionable; Michael Fasusi doubtful - A Sea Of Blue",
           "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOOU1RR2VOV1JwR29VUDZ5SGFKLUh3Vk9GQVdJcHJYTVNMdTIxTnhDWHlWUGljMGE2eDE0LWNoSkctOXZRUVpiWWI3WmFjVTdRWjc3T2J6dXQxb29kdGljOEEzRWp1eFBpWmp3dG1ZR3cxWnNtZXBfRkotNVVnelBvNGl3RTliRXdUZjFLSEJ0MktWRXItTHBZRVk3WVA4U1JXclFWa1B4b09sVDIwYWtodGpjN1NSREtod1NlU3hB?oc=5",
           "published_at": "2026-10-17T00:36:00+00:00"
         },
         {
-          "title": "Duke Football Injury Report: Latest Updates and Potential Replacements - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbTJYRlcyRXRaeVV0ZTJLOEE0OTBnckZiNVV6VDc5cjlzNDlaV2pYNDA0a1ZrUEZiT05YR1lBaTAwRDVQNmhObTJVYUdaSVpQeEFtVF90RUZMdDlVN3FBN1d3SkVWYVVuNkRxbjg5VmtMdllSaTdaVHB0R21neFJmZ2F5NWYwYmluMlRzLUlJSE9CdTJnX054OTJpOEwya2VYLXVCS3ZUdw?oc=5",
-          "published_at": "2026-10-16T12:00:02+00:00"
+          "title": "College football player dies days after suffering traumatic injury during game: School - ABC News - Breaking News, Latest News and Videos",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPM3lPalUtdVZVWHYxazFUTUNvUmVoeWlZZ2pDTDJjVlNET2NtSDlkRWlSTF9QVFJkczRnbHowR0c1NnkwbjBkQzJrZm1vS0hXeFlQaXh0cV9GNmJJcnVCUDl4dkZ5d01mbERKSmNRQ1pwSUcwQXUwU2gzOFh6UEp1YklrdWlHYldsNllUNmJ3ME53TXNaa2N3bWk2LV80bUMtQWRPNdIBqgFBVV95cUxOcW9qMTBINWtxQkRjNjczVUY4MElSbFlDRkpSTnBkY3lFZXlDWVg5cVNnSHJxM3lPX3ZFcDJXd001UUExUk5XdVliRjkzLVJLdmI3WkNWLUMxaVdFZmtPd21JcC1RYVRDVnlNeHdyQWwxa0o1dy1jOXZEdlhMb19uVkxmWUY3Mm15SmdIaEJFVHp3Q201YUpfTjdqR21aUW8yR3lXWFBpNzJrQQ?oc=5",
+          "published_at": "2026-10-16T17:33:16+00:00"
+        },
+        {
+          "title": "Week 6 Fantasy Football Final Injury Report: AJ Brown, Quinshon Judkins, And Updates On All The Top Stars - Sports Illustrated",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOVWdIQlFrcndFRmZJdVhESzA0V05uUU9SUzJlTFFUVW4zRVlXZENDRDFTcU82cmV4cXFMb0preU0tZ3hSRUtNMXlPRHlEbzdIVzlzSWNkeFVnRFd1NmlnclJRdVVzZkpzQ2htWDZJWFkxdV9hT2k3VzJ5T1hCUkVwZUdSaHZJcTJqT2lvcEhQNHpwVjcwQU5raFpTMUF6UXZmbUU5QWZ0N2NrRWw1dThLV0k1MkZaRlQxN2hNUnhpaEQ2MGxUV3VQZWZma0NHNzRXTlpGWFFuLUNFenc?oc=5",
+          "published_at": "2026-10-17T09:00:00+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -196,6 +196,11 @@
           "published_at": "2026-10-16T06:56:49+00:00"
         },
         {
+          "title": "Emma Raducanu: Retired Brit Dan Evans predicts former US Open champion 'will win Wimbledon' despite injuries and fitness issues - Sky Sports",
+          "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQckZYRDJDZ0hzdTJhTXYydGlselhMSWg1VlB2V1duV3JWT1ZYU2pEWTA2dGkza2xfM2R2X1FOUFFMRk1UODhSb0RtXzNHVExSTllWeUtjakxxOUZjRmV3WUd5bUlDTThIbkR5OW03RUdBY29oWkNMTURpT1BiRWd5bkpWckp1Rm11aDJ1djRVLTVsckZvaXVWOS1oWVo4Q2FFYjhaems0MFFfOGY4ZzJkQnA3ZkdVVjB3Sm9iYmx5TmxTQ1lIdk9kd2duWC1fYWRUQTIwakxTYzhJcnU2dlM1U2JGMjRCcHRVQ0w4a3lnQUhzNEVxYmxVOFZkXzQ3ZDk4?oc=5",
+          "published_at": "2026-10-17T10:36:41+00:00"
+        },
+        {
           "title": "ATP Tour proposes changes intended to reduce injury risk for stars - Chattanooga Times Free Press",
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNM1BFVGI5MS1LTTkydExVYzhKeVZwWDE1U1B1MW9WZzgtM1AxOUxoUnBCNmp2RXVaNURXejJkVlMtTlEzMnUzUldwZldpcW1lRWwzZndiM2hYay1BREt6MGgwWHpUSE5qMDRvcVYzeFBCUGpETDFlVUR1ajdxVnktaVFlVGQzZVlWdUgxNTRJd1RaOXlqS1VhTQ?oc=5",
           "published_at": "2026-10-16T00:00:00+00:00"
@@ -204,11 +209,6 @@
           "title": "The future of the Wuhan Open is called into question after big names withdraw from 2026 tournament - Tennishead",
           "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxObWdyX1V6Y041UGxpS3ItOUZkaDNyREhNN2k0b1NSV2tkMUxZVk1Nc0t2SXJtMDRETzJxQ2NCQk1zNndJQXRrajZ6RWN2aWdGc1VnZkVWbVZueERBMWYtNDZHUkFicEZqT2w0UnlvNTdXbk9yZktFbWp5eXlRUk9XVS1kQ3U3ejJMTEZVMFY4ZUdzaEVkX2wxVkNteHV0RUw2UDRDLTZKOFVaclljM21TMWJsbkJYSFAxaF9wMXE0dw?oc=5",
           "published_at": "2026-10-16T18:00:00+00:00"
-        },
-        {
-          "title": "She was one set away from being world number one but retired without winning a Grand Slam title - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5zR0duWHQxYXJBdGZCTjczNjBLemM4bDY0azlyREdiTXgtWmwwVUVsYXhURGllUndwQXBvODktdFByaGRHVDdlNU53ZDI5VDZtUG5aSENtNW1rRFFURmZIc29QbmhsVFQ1OVFsRFhIdDRaVW5oMGViMTE5aw?oc=5",
-          "published_at": "2026-10-15T23:00:00+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
