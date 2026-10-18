@@ -1,11 +1,31 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-10-18T14:00:16.277619+00:00",
+  "checked_at_utc": "2026-10-18T17:21:55.146844+00:00",
   "method": "Google News RSS headline screening (unverified)",
   "sports": {
     "nba": {
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
+        {
+          "title": "Dru Smith Injury: Active in Sunday's practice - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSXJjUUYzNTNQMTdvWDhRN2E2dXFXU0IyRHNDWFNwR21hRFNybFN6Xzg0V1I4c0VmbWlpUjRrSFdYOTB5cUlYZzBrM1p4MVI5QXZYWTFUQ3BoamF5bFZlZUpVaDRGbEpRbTY1aWgyM0Y2TjU0NzhQbm9xMlFwYXFyQzdmVmJXQnlKLVVNdDRSSEdXcXptRjNKclVXWDc?oc=5",
+          "published_at": "2026-10-18T17:02:10+00:00"
+        },
+        {
+          "title": "Bam Adebayo Injury: Practices Sunday - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxORmgzMEMzWmgtcEMtTGZIdHlWTUJzZDdwLTdFYlZyejdiSWJuNVdwbUZ3NDBPRHFIbTZmR0RWZFpwOVRNZDE1aDNQMnRTNjB2RUZQOEZQMjU2YkxBWTlrbi04UVpIRTl1R1JHUXk2OUhmcGt1T29WSFFySmd2dDVLdzJfaWtHSFR2ekppT05Ic2d3UQ?oc=5",
+          "published_at": "2026-10-18T16:55:44+00:00"
+        },
+        {
+          "title": "Franz Wagner Injury: Limited in Sunday's practice - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOemNFLVgtQkZ5R1JzVDRtcVUxaEc2YmlhV1ZZWkxWSDJtdkI4dWpSVUI1TVhicFlJVGdleDBERDI4VmRqaG9oUDRNa09Zb0VaSzZMbFFuUm5ZTEtsSnozX1F3QjQ3aWNHOVdNUVR1aGFwR0UteTI0anJkWEcyTzdTR3Frdjg5RTVCMTBJZ3llWHhyOHQxaDJ4a2xVVGswbG95U3c?oc=5",
+          "published_at": "2026-10-18T15:55:37+00:00"
+        },
+        {
+          "title": "Devin Carter Injury: Without timetable for return - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQajhvWGlyU2twZDh6djFNeW0teXoybHNmTGRHWTZCSjFWaHBaRy0xSThKZUpHenkzRG1fS3ppU0JGOE4zZUxxblpuWHBKNVNKMm1TXzAyWktUR3AyUDNOOFNhNmp0MGUzUGJTU3Bxb0hadG45MWFwT05DV2tVNVZzbHozeFQyWVBpQ0diM3JyUE82M1dwYTE5TEt3bjdzY3RObFNV?oc=5",
+          "published_at": "2026-10-18T14:49:30+00:00"
+        },
         {
           "title": "Jase Richardson Injury: Classified as day-to-day - RotoWire",
           "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPb3lrU1ZSeXA1TlgzTndZMG5scHZiWlRoNUhkZ3NCNWtKRzFpTFlZSUltSDZUelkwLXMtMU1fYm5aNXJGRlJldWNRWk1fNHBSWWxhbUhhbXZvbWExZjNzMm95bDdBVGpxMkwweEtqQm5XSWNGT1FheGE2emRCMk9lcWNzYmRsNU9vaVQ2UlRqQ2VfVXZzLUZIem9SWVFyQm1ZY1E?oc=5",
@@ -25,37 +45,37 @@
         {
           "title": "Fantasy football Week 6 inactives: Williams to play; Hurts, Jackson ruled out - ESPN",
           "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQMnZleEJnNFFDUUt6SXdFNV8xTmpnbDFEVk5Fd3lCLWFkZk9zdDMyTXNJbGNBQmt5OXRkR3VVTXRyX3BHVHNSN0J6RmxLMnhqQmlnc1FoQmNveTJraEhfWVVmS3pGZ0ZJY3hpeXh0TTV6X3BNR05wS3B6Y3FWNHFHZGQzU2VDOE9NTjJnOUViWlNiSFU3ZmpTSWFzc2F3Vzhoa1FVR2l1eXFOSDVlWXdHbGs5aGF6bmptRXMwRnR0Z1dBeWNBdUVvdUNR?oc=5",
-          "published_at": "2026-10-18T11:12:00+00:00"
+          "published_at": "2026-10-18T15:55:00+00:00"
+        },
+        {
+          "title": "NFL Week 6 Weather Conditions (Fantasy Football) - Fantasy Footballers Podcast",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNYmpTSkV6SlIyWVA5aW4td1l3aElJM19iaUFGckVZQktkMVMyTnpocXJDNzBfa2s0eVl0aFJZeVJTU2pJWUhMR0FjakM4X1ljZGIzV2pqSlI3cUFqNy01emx5Y2pKWVYxQ3ZDN0VSbFFOdm5iRHpVS1VsTEJ5Mk02VVdjLVNQZDdkQ09BazVHbldDcGFKWmQ0RHE2TEM?oc=5",
+          "published_at": "2026-10-18T11:03:49+00:00"
         },
         {
           "title": "NFL weather report for Week 6: Heavy wind could affect Buccaneers, Steelers - The Big Lead",
           "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZGU5YmpPNU02YWNNUkZIRmtGMTBXY2d5VUpkZE1PaF9Fdk90a2QxaElyajd1el9xR1pLeGFmb3hWMGNmXzQwWF9MUnl6Mm1HMFNqTVhYRzBnTWxic252Z0h5dVFmRXVuXy1OUkVyN0tGWjhneWxsamNBQVBsMHVNT2NiUWVXQk1PcERENQ?oc=5",
-          "published_at": "2026-10-18T12:38:47+00:00"
+          "published_at": "2026-10-18T14:12:36+00:00"
         },
         {
-          "title": "Chicago Bears plan to start quarterback Caleb Williams vs. Atlanta Falcons: Sources - ABC7 Chicago",
-          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOZ19idml4YnV2c2NtazFWTFFtVmdqa3JMZW5KbU5GS3RLYzkwWUNKellXajFaSHhTT24xcnB4anRLLTRGTVVvWXBWa1dsZTIwOVhoNngyNTQwLUtkN3Q4Z2hEeGpxVGo5d1ZYRXcyQmtuTF9qc0Q5QWxzVzRaM2pUZE44ZFNtRGMxRmVyaU1UU2ZMdTRwYXo0MWhEU2Z0TzhBSlFFaWFwZllKMU94emlWN0NOSExMc3dQekFPemNRZ3I0RjBWcTgyUGxGZlJNV0xFenZtYlRqX1JGN2Q2a3hRU2ln?oc=5",
-          "published_at": "2026-10-17T21:09:53+00:00"
+          "title": "Steelers-Bucs Inactives | Sean Tucker Out, Josiah Trotter In - Tampa Bay Buccaneers",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWk5vblk2SVpNNnZMbEtRZ242bEZvcmtqQS0xUElBYjJrazNxV2h4R0lNdWp0YTJwbVQyTGl5ZmE4NFVPeEdlOS1YTUoxbXkzQUtfSDNpSFFEaW11N3RqWjFfUmpReHA4aHNSQmQtVnlXYVZhQVVyNEV3bC1jYnZXSnRoNGpvSjJEYVhNeVdNOFRFOWs?oc=5",
+          "published_at": "2026-10-18T15:56:10+00:00"
         },
         {
-          "title": "Steelers get positive injury update on Pat Freiermuth - Steelers Wire",
-          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNaC1YbkV3eW1oSHBEWFU5SnFxc0tKajV2dm9YRkR1UFM2LUFjSXNPaGE2SzNDTDEwZVRsWGhxX1MwM29ST3ZZaFVvTHZHbENjS2NhYXRRWHpteS0wdkhRb3N3Q3ZnazBEMl9uRjhjUGd2UUYwaEV0OTJsaVJ3dXJtOEt1THJNakVGcGhOV2Nkai1CTzYtMHcyczJXQnp4QkxXaDNOdWtESmdrVndsQnNiWmwzNjBXNndpRmZOTEl0SHMxRnBEbUJ5YnR2MWk0aExCZ0ZF?oc=5",
-          "published_at": "2026-10-18T12:40:00+00:00"
+          "title": "NFL Week 6 inactives: See who's in and out - theScore",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOVlFqaFoyMmRCT09FT19nNDhfSTg0UEpnT1hRb3ZpZVRGR0dYcFJLU3E2T1JmOUNTNlRCRW1STk1ob2RBVkF6TXh6d0hYVHNSd2dBTmhkSXBUSV95N2Vlam9HTTFCendBUUpGdkgyWnlzWEZNQTVaSmFhanE0Q1FVcVUzUUJrTVNidFE?oc=5",
+          "published_at": "2026-10-18T15:34:25+00:00"
         },
         {
-          "title": "Is TreVeyon Henderson Playing Today? (Injury Update, Betting Impact for Jets vs. Patriots in NFL Week 6) - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTWNhSTc5THVrXzZ5ck1hS0h0NVZ5REFTYlNTX1Vjbks5MVl1UjFCcUFYd3ZWY2Z3eHBYelBjdlhyWmlVOWVPX1BaZDBsb0hKWjh3ZnJxSUZVTjRzOVFFUUZmTXFSZ0V1a0IwZWx4cEZWd0dfenN5ZFZXZTFMeUt5QzR3dnpYUkJsaTV1NUFrblZnZlRFcUtmcWluVkJqOXBtRmp2NGYxM3VsZWt0YS1HSGltYUY?oc=5",
-          "published_at": "2026-10-18T11:43:04+00:00"
+          "title": "Seahawks Won't Make A Quarterback Change, Sticking With Sam Darnold - FOX Sports",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQV0Y5Ylk4bWxzMUs4RlVTUEdhUndYUW1mMlozLXFKbm1rdzVYX0tzcmNNOHYwZVd2UXpzRjNaRHpORm8tVm52S19IdWhYUDhhWVVSblRrYjN5MHRwdUU3eUMzMG1Ha2RERl9Uc2lneEJaVldpa2tUM3oxRF9VWkt4V0w0NUI4OUFaa2xpSXlZS3rSAZABQVVfeXFMTmxBSVRhbUJILWNQTGx2QjNjT0ZNejEyTk5NdDN1NmRSU0tabDRaM2pvUUcxM1pycVRlc3hrVHFKa2FGTjN2RklWT2U2dUx5eTlrSG9ILTZUNjdnc2hWaUZ6STFnMEJXT0dydUZ3blhFOGEwYTBiUlo3S2tGbEZVQWl0Z01icFM1Rjg5TktQbDVk?oc=5",
+          "published_at": "2026-10-18T16:10:31+00:00"
         },
         {
-          "title": "Eagles place QB Jalen Hurts on injured reserve due to superficial blood clot in calf - NFL.com",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNkNfVTVWM0RTNlJyUFdNUXFsenR3VjFrbmpfYkVFNllwSHhoeE9KcHhHaVNObkVfLWFvNUVzUk0xVXNVZ19jMVFzdDFicEFveFpyNU1vcm5kdW15UUtfYUQ3QXN4OEZLWGhRN0E1dXVlenJpc01QOVZOZ2JLQTl4M1NEYzNzRmxZUFF4QmJrNHpxcGtQLWFTV3R3YlJYSjFEenBjR3dUMEtyNW9VR3c?oc=5",
-          "published_at": "2026-10-17T20:17:49+00:00"
-        },
-        {
-          "title": "NFL insider provides injury update on Colts wideout Alec Pierce’s recovery status - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPLXVXUmVMaGJXTEJFN2lON3BxQTQxaFNWemVhUl9fRkgxbFFlVFcybjBMSTNqUG9wXzd2SU05QjBzNmR5dVUzcW5xRTFNbEJ3V05mWjVURTF2MjBxSllnOTNfVzYycmlDeWdfdkozeE1lMkRpOVVReEJMNlBNVmZBc1p0U2E3VGY2dVE?oc=5",
-          "published_at": "2026-10-18T03:55:00+00:00"
+          "title": "NFL Inactive Report - Daily Jefferson County Union",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNN1k2Z21HSHBrZ2xQMnlGLUhTaHZFNENJNVlVM0RmU0c3RGN6RlhzNzhrWW81RmNhY21ON1libDFxVFZDS1VJUDZVUzJnWm93X09GRjFfSDBaZ3JDQTd2RXFUUkZQS253TVNXc01aczdKNV9IUDR3SDg5eFpoYXJjaDlWcEhIdWJPcEF2THRPTUVaZG9Ob1RqdHFJOHdjWHo1ZEd3QXN2RjVFdExsRms1VHJR?oc=5",
+          "published_at": "2026-10-18T15:40:48+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -63,6 +83,11 @@
     "nhl": {
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
+        {
+          "title": "Blue Jackets at Wild projected lineups - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNZE4xVktFUnBRdWtWdzBkeVcwTWx3LWozcXY1eXM5Zm1keWxoZXhfU05Bd3FXamUzZUhYc3dlbVk5UC04MEo1VFNReVlQV3Y4dWFjc0llaFo2aVhlTG1DQjhvcmtDRGZQUHdVMUYtSXFzZHU5SUIyMUJhY3haTVo4OXNheC1VVV9jd3dQTWZONDJZTWZG?oc=5",
+          "published_at": "2026-10-18T13:14:43+00:00"
+        },
         {
           "title": "Projected Lineup: Oct. 17 at Nashville | St. Louis Blues - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE56ZVY2NGNKNnFyYk5TZk1QSVBOUTZwNHJ0NDZOU0U4aFIzUHlOQmxEY2FWd1dvQ0pUQ0ZoZG1taWJ5SVp6dFZIV1pqUExKbGV3ZGlQTGkwX1FJMUhxQnNwcXY5WmMxUnpqTEFCdm0zaFRvNTltRHc?oc=5",
@@ -84,19 +109,14 @@
           "published_at": "2026-10-17T18:22:22+00:00"
         },
         {
+          "title": "Kraken at Panthers projected lineups - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQQVBZcmpaZi0xTUN5dTNmUlNIb21aOUVtUkpXYjRTV0RMTFh3Q1ZLc2U3ajdReW9DaEkycWdvdkFDa0stZ0U2UDE0eGx1Y0NYcEZzM0tvUTVMLWEtd1N3anJVMnhhN1djTHlCTGw3Zmlwbk9sSnpiN2prc0QwQ0VBWjd4cW1zSzh6dHl0NnhR?oc=5",
+          "published_at": "2026-10-17T15:27:06+00:00"
+        },
+        {
           "title": "Sharks at Red Wings projected lineups - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPUmhieEhSdmlTQXVpbXQ2T1VlLWRSZ0FCeFVIbWI0eEFkbWpMd2JGNHRDbmVRQ0FRV3V3dWE0ZXRMWXFla2kwMDNHbmQ3SFB2ejJHeHpRTDMwSy1xYWNkOTBndE9lLXFnZGRfTVZIMUlrYkF2Ry1KRGZBeUc2RFpOUU9TTnBYWXF1RkI3X0tMU3Y?oc=5",
           "published_at": "2026-10-17T17:37:37+00:00"
-        },
-        {
-          "title": "Rangers at Blue Jackets projected lineups - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOekNWM1ZKZUFGdEFkVktsYXBxdFpkUjZWWENFN1ktOG45alRhamRxR0d4OXloVFh2VFNMaU0teWRISnZVYnNtaGlRWHhkcnFmWHRSSUh6QzVmTUZuNmxSSzlUb3I3NUdXSHVfUk5KMGtDanIyT1NmSHlGd0xqQmkwQzlzcnU1NlpDWUtkOGNvMEVOZktSNFpN?oc=5",
-          "published_at": "2026-10-17T17:14:37+00:00"
-        },
-        {
-          "title": "Blue Jackets at Wild projected lineups - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNZE4xVktFUnBRdWtWdzBkeVcwTWx3LWozcXY1eXM5Zm1keWxoZXhfU05Bd3FXamUzZUhYc3dlbVk5UC04MEo1VFNReVlQV3Y4dWFjc0llaFo2aVhlTG1DQjhvcmtDRGZQUHdVMUYtSXFzZHU5SUIyMUJhY3haTVo4OXNheC1VVV9jd3dQTWZONDJZTWZG?oc=5",
-          "published_at": "2026-10-18T13:14:43+00:00"
         },
         {
           "title": "Penguins at Golden Knights projected lineups - NHL.com",
@@ -110,9 +130,24 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
+          "title": "Week 6 Fantasy Football injuries: Jalen Hurts out, TreyVeyon Henderson 'good to go' and A.J. Brown is back - CBS Sports",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQeVVNeVdUcUNuRllzS2VIM1F5NXJUQkZIbEp5aFNSaWVvNFVEZmRualBDWjJyaU04VTVaN1Zkc2tGNzVTbnV4ZXhlaVZHSW8tUTVDZGdkN01iaUltbGtZcUpTUy1PRGExWlRQdE9Ud3RNaV8zajh5WFhiaXlfbDNZVWQ1QzJtbkRqQWRhSk9tUEdYMUsxaHc3c2xZRjAybmdSdWVjR3J3ZXlSVnNINVRLbjB2cjI?oc=5",
+          "published_at": "2026-10-18T15:23:00+00:00"
+        },
+        {
+          "title": "Last-Minute Week 6 Fantasy Football Lineup Advice - FantasyLife",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWkRqZ2d2cnJQeWctUTNJZTlKT0lMbGRhUXdwcmVmWXZSYnB0bjJoelE5RzBXWGNDcHRvTExFc1pfaXA5UEpMZzc5UHlhbHlXVUJMX2xuX1R0a0RPaTdqRVVoZUZaSTNNR0lkMGZFOFdrcFd1R09zcjRLdGtVd2tMX2d0RWxSZTF2Y1F1MDBCQXJvbHpGQ01hNU9R?oc=5",
+          "published_at": "2026-10-18T11:30:00+00:00"
+        },
+        {
           "title": "Chris Marshall exits Arkansas football's game vs. Vanderbilt with apparent injury - Whole Hog Sports",
           "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOdWFQblpZSFZUQXBPZUlhMGw3bFIzc2o2UTRyY0dqR2ZEMzBZb0gtQjVKWHlrWEMxWWJHLVFMODdYZEJkU0llTGZrTGJyTFRlR0xuYXZRRWtPSDZkdWs5SmFGXzF0aHlJOGdYWVc5akItOHF0dXUweS1HeFJSS0syWGdvZjhrNlVGUWFtbEdKTmxDSjZzelRfcDdnYXZDbXp2QnVWNHRwaWFIdmtCM2Rma0pWRzQ5UGFvOXowWA?oc=5",
           "published_at": "2026-10-18T01:08:00+00:00"
+        },
+        {
+          "title": "Start? Sit? Craft your best Week 6 fantasy football lineup with our tool - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNaUF6am5yUmkzZDZnZk93aVUwLS1sWmdhRlRRSS1yZHBKZGw1Y0pkVVFXTTVINFlkMXFWV0tTVmcwa29OX3l4cTBqZ1ZPeTN0eXk3R2VuMHBXNUl0MEtoTzlaOXc0TDlsdW9pdWxpZXZ3b1o4bURWSDdhVndoUXBUVmVxb2xONVJveUF3UjM1Ukt3SHZkZ1Bua25MZ2g3VGV2Zkw0aDFnQktxbG5PeUJGLWU0d1k?oc=5",
+          "published_at": "2026-10-18T15:01:06+00:00"
         },
         {
           "title": "Notre Dame football injury report | Leonard Moore in, Flanagan out vs BYU - South Bend Tribune",
@@ -120,9 +155,9 @@
           "published_at": "2026-10-17T22:58:00+00:00"
         },
         {
-          "title": "Here’s the latest on Utah football’s starting offensive tackle’s injury. - The Salt Lake Tribune",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZGY3MHEyWWpvX1NGWS1VandzdV9kTnhsYy04TzEtYThyWjlaZFRvVXR4TjJSd1FhRUpOZjJzVGRFaGwxcnhmaFpEcUs1ZFNFYzJYQzRBYmh0dnVGNVR2bndMMzg5NV9jdXpYa2dMb3ktUlpmS0RUZExyOG1vZ1hscWNmNVBvZw?oc=5",
-          "published_at": "2026-10-18T08:37:57+00:00"
+          "title": "Luke Bryan's Son Injured In Football Game, Taking a Break to Heal - Taste of Country",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5lcmc0QzI4cC1zdjRBUWg0SUxLNEU3aVo0V1VGVmxjS1ZiVmV3a1B0R3BRT3dpM0o5cTRnYzBYODJYVnktSnUxZWFpMVZBa1NtOHBVTVAzMjZaZ3dyV3J3cWFOYk5IQ2d3QVE?oc=5",
+          "published_at": "2026-10-18T12:44:32+00:00"
         },
         {
           "title": "FSU top RB Ousmane Kromah carted off vs. Miami with ankle injury - ESPN",
@@ -133,21 +168,6 @@
           "title": "Fantasy Football Start 'Em, Sit 'Em: Justin Boone's lineup advice for Week 6 - Yahoo Sports",
           "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPckZmZEwyUnhBbVExaW5oLW56TTh6ZV9xemlUQlNFSE1XUVYzVHMwdnRScE1rbi1sbWtnbWpxQWp3QjBiX1Fad0hqeDBOWjRndHZSU09JeGxaRjBLbWxndnRFV2x0X3VtZUk5TWRtS0EwNjBFdnV6ZkhCRFVVVUdlMHFkUU4yUlFLMTlfVEF1TGllNzFIZnVHSGVTUFRKZ1UzZW92blNWQ3l3Z09uTWk0UnRPVFpaTzMySVgtVnNaODM0UTk0T0E?oc=5",
           "published_at": "2026-10-18T13:26:38+00:00"
-        },
-        {
-          "title": "Michigan Football Injury Report Raises Major Concerns Ahead of Penn State - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQdC03R2J4QkJPVXZ5UW8yYmJQMFF2Y2ppbk4zUUVVdkxpVGdnNHJ2Z0tGT3VhTk9RQlIyenVIcUVrS09FNlFCaVZsSzhqMjVxVE9MUHl2dzlfdmN0WTM5bE9sblRoLVp4NTVJenRwbE1iR3JsVkYtMjR4TkNKdFB2ZjNGZnF4TDdZUTJYaW44Qkljd2Rrai1lbTAtenc5cUZhZ3JmbTVpMnNTd29EVktHSV9qamVoSUkzWmtoS0ZISHhuNGpqeGF2elB3?oc=5",
-          "published_at": "2026-10-17T17:33:46+00:00"
-        },
-        {
-          "title": "Michigan Football Injury Report: Week 7 vs Penn State - Maize n Brew",
-          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQNFFURFhTVTdISTlCc2RJMHZSbm9kclBIRXN6LVNlcVZac1d2eFFYRnZQSWlYdm04b1FMS2J3RE5aTE9JTHNsN1l4M2V1bERMRUd4cnhsd2FXZXdyY1FydHFDaUJpbF9UX19jZ2dINWdXRVo1WjhoTnBPMVRDa3o3S1BhNWM0QnFFTi1WUDhpWGU4N0huLU5XUDhUS1UyOWpIdXhLOFVuc05jWGNFWExqYjBaX2xtT2FCU0R4dkxxeWFnOEZvbzRIUHVVT0FmRy1lS3RZcEFiVng?oc=5",
-          "published_at": "2026-10-17T17:36:40+00:00"
-        },
-        {
-          "title": "Alabama football final injury update before Tennessee: Who made list - The Tuscaloosa News",
-          "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOSWdhZUZZNzdqbHloZncxWFc5M0ZjVThiaTVYREV1QXZ5bTR5WWFHUk9sOXFTYl9RM3E2aDR4MGFMbFFlbERHTWp3STVpRHZvWVZMWFc3Rkc1WnVqZkVPbEdSRlpEQ0hVSUk1bC1pUWh4WG9pVUlpNWNZczZYaTBCTkpZX0NIdEp6M3R2MFFuWEg3RkQ3dkkwemtQZU5hMWVHUUpGMUllSk1FWjB0X1RxSldnWmhFT2hBcC0yT2pMRFdZM2NQMWZQcmJzZU1uZzRDYzJLdF9USmQydXg4NWoyb0hSZTJEd3Z2bHZGRFVEVQ?oc=5",
-          "published_at": "2026-10-17T18:02:00+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -161,24 +181,19 @@
           "published_at": "2026-10-17T18:27:10+00:00"
         },
         {
-          "title": "Wuhan Open 2026: Sonay Kartal surprises herself by reaching WTA 1000 final after six-month injury layoff - Olympics",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxObXVVa1h3cUxpRGlUZVJ4Z0xwUENfWnF6d0lmQ1BOU2VNWGpCWG4tNzBzQjNQeGt1VWM5dlR1V0E5MjdRWXhubGRia0pJTjZVSWxXRHQyU2hWTERNTGpfYmpFVXJTZzhNSFVfa3hPQXVMakRfdkVZVDFVZ1VhVGVGd2F1bHlJemY4NWdkZks0MUpmcFk?oc=5",
-          "published_at": "2026-10-17T15:15:00+00:00"
-        },
-        {
           "title": "WTA players react to Jannik Sinner's injury news - Tennis World USA",
           "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOT29qT1FmRFdOSmhYbDBwMWhoaFVpMjRkZEs1eFFqbFZWVl9mSEZ6UWFta2VMbnRmbTkwUnJyY0hLaXBRYXgyV1B4dXNRTW1zMFFKcDVBYmMyVnRkYnhxYkhoa2hHTnU3elJYeTJ2NF8wNVVlNXBndWNpV29NY1lzckF5UGxGUWpRaVU4X2QtbFpUN3RyWkQyYV8ta056SnA4Vk9yZVc0OF9kMzViS0ZVczBaYw?oc=5",
           "published_at": "2026-10-18T04:30:54+00:00"
         },
         {
+          "title": "Wuhan Open 2026: Sonay Kartal surprises herself by reaching WTA 1000 final after six-month injury layoff - Olympics",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxObXVVa1h3cUxpRGlUZVJ4Z0xwUENfWnF6d0lmQ1BOU2VNWGpCWG4tNzBzQjNQeGt1VWM5dlR1V0E5MjdRWXhubGRia0pJTjZVSWxXRHQyU2hWTERNTGpfYmpFVXJTZzhNSFVfa3hPQXVMakRfdkVZVDFVZ1VhVGVGd2F1bHlJemY4NWdkZks0MUpmcFk?oc=5",
+          "published_at": "2026-10-17T15:15:00+00:00"
+        },
+        {
           "title": "Tennis player Kawa reaches Ningbo WTA main draw after Snigur retires — Interia Sport - UA.NEWS",
           "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdGdFLWdLSXpCNW40MzBZOWtGUG40cjVFd0JIRUhqV3VlaEpzaUFZT01RNG5VT20zd3BZbnJabXZHQThKd0lBeHNRNGRPd1FCNEpJX2NKdm5ISjNGc0pEQTlZMDZXc2tYbnJQNzRlV01POXpnMFk2X1Zwc2F3clVRd3VJdU03bXhRb2NCU2VZaFUzdU5zMnRVRHRjcVFleUVqODVRczZ4Zw?oc=5",
           "published_at": "2026-10-18T06:40:26+00:00"
-        },
-        {
-          "title": "Snigur and Kalinina retire from final qualifying matches at WTA tournament in Ningbo - Mezha.net",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPV3p0Sk53NzZrckJ1QWNDZzNUQUZsdllhbzM5UmhWU1BpLXEtSXplU1RHcEhaR2VmUXdJX2dkRGVRUnptOFpxdHE0UVk3X3VDQXVXeUxmc0lGZHd3c293WHhJSE9JZF9uR09CQ1dhNnlyWlJGTWVyM0k0XzVDT0ZIUTNSWm8?oc=5",
-          "published_at": "2026-10-18T07:33:16+00:00"
         },
         {
           "title": "Tearful Iga Swiatek flames out of Wuhan Open while battling injury - Yahoo Sports",
@@ -189,6 +204,11 @@
           "title": "Casper Ruud joins Felix Auger-Aliassime in withdrawing from ATP event just hours after losing in Shanghai - Yahoo",
           "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPb1NlRmJBRUxjRFY4TTd0YmJtU3lmMXBFUnA0ZGY3WHFuQW1JVjMxeHZ4bkFnU3ZwalgyMXpyU0pOczFOVTM0ZkVvOEI4b3psZFZHaEVXQVFVaXBEQ2R1c090bjF0VDN5bG1FZldmLURqRGl0TGRHbHRteV9ZdkRMWkhR?oc=5",
           "published_at": "2026-10-17T07:00:00+00:00"
+        },
+        {
+          "title": "Snigur and Kalinina retire from final qualifying matches at WTA tournament in Ningbo - Mezha.net",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPV3p0Sk53NzZrckJ1QWNDZzNUQUZsdllhbzM5UmhWU1BpLXEtSXplU1RHcEhaR2VmUXdJX2dkRGVRUnptOFpxdHE0UVk3X3VDQXVXeUxmc0lGZHd3c293WHhJSE9JZF9uR09CQ1dhNnlyWlJGTWVyM0k0XzVDT0ZIUTNSWm8?oc=5",
+          "published_at": "2026-10-18T07:33:16+00:00"
         },
         {
           "title": "\"After my second round, I was ready to withdraw\": Swiatek opens up about her injury in Wuhan - TennisTemple",
