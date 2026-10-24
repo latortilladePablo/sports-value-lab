@@ -1,50 +1,50 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-10-24T00:40:27.017346+00:00",
+  "checked_at_utc": "2026-10-24T05:50:42.292792+00:00",
   "method": "Google News RSS headline screening (unverified)",
   "sports": {
     "nba": {
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
+          "title": "Jalen Duren Injury: Leaves for locker room - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQcmZiejJEUVJtd1otSjdsRTZselZkNEJQUDB6dUwyRWNsbUVqelpOZ3hpcjJkRmFPWWo0aTAydE1QNkpWT2VDczBGYlp4SzZYSldHSXpqUHQzNVZQeVpEY3p6cHhDcVZsVlI1ZHY1dGlTdmxBbkYwTGR6TlRQanZ5WlF3RzFuM01zcHBkYUFUaGNSYzhhSWR5bldn?oc=5",
+          "published_at": "2026-10-24T01:03:24+00:00"
+        },
+        {
           "title": "Is Josh Giddey playing? Bulls vs Bucks injury report - Yahoo Sports",
           "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNejhlREMyUnRKTnFmeGhlZHZuV0ZXdU0wblY2VzZ4ZVVZTWRJUU0xVGJGRjZfYUZWZ0RkeDVWb0JpZW81OWdReGVXVENIcGotbkdXUXp1ek1yZm95eTd3bDBrM3dJbjRHMHRlVDk5Sm5MN3pHM0I0b3VVYXBGRDJmRk1CYw?oc=5",
           "published_at": "2026-10-23T18:40:11+00:00"
         },
         {
-          "title": "Reed Sheppard Injury: Won't play Friday - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQOElQellKU1FFcXVnSzJYMWdveFVSdDZmeTU1UjcwNXJ3Z2tObUlybEdheFBneU9UWkRodWhfRVE4aEY2VjROREVndldNR0pEOVNFekN4VTIycXF5V2VlNFBra21EV0NkcHA0UFlndVlHLWctWHJXcHlla2FrUVVDdDRPcGdzYzRCeWw3N0tramtZOHda?oc=5",
-          "published_at": "2026-10-24T00:21:44+00:00"
+          "title": "Yves Missi Injury: Won't return Friday - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNmlhc2JnMWNIRWRfenVCcVNaaWgwSGZNdk1JcmcwaFBJMjI1SENfMnVocGRFdVJLRGxFeFZrdU5BR0dqSEt1ZDFwU3U4eWdKQkZaTTJ3SjNzcEtid082M2xfZnIwWTh4RHQ3YjlMbmdRMk5PZ18xZkx2eTdkdzJoZ0JuYl9SQlRIUzJSUGlVVXdPT3c?oc=5",
+          "published_at": "2026-10-24T02:46:15+00:00"
         },
         {
-          "title": "Cooper Flagg Injury: Exits to locker room - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOajVHX0tlZ0tsRFl4RDljdWtzTUt0cTZpTlB6SG16cUVxME01Y19oUmx3N3Z3ZWdUMHZNUVEzczdpNjdCQmRLREhqWUZ0Vm5meVRDbXZEZS1EZklxMEg1d3pITVlXOXB6RFQwdkxMNkVVY21PUHBZN1hNakRwSzBvNTN4MzVZSGdMM3VnT1hIV2lhV2w5cF9FeQ?oc=5",
-          "published_at": "2026-10-24T00:28:30+00:00"
+          "title": "Ausar Thompson Injury: Doesn't return Friday - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNY3MyR0RJdk92N0Rfb3l5M3BsQk41TGFzUXBPSWk1WGRrc0ZoZXNXNF9HUWVXMElMUU1FWkNiVHdDUW5lbk92WVQ2U2hxNFpCcDlqUDltOUh2VEk5aThDQ3JJYW9oSS0yRXQtR2s0Smx2T3FtOHMwOUNDeWxqQUtMQmRxa2hPc0c0cXdWdXVGeXZuZnZfVU9pUDA2Zw?oc=5",
+          "published_at": "2026-10-24T03:06:26+00:00"
         },
         {
-          "title": "Cameron Johnson Injury: Won't play Saturday - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPWmRvczAxR1p4d3BmVGxKeEVnLWFJNTBIRm43Zm8zS1dBaHF6U0FGN2p1RmZPSURxU1lOMUlOSGlRc3FTR0YwVUs5WkRWVzlSM1pPelZiSkFjLWVEaWpqYm4zTFB3VF9uZEFWdzhKeFJaMDFmNC1GMV9CamYxOHA0dGNHbEVWVkRzZmtYUXV6bkltU0FyLVkxY25B?oc=5",
-          "published_at": "2026-10-23T23:08:34+00:00"
+          "title": "Jalen Duren Injury: Doesn't return Friday - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPQUlVTFdMQ01WZGVaTWhGRzlzVGxyQldHMHMzZVlMbkNEMUxtRGFGZFhZUjFiTlhuQUh3UHQxZkN4MUNvcVp6bEdFbEdDekgtSXNybktnRlNjM3lnb05QN19MNF9VQU02UXUyZm5QVUFtZlo3SVNzdjZFUGJpbm1WUDhGQURmLVBEYzJ3T1hTNHBBY0NXaUQ4?oc=5",
+          "published_at": "2026-10-24T02:40:16+00:00"
         },
         {
-          "title": "Ben Sheppard Injury: Out Friday, no timetable for return - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNYXYtV0hVaERKM2pLcXBjS3I0VUU1NWhXcS1SQ3k2cTBPazhNbnZMLS1ZaHBUYmpWLVRzMGJ3cG5KMXFMblJKWldfTkRROTNGN0E5akhRN0otb1NuZnBCTV9uNHZ5QWgyOWV1NzN2VFdlZGJRVXk3SzBEeURfNVhVSmZ5eFl3TG1SV1M4UE1KeGRXQWRJeGpROXMxcEtiaUx6cENqci14R09fMVE?oc=5",
-          "published_at": "2026-10-23T21:27:16+00:00"
+          "title": "Jalen Duren Injury: Questionable to return Friday - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPWk10MXFkWmgwaGdLU2Y0c0Z1b1ZPbVhkcWVYZFVhSVMzOU5VVGhuNDB0ZGZDUURyMThNb3hmbzhPYlVpRGtYMVRYNl94a3JJUk5IQWJUb2pacm1lcVg1UzhzNTdCM0lTeVNxbmNrT0dxbzNqcU5lWU9PdjJzZ0gxYVdXR2hCOE8yLUR4bk1IZ3UwMFlQVlpOWml1WjVlaWp6czBB?oc=5",
+          "published_at": "2026-10-24T01:16:01+00:00"
         },
         {
-          "title": "LeBron James Injury: Questionable for Saturday - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWHNZM0RVMDZWZ05jNWtNNnhqQzFUVnNWbldqVVpGLWZIM1MtdVFreFpXZjd5MXdJaTR1ZGI0NUVieWhVWnpjbXNpZERNVVlCOFBFYXlZNWl4cVJoYlhMTUpNWHlkc0t4Q05JTG1Qcl8xeVRKVHlpT1JtNEVIenFyRzQ5Sm12VkowZXpTci14RkxEVDBEY1ZZYzRWQVJycGM?oc=5",
-          "published_at": "2026-10-23T21:03:46+00:00"
+          "title": "Paolo Banchero Injury: Exits Friday's loss early - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObW9IdEdLcVhHUUwxR2xDOV9KZlR2VkxvSlJvV2hjT0tSMGtnMURHMF9sN3FvUHVlemhSQUdHVy1KY2Rjc200YmhUSUhnMy1WQ3BCU1hSMTljMnVQTnkzZnlERVljNy13RFJxR2RheVJtTi1Ia1ZrUWNDUll0ZU9GaUl4eERRSlhXYk1xUXY5NnFDaXhZTmpmWERHMXFaaG04?oc=5",
+          "published_at": "2026-10-24T01:55:59+00:00"
         },
         {
-          "title": "Oso Ighodaro Injury: Won't play Saturday - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOZlZ2N0pYRU44WGF0VDZ0dmsxZG8tcnpVWFdhbFpOYjJocEtXcVJvaU9xRG40WkpNOExYenVFdlFRbDFtNDBhbThyTEFUeVB0bnlWXzVDekJtVE90Yi1KeG1naFRZeTJTTjhiTVI5cGpDRTItV1p3c2l2cGR3QThVbXg2OXJZcTlIMnFhZW5qRnIxMi1tSEE?oc=5",
-          "published_at": "2026-10-23T20:43:16+00:00"
-        },
-        {
-          "title": "Jake LaRavia Injury: Ruled out Friday - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQb0lQOE5qVkM1QXVEZkMxM2ZaSy1sY3dISWtETlcxSWdRa2RBU2VoaVAxUzAtdHJBbjBtbmFnN3FJSHZUeVk5ZkNIYWNMUm9sT0FKWHBtNERUbG1rTGZ4b0hsNXRkZkV4LWNNbWtyRDV3MUtycUlnbFF1cGtoRURlUzlEZHRJODRZcFlDanlud0VpRGs?oc=5",
-          "published_at": "2026-10-23T20:05:05+00:00"
+          "title": "Paolo Banchero Injury: Doubtful to return Friday - RotoWire",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNbW9mT1ZDWGhobTJBNlhWTjR1RW4wWFZyZDhmdVJGZTFQWThVR2UwZXlteVJhWGRuMS1BZERtUFpSLTBmU2JQLWVrN01INlk5SlVDc3MwZndfNEhuYUZ0aFBkbnpIbTBhOUJQWmJtRXhxa1ZQbkhBSDlEV0dRMnZfX2RsemZ4TXZtWXlWV1FNcW84WW1nUmM0Q2phQkphS2ZMUFE?oc=5",
+          "published_at": "2026-10-24T01:22:39+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -63,11 +63,6 @@
           "published_at": "2026-10-23T19:35:33+00:00"
         },
         {
-          "title": "Saints Friday Injury Report: 2026 Week 7 vs. Pittsburgh Steelers - New Orleans Saints | NewOrleansSaints.com",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQOGxtbWVSWGQzaHRnVkxtSVkzYVpPaTBCZ2Q4UG1WdnROVF95V3NYTE1yb3ZQZ2ttN3FGNXdnMzBQanZ5bU1GTWZ5VGV5RzgzUGEyUGVMU196bHg4RFVfR0p5Rk5KSGItUG1NZm9XbGZieU5mRlUyRlFTdENUcloyNFY0RFdHVU94d2xocVNvLVZTbFg5cmhyaHlKR1RqYzNwbTRZc3MybVBnUWVUNFZnZWlPU2ZJekE?oc=5",
-          "published_at": "2026-10-23T18:45:36+00:00"
-        },
-        {
           "title": "Final Vikings vs. Colts Injury Report for Week 7 of 2026 - Minnesota Vikings",
           "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1HT2xRME1GQjN2LUROYWVqOFlad1A4NXhYN19VczVWdXJUcDBWTmV1TGFjNTByQTlHbmxMSXI4c3lfcmVsZ2JoUnhnQnA0XzB5b3RkQmwtTUIxQjdWWGprcTl6ZGU0cjE5all6ZGhUQkdVbmctcTcyS0Mzbw?oc=5",
           "published_at": "2026-10-23T19:00:39+00:00"
@@ -83,14 +78,19 @@
           "published_at": "2026-10-23T13:04:00+00:00"
         },
         {
-          "title": "NFL Injury Report: Latest Player Updates - PFF",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4wR2NRcU13OGgzUTJBQnp3YjBvVUJhS21VSXFNbTc4QVZPUVJYUnhQQXpzYXdKdTZzaE0xYm9TdzFCaUs4aHRtSTYzam9iTG1yd3ExTw?oc=5",
-          "published_at": "2026-10-22T14:35:00+00:00"
-        },
-        {
           "title": "Falcons HC provides injury updates for Week 7 game vs. 49ers - Falcons Wire",
           "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMlBLb2kzZnFSMzlFN05PTUFUbjlvaWJwaFVVUF95SDJDclB1Vm9wNnlMdkpUTGZpUlpSLTlnT0VhbDVkRmdFZkpMYUNGVk1lbktyVXBhb0N0RmFaV1NhSmRDSFA4bmZNaDZCaWlRbEl3Z0loUzZDUnM5YTFJUHVtWTl4Q3lnQ2xCR3JJRzdiR1JrZ3A2SFZ6MC1kOGIyTVotdUoxVGlXRkZhQ3lnVnF4eVBqdG1TWGRRUzk3djczeENHcmMtcEk4bnhKSDZZMVBncHVCUg?oc=5",
           "published_at": "2026-10-23T17:27:00+00:00"
+        },
+        {
+          "title": "NFL predictions: Can Falcons take advantage of 49ers injuries? - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPOVBkZjM0YUMwV3pTRDUyZU5RWTItWllVbHJWV2JMYXFQaUplYkNyTVRNdkhhTWFyZ2xuR0l1RmZfeU45SXZKRlZJTG9yOXM0Y1lWVExER1ZCRC1nNHgzRlIyeTVHdW9tTkpGOUJoZ0s4bTQ3a1BxbDc4aWFNMEQ5bF9TN1JySG1JajR0YWRTN1NCZw?oc=5",
+          "published_at": "2026-10-24T01:17:00+00:00"
+        },
+        {
+          "title": "Bears fear season-ending injury for Cole Kmet after veteran tight end is carted off field - CBS Sports",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNOXRIVkM4UXVPekNGQll6NjlPUHBrQkltMFYwamY4RjZibkJyQ0lOZ1VzNUlmV0plaWt0RnhLdG16WFBvUEFWcFVDMkFJRDd5SzJmWFV1SGNTQnhTdFgyX0lFWU9Sc094bkFZd1dqTS1IWlJmNTM3WnFORVZ6NWYyNUNyOA?oc=5",
+          "published_at": "2026-10-23T18:15:51+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -99,14 +99,19 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
+          "title": "NHL Status Report: Blankenburg, Rifai join Maple Leafs' injury list - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5DQlJjTURlcGM0bmFGSXRROHMwM2lMcVlSWjhyZklkTEtuOGVVTjNRblJoSk94OGxobFVvZ0JnUk9VajE0dDJFNll2VE1lbUJHcEVMWHRIVWljRUhwZ3VQa3J3dE5TRVI0NlgzTXM3MWxENjZuM1BBVVg2cExJdw?oc=5",
+          "published_at": "2026-10-24T02:20:45+00:00"
+        },
+        {
+          "title": "Panthers' Cooper Black, all 6-9 of him, becomes NHL's tallest goalie - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUlBGbkxpMjUtLWd2V2xtSWk5TlNrdGZFOFlMb3FLUUdteVpUcXA2YnFKWThLVzIzWUtsVmlRczEtcm5xdDdmU1hwaFVLWldVLWNNRC0tX3RJdmZsY19pVGhTaVNYVE1aNmFYbkJ3X0o4eThZdG54bk9xSXRpUlp5OVB3OExBRElkdXBkTTJzLW1HWXVYNlRXSEZvYTlBUQ?oc=5",
+          "published_at": "2026-10-23T00:26:00+00:00"
+        },
+        {
           "title": "Lightning at Avalanche projected lineups - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNSzhxeEVMeWc5WkowZ2tPOXdIbHlQOEU4Q0FVY2k1Sm9EN1dqWVd2QUczZk1vOHF4UEc3b2VHQ29QenFMWkhWMWZJU21fRkFaajZmalM4RUw4VGRXVnl5MXlpaGRZQ0tQSE5jSms4dnc4V1lweGJ5d2hOX08wVW5JVFI5eFNWWFlyS0J4WmZRdmVWTFVKRlRB?oc=5",
           "published_at": "2026-10-23T18:46:24+00:00"
-        },
-        {
-          "title": "NHL Status Report: Blankenburg, Rifai join Maple Leafs' injury list - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5DQlJjTURlcGM0bmFGSXRROHMwM2lMcVlSWjhyZklkTEtuOGVVTjNRblJoSk94OGxobFVvZ0JnUk9VajE0dDJFNll2VE1lbUJHcEVMWHRIVWljRUhwZ3VQa3J3dE5TRVI0NlgzTXM3MWxENjZuM1BBVVg2cExJdw?oc=5",
-          "published_at": "2026-10-23T17:41:18+00:00"
         },
         {
           "title": "Canadiens at Blackhawks projected lineups - NHL.com",
@@ -119,6 +124,11 @@
           "published_at": "2026-10-23T20:26:50+00:00"
         },
         {
+          "title": "Cooper Black set to become tallest goaltender in NHL history | Florida Panthers - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQMkxKSElLNzJRcVJHYTZFNE5DcUVDUlA0ZUQ3MWQ1NjlmWW5iUlVIYVhxaGJYVTZmUlA5LXNydVpnUllEUlhBaWFWdXBoZ2d1cS05VlR3MGFGUTVWUWdVaW5aZ3d0ajhKR19UczhQZ3ROeXFvV09sNVJyQzdaNXd4MU1FNTg0YV9xcERLcEV0OHZJMmk5RWl4QWtn?oc=5",
+          "published_at": "2026-10-22T21:10:37+00:00"
+        },
+        {
           "title": "Ducks at Flyers projected lineups - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWDNZb0N4WEE5T0txWEtIS0xpUV9aRVBUbGlvRndlQXFTN2M4UEU2SXREYUtjZWd1ZHlDbnUzdDU2bVphRk51LV84Qk1uWGJpQzNUUTFWa0FUbnVQTTRuaEdXcVhKS3ZJRkpEWUdHM2I1TllVNGpGMU5VM096bU1lN0I0OXZIUllxLW1EdHZCeUY?oc=5",
           "published_at": "2026-10-23T21:37:25+00:00"
@@ -127,16 +137,6 @@
           "title": "Lightning at Avalanche projected lineups - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdVh1dk54UWNhcXpNNWFMOS1fQ1BkWGFUeFJmN0FzNEJXZkdCLUo4WW1OYjMydzhicHU2TmdmdE1tMjAtZWNjZXFTTmIzTHg2UVV3YXFhVXhCTVE1MlJubEFmQm43Uk90Qjk5ejlUSHVMZzZGMF9KUmdwQ2pubjNqWXd5TktMNlVjS1hicEtJdmxxREU?oc=5",
           "published_at": "2026-10-23T20:25:56+00:00"
-        },
-        {
-          "title": "Cooper Black set to become tallest goaltender in NHL history | Florida Panthers - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQMkxKSElLNzJRcVJHYTZFNE5DcUVDUlA0ZUQ3MWQ1NjlmWW5iUlVIYVhxaGJYVTZmUlA5LXNydVpnUllEUlhBaWFWdXBoZ2d1cS05VlR3MGFGUTVWUWdVaW5aZ3d0ajhKR19UczhQZ3ROeXFvV09sNVJyQzdaNXd4MU1FNTg0YV9xcERLcEV0OHZJMmk5RWl4QWtn?oc=5",
-          "published_at": "2026-10-22T21:10:37+00:00"
-        },
-        {
-          "title": "Panthers' Cooper Black, all 6-9 of him, becomes NHL's tallest goalie - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUlBGbkxpMjUtLWd2V2xtSWk5TlNrdGZFOFlMb3FLUUdteVpUcXA2YnFKWThLVzIzWUtsVmlRczEtcm5xdDdmU1hwaFVLWldVLWNNRC0tX3RJdmZsY19pVGhTaVNYVE1aNmFYbkJ3X0o4eThZdG54bk9xSXRpUlp5OVB3OExBRElkdXBkTTJzLW1HWXVYNlRXSEZvYTlBUQ?oc=5",
-          "published_at": "2026-10-23T00:26:00+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -145,9 +145,19 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
+          "title": "South Carolina players listed on injury report vs Tennessee football - Knoxville News Sentinel",
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNVTctMy1ZdjgwZ2pXTlR2WFcwUHdYejNZQ1pTcGxMNlJuMUEyejh4dEw5MHdjVmktQ3d5YVd2cUJOWERIV3FjRkp3SkZKU245MV9FdExVMDgzWURUbXJnamtBQ1NhYVJid00yNHBZM0c4LTZwQThhdFRTek16SkNMM0s5cFhqUlZWSTU4QTNEM0l1T1o0ZjMzbTRFQll5dk9NQkswRTdnMkxNUERLRmxEOVEyU1RTT0RndGZBTG9jUzlpeWZfUzV1bVp0NkQwVkZBb0pUWXJfMXpXaENpMklvRmVCQzZrTXRB?oc=5",
+          "published_at": "2026-10-24T00:32:00+00:00"
+        },
+        {
           "title": "Fantasy football injury report: All eyes on Puka Nacua’s calf injury - The New York Times",
           "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxONE1NSVNvb0cyOVJTVXRERGl3eUV4WG1vUzVQRGU0cHFjMDR1N1lLNFNHRTYwYWJNbWtZZ1V5QlQtNjlFRTRXTmw4OXBZR09GMGtBSDdFRW0zRFgzempmQ2Jva1VlSTVReDhlYzdpalBuRFRHcWZzcDVCTlZrcnJBX2t2TXBSckpYOFF5eW5yUXliTWJMZ1J3bW1xV1FJX3ZySEc1UGpPdFZCR2c?oc=5",
           "published_at": "2026-10-23T21:45:59+00:00"
+        },
+        {
+          "title": "Tallulah Academy game called just minutes into game following injury - KSLA",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPR1l2aUFGa1NUdEhMa2wxYTZWVHBnWmJDOGhIUXpoVms5THhFcmlNQXVDa2JPaFM0Wk9XRFFnR1Ywa0oxNzVwYXNHcXRCa2hzUEtLX21QZ2ItUm9mNk5iamwxb3JkRmZtVUVsck9lTmVBRnZic3VFbU52X3B2dkpIX0RQLUhrUi1VTGpZY0lBUUdxTUNWSjcwYnE3c1pFUEY4dnI0?oc=5",
+          "published_at": "2026-10-24T02:05:00+00:00"
         },
         {
           "title": "College Football Week 8 Injury Report: Julian Sayin, Dante Moore, Other Major Updates - Sports Illustrated",
@@ -160,52 +170,26 @@
           "published_at": "2026-10-23T11:51:00+00:00"
         },
         {
-          "title": "South Carolina players listed on injury report vs Tennessee football - Knoxville News Sentinel",
-          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNVTctMy1ZdjgwZ2pXTlR2WFcwUHdYejNZQ1pTcGxMNlJuMUEyejh4dEw5MHdjVmktQ3d5YVd2cUJOWERIV3FjRkp3SkZKU245MV9FdExVMDgzWURUbXJnamtBQ1NhYVJid00yNHBZM0c4LTZwQThhdFRTek16SkNMM0s5cFhqUlZWSTU4QTNEM0l1T1o0ZjMzbTRFQll5dk9NQkswRTdnMkxNUERLRmxEOVEyU1RTT0RndGZBTG9jUzlpeWZfUzV1bVp0NkQwVkZBb0pUWXJfMXpXaENpMklvRmVCQzZrTXRB?oc=5",
-          "published_at": "2026-10-24T00:17:00+00:00"
+          "title": "FRIDAY Ole Miss vs. Texas Injury Report: Brycen Sanders Upgraded, Hollywood Smothers Out - The Rebel Walk",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9fZmdSdm50OE1hdTV0QlN1aFVpM3Z3M2xCZDF6eVRpZW9WNkdLQnBpWFhySUZrak13MjdJY2ZwQi1tQWJaY3NUejhRbzdIZmtmblczc2hzbGQydGFNbEc3X3RnS0lTaFkyeGdoSlZWQjNCcG1QSFVWQlhFVFQ?oc=5",
+          "published_at": "2026-10-24T00:32:43+00:00"
         },
         {
-          "title": "Downriver soccer coach suspended for 'intimate relationship' with minor - The Detroit News",
-          "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPN0JsdUJWVFlDcmxrMkUzd3VzSXlGaW9EQXdJYXJ0Q2R0ZXFCWmNHUmFnbkhBbTB2LVJEcWZITFdXRk5qakI2WTRoTmE2WG10WVZOTEFQM1hWN1Z0bWZNVHVmd21DSC1jRFFDYl9MdDgxMzBuRnZ4UzJrTnFSa1pLTWk1cnlsdkFDbDI0TEY3ekZ4ZEdqY3pUd3VVUHVtVHctMThRWnpaMGM3NnNNSlVCSGlPWFBXQVJMWnJKYW5zekIyb0FRSmhYdndYN2ZERDdsQUY5WVl0elVLd2tyT1ZRV2lzYmNiUGVzWEU4OUdaeXBQOEZJaGVYV3dn?oc=5",
-          "published_at": "2026-10-23T17:45:00+00:00"
+          "title": "Fantasy playbook: NFL Week 7 Shadow Reports, lineup locks and projected scores - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNc1ZrTGZXeEk0NDlma29WYkpsZXNiT2RTc0dMRWxjU0xpbTJwc2QyRS02Y0pCZGFON0d4RHNCLWJYWWtpU204RWhaQklTRkRSb3ZISGFQYk9Hc2hqY29lZmxLQWxfNGVYVnI3ck1teHZKdHE3dGNKQmlFVnFDRUNWLUlCeDkwcmkyRWZZQjdoRXN1QmtVNHgtNkZKbklsY0F0QUc2d0dNTlF4Z3JaY2QydzB3aw?oc=5",
+          "published_at": "2026-10-24T00:11:00+00:00"
         },
         {
-          "title": "Ohio State QB Julian Sayin’s injury cracked open a CFP path for the Ducks - OregonLive.com",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTXpTcGlXb0VEMXFNUElYVmIzY09EdXl2NHFHT3EwMXpYSVdpQkx0ZzcxdEJuV095bEdoaktTV0I0V0pYdmh0anRtSlM0TFdKTzBlckwtMlNzSWNkMmlXQ0FRMXpJWFNGMWlfXzVWVHduak5DTVlSVEpJeVcxM3p1STdRdTg5dC1lOW5zY3lNbHVEV1g1dFAwWlRPZmFwRnUybUJDS0dOelBKVDVEb0szZDIyTnBrVnBvUUE?oc=5",
-          "published_at": "2026-10-23T20:58:00+00:00"
-        },
-        {
-          "title": "George Pickens Fantasy Football Injury Update: Will WR Play This Week Against Eagles? - Complex",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOZ3lONjlVSzh3bGZGSGxlR2kwc1Y0UTFIZm9zSHl0UXFNa040YS15akZGQXp1QlFMZE0xR0JCNVhoeHJuRkdLOXhYaG5VNy14dmZ3N25YTkhPZ051cjBKU3QwcUhZRFpIOU12ZC04UDhOSHNlVE9mSXR5QVdEWGFOX21fN0JacUZTSG9DdXVHSHd2NEVhTHJOSHRBaTFNQQ?oc=5",
-          "published_at": "2026-10-23T16:21:04+00:00"
-        },
-        {
-          "title": "Fantasy football rankings, projections, lineups, sleepers for Week 7 from proven model - CBS Sports",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNa2h4a3RWVVd5TTVFM2FJOXFMUklLekRTQWNYeThpODFrSnNjZVpKRGxxdVU4VW12SExjak4waXVFU3A4RTh3eXZrMEZMaTB1ZXJkTVlvUXVMSzJ3ejRQZTRjM3dZdlZVRl9rRDFpbmp1S2lZdVFhcTZRazQ2TzMzYktDQ2JsVjFkOWFjVE91bzFqYXFOX2lVVWt5enItRi1CRlQ3TDZjeTYyTktfNEgtMGdubUlESzI0ZTIzamRRdkRsTjZHOFN6ck1XQzc?oc=5",
-          "published_at": "2026-10-23T14:10:31+00:00"
+          "title": "Fantasy Football Week 7 Lineup Picks, Seahawks RB Outlook - Seattle Seahawks",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPaWV3WEY4WTYxbnpvU3BsVmVRb0poNjh1cU1fLWZNV0ZORGpLdmdkMVBYN0Z5U0ptQk91LTIwMU9jNG5WOEYtZWd3UEEtM0ZiLXppRVdzWEIxZ2FyTGZIZ2Z4eDhaQXFjX1FiTElSdWxvakFxM0tiYURjLTJ6bmk1c0l0WS1YM1Bzd2xoVzk2NA?oc=5",
+          "published_at": "2026-10-24T04:29:24+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
     },
     "tennis": {
-      "status": "HEADLINES_UNVERIFIED",
-      "articles": [
-        {
-          "title": "Celebrating newly retired David Goffin: 'I gave everything until the very end' - ATP Tour",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1tYTd2ZzVKUUhvOU5zdk1yYnJIdTI1TWpFMmdCUHBleC1vMTlFWnhxTHhJNWgwMnpYeXA3RW5Ja3lKc0sxSUY3SUM4OWRXYXprZUdyMU0wQ1VsLWp3ajhSQ2RKVVM5WnlZTGxsbGJkMjh4OTJObUVF?oc=5",
-          "published_at": "2026-10-22T14:56:32+00:00"
-        },
-        {
-          "title": "Karolína Muchová Clinches Last WTA Finals Spot After Kostyuk Retires - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQXVUSUNFNWdjN3p2dVBDM2huYUFMZ0s1TFA5OXRZTGkxQnJaUmJpMnBzZjhOTEprTGQ2Mi0zNldkLVdfMkVydkczYWh6WmRFbDBzRWlxYVd4UTg5c3NLYjIwbDZXNGVlVVZkOFRxV0hscmtmWFFPeVlkTmhkREVaanRpbzhJejd0cVd5RXFkSHd4eXVCczRvb2RnelRhcjNkMXA0QWh3bWoyMUcwYXdqRktHY1c0ZmM?oc=5",
-          "published_at": "2026-10-22T13:10:37+00:00"
-        },
-        {
-          "title": "Rybakina advances to face Kawa in Ningbo quarters after Polina Kudermetova retires - WTA Tennis",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbGZKR18yc1AydGdjNmdnbkR4MFFZNzBaUEdYc1dwYjBYOWphMmNHR0xsZ2EybWVCcGo5MTFOTUNYUy1uY1otUlFmZ0U5R1QtR0ZBb2FicXdPbU1lbVpFY05PVEFnVGV1UWQ5bmdsMHk1RXVXS0pkdlRVR0RMNmdxT1MtM1p2YkpGWU9TMjRNSGxZcTRmQ3gxWHpYUG80UGh0Q2VOa2Y2UXFjSUktdndpdUFndWtDREhzSE1tUERR?oc=5",
-          "published_at": "2026-10-22T13:23:35+00:00"
-        }
-      ],
+      "status": "NO_SIGNALS_IN_FEED",
+      "articles": [],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
     }
   }
