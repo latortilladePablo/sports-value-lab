@@ -1,9 +1,14 @@
+import { Suspense } from "react";
 import NewsWatchPanel from "../components/NewsWatchPanel";
 import { getNewsWatch } from "../lib/news-watch";
 import AppNav from "../components/AppNav";
 import { getDashboardData } from "../lib/live";
 
-export const revalidate = 20;
+export const revalidate = 180;
+
+async function DeferredNewsWatch({ sports }) {
+  return <NewsWatchPanel news={await getNewsWatch(sports)} />;
+}
 
 function Metric({ label, value, sub }) {
   return (
@@ -66,7 +71,6 @@ function SportCard({ sport, statusMeta }) {
 
 export default async function Home() {
   const data = await getDashboardData();
-  const news = await getNewsWatch(data.sports);
   const p = data.portfolio;
   const primary = data.primary;
   const primaryMeta = data.statusMeta[primary.status];
@@ -117,7 +121,9 @@ export default async function Home() {
         </div>
       </section>
 
-      <NewsWatchPanel news={news} />
+      <Suspense fallback={null}>
+        <DeferredNewsWatch sports={data.sports} />
+      </Suspense>
 
       <section className="metrics" aria-label="Portfolio">
         <Metric label="Bank" value={Number(p.bank).toFixed(2) + "u"} sub="Inicial 200u" />

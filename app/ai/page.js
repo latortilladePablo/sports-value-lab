@@ -3,8 +3,7 @@ import AIWorkspaceClient from "../../components/AIWorkspaceClient";
 import { getDashboardData } from "../../lib/live";
 import { isOwnerAuthorized, ownerSecurityConfigured } from "../../lib/owner-auth";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+// Owner auth still makes this a dynamic page without disabling the data cache.
 
 function bridgeVersionAtLeast(version, minMajor, minMinor) {
   const m = String(version || "").match(/^v(\d+)\.(\d+)/i);
