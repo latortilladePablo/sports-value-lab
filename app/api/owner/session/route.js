@@ -12,7 +12,7 @@ export async function POST(request) {
   }
 
   const body = await request.json();
-  if (!validateOwnerToken(body?.password)) {
+  if (!validateOwnerPassword(body?.password)) {
     return NextResponse.json({ ok: false, error: "Contraseña incorrecta" }, { status: 401 });
   }
 
