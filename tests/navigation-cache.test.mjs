@@ -48,7 +48,8 @@ test("Navigation displays a route shell while CURRENT loads", () => {
   const src = read("app/loading.js");
   assert.match(src, /<AppNav \/>/);
   assert.match(src, /role="status"/);
-  assert.doesNotMatch(src, /LIVE ·/);
+  assert.doesNotMatch(src, /className="sync liveSync"/);
+  assert.match(src, /<span className="sync">Actualizando…<\/span>/);
 });
 
 test("Scope, runner, paid consent and owner gates stay in place", () => {
