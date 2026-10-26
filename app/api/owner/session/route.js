@@ -3,17 +3,17 @@ import {
   OWNER_COOKIE_NAME,
   ownerSecurityConfigured,
   ownerSessionCookieValue,
-  validateOwnerToken,
+  validateOwnerPassword,
 } from "../../../../lib/owner-auth";
 
 export async function POST(request) {
   if (!ownerSecurityConfigured()) {
-    return NextResponse.json({ ok: false, error: "SVL_OWNER_TOKEN no configurado" }, { status: 503 });
+    return NextResponse.json({ ok: false, error: "Acceso de propietario no configurado" }, { status: 503 });
   }
 
   const body = await request.json();
-  if (!validateOwnerToken(body?.token)) {
-    return NextResponse.json({ ok: false, error: "Token incorrecto" }, { status: 401 });
+  if (!validateOwnerToken(body?.password)) {
+    return NextResponse.json({ ok: false, error: "Contraseña incorrecta" }, { status: 401 });
   }
 
   const response = NextResponse.json({ ok: true });
