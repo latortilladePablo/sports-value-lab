@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import NewsWatchPanel from "../../components/NewsWatchPanel";
 import { getNewsWatch } from "../../lib/news-watch";
 import AppNav from "../../components/AppNav";
@@ -7,12 +8,14 @@ import { getActionPolicy } from "../../lib/action-policy";
 import OwnerGate from "../../components/OwnerGate";
 import { isOwnerAuthorized, ownerSecurityConfigured } from "../../lib/owner-auth";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+// Route stays request-time rendered because owner auth reads cookies().
+// Do not force no-store on the read-only dashboard fetch.
+async function DeferredNewsWatch({ sports }) {
+  return <NewsWatchPanel news={await getNewsWatch(sports)} />;
+}
 
 export default async function ActionsPage() {
   const data = await getDashboardData();
-  const news = await getNewsWatch(data.sports);
   const ownerConfigured = ownerSecurityConfigured();
   const ownerAuthorized = ownerConfigured ? await isOwnerAuthorized() : false;
 
@@ -69,7 +72,9 @@ export default async function ActionsPage() {
         </div>
       </section>
 
-      <NewsWatchPanel news={news} />
+      <Suspense fallback={null}>
+        <DeferredNewsWatch sports={data.sports} />
+      </Suspense>
 
       <section className="safetyBanner">
         <strong>P1 manual cuando tú lo decidas</strong>
