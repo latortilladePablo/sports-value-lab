@@ -33,6 +33,7 @@ export default async function ActionsPage() {
       lastRun: sport.lastRun,
       reason: sport.reason,
       scopeIssue: sport.scopeIssue || "",
+      handoffAction: sport.handoffAction || "",
       runnerConfigured,
       policy: getActionPolicy(sport, runnerConfigured),
     };
