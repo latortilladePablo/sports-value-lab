@@ -31,6 +31,7 @@ export default async function ActionsPage() {
       scan: sport.scan,
       lastRun: sport.lastRun,
       reason: sport.reason,
+      scopeIssue: sport.scopeIssue || "",
       runnerConfigured,
       policy: getActionPolicy(sport, runnerConfigured),
     };
