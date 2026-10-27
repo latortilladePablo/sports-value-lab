@@ -15,7 +15,8 @@ async function DeferredNewsWatch({ sports }) {
 }
 
 export default async function ActionsPage() {
-  const data = await getDashboardData();
+  // Execution decisions must use the newest CONTINUITY handoff, never a cached dashboard.
+  const data = await getDashboardData({ fresh: true });
   const ownerConfigured = ownerSecurityConfigured();
   const ownerAuthorized = ownerConfigured ? await isOwnerAuthorized() : false;
 
