@@ -300,6 +300,9 @@ export default function ActionCenterClient({ sports }) {
 
             <p className="actionReason">{sport.reason}</p>
 
+            {sport.handoffAction ? (
+              <p><strong>Siguiente paso acordado en ChatGPT (CURRENT):</strong> {sport.handoffAction}</p>
+            ) : null}
             {sport.scopeIssue ? (
               <p role="alert" className="actionScopeNotice">
                 <strong>Corrección requerida para ejecutar la captura:</strong> {sport.scopeIssue}
