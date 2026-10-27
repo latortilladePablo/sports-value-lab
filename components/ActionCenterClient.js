@@ -300,6 +300,12 @@ export default function ActionCenterClient({ sports }) {
 
             <p className="actionReason">{sport.reason}</p>
 
+            {sport.scopeIssue ? (
+              <p role="alert" className="actionScopeNotice">
+                <strong>Corrección requerida para ejecutar la captura:</strong> {sport.scopeIssue}
+                <a href="https://github.com/latortilladePablo/sports-value-lab/blob/main/bridge/NBA_RUNNER_SETUP.md" target="_blank" rel="noopener noreferrer"> Guía del runner NBA</a>
+              </p>
+            ) : null}
             <div className="actionButtons">
               {ACTIONS.map(([id, label]) => {
                 const p = sport.policy[id];
