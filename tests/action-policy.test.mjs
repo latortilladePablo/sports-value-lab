@@ -38,6 +38,25 @@ test("NBA SCRIPT_SCOPE_MISMATCH sigue bloqueando compras", () => {
   assert.equal(getActionPolicy(nba, true).P2_CHECK.allowed, true);
 });
 
+test("El siguiente paso P1 sigue visible mientras el scope bloquea compras", () => {
+  const nba = {
+    ...sport("P1_REQUIRED", 5),
+    id: "nba",
+    name: "NBA",
+    scan: "P1 COMPLETO",
+    scopeBlocked: true,
+    scopeIssue: "SCRIPT_SCOPE_MISMATCH: Preseason habilitado",
+  };
+  assert.equal(getRecommendedAction(nba), "P1_COMPLETO");
+  const paid = getActionPolicy(nba, true).P1_COMPLETO;
+  assert.equal(paid.allowed, false);
+  assert.match(paid.reason, /SCRIPT_SCOPE_MISMATCH/);
+  assert.equal(getActionPolicy(nba, true).P2_CHECK.allowed, true);
+  assert.equal(validateActionRequest({
+    sport: nba, action: "P1_COMPLETO", runnerConfigured: true, confirmPaid: true,
+  }).status, 409);
+});
+
 test("Un runner desconectado impide P1 incluso en modo manual", () => {
   assert.equal(getActionPolicy(sport("OK"), false).P1_COMPLETO.allowed, false);
   const got = validateActionRequest({
