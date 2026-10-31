@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-10-31T09:36:00.207069+00:00",
+  "checked_at_utc": "2026-10-31T15:43:22.730799+00:00",
   "method": "Google News RSS headline screening (unverified)",
   "sports": {
     "nba": {
@@ -17,6 +17,11 @@
           "published_at": "2026-10-30T13:51:17+00:00"
         },
         {
+          "title": "Sixers at Hornets: Game Preview, Injury Report and How to Watch 10/31/2026 - NBA.com",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPVFUtZUNHVnJyN09MeW9oWXVkZUlLRncwb3I1S2o5V2l5UkloV3RiY1NoN3Y1V0YzcldVZjItUHV6QW0yUFlsSUNvcVhyU0UzaElGY002Z2R6Qk9BMDl1RUZVVnh1UVJIbVduX1IwTWF2N3RXb1E4ellTd194aExLTVQ3YWhRZF9MR01qM3ozSkJscmJuTUdaVVNZcWJaQ21iY2wweUdlbw?oc=5",
+          "published_at": "2026-10-31T12:40:00+00:00"
+        },
+        {
           "title": "Ja Morant out multiple weeks in latest early-season NBA injury crusher - New York Post",
           "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOSFJIM2tDNlY0Sm5BdHh4VHp6LWVkcHJDYnROaG91LWxLRFB3UHNYaE5OYm1fbFpsWFNXX3A0VVQycFFaWkd6TVlvQ3JXZ1Zwc2pzUU9NZFpGQTB0cVlfM1pMQXM2cmxuWkhnQllPbEtsS0d4YzFYZXprbmdnMkJjcjZaUDY5R0I0SmRjaXFBdWxQbEN1MGJXX3RuR0F0UQ?oc=5",
           "published_at": "2026-10-30T23:36:00+00:00"
@@ -25,26 +30,6 @@
           "title": "Injuries (still) suck - The Stein Line",
           "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBqeE1DbDNmZEhSNUpiWmNSSG9nejFMbWhSc053RTdZOFdaVndvbUp3dVFMNzdfaWxzVFdLYzNxdk5LU2NscFVXV1drbzQ1VUtMcFNxcnlWQVNTbkc5OW9kVWJCMFQ5Nkk?oc=5",
           "published_at": "2026-10-30T16:57:29+00:00"
-        },
-        {
-          "title": "Ja Morant injury: Trail Blazers star expected to miss at least four weeks with hamstring strain - CBS Sports",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRGExZmJORkFqZFp0R3JuLUhYVk5YMkhrUUhYdkthZzZzeF9ObTY0RVp1Nm5IY1o0cXo4aUZrc29iVHFhNzA5b0dsRTI4blA0eUtUNmY1bFZ5anBYUEVQN1hZeTNOMEpTYjNwZERpdnFCTmJKejRDZnd1Zml2TEd5TGhXTnRDNzNEZi1uUXVzVkZmTEtsSk1jejZYdWVJMFlIMUhQOW5UdXh0clI0eVJrRWxnbw?oc=5",
-          "published_at": "2026-10-30T20:05:18+00:00"
-        },
-        {
-          "title": "Without injured Brown, 76ers outlast Knicks in NBA Cup Group Play - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNWlY5YmtNYkswelRhWVIwLVhhbTJkN0Rod0VQQmFJekM5cHQ2cmVVdzhIdERVV1g1XzRseU4ycGNuM01xem9uTU5sNDhTakxTYnhvMm4xQmJLcjFiVmxVeTBOWC1zay1hRnJOejE1emZ1M19IdmNLUXBfRFhJNU56ZUpWZ2xuLUd1VVFB?oc=5",
-          "published_at": "2026-10-30T23:03:31+00:00"
-        },
-        {
-          "title": "What Happened to Chet Holmgren? Yet Another OKC Player Sidelined as Thunder’s Injury Woes Deepen - BasketballNews.com",
-          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNTG1OVFNFeTRpLXVLLXpIb2t1Ukx4RVlyQ0p0TlpiWUhKS25kTjlHZF9RRmt2X1ZrNVoxRnRydFlpYl9KQ01YQ1R5dklBRkFPT3NzdjI1c1ZzbFp6anZCTkMxY2F5TUF1QUtqbnhKWF9TQ0twRWdIb0dreEpFU3JwbV91d2lxOFhDTUZ6OEJsNGJzRVd5QUJQVEM5QUhCdU9nSFhVRmJER3U4U0FYQmhpVy1Ba2wycmNadS01eHZtMGotSm9fcEhHODVVTWhvNEFoaHVYWURyd2laUl9MOV91SWZuVWI4Z0IyMkFMZHRaemE4WUky?oc=5",
-          "published_at": "2026-10-31T04:25:19+00:00"
-        },
-        {
-          "title": "The Chicago Bulls have one solution to the NBA's injury plague: Norman Powell - Pippen Ain't Easy",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPd1BQNUZJOVdQQjNWUW1lVW16VGpaeVZPUFpvNGtLSnV0NVh2TzhJaDcwVzdDZThleE9GVkxEWEtkMFBMSjc5bUFzY3V2YzZKQzBQUmcxSTVqZUFTUkJud2xEVjFDcy1IaWNNV3hKd3Azc3A4cTR5aWdDeHZCWmxNZjd3bWlVbDIz?oc=5",
-          "published_at": "2026-10-30T13:00:04+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -63,34 +48,34 @@
           "published_at": "2026-10-30T20:52:14+00:00"
         },
         {
-          "title": "Chiefs get Rashee Rice back from injury for Broncos game - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQY1p5eWFkVWZsVzJLSlFZWWtuVWVscFF5MXktRmE0eHgtMVJCV0l2VWhPY1I2UllXTmpXTTNyaFdXd1gySlBxYjFlcFhKRGkwZzJjd0tDX3BpMXZoVnNRVkxxZlFaVGtSbTdyVHVkclowLW9BTXh3bFdRZVlXVk9WM0V5Njd6ZndJZXVxdGhlNk5oOHdyRTQw?oc=5",
-          "published_at": "2026-10-30T19:51:00+00:00"
-        },
-        {
           "title": "An NFL Quarterback Lost His Season Due to a Blood Clot — Here’s How to Lower Your Risk - Discover Magazine",
           "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxObFRHdWgyLUJwaHQ2X1FJc1JfSkRqQ0FwbHBocWJCZzIyZXlpZ012SHRPQjh3Z3VvRThHQ0djVE1mMFd2VFZMbERMSWZyMnhsQjl2blhmV0NjdmNBbjBqUDU1OU9BdWV2TTdlWFo5M3NoZGR2dGVxUE1yV0FQMVBuWUxWY2k1dXFWNHE4MEZKRHlycUpVOEY0eFpsajZCeVVaTzhsbVJsRUdLc3RvektHcGhEMkNsYUcyUUZsMmhpd3g?oc=5",
           "published_at": "2026-10-30T22:17:23+00:00"
         },
         {
-          "title": "Thunder’s Chet Holmgren to miss 8-10 weeks with knee injury - The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQREdFMnQ5dzlZNFlJYnJwVHU1azFCUmZvYmpWNHJaUlFCOGowOW0tX1ozXzBpdzcyN2c4ZGJ6ME4tSnZZelRDVmkzdTAxR1pjTm1DRVZnOGxicXVxTTRjYzZreXFIa0VoelJwV25iREVudXY3SVI3WWp1MkV0T2gwVjFpYzJlRzQxeVMtU053?oc=5",
-          "published_at": "2026-10-31T02:14:25+00:00"
+          "title": "Fantasy football Week 8 inactives: Chase to play; Hall questionable; Egbuka out - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNQlFmZ3ZCMjlhdU53X01XNFZQd3d6QThFQTVjVzU0UjVUUDhjZThqdkxWOFdnMG5zeXdoWVNGbTlJWFdhSk9NRXZIckloN3ZkWFItaDRQZ2tTMXF5dlMxeTQ4SVl1VnlhRW1iclJlYzN4ODRNR2picWZUREppczNFVnZ0OTdrZkNVVkdTempzT2RWc3luaGdSMzFnNlhibUlGZ3ZYS3VaUVZhbG01dnQwTlRtalNHa1UzTE8zdlg0THlwUERDc3dPQVNR?oc=5",
+          "published_at": "2026-10-30T23:55:00+00:00"
         },
         {
-          "title": "NFL Injury Report 2026 Ahead of Sunday's Week 8 Games: Carnell Tate, Emeka Egbuka - Fantasy Alarm",
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQR2s5T2t5TVl2UVNFc3BqWE5KcTc4M2REazd1QXIxN0cxVW92MW1CcmNWb0QyelowQXBOSWw5SnlNeFhPdE1UV2RfamNkQVJOeDB3WGFnZTBETUJMYVJyN1o1eDdiX2pMTEVXTk9qQXd1NDZqR2tkTVAySFlNUXAtc05Kd2JKdkZmckdUQmlCVklqVmhXdjFFWUxkRnBBakRMNWo5VVlIMzI1a0x3TGVqSko2SURINGhwdDNYUGFmQ1lXX3h2d1dYWlJiQXptdjZBck9sRQ?oc=5",
-          "published_at": "2026-10-30T20:18:54+00:00"
+          "title": "Myles Garrett, Micah Parsons injury updates could impact Browns NFL draft stock - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQaHVORXRmY2w0Ykg2YWJJNWNQOF9uNWptN3hXbEc1VGE1SWJtczVmMWZ6ajlaenJMeWZEWW1ReFhWblFtNkpiT3ptcWhhUDZkQzhENHFZeWU5M2ZxNzRTajNOLXlKR2RVQWh6bFZ0TEhhU08yX1dCeG1VVEt2V0V6dFhhS1Nsb3BXMlZR?oc=5",
+          "published_at": "2026-10-31T13:30:23+00:00"
         },
         {
-          "title": "Jared Goff Is Ranked Best NFL Quarterback - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOTUVGRjRJbTBqMHljM0NvRXcxNzdUWC1venp6aGROVndfMjVYUktfZzNyNDAtZEtCMXVQN3pBYUVnN0VpeFVWV0kzUmVUczRLZ1lXRVJyMGh1M3hiZHMwZWNMS0NDY09qYW84b2VOczByQWtJLVZ2dXlSWDBvLWFFYg?oc=5",
-          "published_at": "2026-10-30T15:04:31+00:00"
+          "title": "Micah Parsons Injury Update, Latest NFL Rumors on Timeline for Packers Star's 2026 Debut - Bleacher Report",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOLXdPTmdaQUhzLW16cEEyZkxwUGE2RTlWSzhfeU9CQURxMzNkRHhRbTNQRjNNMUxIeU1sOTZsd2JraEJvOG5WRDgzdDFQa0VYajZYNW1jUDNsbXpPOXN4SWRWLWFCbGhwMVFsaVRTTS0xSUlXeVVza2NPMElzSHduNWdIcE5JOTNVaDFTc09EYmoxY3JrRkp6Z0VaV0JMMkxJSFVaRW1weGlGWTJaVGRnZDJpZkE5MTFxdGw2NjdLQXNHdw?oc=5",
+          "published_at": "2026-10-31T13:22:49+00:00"
         },
         {
-          "title": "Ja Morant suffers Grade 2 hamstring injury, to miss at least 4 weeks - The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQXzdPV3NxSXZGNVYwRzYzdUZFckNGVUl1dzNjaExWSmRuWmtJalY0YjVMbjJaS2lTNmc1Ykp5ZGxNZGFPWlo2Mnk0ZEhrWmQ5QURpTkNlV3kxV0dLQ2dXN1lqbGRWR3lBak9MdEpCOHdxT3BIak9mdHRTellqbTdQbkoyVHlVUnlYZ2JJM3lrdExwVkVfU2JmWA?oc=5",
-          "published_at": "2026-10-30T19:07:34+00:00"
+          "title": "Fantasy football rankings for Week 8: Quarterback - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPRVlET0VJWWVfWV9uRmJfdGVmUEd6S3oxOG1WcEtlYzg4U1lUV2hGb1BPNnA0UmhXUWNUMUkzcUNKWjdHbldLMjM4bDlCS0VkNi1aa0RveEVYWXVnZGhzYWNNZEFPQmtobUZ6WVFfb2JxMGJVU0t0SHk1UDdQZDBwN1IxZDZKTElBSV93M1RZRjlTbjBKVm9tTkVCWnNtWktIRVUtMlo4VnluWXdxWVdRWXk2NkIwcW8yNWExdnVTaDBYZ0pYRXpnUjJn?oc=5",
+          "published_at": "2026-10-31T03:54:00+00:00"
+        },
+        {
+          "title": "Tailgate forecast: Spooky storms, chills for college, NFL - The Weather Channel",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQekcwRU5BX1BXRmVTbTkyNGpzZm1fdzlHajJoOVhhMkVrdWh4YmlVTURmSmJ0d29hUkJRS0N4NzMtTlVZd2RzWDlpUTFfak9xWUt1UWhaMjc5MDBtWGlIdF9haEc3VEhsUWpsTHNXTDFtQUpMaGl5ZVJqUDJ0THFackoxTFNEVDNSZXpxbU5WMmFNREZFQ1AzdTRtZWc1WDYxbnNtNVdsNzlhQQ?oc=5",
+          "published_at": "2026-10-31T11:30:00+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -99,9 +84,24 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
+          "title": "Maple Leafs at Canucks projected lineups - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTEVtdGJNbkpzai01WGp4WmF1OXJ4bzgzWURQdldVOEtnRDZYa3pwYnk3ZmlmbDVDVzBKMkt6R3dpVGNYeVVoN3owWk5Ta21nUDd0ekwtQjF3b2dZQU1tLXJGa2FVUVFZc1U2aUk2UVBKWXZSSnlLOEZoNjhlVkZ5RTBWQVNTNk1iVkNfV2NFY21Cc2JOMHc?oc=5",
+          "published_at": "2026-10-31T15:05:04+00:00"
+        },
+        {
+          "title": "Sabres at Kings | How to watch, lineup nots, and storylines - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQR0tGODl5clJuYkszS0tGZWJCcFlISENZZEE4OTkxRXg3bzZPMk5LUk92QjhmZVFkRmVveEJjb0dlU1FoeURKX0Q5S0tnSDRJU3FVeEt6bEhwUDNsdk1JbEhTbGtfTHFtQjBGYk5KOFFkUXNaaEFnbjhGc0ZyYXcweQ?oc=5",
+          "published_at": "2026-10-31T13:44:27+00:00"
+        },
+        {
           "title": "Manson out eight weeks for Avalanche with ankle injury - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNRlNUaW5YR1JQMW5XaktyNzRicTFZSlg3MUVnNWRuUmpRX0EzMmlRaVFFczN2NmJzbnB5WjdjbDg3eEJoMXVZazVublhYSVgtY1lPRTQ2WFJ6TGp0SmxNUEl4Y2dyenRXdlI1SW1MVlhDVkNsaXZlTUV3MmgxRFJXN2F0WWtIRnZPVVNlTlZNNGlMdUg1QU0w?oc=5",
           "published_at": "2026-10-30T19:09:53+00:00"
+        },
+        {
+          "title": "Blackhawks at Bruins projected lineups - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQcXJIMmE0VkVFeG1PTU4tZXdUY3NQNy0xdnB1aVpUREM3Um81U1NmZXJZVkE3STE2NFB4a3huUXUtcmg5NGdsODlJelpRYzRvRWpSX0NzOXZxY2ZaRnoyZzg0WEdWRU94UXRJLW9sZWd2YW5XbEFQb2ZDV3lxaXFhaFJVSE81UTlvMjVVWjhoSQ?oc=5",
+          "published_at": "2026-10-30T21:01:56+00:00"
         },
         {
           "title": "Kraken at Flames projected lineups - NHL.com",
@@ -109,34 +109,19 @@
           "published_at": "2026-10-30T18:39:47+00:00"
         },
         {
-          "title": "Projected Lineup - Flames vs. Kraken | Calgary Flames - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE12aEprMzBzejFwTHowY0hVVnV4S0hTWXcyWGdZVDdRbEp1QnlqaXpQZlV5LUJOMUVsZ3E4WUpzNGJ6T3ZKM054WHFmTmIwZDA2QkdXRW1QaGdEWjFxQ2pBQjEzaUczeDVWczVicGo2R290ZENrTnRrUm94ZE9ybE0?oc=5",
-          "published_at": "2026-10-30T23:56:27+00:00"
-        },
-        {
           "title": "Unmasked: Unique goggles offer new way for goalies to track pucks - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQcFhKRExkN0dhWHlxUE52LVhMbFY0S0pEVmJobXVWVUxBbnBwY3dLS0VYM1ZMVGVCTHVxQnVHX3FVLVBSV0RPVk95YUdHTE05dllEUVlmU1VaRG9wXzhtclhrRS1tRnB2b1hZQ1pqLTFzbklpdWhTbHFvcUMtRjBkSW56S01TcE9hbkJn?oc=5",
           "published_at": "2026-10-30T04:42:56+00:00"
         },
         {
-          "title": "Jets at Panthers projected lineups - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQQk02bGhOUldocTdCYV9pSG01bjg2SXpBNzc0eW1Kdm52UDlNeDFGclh4RmNaMWJRVGtVdmNpbnM2Rjk2TzJiSVFNR3d3ZTA3SkU1OXZSTkIyMUJNSHJTdUVUMXZvQ25pdGNQNGZIaTFYSWx6dk54Z0V3RXhYUm5FWm1RcmVoYXV2WjlMbg?oc=5",
-          "published_at": "2026-10-30T15:09:10+00:00"
+          "title": "Blues at Red Wings projected lineups - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPWDlBZUlwanoxeW96a2Z6UjdwQmU5Z19Dd2JrR2FzSFpUSUZrYUpqRXdvVXN4RnczT3JrT3poQlJNRmtqZkZ1ZE0ybGRuUVdtNUVFSDNiakg0RE5RYmhoNVIxWUdwcVdISGVjTC02MDJfUlZEb1ZDZERCbE8xVTAzZExkTlFaUWRhcVlJOFdSSQ?oc=5",
+          "published_at": "2026-10-30T17:21:16+00:00"
         },
         {
-          "title": "Oilers at Islanders projected lineups - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaV83Nlg2azVFTzZTYmJxSUlTMXRfT0ZFN1FOZThJeG1yUFluS19MVWhqaTRlQ2NSWk1VR2tGaFAxQ2phemZveV9OSWlsUDBCRU9DZGZORXlqUXEtczhPLS04UzVTR2Rpc19fem1ULVlkZDZBc2oyS2F4QXBvMnBleWlQc3lZQlYweS1HMXVGZlJlUQ?oc=5",
-          "published_at": "2026-10-30T15:15:11+00:00"
-        },
-        {
-          "title": "Projected Lineup: Wild vs Islanders - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5vRVBiQWR5dDN1eDBIRXRfVTlkWmZYNkNHOWVUY25HYmttQzFiMVRiWmQwYU1GMTFUVkFpQ1FFcUh5cmxXRWxqZDUwRTlaLVc1Q1FraEk5U1A1WUN4MjJIYU1pWGlpOFdqUWx5T2ZVcHJ2cXJLUHRFQTBMYw?oc=5",
-          "published_at": "2026-10-30T03:50:26+00:00"
-        },
-        {
-          "title": "Senators at Sharks projected lineups - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPdGpNNXQzUmJDaUUyTmxtdU5rR0NtVklyZ3dtSzl5akpkOWRDcFlhRkVHMWQ3UDFsUHBPTm1mR2I0NHVla1dwYlFUQUtqdC11c0tVR3dyTi1UT2ZlRjJNeEtraHJpWkF5NGVMTk5jVEl3bDAzYW9xanMyeldxUnZQcDlFdWlvSmVaOG53Q1hR?oc=5",
-          "published_at": "2026-10-30T20:19:52+00:00"
+          "title": "Projected Lineup - Flames vs. Kraken | Calgary Flames - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE12aEprMzBzejFwTHowY0hVVnV4S0hTWXcyWGdZVDdRbEp1QnlqaXpQZlV5LUJOMUVsZ3E4WUpzNGJ6T3ZKM054WHFmTmIwZDA2QkdXRW1QaGdEWjFxQ2pBQjEzaUczeDVWczVicGo2R290ZENrTnRrUm94ZE9ybE0?oc=5",
+          "published_at": "2026-10-30T23:56:27+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -145,9 +130,14 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
-          "title": "OU football injury report vs South Carolina: Which Sooners are out? - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQ1Q3VmpQazM4WWd0V0ttSW00NzdScGFVN3ZfbVVVWWYtWUV1NGZlQTFRWENnaFN5azlPTXFiY1BOc2VMSVBlWVZTR0xYWEtmcXVSWVA1VjIwbXhGTk9FV0I5dzJUZGxjb0ZsbnoxdE1jNElaNHk0ZEJ2N0Ntd1NoSjRQcw?oc=5",
-          "published_at": "2026-10-31T00:39:00+00:00"
+          "title": "Ohio State Reveals Negative Injury News on Star Defender - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNb0ZRTmxOTzNqblpkY2c3U0xLSlVMU2Y2U25HUXhDblJtVnpxWXA3dFQweFdVOVJfdnB6d0xhbUROSTczVU1JWExCWjhhYW43a1YyUDZacUxNQjZEeUhnVU9FWDNIQmpKcFYyMzdZc1ZjN2I4MWdZazI4UkQySHFHWmZ4YjJlYTJSekUw?oc=5",
+          "published_at": "2026-10-31T12:01:10+00:00"
+        },
+        {
+          "title": "Injury report: Michigan Football Has 3 Starters as 'Game Time Decisions' vs. Rutgers - Sports Illustrated",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOclB6ZjFMal9iTGNENnJOZ0JFTTZFcElETGk1OHdCOWhaZzRLTnp1cGJ3OXJCa3F5dnZOLVhhY1hSNk1hZWREU0ZCTTdsQVRZXzQ3eUxIeWpiWjRZZVRvSTJnYU5sUTdSWnB4QnV1UjUwRDBXWXI0ZEd3QTQ4c3lQdkxfZ21yZllSTHdNNkg0bnROU3dOeG02NGcyNzMwLXA0ZmduOHFDOEI3aWlrbHVHOXZHY3Jxa25yU215YlA1VGhwSWYxRVdxZUtn?oc=5",
+          "published_at": "2026-10-31T14:33:00+00:00"
         },
         {
           "title": "Fantasy football injury report: Smart pivots and backup plans for Week 8 - The New York Times",
@@ -155,34 +145,29 @@
           "published_at": "2026-10-30T21:52:00+00:00"
         },
         {
+          "title": "Is DJ Moore Playing Week 8? Fantasy Football Injury Update - FantasyPros",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQYXE5Z0tTeURhOHlxVTNuUHJPSm1zLTZwQ1Z0V3RWYmpFOFhIczZQWWpPUm5CNTZGa2xXa1VBdTViVWZjU0ZhWkVsNm15Sko3UzYtMjR4ZHg5QWc1dUVON0dUT003MkNGek9tbTlzNl9udlNOWkdxUDhpMG1uaDRORHNMQkhKNFlVUXdRTjNNcXhGVktJNUdkeFlWd0p3YXVC0gGmAUFVX3lxTE5aeS1tRFBsYWJjb05Da2JuQVZ6TnV4UDdmNzAyaDgzb1dlckNOWHVqd3N6YzFZVnhXblVEc3hLczY2OFhfQnZrRVBiM0lzWFN3YkNaUmNEOHFlSlRrNFZ3NUpkcVVpS0NQN3B5MlVncXQ0RHpLZHNUbTRCWjRPNUNBSTNDUjJhR0VsYzE2clFnNmFmdzJ3dDUySDJiNlk0Z0VuZ200eEE?oc=5",
+          "published_at": "2026-10-31T11:36:58+00:00"
+        },
+        {
+          "title": "Michigan Football Injury Report: 3 DL are game-time decisions vs Rutgers - Maize n Brew",
+          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPS2U0T0FLa1FiQUZ6WE1KWEc2bFdqNHB1SjZrUFNwYlJSWm55d1g4RjZMRU9fY2M5TXlSVFhjLTJVWFhFQ1RDMnkyYjhKQndGazdQRlQ5TFhLaGYxaDJvOWIzUzlLU2V5eHpOSnRTaG5TaHJnU0pDQnZqODhOMjNFa210aDA5Qy1vNFZueHc5eUdDT0l5b2RaMm9zc2laZWpIWVA1SGVsdk1SZWJWTWNrSnF5RkNCUzJCQ3h2ZWlMWDhZRzVseEQ2TlJ5N3BsQU51WmFNV2lUSzVfT1RsMU9KNA?oc=5",
+          "published_at": "2026-10-31T14:36:06+00:00"
+        },
+        {
           "title": "Florida injury report shifts ahead of Georgia rivalry - Gators Wire",
           "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNVU1CNFZCbEF6LXg4UTIyaU1RWUpoMmtyeWpheVpYTmV2bElfVklTdkNRTl9lOXVrZUNCZ2tRTG1VOE1NS1IyekxNQjhsRFNLOGRIX3B5ZVl0eTRxbzZnTnNYNzkzeVFlQXhvRXdGT1BoUndGZ0pHa1dHVzlnRUZxM0doRW5DSWFVc3hTSHpaZ3cwcDVxV3dkRTQ3VTJPMEk0clFPNmhUV2NvVzZiVHZFVlFIVkJVbjdCN1hXSHJVMjR1akVLUFpjTkY1UlFEVUN5TlpZTWlwaGJZQlZNZFRvc2NaS0ZyLVhqcEZKN0FiUHA4a2pQSlk4YVhsX0RBUQ?oc=5",
-          "published_at": "2026-10-31T02:09:00+00:00"
+          "published_at": "2026-10-31T01:12:29+00:00"
         },
         {
-          "title": "Oregon Ducks Injury Report Features One Major Addition For Northwestern Game - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOV19ScjN4UEZ3b2loUUFubzhEeUxobC1qeW5QMTE3TVFMRWZqMTZxVXVfZE14UUhRMUo3QjJEcVdVWXV3clByQTNzeTJmLWQ3cHJ0LTZWN2VQSTJIaHBaNkNzNTFMWC0zdkFkdGpVU1lWVHpVOUQ0bTd2R1JkWFJUYVdlenRWSmpqdWQ4azRjRy1FNkZwWEJxS21kcEVoSmhvVm9DMEpfVUdoOU1kckE?oc=5",
-          "published_at": "2026-10-31T00:27:53+00:00"
+          "title": "Michigan football has big injury questions heading into Rutgers game - Detroit Free Press",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPUnprYV9POHllM0NndmxqRVptUmtqNGRISm5iQ3pFR2hzWU8zZmVxM2xsS2l6ckR5dGVtQVJZRFVnOXp3T3FLbEpaUENfZUNrMVZjcHNCc2YzTUQtTGZHQXhDYWVLWGRFcjJBVl9FN2NoREctT0hHODNXakQ2ZUsxcVdZeWZwTzRfZENtSnVtbkR3QU9BQWhrYXAtdWliR2VLVVd2U1VMX3R6R1VYcnI2U1V4a3ZLUzd4N0tPZm83MWg4RElOcjNqRTJ0QmF6ZTVMems2ejR4T29PLUluMG1HZkJqTnRTbFE?oc=5",
+          "published_at": "2026-10-31T14:56:58+00:00"
         },
         {
-          "title": "Georgia football injury report vs. Florida - 247Sports",
-          "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNcVBHM3VCVFJqUWh0SzAyb3dGYTI2RnNWUHZYXy1UdUE1cm1Sc0RhTXUxQzg4cm9yYkwxLUJKQmRBeHVmTmZTTXgzWHJnbGZzQklFbDBvNkVtb3lyZFRkQXBVOEdoZldCYnJrNFo0QTR6VDljb0tzd3RFQVBxdmlVR0lCQlF6WTR0a3F2WWJZdjQzbXZNa09LRWpXYUlCVFhCLVYzTjN3TnRUTElsVmFub2IzSXJSTkxmR3J6X0otNngzalRwcGRVX1gwUkI2WkxOZ19yeHJoTVJpV1UwTHdBUlhsTEEzSDdVb3cxUXQ4azRURjhFdWk2VmExeF82ZEQxcUM2aHhwRi0?oc=5",
-          "published_at": "2026-10-30T14:57:37+00:00"
-        },
-        {
-          "title": "Travis Kelce Fantasy Football Injury Update: Will TE Play This Week Versus Broncos? - Complex",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQY0dGWjcxczZULWdoU1JyeDJ0d1IxYmhIUkpweFlqVjBTWERrRlJLNmNVb1FGTTlpYS1fSmZYS0tBZURUbUlmbmxPTW11V3V4bzlhdVF5WU40Tm82dGp5R3pKc0liTWdHV0Jrbk5mUk5OT1p2dXF2YW8yUDdfNmFRTEE5a2hSSTMteTFTZnBB?oc=5",
-          "published_at": "2026-10-30T16:21:43+00:00"
-        },
-        {
-          "title": "Texas Longhorns Make Final Injury Decision on Colin Simmons vs. Mississippi State - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZk1WT1YzNmcxbzRqUW4tYTQ3NldhMEM0cTNxSGJFLUhGb0tEdmM1VWhERnVLZ2xqWTMtOFdZSmwwSkxaR2IxUTd6MV95NS11a1hVU055akM3dlRIMVhBNGlnb2JRZWdpTEJmMElCQ1R2Q0k4cUVHZHp2OGp4OVNQSVFDYkxBeUdmY0RSUHVQd3o5SXFERXRRdmZwdERxQS1GMHlDbTllOTlHZUpXM0VDSV9PZlBnVUVCR0lv?oc=5",
-          "published_at": "2026-10-31T00:30:41+00:00"
-        },
-        {
-          "title": "Coroner: Southern Nazarene player died after suffering traumatic brain injury, brain bleed from helmet-to-helmet hit - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxQemJEMzNVSkFyTFZrYjJwSWEtSkFMUjVpdWxIYlozVGk5WlppTlFhQkdNMTkyV0VEVFFIRzRHX1RSUEVvMDdNNlpST1F1RXlIRjIxb3ZZOTU4NWMzR1FEYzduR09UYUhUOFlPdGU4cE5ydnZSQnJWWXRHbXZxMnd1eks3aVAyMmF1eXg3QnRfYmd2UXg1SnU1WUtSWkxDMk8wVWIxMVRuYmR1ZjBrSzRDNTBCdU5WRHVuVnBTbkwtclVEVTdNR2pmdUdHVmdRSVhmQThOall3TGRmem5tbHhscmZHZ3hPeV92Y0ZwZnZKSzd6VEZCUC1Td2hfLU9XdjZjWGVVekNzSDJvOWMxRnAwQUgtRmhjckpublZrcEdR?oc=5",
-          "published_at": "2026-10-30T21:47:22+00:00"
+          "title": "Dalton Kincaid Fantasy Football Injury Update: Will Bills TE Play This Week Versus Ravens? - Complex",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOdjctU25mczhyRWJDVUwxS3ZNeVcwdEFsUEdWY1dIWUlSNTA5QXVKcDF1bS0zMHFvTUlQUXZMcnlFeWNwRjE4eWdQbzFNSFhWZWhaSlhBX1duQmtHT1V0M2Zyb21DRElHSHd4WEF3ZkdlUXNZQmExYTZGelRmZHVYb1hPbE5fUXVva3l2OW0ySy0?oc=5",
+          "published_at": "2026-10-31T15:10:01+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -201,24 +186,14 @@
           "published_at": "2026-10-30T06:35:26+00:00"
         },
         {
+          "title": "Flavio Cobolli reveals the extent of his injury as ATP Finals approach - Tennis World USA",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQOXFGSjlSeERrVDJFZTRmXzVSVmJJNXY0ZDQxX0hoU2ZQcHdfRFBmZHZBVWc0VFp0S2w3Q2U5YlMyMzFyNlp0SXVjTk54N0o2dkItZjVUdUk1ejVmVEE3NVY0M3pzODRHUzJtVHo2T21xRXpsRVh1OEpzNExxUjB0TVhXa3FBVVlicnBWaXotX1dqdzFSRmlkZjZFRndTbVB4U25zc1dQbDg3OG9XOE4zMEt5b2cwWkFKQXRpVDJzeEhOY2l5WmlnV2JZcWw4TldhSkE?oc=5",
+          "published_at": "2026-10-31T09:41:06+00:00"
+        },
+        {
           "title": "Rybakina withdraws from Tokyo quarter-finals with neck injury - Reuters",
           "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcnFCZUk2Wmp6ck5XbUhpcjZIYklQLV9zcnNReHVqQk42RUtUblpOTDc3cjlBblVleUFZdjd1eFRUNXYwRnREMm9TOC01eFBkOHNUd1hBNU5SVVhBcktNOGVmMUtkb3BXLW5ZdUNnMUllWmJmNmtQYVdzQkN4NDdQOUgwUDN6dVdMN1Z5MGNIZkppZmhoZzd6dUFCZzFzajIyQmhDZWJVcG52dw?oc=5",
           "published_at": "2026-10-30T13:26:56+00:00"
-        },
-        {
-          "title": "Cobolli Reveals Injury Diagnosis, Plans to Play Paris Masters with ATP Finals Spot on the Line - Tennis Now",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZ1ZhTm5CTEhJX0VnOUF4Q1ZPOUhnaU5zVlVQZGZLUFBrMUIteGtLOGpSeHlvZ2NGTVlZcmVVczBZWFlLXzFuMFMycHZTZTN0eE11QmdocE5nWVFuc1Ftb0FYWUVuczBOVlVBaUNudElpYmlsMjViRG1RWE4xdHF2anBqeDVySUFqRDlZTFh3YmFsNGRZajQ5S2dNYlJQTXRxUWI1cHI1a0RDN1RWVUw2MlhJLXlvc0k?oc=5",
-          "published_at": "2026-10-30T20:19:57+00:00"
-        },
-        {
-          "title": "No. 1 Rybakina withdraws from Tokyo quarterfinals with undisclosed ‘little injury’ - AP News",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdDNJenRtLU1TT0hENGFUQlFIbUt4dFBkX2RucVFUMUwyVGVCY1lzYnVXZnlXck1ta29ObnphZVR0VUs3Vi0wYnVNUUNFSDdjSmZQLUk2Z08tWjMyZDZ0NE5jR2JrLUIzdEVjblFRdGdjbkJNamFvRVIxd3ROdUdRTm1EcmtUZ3R2Rl9UVGNQalo4dw?oc=5",
-          "published_at": "2026-10-30T11:34:00+00:00"
-        },
-        {
-          "title": "WTA's top-ranked Elena Rybakina withdraws from quarterfinals in Japan, citing an injury - ABC News - Breaking News, Latest News and Videos",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWnZaeWdOY2ZsSFFMYTc1eWRlcV9OY0N0ZHU1MFU2dTVjNUFvQVVPMVJLeGJOdkVEZzRhVVJCS082UGVlYnBQdTFnbmliODNkdnlFa29SeEgycHpnZmprYW5PLXhhTlNrWTJFcl9XS3JmYUhQcnk3UzQ3bW96d0o4VEpzUExpSW9NNl9ELWwySHgzWkdtVXQ5TjlUUGpoMkYxb2Nmc3YzZUhXRknSAbABQVVfeXFMTWowbXM0aVA0TlVKX3BjdTNjVUtkdWNRbGdaMFN4eHg3dHlsUDBqd0hRNkZtZm5RYkZ2bm1IUGpCOHo1UkNhTTlSd1BYbXRZQVlNeGdWamRXbTF1cDlyMDVvRVZwQTlTdGx2T2RkR0xOUFJGWDcyZ0F6TVgwQWM0eTJtYzlsNHNBV0dQMXhYUlR0SFh1VUl3YWNlLW8tdXF5R1dNQzVQRktlUkxPWElGejk?oc=5",
-          "published_at": "2026-10-30T11:58:42+00:00"
         },
         {
           "title": "Elena Rybakina Suffers Injury Setback Ahead Of WTA Finals - ubitennis",
@@ -226,9 +201,19 @@
           "published_at": "2026-10-30T10:03:31+00:00"
         },
         {
-          "title": "World number one Rybakina withdraws from Pan Pacific Open with neck injury - Al Jazeera",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZkI3OUlxMklYY2oxTVR3Uk42eVBoNHVsQi1NY2QweUFseFpXZmNCLVFocnA1cjZLVkgxNXlxN2RFRjd0RlBpbHhNUEpJSDByalRJbmtSRFdnYnhhYjZWRHdpampKTGM4OFp6eVVRb2UyNG5mUVJJN25Lb3NtMzlDR0xvVzl3OS01WXp2aVE3X1JXZ1p4SmhwMGpUNHd5RmRXUnBZNzluQjA1RW9GMWx1T0FkMFJybG0tTnfSAb8BQVVfeXFMUDFMOE8xRHp1RmtMOWxaYjZsa3B0Sy1weGM3MzgxUFk4dTFLblNpeUx0Q05GQnNVdVA1UWQ3U0lpTDRESGh1N0lkVXRwSEIxWFBrOVV1eXZ3aWpmVUFRVXNHSGZMYUh3T3d4X2Y1bzF1dWJVM3l5Uk95Tm1SNVVuUExlYUpiMkk1VDNrX1FSVTdURlhKSUNnczloZTJ2WU03MHZWbjFQbXF1dm5Rd3hMYUhrUFlLcEhnM1pMSnpMOVk?oc=5",
-          "published_at": "2026-10-30T13:08:23+00:00"
+          "title": "Cobolli Reveals Injury Diagnosis, Plans to Play Paris Masters with ATP Finals Spot on the Line - Tennis Now",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZ1ZhTm5CTEhJX0VnOUF4Q1ZPOUhnaU5zVlVQZGZLUFBrMUIteGtLOGpSeHlvZ2NGTVlZcmVVczBZWFlLXzFuMFMycHZTZTN0eE11QmdocE5nWVFuc1Ftb0FYWUVuczBOVlVBaUNudElpYmlsMjViRG1RWE4xdHF2anBqeDVySUFqRDlZTFh3YmFsNGRZajQ5S2dNYlJQTXRxUWI1cHI1a0RDN1RWVUw2MlhJLXlvc0k?oc=5",
+          "published_at": "2026-10-30T20:19:57+00:00"
+        },
+        {
+          "title": "WTA's top-ranked Elena Rybakina withdraws from quarterfinals in Japan, citing an injury - ABC News - Breaking News, Latest News and Videos",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWnZaeWdOY2ZsSFFMYTc1eWRlcV9OY0N0ZHU1MFU2dTVjNUFvQVVPMVJLeGJOdkVEZzRhVVJCS082UGVlYnBQdTFnbmliODNkdnlFa29SeEgycHpnZmprYW5PLXhhTlNrWTJFcl9XS3JmYUhQcnk3UzQ3bW96d0o4VEpzUExpSW9NNl9ELWwySHgzWkdtVXQ5TjlUUGpoMkYxb2Nmc3YzZUhXRknSAbABQVVfeXFMTWowbXM0aVA0TlVKX3BjdTNjVUtkdWNRbGdaMFN4eHg3dHlsUDBqd0hRNkZtZm5RYkZ2bm1IUGpCOHo1UkNhTTlSd1BYbXRZQVlNeGdWamRXbTF1cDlyMDVvRVZwQTlTdGx2T2RkR0xOUFJGWDcyZ0F6TVgwQWM0eTJtYzlsNHNBV0dQMXhYUlR0SFh1VUl3YWNlLW8tdXF5R1dNQzVQRktlUkxPWElGejk?oc=5",
+          "published_at": "2026-10-30T11:58:42+00:00"
+        },
+        {
+          "title": "No. 1 Rybakina withdraws from Tokyo quarterfinals with undisclosed ‘little injury’ - AP News",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdDNJenRtLU1TT0hENGFUQlFIbUt4dFBkX2RucVFUMUwyVGVCY1lzYnVXZnlXck1ta29ObnphZVR0VUs3Vi0wYnVNUUNFSDdjSmZQLUk2Z08tWjMyZDZ0NE5jR2JrLUIzdEVjblFRdGdjbkJNamFvRVIxd3ROdUdRTm1EcmtUZ3R2Rl9UVGNQalo4dw?oc=5",
+          "published_at": "2026-10-30T11:34:00+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
