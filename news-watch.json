@@ -1,50 +1,50 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-11-12T02:57:19.569814+00:00",
+  "checked_at_utc": "2026-11-12T11:03:24.524791+00:00",
   "method": "Google News RSS headline screening (unverified)",
   "sports": {
     "nba": {
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
-          "title": "NBA Week 4 Injury Report: Keyonte George latest early-season injury for Jazz - NBC Sports",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOLWZsTmJSUVl0dmJyWkNjdTY3N3BTY2dZZ0JLUUs3N0IyWlNDVjczRFRlSy1NaGlHWExCUUo4UXBaNnNydWZLYWRKOUhiNW1iMnZXd1loeGRSa2R1M2FRVlVBSzh6UmppbXJUZlR3MlNVa3BURFdCaTRZcHJCejRGMFF1OHBVYkktcVdvUkp5Q3JReXVyUzZlY2xUYXcwRnlKc0d4Nm1teXlKUmtyejdyU1RsTWZHTHE4Zk9ZSjF5bUpkVVk?oc=5",
-          "published_at": "2026-11-11T19:24:35+00:00"
+          "title": "Stephen Curry injured versus Rockets - NBA.com",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5FZ2U4Nm0wdTBCTFVXeXV4Q3lHVTgwNnFVQW1XZ2plTWx1VVU5SDA3WGpoTHdGYnQ5c3AxYTZ1YnFiZWc3VVhNZFpBejlJVVMyc0huMEdhU3NSU3M0cTBNREZKV1F6d0NpZXotMTl3?oc=5",
+          "published_at": "2026-11-12T06:17:05+00:00"
         },
         {
-          "title": "Sources: Jazz star Lauri Markkanen out at least 1 month with fractured hand - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQWnFoNzNEOEllUEcxcnlEa1dNVTNfUlVGUkw1QTJuREQ3MkZnSjdrYm51amVrRjk1YkVpeXk3Z3dWM2hwdExXTktYeUlZMGxlMy02MmFGdGo4NnVySzViRk01OHN6TG1PZzdxQmx6ZmFGQjBVZlE2TWdiSHoyemxYM3p5QmF0THRsM1VEdWpLdWJWQ0JfTW93?oc=5",
-          "published_at": "2026-11-11T18:34:00+00:00"
+          "title": "Off the Glass: The NBA’s growing injury list - The Tufts Daily",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNeDNQZmIyVDlvWGV0akpWYmlYQjltaU5lNzUwdEU3MFlRTTMxQWZxdTdvcnFpX1VZOW1RVndFTE9nR0VRMVRDalAybWQ3dUF6cUg0YWVnZ2dJRF9POHhVeDl5SUFwaGMxTFhzZUw1cVcyMkl5WWotZHJwZWtuN29WcC1McW9QQ20xQ2dhWmNn?oc=5",
+          "published_at": "2026-11-12T07:07:16+00:00"
         },
         {
-          "title": "Ajay Mitchell injury update: OKC Thunder guard out vs Trail Blazers with sprained ankle - The Oklahoman",
-          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOUklnbVZLNjMwZlVYV0xNZlpJRmpJdThSTU9sTWxZVmtJQ0J5MHQ1UXZtcExjZ2x5YnpYZlF1RzgxLWsyQmRmc09IbW10S3NaMmh6MF9YeE1wM0dCdm5PSnBFOG5HMjBRbjY3N2tQM1VXOVhrdE1rd0xKTEZ1aE0tYWhPS0xQVXZyNDlvNm52cnk4VFhhdm9tTWhMb01PS2VCSHRfdVNYbWxIWnBYT2FSWTE5M3lXNjNFbnNBa3Vob1A3WU1MZWV2S1Y3RUE5SWtYSUVsR2pSNHlldw?oc=5",
-          "published_at": "2026-11-11T21:30:00+00:00"
+          "title": "Plan for injuries in today’s NBA. There’s no way to avoid them - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOS3NMTW1Oa0tTb2QyQzVIMUY3dG5hNUFLUy1aREIyTVo0NTRNODhMZnUyelBIck1tOG1HNDcxSC1hQXp2NDhGT1ExNXg2MURpc0RjZ0pIUjNzT202d0haNDNpQjBOcGNUYzZ0UjdhemhZcHZIVXZQaVNVQUl2d2Zvc3d6a0dtRGJycW40?oc=5",
+          "published_at": "2026-11-12T10:48:14+00:00"
         },
         {
-          "title": "Jamal Cain Injury: Ruled out for Wednesday - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNQ3hVS3JmMm5JZWZ0R0J4VXU2T1pKOWRNUFI0eG5OOWlqX0tUbGZsZ1o3TlR2bHlGMXFORU5HYlUtWWNnV3NfQVRGd1g2LUNMZ0ZXSHZGNGNjcmZYcVYtZmFVUDZmcXlaSTFnSnJmWmhIWFpsdGw5X3J5UE9fLWNOd1hKYnRYSkp6ODZrSUtyMVJtbmpQeWJzN193?oc=5",
-          "published_at": "2026-11-12T01:28:40+00:00"
+          "title": "Charles Barkley pinpoints Spurs as NBA title favorites after Thunder’s injury bug - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNcENqUVVyYnp5OFZCOVJEN0YyYnBoS1ZXTGgxbVFXdzFWcXVFQWlwbmluZVlnZkVfUUFpRnE3aG5DbVJScXNyWEltN0lOanFuVzlMb1l4NFktQVRlVXB3SlYzcXdDanpXeFBseG9uc1owUWZQVTltTWtXbEtNUFEzcXdJUjdKMDRyY1hsRw?oc=5",
+          "published_at": "2026-11-12T08:23:29+00:00"
         },
         {
-          "title": "Adem Bona (neck) remains out for Thursday - FantasyPros",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNaHQ4emRjaWVjVlBxajhZbjlVWUt0WkJhR2xzNHBHMEwzTzFpemVkZ1VvU1RJMy16b1d6WGt4ZFAwS29ocnUyT0FZaGVXaW5zYV81RDQ3eVBWNllPZkY4TFdfMERGSnpzVmYtdE9YNExiUXZZaFlOUWtwNWdiLVg1YlcxQWJzYTBSZXZv0gGQAUFVX3lxTE80Tk9EYzdNczd1SGRSZnZWcGZIWnZaX0Y0S3FuRGluaWZxWW9YT3QyalJXYWl6eERfQk1QU2FXdTctYUdrZEtwcjl1Y0pmQ19IdGRrMnVxR3dzWE9kcjRUaDJDWlpRcG0xdkpPSndLSEFkbmIyNy1RdGhOTF96VGticDJUNFJLWFc3dDdnZVJyQQ?oc=5",
-          "published_at": "2026-11-11T22:43:46+00:00"
+          "title": "Austin Reaves exits with heel injury as banged-up Lakers win 7th straight - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYzdFb2lnb0k1UDVDUE5zZ0Q0am0wOWNQU0tYVWZjMW9rNlRieDJGcVNZMVpDTVhhT3E1cjNsWWZlM1RydWNjaHlzLUljUGlmcTFkUlgyNkZ2cXlVRGFIaDVZR0hUZWhBcFJIdG80N3pvWDFtTllzYkcwSFhWYnFnUEdEMHByNEQ3d09wVG5wNnFzSjZreTlsbA?oc=5",
+          "published_at": "2026-11-12T05:31:00+00:00"
         },
         {
-          "title": "Is Caleb Wilson playing tonight? Bulls vs. Spurs injury report - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPOEJHdnhOcUp1NWVxUUhFZk5GNnA3SnZvekhFN0NDdWhfb0szbXdwcGV2SmVSRmdid0o5Rk9MMmN1TmVkSlhUbjMzMjZfZnV0OEItLVE4Q0JaaXZKRjBydEd4QjBqRkx5X1VmVE84MDd2OTBUWjh0UmF1ajVfYlZEOWpGeG9RakFJSGpF?oc=5",
-          "published_at": "2026-11-11T19:46:13+00:00"
+          "title": "NBA Roundup: Doncic injury scare, Wemby, Jokic, Wagner power wins - Eurohoops",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQQ2lMM1YzTWJJUERLSWtEaEVjaTNtLUd6TVVLcGdjUmwtVE1KOHE5S2RxY2Z1X3Y0R0Frd25vWHZLQXZQVDk4dVZWVllQYUpCcXdGdHV3d1RYQUtnSlo3OVlmaWdqcEkxVEZYUTVaUnRzX3dfT3ZjbmNGeDdLTzNZT21KdnlxR1pLQnJ1dTFPY3BtV3hOUzBFc19NWlJhLU5DWFNhNkluQVpvMDkwU0plSlBwSHpCTEU3WEZkbk13?oc=5",
+          "published_at": "2026-11-12T07:27:00+00:00"
         },
         {
-          "title": "Tarik Biberović (heel) out Thursday vs. Minnesota - NBC Sports",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNRHpEbVBNYjNXeEJlVFlKdXhja3J0NkRLS2oyV3JuaU85V0s2N2wzeGNzdTVHT3FEdlNEek9EeW55T05LS25UTi1BOHYyalR4TWFET2xkY0VieE1PN3VqQVJGeG40cFlveTgwdkN1X3BuTGhmYlpDd05QOTJpNGJZR1RhUnNQaDA1bTdwaGFwS0owdHR6YWVrTlN6UUM0MFNNc2RybXBEbTlWR2ZiTC1fVlpJMWw?oc=5",
-          "published_at": "2026-11-11T23:27:47+00:00"
+          "title": "Lakers' Austin Reaves to undergo medical imaging after injuring heel - NBA.com",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4zNWJzVkxmUnQwMmxhRUhMMGY2T1ZSYkFHQWFGX0F5c3NodVdZYVp0QXpiQlhTZ3g3WkhaR2loa3hHVkFHd2h2cjFmUVkyeGFjdkhJcEZqNnRiSEZtYndwSnZyV3IzbWRj?oc=5",
+          "published_at": "2026-11-12T07:51:46+00:00"
         },
         {
-          "title": "Aaron Nesmith Injury: Won't return Wednesday - RotoWire",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOaWZVSXdlTG9wdUlCY095eFV2R0RVWmtaNVIzS1VTdTByUjc3akZ0cG04Wk81cFhwUE10eVhma3l6OFhkNHZRWl84RHJsUF9xa25vQzB4c254cnFvWktkcDJkV1o2Mm1ac3ZNZ1JBYUxYX3NkM3cyN2k4VV9MdmZBb2RJNTN3aTF2a2pzUUtBVERlVnpyV1J1TW42NA?oc=5",
-          "published_at": "2026-11-12T01:59:37+00:00"
+          "title": "Luka Dončić 'good' after injury scare; Austin Reaves slated for imaging after injuring heel vs. Bucks - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQdzVnUWJKYkZTX19nWlJLeXhvQjFWTThWeElrZTR2N2lhQjJkdXVJTDRNUG5LLXhTSHFwWURNZ1p6REgzMmgyYkNGUThiMXFqZmNOS0tzVm1XZm02OFluamJkclRZaEJpVkpubjVEaWJEU1ZkUzU1MlpkNmdQUUhnTTBWbnZURXdCOW5WNEZHeEp4VEg0ZThjRGxYQTBVakJxTC1kRlUzRlZaNWlfVDlKQnhxdWR4Z01tZ0FBMVFENVo1WnZMdjR3dEZDY3BybVl6N0kxUXloeENVNldxRlUzVlJLRktWaU1oVU85VUQ5NzdqZTl6bGc?oc=5",
+          "published_at": "2026-11-12T04:27:00+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -58,9 +58,14 @@
           "published_at": "2026-11-11T22:57:08+00:00"
         },
         {
-          "title": "Latest NFL Odds and Picks Factoring in New Weather Forecasts for Week 10 Schedule - Bleacher Report",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQVkdjMVlWOXZaalBiY2xsU0Z0MmpMRmtmN2xnWU5mNXRuUnZNMlIwRVZSaFY5cnhoNWRyb3JzSHlhaktBbjIxVWhnc1J2ZWZxbkhVOXhLNHdTcTJkdFBTSUVCdzZQUzRFd1hLR3I5UnlrQW9pTlJtUFU2R2VZR2VGZFh6aEpqaGhjQzVRUXBpN0lSSnRuTDRwX0d6Y1QwZC04R3k0VlJmZXdrMDI1ZElrMXVPbnJ3cktYcmo4?oc=5",
-          "published_at": "2026-11-11T12:20:43+00:00"
+          "title": "Wife of Former NFL Quarterback Richard Todd Arrested After Allegedly Attacking Him with Pliers - People.com",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQVVZEekpib0pqU1hZWG54X2w4WlU5WldoaDNKclAwS2J1a0JZN1kxZEQ3R0xydmY1YmtsemZYR0x6SnV0bV9oQ0xuUFZzaWpHUkh4WFVwQnlLZ3JXZV9QUlJRX05JS3luOE1hOER0Q201bnhiZHFJX0ZvWGY0UW50dVBJalJ0T0k5am9iLUU2LW95U0VYRDZsME9ZWUhyczA4R3VVMlh0akxjdDlQZGppLWFrTDhTN0w4akxKdXprYw?oc=5",
+          "published_at": "2026-11-12T01:20:27+00:00"
+        },
+        {
+          "title": "Gutierrez: Raiders long-term plan comes to fruition with insertion of Fernando Mendoza at quarterback - Raiders.com",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObmswYlMtN043em5GU3h4MS1mcGl4QlVWa28xZmlrOEsxQnN6elVkanJWc3dpdUZuYV9JeTkyWUhFeWZLUWNkTURaRk53eWM0VE9CbnlRajNYczJRellnb0N2am9zZlFucFhQVS00eWxENnRKdm5ISkhNaHFucXpqajE4cW9GUUpvVGRlaEtOSlVLQjJicTZhZHkteTN2VVZTUlBxWW5mXzRiZWhVRnh2MTAxbHJxV2cxSXdXX0lleDRSV285bGZXWQ?oc=5",
+          "published_at": "2026-11-12T01:11:06+00:00"
         },
         {
           "title": "Former NFL quarterback’s wife allegedly attacks him with pliers - Cleveland.com",
@@ -68,29 +73,24 @@
           "published_at": "2026-11-12T01:48:00+00:00"
         },
         {
+          "title": "Latest NFL Odds and Picks Factoring in New Weather Forecasts for Week 10 Schedule - Bleacher Report",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQVkdjMVlWOXZaalBiY2xsU0Z0MmpMRmtmN2xnWU5mNXRuUnZNMlIwRVZSaFY5cnhoNWRyb3JzSHlhaktBbjIxVWhnc1J2ZWZxbkhVOXhLNHdTcTJkdFBTSUVCdzZQUzRFd1hLR3I5UnlrQW9pTlJtUFU2R2VZR2VGZFh6aEpqaGhjQzVRUXBpN0lSSnRuTDRwX0d6Y1QwZC04R3k0VlJmZXdrMDI1ZElrMXVPbnJ3cktYcmo4?oc=5",
+          "published_at": "2026-11-11T12:20:43+00:00"
+        },
+        {
           "title": "Former Alabama and NFL quarterback allegedly attacked by wife with pliers, records state - AL.com",
           "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQM3hwcVhYU3VzSlJoVDhUUU1OMDZIYk5VSV9DWFNuQUtOdzlNQjRseEZiR1NrdXlVY21SdlFuRDIzWUxtQm9maHpGZzhLbVJXTFBwTTlsbHpfSnBySXRsU19RZFlHNFpMQmw1bjRkdFRNNVEzUEZEak05bEFwbWlHYW91Y1lQaTFBNjdDanZoU2pYeDlDM2lzTk42Y1pEZDVzSkFVcTNJNXVzQ3JqaExqOF9fYnlGY1JtQkY0RmpWWlNUUdIB1gFBVV95cUxOeEtvSHdNREgwRTZGR2lhYWNqOGZsdnRMQlZob0Y1VGFQZ0xJWnItZnM4YWZ4eXFTbTZKbnV4QVN1aXlfMHlEalRDdkl2SklxRjJXT0lqR3JQQmJ0bEZkcjdDcTl5RHB6X1MyTTdkUXp5LWNEUVpkSEVpRnBjYUZBZEZKVzBIRUZTQ3ZweHRILWJud2tBZ3FSY29ZRnJRYTZDdGpTdzljZVo1RU5tTE5aYnJCSG81ZjE2ZHVhWG01ZE5XYTJlVjNyYjVKanZRMjljeE9FcGxR?oc=5",
           "published_at": "2026-11-11T14:16:00+00:00"
         },
         {
-          "title": "Dolphins quarterback Malik Willis goes on injured reserve ahead of Week 10 game against the Colts - IndyStar",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOdFJJemxJWUhZNEN4aDZBdXNpdkt5VE15YjMzaVR5bklIOUhDSmNCQlJ6U3RSWGdzNHRuZkdwOE9PdTlfX2VqbUlVa0RJOUtkZ1VpUEVTVVktNHNRaHVLRVd3Qm9GZVVmbGpaMlVaZUpMSHRyck5SNzR5YTRqTUNIQjg1Y0syZDg1aFlEbFhJaE5kNGZHN0FwZ3BaZUp3dEZ1Y0NmV1pMank2ZkdMMS1TTkdocFlTUXFJZnhQcF9ZMURFS2Q1R1hHMW01anl0UEMw?oc=5",
-          "published_at": "2026-11-11T21:48:00+00:00"
+          "title": "Commanders-Giants Weather Forecast: Will Rain Clear Before Kickoff? - Sports Illustrated",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNU01RcHJsZ2s3YTIyM2R6TUxUUjNoRFRpbGlQdWM2R3JhTWVXNmZ1UEhXYm12QjNpUXc3aG15LUNwUDZOZE1uYTNUcTJ3dUdCcTN3MWNHeUtPS1NmTjdzeS1uWElyZ3pSMDMwS3VVelBGTTdBWWZwNW9WTGxRbE5yTHJ4alhHOVpE?oc=5",
+          "published_at": "2026-11-11T20:10:28+00:00"
         },
         {
-          "title": "Wife of Former NFL Quarterback Richard Todd Arrested After Allegedly Attacking Him with Pliers - People.com",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQVVZEekpib0pqU1hZWG54X2w4WlU5WldoaDNKclAwS2J1a0JZN1kxZEQ3R0xydmY1YmtsemZYR0x6SnV0bV9oQ0xuUFZzaWpHUkh4WFVwQnlLZ3JXZV9QUlJRX05JS3luOE1hOER0Q201bnhiZHFJX0ZvWGY0UW50dVBJalJ0T0k5am9iLUU2LW95U0VYRDZsME9ZWUhyczA4R3VVMlh0akxjdDlQZGppLWFrTDhTN0w4akxKdXprYw?oc=5",
-          "published_at": "2026-11-12T01:20:27+00:00"
-        },
-        {
-          "title": "2026 NFL Quarterback Rankings: Week 8 - PFF",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE02NTVfLXItbHhidS1md21mWHNZN1NVN2RPbDBoN2dYWU5mdjNPRWg4NElTcll3ODdmNU1VbTJXT0JjY3ZWMlB3a3ZyN3VkWUZEQVBqWGUwU2NIdkdLZmc?oc=5",
-          "published_at": "2026-11-11T11:15:00+00:00"
-        },
-        {
-          "title": "2026 NFL Week 10 Injury Report: Latest Injuries, Practice Updates and Player Statuses - Sports Injury Central",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5wc3A4dk1KamM0SGI0eExVOExoX1FlaWFpekZkckJSRTNucFVERkM4dTBiTzZaTXY3OG80aFZDRjBzQVJvbzlKVHZfZDFkLVRuX1VQa0hpMGEyaW8wOVRDcmhYYWNuNjQ?oc=5",
-          "published_at": "2026-11-11T21:31:26+00:00"
+          "title": "'The NFL Report' provides an injury update on Los Angeles Rams wide receiver Puka Nacua - NFL.com",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQRDBZMllHYmxZNi1pTEs4Z0JZd0dVVVNxYmNhdWZuZzN5TXdQZ1FZYVNoNUIzTTVhTGFOaXVsanhnc0ZraGJXdE9NT2RMaXBkanhldHlwR1c1UXFWeVFXVE1MTzJ5RmtPU0c1RkJiMGRIcVlkbHBYZVJxUldfM0xiTjl4bFZmWGJv?oc=5",
+          "published_at": "2026-11-12T00:32:21+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -99,9 +99,19 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
+          "title": "AHL notebook: Top goalie prospects this season - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1DYUY1Tl80Wm50MTNrWFNfeUxvQ2IwMUFQYWJjTHZJQ19GUnljUHlaSktxZWIyRlhkSmJUYmp6eWVMNGpQanNqSmxiS3c2bklqLTNiUkt4WkJPT2lDV3ljYkNvZzY2cmx1eF9qUmhJU3p5N3RmTW9ZVzlR?oc=5",
+          "published_at": "2026-11-12T06:33:36+00:00"
+        },
+        {
           "title": "PREVIEW: Ducks Seek Sixth Straight Win as Terry Returns to Lineup Against Predators | Anaheim Ducks - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbkdfa3FsR3hOU1pKaXVvaG96aGxrMFdRZUV1Rl9pbmtsVkZPRHlhN3otb3JKWXV4SEdwbVR0OFVJMjNYWEhseTFwT3RLZXBMVGFGOU5VV1phZTlOWXE0aC1qRGh4Vkh4T2IwZDFULWR5U2JIZ21ObTZyV29pRVBlQU1wMEZnUUFEb1lsZmlTbTdOd0J3ZTk2VXZWdGUzUmJsdVI4bHFZWXNWbW1mRVNYaks2Zw?oc=5",
-          "published_at": "2026-11-11T21:01:08+00:00"
+          "published_at": "2026-11-11T22:06:59+00:00"
+        },
+        {
+          "title": "Starting Lineup Read - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8xZTRfeFJuRUdVNjBTbVRZbFBZblFtVk1XMUlaNmpwa0xXYWN1UEZ3eXE5eGRkSms2Z2tpbjBrY2tpcjIyMUMxQV9EZG54ck1Gb2JVbFRVb1VJenlOUVp5ZGdxV3d2MTlHTG0wRTNhUVR2NDRhUnc?oc=5",
+          "published_at": "2026-11-12T01:44:59+00:00"
         },
         {
           "title": "Mammoth at Golden Knights projected lineups - NHL.com",
@@ -109,19 +119,9 @@
           "published_at": "2026-11-11T20:38:04+00:00"
         },
         {
-          "title": "Starting Lineup Read - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8xZTRfeFJuRUdVNjBTbVRZbFBZblFtVk1XMUlaNmpwa0xXYWN1UEZ3eXE5eGRkSms2Z2tpbjBrY2tpcjIyMUMxQV9EZG54ck1Gb2JVbFRVb1VJenlOUVp5ZGdxV3d2MTlHTG0wRTNhUVR2NDRhUnc?oc=5",
-          "published_at": "2026-11-12T01:41:15+00:00"
-        },
-        {
-          "title": "Sabres vs. Lightning | How to watch, lineup notes, and storylines - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQc0RNN09KbTRzbXRVclJyUUlCWXppUXlBeFZyVmFXdkVYUnJHRm5OWnVLRkIzM2lQWGZ4RlNfclFrQzlfYWtBamlId2ZyUjk5WDdYNy01d3pMZ0FEUXdWX3luUnFCNzRQVjZ4U0FUNkV1TXZUNkdTdjFDZ2F0T1EyQmQtTFJzVW9SOFJVZ1dYRQ?oc=5",
-          "published_at": "2026-11-11T13:32:25+00:00"
-        },
-        {
-          "title": "Rangers at Flames projected lineups - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPU2tPZ3VyYmhJczdUcmFSOFFtOFRKY3pIbDNiTlhWcjF1WHV0RG8zbkhoZkNYVkdWX2Z3Qm5uWXVLSUdyRFg3Q2dTZ3BjajFIZ1lsZER3NllOUjVIVkhmZHk1U01kbDhZaHpsNjZ1cU5IVkttZk92WjctVlZBMlNXSS1Ed1NJNWk3RTh4dVVmZw?oc=5",
-          "published_at": "2026-11-11T18:28:42+00:00"
+          "title": "Predators at Ducks projected lineups - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQZWFvZmk0aHRQVlhwaWtlYVdWREgxSDcyMG02ODZBTHdoczVYaU1IdlE2eFpNN3hDX1lfSmdsMEVSSFpUUDAyOW1YeHhIT1RJSkp6cXlVZmxyaHNkS0JlbEo2eExOSjVkVGxpaW9xR3JhZXdPWUgyLU9jLUVhNElLcTlKdS1MaXZFRk9mTzhqUjBKdw?oc=5",
+          "published_at": "2026-11-11T20:38:53+00:00"
         },
         {
           "title": "Flyers at Oilers projected lineups - NHL.com",
@@ -129,14 +129,14 @@
           "published_at": "2026-11-11T18:56:48+00:00"
         },
         {
+          "title": "Rangers at Flames projected lineups - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPU2tPZ3VyYmhJczdUcmFSOFFtOFRKY3pIbDNiTlhWcjF1WHV0RG8zbkhoZkNYVkdWX2Z3Qm5uWXVLSUdyRFg3Q2dTZ3BjajFIZ1lsZER3NllOUjVIVkhmZHk1U01kbDhZaHpsNjZ1cU5IVkttZk92WjctVlZBMlNXSS1Ed1NJNWk3RTh4dVVmZw?oc=5",
+          "published_at": "2026-11-11T18:28:42+00:00"
+        },
+        {
           "title": "Projected Lineup - Flames vs. Rangers - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQRjA1Ykc2bHJLV2lmZUY0V0lBeDRjOW9RbHNJNkFfS0hHckdnX0xDQzRCRk5mc28tR1lRck5LTmdKaUc0QXF6MVZLMUJ2X3o1el9SeXJEaUVySms1T0ptc214dHQ3dU5uZDJ6V0VfRnBkX1ZHQTJIQ083X1kyY2xjag?oc=5",
           "published_at": "2026-11-12T00:42:10+00:00"
-        },
-        {
-          "title": "Lightning at Sabres projected lineups - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOYjdXT3ItRnpfUEJMcWxQMDBTT1N0Yjg5UWkzLUFFa09XMTFoTEhuVjBFYmFBOFIycy1lQjhWMlFOSmE1aUlycENVVldCY0dNMHNXSG5ZNUpyMGhTWVdRcGtQb01PV1Q5MkpHeVVDTlJXQXZCYVlnOWpUemxqYXd6OWR3cTBYWDVSOGd4MU4wcUNxVVE?oc=5",
-          "published_at": "2026-11-11T18:25:42+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -150,19 +150,24 @@
           "published_at": "2026-11-12T01:18:48+00:00"
         },
         {
-          "title": "Auburn football vs Mississippi State injury updates: Who was on first SEC report? - Montgomery Advertiser",
-          "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPNnBvRDJucHk4SUZfRzVNcW9Ua3AyUzNpZDlodGo2VmNGR19TdlQyQkZUYjlaVXJleTVocGdCQkF1azRxTElfN0dIczBiTmREdVZCbTBETXAydWJsZGNEQkh2aVJmODhKM29mUGhoczNMOWNqaXlqV2hKVEJHT1FLV3k0LXZLSDV1OXJZY2N3d1laanV4RVpRZDRibG9QSjRJSnRnMnJ0QTVUWF9fU2JlbkktLWQ0SkhVejJpZ1k5MEVsNWJ3TUY1QU5SZTN2akUzck1jcWUwU0l6YmMyR3ZSWE5QenN5cUs2YzRXNHR2NGlfQnM?oc=5",
-          "published_at": "2026-11-12T01:30:06+00:00"
+          "title": "Major injury update for Georgia Football-Missouri game: Why It Really Matters for the Bulldogs - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOR0hGQmRrNWhMUGtoZFlURGJlRWVJcVJYc09fSzlmamI3QVphZXVUSFRDYTl2bVhFYmEyUFhsWE1uaDg0M3U4Ukx0MnBMVF9wTEVzdVpCdUx1aldJZ2dyNERPVVNEOVhCZGRVSWdsOURZbUp3QW9MdmtHcnhKNnRORjBteExpNE1pVHhDWThzTGw?oc=5",
+          "published_at": "2026-11-12T01:28:00+00:00"
         },
         {
-          "title": "Vanderbilt football vs Alabama injury report ahead of SEC game - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWlAyY04zNFNEeWI3YnhzUnVJOWMyUG5Hd0dBZ0xXWEFGX01ZUnloejFOSl9mcWtBVjBTalRtZUt3dTFGLXZMb09mSVNHTzlnSlhBYnQzVmxtRHFfamlZMmdnclk1WEgzWG9aV1dxdWhZbmhCRklFRkZMLVZiOENrd3NSanpUUXI5TTVGbEZ1Yw?oc=5",
+          "title": "Georgia football has a season-low two players on injury report - DawgNation",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPMGtTUmY5bVJqNmlKZHJiQ3FrM0dieFRlWWF5VnlFV2pGMUVobG91M2xMZTM1MGFPenQwVU1BX01IQktNeXlBNHhLTjNNa0pUbnZjMUttOUlKRDU4WVJ0dUN3R3V2M2ZDSHNPbE54UmlsMjQzOHplUmNWY2QtZ2NEQk1UQjF0YVpmLXc1WW1idW56WmJoM3l4WWg3TzNIUjA5aEJrRHRJN3h0SHFUblJtVVgxbmxWMDN3WlI3U0hn?oc=5",
+          "published_at": "2026-11-12T01:13:30+00:00"
+        },
+        {
+          "title": "Josh Hoover not on injury report; RB Turbo Richard, DL Kellan Wyatt out this week - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbGdTRDZsVThIRHJsQzZpMk9lQV9RWGxQTEJONjJZN0NYQnN4b1ZtYXdyZGx6b01uYzN5TFEtZmZqN3A4dkpwTW5wR0NUV0xRY0FOejJLWWFTU0h6elQxOE55d1hYUmZPbG1FZzJqcmJ2Y296bnJQSl9kLVF3d3Z3aFZJX1U3bDAzSm1tSE9XUEplSmJqT29LSXVYWTByQ2gtRlBmYXE0Tk1lY1A3UzRNQW9EMnhJa1dGREIwcDVxQzJVMHc?oc=5",
           "published_at": "2026-11-12T01:47:00+00:00"
         },
         {
-          "title": "Texas Longhorns Remove Multiple Key Starters From First Injury Report vs. LSU - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNV0RPTUktZ1lvSERBbUpicUhCbFZ2MFpKajFjSWlibm0zOS1OTVRGT05iSDIwSmU2dkdWa2FDcWpwS1F1am0zY1ZFYm5GZ01EQjZJRXpkRUxXQWxLSmdXY1RHQUhhTXNUdGpSYWRReHhEQkEtWkxCMXhoNnVqaVphMHJSWXpkUnRPeUdNT0VFOTB5M1l1Y2lJS1pSUnlHeTZRMHdhSlFsazJvbHk0UmhJeDR2X1RaSUlrblE?oc=5",
-          "published_at": "2026-11-12T01:40:48+00:00"
+          "title": "Trinidad Chambliss among Ole Miss football stars on injury report for Oklahoma game - The Clarion-Ledger",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNajFibzZ3N1BRVHU1dTZncU5oSVJ5a2JqajE4N0NOaktnR0RFdTBNSXFSNDNsbFdIWFltVm1UMXJTNWx6R2RqMmlrQnVtVUg4ajlWMXp3TUY5Z3g1UlpoelFZbE1MSmoxYi1JMW5lbVZCN2laWW5ZdGRVbFhBQjNWTEdmdW5xRkc5RkJkQkE2Ni1JbmUyWFZ6a0hKY04yX0k4TnpSVXNzRDJNUXd5QVRuQ2otTTFYTVg5WlBaVzBWQ2t2azdMc0dEUTNGS19zYjFYNUdQSE94d3psNHM?oc=5",
+          "published_at": "2026-11-12T01:32:00+00:00"
         },
         {
           "title": "Missouri football injury updates: Official SEC report Wednesday before Georgia - Columbia Daily Tribune",
@@ -170,19 +175,14 @@
           "published_at": "2026-11-12T01:25:00+00:00"
         },
         {
-          "title": "No new Tennessee football injuries on SEC report for Texas A&M game - Knoxville News Sentinel",
-          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQMFRoLXZvNVNkaXpjeXRXRC0ybUd4MVNySnFiOGZtenJHaVU1d0NoLU9CdDgySEw4S3hJR0hMbjFfdjhSYU1rQXhGUENzLVV3NHpCR01NTFpmOEUzTVY3RHJGUG56UWthdFBRODFwSHE0MUNCcWlod1dLSXhsU3NUOHFscV90bVhOZ2NZd1VyTExZVThCOU9QdkdVa1dQb1FXYXNMTU1wanhOVk5KalpxSWY1WFRCT1dUeW5oaFd1bEV4TFJRUlYyTTdlVUYxX3VzWjJsTEY2eVhhN0FsZDZmRQ?oc=5",
-          "published_at": "2026-11-12T01:18:00+00:00"
+          "title": "Texas Longhorns Remove Multiple Key Starters From First Injury Report vs. LSU - Sports Illustrated",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNV0RPTUktZ1lvSERBbUpicUhCbFZ2MFpKajFjSWlibm0zOS1OTVRGT05iSDIwSmU2dkdWa2FDcWpwS1F1am0zY1ZFYm5GZ01EQjZJRXpkRUxXQWxLSmdXY1RHQUhhTXNUdGpSYWRReHhEQkEtWkxCMXhoNnVqaVphMHJSWXpkUnRPeUdNT0VFOTB5M1l1Y2lJS1pSUnlHeTZRMHdhSlFsazJvbHk0UmhJeDR2X1RaSUlrblE?oc=5",
+          "published_at": "2026-11-12T01:40:48+00:00"
         },
         {
-          "title": "Georgia football has a season-low two players on injury report - DawgNation",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPMGtTUmY5bVJqNmlKZHJiQ3FrM0dieFRlWWF5VnlFV2pGMUVobG91M2xMZTM1MGFPenQwVU1BX01IQktNeXlBNHhLTjNNa0pUbnZjMUttOUlKRDU4WVJ0dUN3R3V2M2ZDSHNPbE54UmlsMjQzOHplUmNWY2QtZ2NEQk1UQjF0YVpmLXc1WW1idW56WmJoM3l4WWg3TzNIUjA5aEJrRHRJN3h0SHFUblJtVVgxbmxWMDN3WlI3U0hn?oc=5",
-          "published_at": "2026-11-12T01:16:45+00:00"
-        },
-        {
-          "title": "LSU football injury report | Could LSU get back a key defensive end? - The Daily Advertiser | Lafayette, Louisiana",
-          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQRDRtOTRwd2dqeThJTUQ5OUhDeVdNMktGU29EMHU2QndmRDNSS01JTjduNXgwODh5QmhtS0tabUtJd3FOckNMTHMwZmV4STFRYS1jZDVKd0tVRURGNFBlYjVnQkpkN3RmLWRSQ2JmRUZGVHRDcDgxbUUxVEo5TWdIUHd3M1NyUFRpVDRiMVRLZGZVM2Q2Z1ZzdVZLVWMxMk9xZWRyM29qOTNhYm8tZVFCSHRfTHBfbkQ2bm1xREs0QUtHMk0xWmtxSFVuSWxXTXg4Z0dIRWhmdw?oc=5",
-          "published_at": "2026-11-12T01:17:00+00:00"
+          "title": "Running backs, receivers headline Texas Tech football's injury report for Oklahoma State - Lubbock Avalanche-Journal",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPMWZDS0Y5Y0xkUDJTSXBkeGtaNVJnWFFabm1IVVJONk1lVDFpV2VmN1BZMF9aRFZ6VjEwSnBnVTlBbmk3MEY5dzR4Tko1aG43WUNkdlE4eUdwZHRfM1dxWDZkSFlZOU4wWkRlcXRwNG04WnBQVEU1OG1MUHdVamRhTHpxYjZlMDREcnNMdE1ucWRnWWhsd3ZBRVNudFU0RUx6a2Via3FkXzNKNVdCUy0wTkZ6dE11RXNVZUtkWHk3Ri1WcW52TjRid1Vtb2REM2xFbm1WdFBQRUx2Ty1yckpiNXhoWDU?oc=5",
+          "published_at": "2026-11-12T03:12:00+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -190,6 +190,11 @@
     "tennis": {
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
+        {
+          "title": "“What Happened To Carlos Alcaraz?” – Fans Worried About Injury Concern At ATP Finals After Spotting Spaniard’s Precautionary Measure - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPNEVTd0FzbjBVLVI4UlJlZDBEa3RpNjdhcWMwanlJTUtpdUFoRXh2NW5CSkdNMEIwSGdRM3VXODRvTlMta21mYzctZDdvNmNrcjBRVkdoWDhJak9ZNmhZZERJOGpyaUVEd0VBaUt6aGlNNm1TZVQtSG5pWm0xOGNzajRLV0FkdjRXU2RYb05R?oc=5",
+          "published_at": "2026-11-12T10:18:58+00:00"
+        },
         {
           "title": "PTPA Criticizes Tennis Calendar Following Elena Rybakina’s WTA Finals Withdrawal - The Astana Times",
           "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQcE1tY1B5eUlUTEtxT0tGbDZjM2ZfVWl0cTZ0ejFVN0NUSTNoM01rV3Nhb1BlMlZJOVBtTjQzZmtqRkpLMThxM1ZnNllxVVh6TXhnR3BkbTV5WmJSMURjZDZOY0dDVlRGbnBRYkI0dUwtUjRmcVVwQ0gzSHIxYVBoYzFKYnZYWTVCWWZ2T1pjd2ZhWUxfbnkwZC1OeXdwMm5vdy1LTEpCZHVJYXlqZTVtY1dR?oc=5",
