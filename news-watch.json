@@ -1,50 +1,50 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-11-25T02:24:44.704503+00:00",
+  "checked_at_utc": "2026-11-25T12:49:38.365681+00:00",
   "method": "Google News RSS headline screening (unverified)",
   "sports": {
     "nba": {
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
-          "title": "NBA Injury Update: Latest news on Tyrese Haliburton, Jalen Duren, Donte DiVincenzo - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNU1otaXp6ZmNYWTM0aTE5S2hSbElhV0pRSGdzYnpOUzRtT21VTm9XMFhIYmpTQVRQSUN5dkY1YVNva2VWaFhUMEV6VHA2NTFUbnRabUszWWduYkh2UFM5QlpNSTdGcFZwRnZiM0RnVlhFUkh1ekdQOHMwRmMyZWU2LWZYeUdCTVVlNVE?oc=5",
-          "published_at": "2026-11-24T23:03:05+00:00"
-        },
-        {
           "title": "Mark Daigneault provides NBA injury update on Aday Mara - OKC Thunder Wire",
           "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOZ0dyTURDaHlORlBWWVh6dl90RnFLMUJUa05ELUpFUEtUMUVvSEJCZUg1TFJWRTV1dU1CUWRQQVBzT183aTFlRHpkckZ0YV90MW5HVjZpVEROci1ja0FUazJ4SjNDZzFkY1Y3ZjhrRzM1NW81OU9NYmRDX3RFUTdjbElicGo3Smc5Wk9xUVVXbngtVmZvRG0wOW1SS0d2ak8wRGkybDRlN25JbFdXOUx1Y29jUjEybTY0cS1XbDVNZ2R3OFJHaHJRVkctX0k1MVU2VjFudFZGRQ?oc=5",
           "published_at": "2026-11-24T19:00:00+00:00"
         },
         {
-          "title": "Jalen Duren to begin rehab assignment in next step to return from injury - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQMm9iaFhXZjhlQkZjSXJqUHlSOHotdFg2VTRzb0RPaXNtVTJzY29mZDlTSEVoUnQ5WFVFM3RES1hRUWRGSU9wS0F2WGJXeFFwR3VVeTNEYWItbWVpS2pVRGI4M0NBZVd3MUd6UmxzdFBQT19JeXliX1dLMDFsYWF1dFAyVjM1NTVaOUlVR3NEQzVJZlhVRUFOQjlsN2pMY1B1X0o4RGlR?oc=5",
-          "published_at": "2026-11-24T23:24:00+00:00"
+          "title": "NBA Injury Update: Latest news on Tyrese Haliburton, Jalen Duren, Donte DiVincenzo - NBC Sports",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPaWdreXFGVm8tcVVQNVFrTlBjVFVJMmRPUGVQQWpnVDQ4Yk15RkIwWHZMUFlvTXllSEFXM04wLV9fSlFjcUpwNnhRTkVSeWlOLWJjMlQ0dlhfQTdRekprQTYwcTJEOVhiQ3ZpWjB6REcwVEotV0pQNGhqWDBJN1d6RFZnQUNxenY3M2NQSngyalU3bDJ3VzRUQXJham9ScG81eXM1c3BRTkRHRHI3Vl9mQVRwLXk?oc=5",
+          "published_at": "2026-11-24T23:04:45+00:00"
         },
         {
           "title": "Joel Embiid doubtful for Sixers’ NBA Cup showdown vs. Miami Heat - Liberty Ballers",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSko5TmdZenI4VWJpN013eTZZYnI4WnRhWmxZUGZabzhDaW16Y1ctQTJqR1lfdDA3dUoxZmh6MWttR1AwNWtYR3BxZndrMFBTNzlObmoydUUyeUNBVWwta0gxd0JmOFNSUTlNSU56X2FwQ0dJd2NaYVRFWldCWlZvd1Z5ZHpFVC1qSC1MY2V0YTZFc2doaVNXeFpPWVJnTGU4OXA4eXZ4dGdMbVU5UkhQR3RETFZwQ0U?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOdzQzbGxBVHYwcFRlaVYwVnlfVDMxSjYtS0NlYU5yMnhvUWRqaDVUNnJkaTd3STN6UXdZS0p2N09RS0VzNFJnbHRicmtDdGlnOEx3NG5tVkRDWGlaUTlJeWlNamk5Z2xtUDJwWG9WQUxXQXd0aWF5SnI5VlpSWlVDdmZUdnpfTnlORmhpOU5sUHlSLWk1SnQxNi1JajVBR0VVNnVUeTNnSmswbUt1cWJaRzVyekxSSEx5c1RKSm1MNkJvaEFjNXZ0MFczMGM5NHZTU25IVl9LWU9Gc0hEa003eUloS1BnRU0?oc=5",
           "published_at": "2026-11-24T22:34:21+00:00"
         },
         {
-          "title": "Cade Cunningham (knee) downgraded to out Tuesday - NBC Sports",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQTk5XVWN3ME9EbndfUERwVjAzaVZPa2d0M3hzUDUycmNXc2Qyd0Vzakk3VmJiZ3JBRG1EOGFyZUdFcE54THNiY2poalVfY01NM3FOVUhVM19ZU1psNHJtRnI4T1hTOHRQamVmY3N0SHVvME5ZTVU2b3hJN0E2U3JiX3k5a0VjalhSWTNpeFYtZldxb25RMng0RGNaRl8zaVZsN2dBY3JsaV9OcXpzdk50bXI0SFc?oc=5",
-          "published_at": "2026-11-25T00:47:45+00:00"
+          "title": "What channel is Thunder vs Timberwolves on TV tonight? Time, NBA schedule, injury report - The Oklahoman",
+          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNbkRmQVVrRzZya2F3S3U3dy1kZVY5aEQ0WnkwRV9iWkRLSjFlalFaMDUza0lneHdZXzk2N2FGaTdlMVBROHprNVZCRHpZR1EycTJpWUJRMl81WTRId1pwN09EeVllUFpPT2JzM3ZlOHdhMzNEeVhqVWR1a0xPX3FlYVZVT0ZYdThGMzBYWXlLZjI0cW9JU25qcl96ejlkNnhLdWFacUlwVVFoZU1sNm9sVE1NS214cWt0TWo5YUttRV9ldVZTTFlobnlDMEZLcUxUVjladmVfNFVjYWVHNTE4LVFFZFJUNVVVUXBfVnJR?oc=5",
+          "published_at": "2026-11-25T11:06:00+00:00"
         },
         {
-          "title": "Detroit Pistons Vs. Orlando Magic Injury Report: Jalen Duren Update - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOMlQxdDRTSHk3YWZRcHRQMi1HNkU0VjlYa05qQ1pyZ01CQzE3N0RhWGd4WWFiRkZhazluNTZsUHM1M1lBS0VNb3RUWW96cUJMZ0pRLWVoeDluT3kySjhraUo0LUMzVDh6MTdDa2t3ZW5oOVAzY24ybVpLbl9xeWNqZ0pBalkwS0l5U1dDZ2hn?oc=5",
-          "published_at": "2026-11-24T22:00:29+00:00"
+          "title": "Are Cade Cunningham and Jalen Duren playing tonight? Full NBA injury report for Pistons vs. Magic - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxORV83MVJCTmFaYVhxRlJZOU02OEpEcTZYeXBQeWhVRTNUUG9kTHliZUdYNEJuZmt1cV8yX2VsLUpDbUkxaEl6bXVObFhBalZ6dl9MM3pnZTZQZkhnZHIySDJLNFQ2WVh4WVNpTllhd2tUMzBoeDZRSHpxUzdIRFl3ODhOTVNsaml0MGQzbg?oc=5",
+          "published_at": "2026-11-24T15:19:24+00:00"
+        },
+        {
+          "title": "Kawhi Leonard begins on-court workouts, out another week - NBA.com",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNVTZvZy1hcDZHZm5PcHRFTjB1Y243UXdDOW44MU5FUm5sNlNDOEstbERfNTd5Rk5WZ0xkOWNCdC1VVUhoRmVJb1lHUW43X0YxanU1NC1rMjV6d0xaVFZrM1k3c1NXRHBaeGNuWFpKMEV2X0NmVlZhaThOS3RoaDlOWWJGZ3o3VGg1UFNOYUFCMzQyQVE?oc=5",
+          "published_at": "2026-11-25T03:52:20+00:00"
+        },
+        {
+          "title": "Cade Cunningham injury dulls hope from Jalen Duren's looming return - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNMHhKbnM2cTdVYmZwQkZ6Sk14S0U4ZUtXZHVsYVRfLVZHRTlwNmpWZWcySUYwQmlDc0FfTG84ekJEN1FZVnZzaFZZenhhdHZ5aGVYOTlrOWRMVVcwVl93U0NTYUJzV09nRWlhRUtLaEJaeFZEZXRTY2cwZU05OWZnNGZDVC1wTHg4TzdYaEpsZw?oc=5",
+          "published_at": "2026-11-25T10:10:21+00:00"
         },
         {
           "title": "Pistons’ Jalen Duren’s return from injury ‘imminent’ after Detroit’s latest G-League move - Yahoo Sports",
           "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxObUQxaTRyZjNqMjg0Y1k1ZXdPYVU3UnUza1FGUi1xVHVQU1F3NGxIMnVIUGdaYUczOGNTNmZ3N3hYb2RadlRmNTdKZUVhWTFOTTJldWhaajhfejNIOXdJSkcxc3pRN3pEWnlrcE9JTzlMUlRTQTRIVHVqazNEN3hfLVRibWY2X0lvRWc?oc=5",
           "published_at": "2026-11-24T19:36:09+00:00"
-        },
-        {
-          "title": "Are injuries on the rise? What the league is monitoring to start 2026-27 - NBA.com",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBoR3Iwc0l5dFNVZmQtSWJka1U4QktlS3ZVcW9NeG1pb2MzZWpwaWVEOEJyaFhJTmpvYlNMN3Jia05lV2UtN1NiWDIzYnNBV04wTkYtTDRoVkVHWnFoQ25PanJQVmJRd0owRjVXbA?oc=5",
-          "published_at": "2026-11-24T15:00:43+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -58,39 +58,39 @@
           "published_at": "2026-11-24T22:57:01+00:00"
         },
         {
+          "title": "Aaron Rodgers will be inactive for Steelers Friday vs. Broncos; Mason Rudolph to start - NFL.com",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOQ3V6TlJlb093VjNNRXhER3Ffb09RSUxOeTA2QThsV2dFNS1zVEItT0tnWWVsXzFYVGZwME1VdDVVQUI1VFhZS3h0MnU1Z2J0NVIwNzlBXzYtM0RWZWNkM0VjQnlYY1c3WlRhUkVuYXlEQmRiNkp6M3NjV0ctTEtzT2NwYnBuS3h4MEdROXZGOFEta0ZRS0phaDVGUHBfUk1QZXBrUXZQMkUtaXJ3SXc?oc=5",
+          "published_at": "2026-11-25T04:23:19+00:00"
+        },
+        {
           "title": "NFL Week 12 Injury Report: Drake Maye's updated timeline, Dalton Kincaid returns to practice, and more - NBC Sports",
           "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQRERXLVoybldBZnE2MUUyVVh4OE5GYUZ1QVFQbHNMVVpVV0VQYWxVcFd0c183NVZtVzVCd3JIOXltbzE2alh3bVd5Z2h0UnhjM2tUMGVMeVhlTHVhQmRaSHg0ZVc1SjhrVnBLZUxiUkJkeF9ucmhudlVjOWFUYkFpdjdjXzRXYnJZVXJlaTB4Q01Dd3dNZ1RjVl9IeGt4OGRTZkFLLVkwY01OY3JJdXhjbDlQalBoVHlNM05CRVJEWU54aEVKSDdEdWpEYWRiUElYTXFxX1Bzd2JqTHZCaDc4?oc=5",
           "published_at": "2026-11-24T20:27:39+00:00"
         },
         {
-          "title": "NFL Thanksgiving injury report: Micah Parsons cleared for season debut, Kenneth Walker III practices - CBS Sports",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOOHN0WG5iZHUyU0VQeV9felJsdWJQS0p0OUNjVS1zS0JwWVNRWHBxcldtWjA3d0JfZXRwQVB0cUtRQ3NLc3oxT1BCMW44X014eUtRT1hGYTZESlRhXzhHS2FSUkF2UENMbzUwQnl5dHZVSC1QcWtSQmFKbHFaLWxTLUNpQmp6S1hSRkRXcDRGS1Ixa2tabm5mQWE4b2JlaTdjOFdGc3lEbW1HN29US1ZNZUowazJMX3Y2?oc=5",
-          "published_at": "2026-11-25T00:20:01+00:00"
+          "title": "The NFL’s quarterback carousel could lead to 53 different starters in first 12 weeks - AP News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPbzdRRURUSzhERmFXLWJzOC12UklsbnhJQnpUdmw3SUhfTUxYSjNoZnBGcWRyZzVnVS0ya2o1QmVJeXpZZTFqSzhvRHZLaVNjaHJkWTJmVUoxTVVqZXBkZE9nOXBaMmJ3c3NhV2N0azJzRkhMb2xjZGswRVJpM1BSemhULXEyUmFwSVIwd1J6M0YtVHY5ZTc2OQ?oc=5",
+          "published_at": "2026-11-25T11:00:00+00:00"
         },
         {
-          "title": "Fantasy football rankings for Week 12: Quarterback - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNbjJhLTJUWlBVbU53Sm81cFljTmJsWEF1djE5ZUFWWGU4UEw5U2NvT19LWUl2cWZ3bk9TdFAyMUd2QmVZNzJPVnhjeERENGY0SzFKSm9iRTVFWnYzdl9TMlF1N1BYS2wwZ1ZXYk5udkpOdzFwN2M1eDZHY0gxZDQtbTNlZmpTZnJoTDgzTFBsM25PN0lod3RWZjI4cWswNTdLUUQtcVJicWJjRmRZTVZ0Rk9LOEtRaGU5SmJRNjBhcDhIWHJhRUp6YWNn?oc=5",
-          "published_at": "2026-11-24T16:05:00+00:00"
+          "title": "NFL player from Charlotte area named starting quarterback in shocking move - WBTV",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQaEJxTlgyc052bnJTdDlNaTU0MWUwazlKaGVmb1ItamdobkVnNGxsckp4Z09Ec2UxREltSVFuaTNZTWE4WHZGam9LLWdFYVZXWmZFdXlzMUpCUHlmcWJKaXZmODhxeFhiNkd6cEFWc2lRdXhVelVWa1dUeUZwSERpMkZaUmRPdHRoLVZwb2tETmZCTGZTTDFXVUtnSVlEVHV6?oc=5",
+          "published_at": "2026-11-25T12:31:00+00:00"
         },
         {
-          "title": "Ominous Thanksgiving Weather Forecast for Bills vs. Chiefs May End Spectacular Streak - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQblNDbTRXZklpb3QxcXNKSmlfSlJSZENubUVPMmY4ZEx3RjFMU3g5Uk00c0VCd1FIUHV5Y1BVb3NTVFV5WUxEOUFVT2xoZ0NpVFBfM29TcXNQdDM5TDhRMEc3TkZyTnBUQm9tOXhITlhCMTd0Z0lxaFVZaFRXN09SQTVxS2VyRnJlVDJEWWFrSk11SVZ5Vi0wOFRPUFBkcGxmUjVHeXhtS3A4b1ZhRWh3aDJKTTRzUzJHNVJRNW1meFNpellk?oc=5",
-          "published_at": "2026-11-24T15:29:38+00:00"
+          "title": "The NFL's quarterback carousel could lead to 53 different starters in first 12 weeks - Oskaloosa Herald",
+          "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNaHhfb0RYMlFrOXhlU3JVNVkxb0kxQktkSThENTkxTUg0b1NJM2k0WFN6b005U01CRHVEUkJ4ZGZKUC14QjM2Uk44RE1YdlJzbC1jYTU5NEgyYzV4UC0yUEZGSUFvRG9ORlFEQV9UY1NIczJiWU9QTEsxX0NxLVVFOFdMOTcxdU9pM0c3Rl9RMlJ4NTlxbEczOGN3dVVHZ3JqbGJRRHVxWlNHS1NDUUtWekhkMF9HOGk3ZGVJVUhxbEN5Zk5ZcmpiNkRkRUpuMmgxNTVWVDVCRkNub3k3THFJc1NpZkxvTldYdDRQN09rWDk0cDdGdHFPZ014eUt6UXl6ZGh4VVFRZFlHd0ZrbGtn?oc=5",
+          "published_at": "2026-11-25T11:00:06+00:00"
         },
         {
-          "title": "NFL Thanksgiving Injury Report: Parsons Cleared, Walker Practices - BVM Sports",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOTFF1cnBPcmMzUUZUUVdEUHQ3a2lkVFozT0t0RnBDVG52TjhFcTRLQV9wQTFxUEU3NHNpcEl1Z3lLUExjOFAtUEMzN3VmaTF2ZEs5aDZ2TkpBRmRoOHpYdkpiUGRHR0xNVU1EZFUyZnJ0MmpmOVRXRTJaT1I3NWxTSUdueG5hS3hGX3hkVnFIZWh0cThXd3VleTFEOHVBUQ?oc=5",
-          "published_at": "2026-11-25T01:14:36+00:00"
+          "title": "Latest NFL Odds and Picks Factoring in New Weather Forecasts for Week 12 Schedule - Bleacher Report",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNX0RoUVV0cFdDSnpyQzlUWWZXUU5UWk5VeWItY2hTa1VqYnp5aVplQ2RyeXgzOG9VT1o5YktjZ0w1UjNVUWJ4Rzh4NEo2c3QyYlF1VzlyVDRLdnhxN0hWT0ZxbGlWdmFMVW1XZWRyaWllVy1ScWlSR0JMQ2I0bkJHSzVmR1pEVmFKMWRtQmZ3aHFwODVyRTFRcVl5OGhYR09GRHV6Z19IcS1pV1Y0bC1EUFNWYUYwaDQwMFBr?oc=5",
+          "published_at": "2026-11-25T12:06:28+00:00"
         },
         {
-          "title": "Buffalo weather forecast calls for cold and rain on Thanksgiving night - NBC Sports",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNMWtVRFVCdnNsUWFJNEZsbE8tdlJyQnU4blc0V2p1Tm01VDU3Qi1tRFdIVXBmR2JwMkZYUlo4TTNkRFNKd1A3QmowWDJXVXN1WVJ0eDFpTDBTYU1lWEg4OGdCRC1fVGxZbElPM1p4d3gtNUREWGNWR2ZHRXhNU193dGx6azk5d3BHbndzSVJ4bU53dkN6eXJONW1nU0dobFVQcVVLeUdYeDdKbFk5NGxfVm9TY0dZU0pGZllGVUdvcklQazFRWjFSNV9paFg?oc=5",
-          "published_at": "2026-11-24T12:56:40+00:00"
-        },
-        {
-          "title": "Eagles Injury Report: Quinyon Mitchell upgraded to limited - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUGd0Zm54bDQ2OVpSNEpKVlhjdTJXMGFLZlRsSXowYW1IUVVSb2VwSzRKVklyZzI1RUNKNTM4Tm82WEdhQ2lpN1F1ek9YZFlvZjh1dzlvS1dPU21zUjZpREdRTDVhTVNjVUluaXl5dk9uZHBrUXpuQThRNXd5N3dZZGRQd1dwQk82QU5zemVET0RyRWg5?oc=5",
-          "published_at": "2026-11-24T23:16:02+00:00"
+          "title": "A Steelers Shocker: Aaron Rodgers Benched By Pittsburgh, Will Be Inactive vs. Broncos - FOX Sports",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQSVNFSTZUQmdtS2JGSUt3ZzJtVko3UEI5U2o0d3BYajZFUXJxMGxScXpScHczYU9hUlBiUXlxTDFadU8yUmdmMlNMSjNMZFRKQlB6aW1JY2dIN29JdGJ4MDQ3R3JxZ2dFVktUbktOSWo3NFRhTko4UjFkOWNUdXFPOFhB0gGCAUFVX3lxTE1McUVpVU1pekdYOG1aMUV0S2pKOHczX2ZETGpaTVlBWUlTV040MkdrdHdxZkJRbmlMZ2FSM1Y1UU5GS0hlbXlwd2l1VHJzWTZMSk5CNVJWY2kyZElOTmRvOFM1SzNfejBDWkp5Z0NHWm1ZQkYtVUZYdWxnRlR0djlxQ1E?oc=5",
+          "published_at": "2026-11-25T04:36:13+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -119,24 +119,9 @@
           "published_at": "2026-11-24T15:49:41+00:00"
         },
         {
-          "title": "Kings at Canadiens projected lineups - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPRl9Hc3R2aXFMVjVTeDRWeDNEdFR4ZWZiSVJPSjdNdGFDQi1KSFBXUHhTYl81WmZ6RVJoNVZPNmpTRklhODV5dC1CMjJGSEJ3SzV6MURGVGl1eml6RGQ3M2xOb0x5d0tfSk1PYkNwbEpxWGlKWV9YSG5pWnU2V0hzVnNKTEdZanZTYUtKSXdrQlJnZWI3NXc?oc=5",
-          "published_at": "2026-11-23T18:39:41+00:00"
-        },
-        {
-          "title": "Ducks at Kraken projected lineups - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNQVM4MnA0eW5CbVRPdWI5VV96alpRbzFEX2dwVTFzLU5YWTQ0aXh5ZDFXN2M3cFNRSHNjcVp6ak5BQmU3NHNEamZ5N0RYN2FTWDJOWU9PbVVZSFdlZHFjMThPRnBFSmgtdmRkQ0pSRm4zSnBNanFhcjVxRm45dzZETWRncnB1Y2o3RU5N?oc=5",
-          "published_at": "2026-11-23T20:38:49+00:00"
-        },
-        {
-          "title": "Capitals Claim 25-Year-Old Goalie After Latest Waiver Twist - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTDNCbFNtbDlENXhOeVhpMHdoM0MwV2p4TTk4N19YVS0zcVNTLTJwMWt6NWF5Z0QwbjJ6ZHdUbndRNTVyQzR4Vl9KYlpJYjF4UHlNNUJkdS1BTmNZMVlERkY3dGY1YTkwc3BvSWVhOWZZU2pzcklpY3hxZ1dCYzlpVUpSRWwwSzBC?oc=5",
-          "published_at": "2026-11-24T22:37:20+00:00"
-        },
-        {
-          "title": "Goalie Remi Poirier's carousel around the NHL spins again as the Capitals reclaim him - The Alexandria Brief",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdS1mYVRqM19ITlUtR3FfeTY0NEJjdjlDVWJBekZYemR2bzM0Q0EyWm1qRF9idTRWbzlieEd5U3UxWGIxNlJvdXlZV2R3SFNyd3MzWk1DUDNEU19ZNkhZZW1NNFh2V0xNX01tOEEtUmozak1tRld4YUVjY0k5d094OUJPV0JfSUc3Ym5Pb1c2dFRZXzEyWVlUaVJmVGxEODhyRzNYM2RRU2llNXlmX1ZxNlVHcU4yRS03?oc=5",
-          "published_at": "2026-11-24T23:19:53+00:00"
+          "title": "Goalie Remi Poirier's carousel around the NHL spins again as the Capitals reclaim him - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNeWJ0UW5RcnBlVk5XWUF0cC1yZjZUaFRFU2dUOVlYX0hydDlZQlVMbUNWMG9TY05OOEZBYjlBTU1Nc05JZjNRNEVja1BvNnNTenU1VlRoajZURXB5dDhZNmd3MlpDV0MxaFI4dVcyUUlwV3hqUUIwQVE4LTExRDhPUmtfWDIxdDdkekhOX1gyRnUydHM?oc=5",
+          "published_at": "2026-11-24T21:03:53+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -145,14 +130,24 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
-          "title": "Penn State Football Injury, Roster Updates Ahead of Week 13 Game at Maryland - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNSDZMd2lmREVwQWkzWC15QmpHYlp3TGpGWnhkOXFORmhyUDJBVU1UQWpWbWM5VGhDcE01ZnJxNElxQnZFand6MVUtU1dJdkRnRjZBcDd5MTVZMzhMdWdzVjFQdngwcG5QRFl6Njl2SFRlWm93ZEJGU2I3amt6c0JTbkNHMVM1RjZ6aWxkUnRfM1FiUUNfNVQ0OGF3RF9ZZzM2Tk9qOHVpYjBRc2JUMExKUjZaRTJqVjZMdnRVUXZn?oc=5",
-          "published_at": "2026-11-24T19:37:39+00:00"
+          "title": "Wyoming football coach Jay Sawvel suspended for season finale for NCAA tampering violations - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNOEt5MUN5MVIzVVpveThFYXVMT3NsWW5Dd3hPYzZZa0didnVkbXZoa01FS2dtc085NFZEU2JVa1hDRzA0TUY5RWJUbTNxbGpvMnI5ZnZhSThJRXFXZGV2RVRyTjVnLXhuRzN3SlIwZnNDUGlaNmNVOW9jTzhSWmNNX1N3Qnhmci1fcGVKM2UtQXlBQzRvVFp0dTFjOVJPT0pDVGJENXNGV21UNkxEcEp2TG5OMWtjaUJMLVJyVlVIYUFSWThqZEZhRkdzVWNMa1dLWWhSQXNaZlRCQ2RjYmNrY2dwdlNEc1RyNV9BSHVqREVWcGxQMkJNNVkyUWVwNWs?oc=5",
+          "published_at": "2026-11-24T23:07:42+00:00"
         },
         {
-          "title": "Fantasy Football Injury Update: Josh Jacobs Questionable Ahead of Wednesday Night's Showdown - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPaUNkZWlDMzdoZTFlWGFhRUgxb0pOY21ja2xCQnpDMFpIOGRTdWNiYnMyckhIMHBBYXI3SjNkcmFLd3p3VmNBR2hRRFFSdWJhRnhxekFpeXN6VGZaZkJVdmIxcUtQXzV5Z3Y5N3pTS2FTTmdGSEVZaWpPcHdpalFyWjdaTG1zNVhGSVdmN3BOT0ViSVVrUWtN?oc=5",
-          "published_at": "2026-11-24T21:57:02+00:00"
+          "title": "Start? Sit? Craft your best Week 12 fantasy football lineup with our tool - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOOW8tUXJSTW51RzVlYUdjS0d6bFdKbE1DQ1d5Y0V6bnRiWVphRk1qMVpBUmdrdFRnRjU4LWtLYkZnbEhQOElDT24weG5YVmtLcHhuWjgzLTJ3dGJzanpYdEFXQTJ4TmM1VXhMTnEtQnZmZmQ1eUpKMHFURjladV9VclhmWlZKMkNfR2xRb0tjT0NCUG5lWjRiTkp3dkx3X2dxdnFva1htWGtuTEtJYlBKQzNfeXA?oc=5",
+          "published_at": "2026-11-25T11:53:46+00:00"
+        },
+        {
+          "title": "Three players listed as questionable on the first Texas injury report - Burnt Orange Nation",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPeEVlSVdGdXpJQ1ZGeGdPQnlsZjQwbkdJcEUzMUVPSDQtamJmMFJmZXVNSmdGeXZNVW5CTG9VaGZBdl9iQ2FDV2J2dzlHMm1fZlZHZEk1QW1iN1RpbTl5MmoyZkd0Y1A0dlU5cDd3R0NrNkgwbVFjOVBlYU9ydXJsUWFhZFFYSnh1aUkxS2xYWno2ZXlHQlhKemw1Wl9JQVkxS2w1RnctSEcwVjhIMVE?oc=5",
+          "published_at": "2026-11-25T03:35:00+00:00"
+        },
+        {
+          "title": "Heupel updates Vols RB DeSean Bishop's injury status ahead of Vanderbilt game - 247Sports",
+          "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOT0czenNMV3BQLTEzUlZmWnNjb1J3YzAzLWlSMUUwOU9qOXNLVk5zcDhtelFCR2w3emdPd1NaekxxaHZuUl9zMTlRcVVwMGRHNEFzTjFtUnBISFJFZzItYUJoMzVpemUtTl93b2lBZHJIbFAxVXM0eHUtR29HSGlQQjdjMFo2WVhnSm5vWVUwTFVSRThidlVqVkZkN3Z5ZDBad0o3bWNFZmxLMEJQUkw3VmlEcmctbHVmQ2gxdE1uc3VCamlMTUtjNUV5amFLNVJwVUFEZjN0SHRRb1BGWmpqRllnb1hMQTBONU1HTEtpaGZ0U0pPdHloVGc3UFBzZmFIOHZR?oc=5",
+          "published_at": "2026-11-25T11:36:23+00:00"
         },
         {
           "title": "Week 11 Fantasy Football Injury Recap - Fantasy Footballers Podcast",
@@ -160,42 +155,26 @@
           "published_at": "2026-11-24T14:12:36+00:00"
         },
         {
-          "title": "BREAKING: Jay Sawvel suspended for UConn football game - wyomingnewsnow.tv",
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQQjVrZ3pCenJBSTc4eEtBcUF3akNpMkdjQTR0NVk4dTlremFidjhacnNiSmtORVQ5UW1hTWxkdXZOZHJ0VU9LZ0RfVEJtTTVvNkJuUm9TZjdkXzI1N1JvMjZuQzlfMXkyLUNYaXZLcG9kdlR2N0Q5R1piaVp1dndaMkJiazg5c013enJDWWlhR0cwMFJEWXBQNVhQWENTYzZHU05sOVczTXVHTTEwTjlEenExYWx4QnBXWDFhYWlwZDFtTTBRYmIyMENrR3FfZjVQYVhnXw?oc=5",
-          "published_at": "2026-11-24T23:33:00+00:00"
+          "title": "6 Fantasy Football Lineup Landmines: Start/Sit Advice (Week 12) - FantasyPros",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZmJjNVktaUV6WnBYcG41OTFwSTJJSTE1aEhZTjk3Z3F5VW1lV0dRQ090d0FlRXdrNG1TNXRjbllnVi1NQkV0Ujl2QVc5dzBhQnkyRkcwMTRkTkZVeGxUclJQQUE1aXM3dDU0TDNGNmJZVTFHQlRjUkhvTm5UV0oxNUROS0RCSWJmVDdZUE5UUlppUTZvZXFWeFQ5UUlRclluOTVoNNIBqgFBVV95cUxOd0lpSWpzOWU1czdkb0MzUldTbmZQYlc3OGdQenZCSE5aVEpjSTl2bGZOWXVYRERnU2p5ZVNsd3U4UmFMdmY3MC1EdHpoWXp5TlpkTVQ3Tzkzd2d3dEZtOEZQbXg0WHhudFY2bmdQa0lLZVB4UWRpTjZON0JEQ083WUo0cnM1NnM2bHVNNF9kRG02WjNhTFVjaW9GOU1SYzVDMXpYd1FUd2U1Zw?oc=5",
+          "published_at": "2026-11-25T12:33:25+00:00"
         },
         {
-          "title": "From a freak injury to silencing Man City fans, Noa Lang enjoys Champions League return to England - Newsday",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQSlVVSTZjZWQySXVkS0t2ZTRmU216d0tQNUxVWTlKRVdFSzJZYjNQUEFqNnBIcXM0eWwzM3pQYVFWOU51eFdOd09waEswR2liWE5tU1NTZXJaZjdHazZRRjJZY0UtdjNubF9mSS1PLThpS1lSLW9DemRTRmhNeUNDalI4VQ?oc=5",
-          "published_at": "2026-11-24T23:19:21+00:00"
+          "title": "Penn State Football Injury, Roster Updates Ahead of Week 13 Game at Maryland - Sports Illustrated",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNSDZMd2lmREVwQWkzWC15QmpHYlp3TGpGWnhkOXFORmhyUDJBVU1UQWpWbWM5VGhDcE01ZnJxNElxQnZFand6MVUtU1dJdkRnRjZBcDd5MTVZMzhMdWdzVjFQdngwcG5QRFl6Njl2SFRlWm93ZEJGU2I3amt6c0JTbkNHMVM1RjZ6aWxkUnRfM1FiUUNfNVQ0OGF3RF9ZZzM2Tk9qOHVpYjBRc2JUMExKUjZaRTJqVjZMdnRVUXZn?oc=5",
+          "published_at": "2026-11-24T19:37:39+00:00"
         },
         {
-          "title": "NFL DFS, Rams vs. Packers: Top daily Fantasy football picks, lineup advice for NFL on Thanksgiving Eve - CBS Sports",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQZVdXeFd3TDJMWU84M2NqclFZQk1NYkczWjRxelAzUjREMG8xM3c2U0VmbkNfS1lzVk1UcUxIUjRIc2ljR01kMnFLdzdKUkszWkpSTEczck52WUpYVFZlSkM4MXBIQk55d2dvcGoxSndCZEFVbHNqclZFY3NCTDBFLXNqRGNrYllBMXNhOEpkTjFOTDVyeDZTRkVPUG9jUEhaZ2xYRXJ3eURIUElpOGNacG9XVVFBUUFKc01SYjNYanVpak1BTkViVw?oc=5",
-          "published_at": "2026-11-25T00:45:24+00:00"
-        },
-        {
-          "title": "NYC Mayor Mamdani to undergo surgery this week following soccer injury - ABC News - Breaking News, Latest News and Videos",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPbzFjUlMwVk42VFZvYVlOMkVTWHozVG9RXzJpNUJZLV9lN2RJUk5rSy0zNHhXaG1YdGlTcEZzUmQyV3A5UUZHOTZlbWs3dGZGRzQ4cGhlRXRZT0t1UGtjbnp0Zm1oY2x0UUpQMHBGYWx5ekg0S1l2ZnU1ckZxQ1hRX3dENTNkOWJNSXVqc0lkSVZfX0pBSVFDY0NB0gGfAUFVX3lxTE9xR2hJVkFITW5zekl6UTRYTXJNNktWNXY3QVNxVnh5LXdiNWZaVlVNNkUtZHc0N05KMVkxbXpxd3AwRFh5b1BxTXBIbVJCTHZHYzlWZm0zVW5Pb09ZV3d3dVpFSWVidE8yQTdud0IyYUUzVDU1cmxSTGZCamc5b0ptQ1I1QU5BT2M1OF9aNnZjMFJhSEllcWp1M1FLYjR6UQ?oc=5",
-          "published_at": "2026-11-23T18:09:14+00:00"
-        },
-        {
-          "title": "NFL Week 12 Injury Report: Drake Maye's updated timeline, Dalton Kincaid returns to practice, and more - NBC Sports",
-          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQRERXLVoybldBZnE2MUUyVVh4OE5GYUZ1QVFQbHNMVVpVV0VQYWxVcFd0c183NVZtVzVCd3JIOXltbzE2alh3bVd5Z2h0UnhjM2tUMGVMeVhlTHVhQmRaSHg0ZVc1SjhrVnBLZUxiUkJkeF9ucmhudlVjOWFUYkFpdjdjXzRXYnJZVXJlaTB4Q01Dd3dNZ1RjVl9IeGt4OGRTZkFLLVkwY01OY3JJdXhjbDlQalBoVHlNM05CRVJEWU54aEVKSDdEdWpEYWRiUElYTXFxX1Bzd2JqTHZCaDc4?oc=5",
-          "published_at": "2026-11-24T20:27:39+00:00"
+          "title": "Soccer star Sterling gets suspended jail sentence for dangerous driving while inhaling from balloon - Newsday",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNTFBxcVZOR0VnYm9YeDBvVk16bU5SSUJsZjhDamJaMmhpSUhmMzh0N1g0SXFXNnhaRnFlMi03SERlNk9fZzFRWkhEWVZzV2pwMlh3cFFfWkxkeE5hekxHMEVmcmZSMDJoaFFkRW80T05sY3R1MVlaMVBWVkRqWTBBSWhKejlPU01tc2NuX3dmbjhEYWY5ZFVUaQ?oc=5",
+          "published_at": "2026-11-25T12:41:17+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
     },
     "tennis": {
-      "status": "HEADLINES_UNVERIFIED",
-      "articles": [
-        {
-          "title": "Arthur Rinderknech’s Coach Targets Long-Awaited ATP Comeback After Injury Setback - NewsBreak: Local News & Alerts",
-          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQYV9FWkFiN21BM25yMFFNLUtwemxzVDF3ekIxb0xYbnJLVG9UNzkwRVFNUVR6SFVHSGswTFgtTkVVbjFvN2dvUC1nWmp3NFBQNjRXd0pZcEJPM1EtSDF6ZUdFQ1FYNmNLRS1vMjhRMjJqMThTQkVYZVZRd1gxdmZYaHRYREVLdjQtekRwVWRpSjhFWFlaYXYwSWEtVWkxR0JWb0gxVllkU3pUSDJuVnQyOFJwWXNacmE3bmo2VlZPMkV0TWZ5WFVGSHNnQ2NwZWJZNVgtTFF2eHhhVmljUFFSblhIdjE?oc=5",
-          "published_at": "2026-11-24T06:22:03+00:00"
-        }
-      ],
+      "status": "NO_SIGNALS_IN_FEED",
+      "articles": [],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
     }
   }
