@@ -1,50 +1,50 @@
 {
   "schema_version": 1,
-  "checked_at_utc": "2026-11-27T18:56:29.745396+00:00",
+  "checked_at_utc": "2026-11-28T01:57:30.210978+00:00",
   "method": "Google News RSS headline screening (unverified)",
   "sports": {
     "nba": {
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
-          "title": "Hawks Injury Woes Give Celtics Clear Leg-Up In NBA Cup - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOZUFoT0RqWUxLY2JyYzhKS3hIcEk4cTR3ZDBES3RCZ3ozbGE4MFNJUldxcmFkVnFuMzNHSUdmVmFDUUF5U0E1Y1VLN3B4eC1HcExjXzZSODZLQzZ2aGtlWXVDNm5vMWlONXVVV2taMWpfUGc5SmczNkVoTUMzdlNSUzFZOGxrYXh0N3Zfcg?oc=5",
-          "published_at": "2026-11-27T17:30:00+00:00"
+          "title": "MRI on 76ers star Jaylen Brown's left hamstring showed no new injury - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQRlhTbWJqcVl6Z0NaX090c2RWa2RPc0xxRWZkVVlLZGVfcVJCMm04eG1iUW8ycGZ4bzBPTmUwamFSb0xEcWlXdWNjeHRpRFhzSzVUZy1nUUxDWHYzdkdUTjlKUUlWc0tQV3VHdXFzV0ZaLUdnNGp2bUp2cG1rb3ItWklHRnktNzZUYXZyaUdzamFVemVUQmpWa0Q5U3U?oc=5",
+          "published_at": "2026-11-27T23:36:00+00:00"
         },
         {
-          "title": "NBA Cup bracket watch: Who's in, who's out and what every Friday game means - USA Today",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNYV9XV2dQMk5ubW9UZ20zdGs4eWtrcVlaS0pmS2x0YWwzUzNkei13X0c1cjZRaXVwdlN1SF9TalhkeC1KMkZyU1lNVFgtTGxXYmh2M3lkOW1XS0NQRzN2MDVPam5TY3lhYV9nNTZMNHljVE1BbE5zZ0RlcDV3eDR4MGpjYng2dzVOWjd5dXk2a0lnTHZTanliRXY0cHY?oc=5",
-          "published_at": "2026-11-27T11:08:00+00:00"
+          "title": "Bucks vs. Pistons, injury report, starters, odds for NBA Cup game - Milwaukee Journal Sentinel",
+          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPb2VGYWhRWFdHYldtdUQ5UjJOZWN5N2JNVHdXbXQ2cnpkWEYwWTctUU5GSUMzQU5JQXhhcGRhZGhvd0RCSml3UGtERjM3TXE0eGd2ZE9fTzhoYzhadkRSY2NUd2s5TmNWUV8zNDQ3VE9QQXRnbVRtdFFnWmFsLVh1RnpNQl9TZm1ZcG1aM1J1NWZuVi00dks4UC0wWDRYS1FsUFpfRVh1WkQ1R2M4MnJUU0Z5YkwyV2lJd0tDb29UTlpVbC0tbS01S21KTS1CTWxHNWdMZzVaM1BPTmtSakVCQg?oc=5",
+          "published_at": "2026-11-27T22:50:00+00:00"
         },
         {
-          "title": "Timberwolves shed light on LaMelo Ball's injury status - DAZN",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPT09oeTZpU0lOX1VVaUhVcmE4eUotY0FyOUR3VTRwVy1GNmYxZGVNMDVJNmNjbVdtZFVCZDMzVkwtYUlrU0VGaHZ6MEJieTgtVUttaGc0NWYwQ185bUhtWjJ1UUkzYmc3WDV3MWNyYnNfTUp2bjlGNGpGN0xYZnl1MDBWakpGeHJpNC12Y1pTcFF3S2gwNk0xejVlbVNKd25qXzhnSWhqZzMwUXUxX2NMWEwweDhqUE4zN2c?oc=5",
-          "published_at": "2026-11-27T16:42:55+00:00"
+          "title": "T-Wolves rule out LaMelo Ball for NBA Cup game against Grizzlies due to ankle sprain - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQT0RETkdzZXRzSDNXQXhrOWJrQ3owTU5Gb09CYS1DVUFCNC0tdjRqWWNaaFdra2FXRE5DRmYzNlRZdXhjemhEQVRHUU40VTZDbVJ4MnZRbWcyLUVZS0wxNlNndXZ4bW81b1hLQjRQU1B3OXlqZFNBTUcwYXJKR25yWGFaYVVDWXVMOWhsSDJfUDVhMmpiT1NubmhheHBaMnRJN2tVRm8tblc2bDFMNFpQLXJkcHR0VTJCWU92NDJvNFVuSnp5ZVZqR1J0eXFUOUh4MmZBSl9zRHpvWmJQRTU3aUxjN3A?oc=5",
+          "published_at": "2026-11-27T19:12:10+00:00"
         },
         {
-          "title": "Sixers at Pacers Preview: Win Clinches NBA Cup Group, Brown Out, Embiid Questionable - Northeast Times",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxORTJQazNCT3ZqejU1cVVWcll1VmN0RkZVMGY2a3gzQy14T1ljQ0RzRDNPUm4zX0tma3RrQk1QQlBMM1hRQTd1VnhTSGJKRnRVdjE3ZWwxS1lpdml4ZWk4dlN0N013SERrYWFZMDhhVHVqcWFJOEdMQW9UYnRXTS1kSV84MkZycGRydHo0d1BWbW9raEFoVWFsMTdHOVZGZ2hnSXl1ZDg3R2VucDdaNXZnN29rNU1uUEdLRkE?oc=5",
-          "published_at": "2026-11-27T16:00:00+00:00"
+          "title": "NBA Injury Report: Ball, Edwards Out; Lillard, KAT, Kyrie Updates - BVM Sports",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNd3VSVUFsN05maEtyMTl5VUVTeUprWWxBcFFISk1mZ2FoYm9DTUVtUkk2X1llSHN6RUdKU3U1MTFHa19XN3JlVWZhWE1LQ3JBb3h0dUVRRmhEaGMyOUlQbTl1akxNQ0ZHMzVmbEVTM0dQcWdsRlNQQ0RNdUt4dFUweVAxSHlFSFh2SUVGMDZhVUxXYkxiTHdHcUF3?oc=5",
+          "published_at": "2026-11-27T20:54:29+00:00"
         },
         {
-          "title": "Tatum, Celtics Can Clinch NBA Cup Group vs. Rested Hawks: 3 Keys, Injury Report, Prediction - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTzdDcXVyRmJKVmFiN3E0RWppenVlVnpoX01QTTFSdjlUS1BlWFhiemljaEZheFAwSDcxYkVLMjczLVFMQzdaYnJoV3EzMzQ4U3NmUEMwRzd1dzY2czQxWjdlWWd3N2h2MV9pVGlCd20yS1UyZUozYkFsSVp0bkw2SVpJN2NGY0F4X3FzSWhvd3ZYcWtKMXpILVBlRmJLN3k2bUdVMFQ5eG9meDlNdUhMYTNMS01JclZFY194dmhraHNFQlVDMWVuR0dSVGh0M3py?oc=5",
-          "published_at": "2026-11-27T17:06:06+00:00"
+          "title": "Golden State Warriors rule Steph Curry out for next 3 games with oblique injury - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSEQxYTYzajFKeHZ6bGdZWHNSbGpqclpod09STjNDUFhhaXUwZ0cxMVBJSTZwdmg2a0NGUnJwWTR2Tk93NGJjSGM4c1pFREQ5LTA2eDRScG84SGRCRjdmbHZuUFk4SmhWTlR2Um9IcnVjaWhQaXczeE5FQnBmdzd1SW93QlozZmJ1UmRQaXBtOWVNZUlUVlJ1Ul84YzU?oc=5",
+          "published_at": "2026-11-28T00:59:00+00:00"
         },
         {
-          "title": "Warriors’ Yaxel Lendeborg calls out NBA teams for passing on Darius Acuff Jr. - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQMDRCTFZic3ZVTGdvSmlPUDlxcmgtMGF2NEVFeW12Mktvdlo4UzRCVkcwczZJLWxpbHJFV0k3U2t4ZjN0dEREbjczVUxsWU0xaTY3ZHBSZXJOVl9WbXhqN2g0VndWdE9lQkhWSENKTFhDaUY1QUJTNDRjcVFaN0J5U3duYUtocXRzamttNzFNcVc?oc=5",
-          "published_at": "2026-11-27T18:15:20+00:00"
+          "title": "Bucks vs. Pistons, injury report, starters, odds for NBA Cup game - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQVnNDSnZleDZEYmNkZnhrTDJVMzVDMDZDRWw0YnlnamlDZWJTdmJFd1dWUWVWQmkxQ2Q0b1AxdVlpQWp5M01JdkdHT2NWT2JJUlRCenFNcHRhajRYdFhtSHBrV3hjRHhOeFdYRVJyejNWVnhzaUZ2Yy1qLTdaenhVaTR6TnFBRUg5OGFn?oc=5",
+          "published_at": "2026-11-27T22:50:38+00:00"
         },
         {
-          "title": "LaMelo Ball’s Status Is Revealed After Scary Ankle Injury - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZGlKV3J1Tjc3MEtWUFEzQzdiV21OaGhuS1lIekZLVUp3eWhRR3NDdmE4TklCOHZld3o0V3dKNURsbXdVOXRhTlhxY2dWUmZFR0htRHc1WW42Y3hFR2hmRjRqVGJHcW55YUpwcXBrUEg2VHNWVE8yWmVqeGpFYlJXZXB4NGh1QS1GdXVfWE9Pdw?oc=5",
-          "published_at": "2026-11-27T13:55:00+00:00"
+          "title": "Timberwolves downgrade star LaMelo Ball to out with ankle sprain - ESPN",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNQU1weHFhOWxEdGxmcl9IcXhBZ1Y4WGEzbmdpVkJERnhjajdpOUtodExoUHBURF9fTl9STEJIaklVU01SQTVrSktIY3RTcmhOVXdhMnlpVkxEUkFhSUFIVzF2Qjg5b2tpVm1Mb19YRS1fRU9zV3djV2ZOWTVUeFo5QWR2M2FhSFEwTVRmOWRtNHIxR2ZLLUxR?oc=5",
+          "published_at": "2026-11-27T18:55:00+00:00"
         },
         {
-          "title": "Injury Report as Mavericks Close Out NBA Cup Group Play Against Phoenix Suns - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZDJKZDVSNmRLVkRJcjlnYkl5akFSLVNCcGpwLTFZOVJKMUxuN291LXItQlMtX1lsbU02UW1yYnRUMG1nTk5MOVZIWGZkRnlLS1BsdFdLOU5QMjJjb29GVWtDWWdONUdrMmk4RVBqMS05SU5OYXlhbUNFakVISVZqM3BBWnVaaTlPMmk2bE5xa05wRVpoUjkySVVHZk1lVGxXT1V6Q0pBQWFoWElLQVFHZzRZMU5hQQ?oc=5",
-          "published_at": "2026-11-27T16:50:56+00:00"
+          "title": "Jusuf Nurkic Injury Update Ahead Of Emirates NBA Cup vs. Nuggets - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUTRJeGowQUhiTE9NTURxWWszUjIzSE9oMk5QVUNpMWhWZi1RZjdZTVp2bUt5MGlLcWQwejk0aEhZdkZYam1jdlZUXzBGT2JJMUkzZ3YyLVV6ZjE3U05NOXVQbmF3NzJCenVUVVYxSGUtSEx6Nl9PZ2JZZ25WQ3RXbnlhMHF3VXQxc1VQaU5QQU0?oc=5",
+          "published_at": "2026-11-27T23:56:38+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -53,9 +53,14 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
-          "title": "NFL injury tracker Week 12: Latest news, fantasy implications as Brock Purdy (ankle) misses practice again; Justin Herbert (concussion) remains in protocol; Parker Washington (shoulder) ruled out - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxOWlVrcFZBWnI0RUVOdEd5LTZXVW01aTNkT1E0Q0tPTnVKNzBiaTliaEp5OWpnck44d1lGUXdIRGd1RzE5cGdzVGFmUzJnS000NEoyaGh6dWR1N2NDaEp0WlNpYjNBbXJERDZKblY3OGRvWFg5c3RUVGRONmhFT00zWDBjY3A5WllWVDdRbnJPZXVBU0QwVktUOUx4OG5xYmJkWXlNNUdUUjVpOEZyNHpQejFyU2Vtc0VtNGtPejFkMk5OeUFvdmd4VkJ3REZfT2czNHZpYWpTZUxqYlpUTjR4S1dySS1oSVF6WUU1ZDFyY2hLZUlXSWJfWGs3c2JZaHN4VVZpaUJMb3BobTZ6dWFydGxaRGJPX1psYUpOU19uVE5Dd3QwamgwTFdYcFowbnEzVGozdjBYR3FFWW9lbDl6SFBLRjRQb0ZBaVktVU9MRmF2UmtJWnRTUm9LcUVvUQ?oc=5",
-          "published_at": "2026-11-27T18:18:24+00:00"
+          "title": "NFL injury tracker Week 12: Latest news, fantasy implications as Brock Purdy (ankle), Justin Herbert (concussion) ruled out; Parker Washington (shoulder), Bhayshul Tuten (ankle/foot) out for Sunday - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxNRzhNaG1YZVNzWnV2Vy1jN2ZrV0hYMXIwS1lRZEJPcHJBbENQenJ6b0RuSW0wQ3JXbE40Qk16d3FKYkJ2clJxT3R4UlRWczZ2djJrWW4ydHdHTnFCY0lRUk0ya1RrYmptTVZiSGxCX1dhZDZsSmJOamItOEZ1MkhVQW5xOTFpM3lEYzYtNEItWVp3VXFTUFBCd2pmMThQdXdlUkFxYkZQdzdhbmtSZ3NrVlVNWDBrdEIxV0JJQ2JXcG1wTmFlN1V0aDh3N3B3b0pYSHNodTdmUzFCRVlLRnVCMUhaZlhkOU8xbXlUdk05QnlvckRzWUZvNUtfWC1JY2duSHNFeWRBajVmbEFldDZUazR2VWl3Z2tEZ2pfazhFb3R1c1RwQ1hmMzVURGVEQTh6VUNnOUpmeU5uNnBta09Qc1VzeVVEVnByc09NYnJpM00wWWFpRFJaUzhSYw?oc=5",
+          "published_at": "2026-11-27T23:32:28+00:00"
+        },
+        {
+          "title": "NFL Week 12 Weather Conditions (Fantasy Football) - Fantasy Footballers Podcast",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNeXdVVUpYWFM4dkFWWVlROWZ3RFZnODVlWlBVeVl3bVcwS3lySnVXcDcwRFVZWE9FbVRnUzZJeGMzRG85VHZScXlETFRyZ3hBRlpNblZjaUtJSUtBWmJlakFNRFBKS0JGTDg0cnh4Rjl0bFJCUzZENGE3R3hkVHZNYXJnd3MzWnMxcFJDbHVYQWswa2hDcTR0UnNxbXYwQQ?oc=5",
+          "published_at": "2026-11-27T20:35:14+00:00"
         },
         {
           "title": "NFL Week 12 Weather Report: Fantasy Football & DFS Impact - Fantasy Alarm",
@@ -68,29 +73,24 @@
           "published_at": "2026-11-27T17:52:55+00:00"
         },
         {
-          "title": "Why the Seahawks are turning back to quarterback Sam Darnold vs. the 49ers - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQei1jTGVQR19QcEdkcXd4RjJLNE1ET1VBb181RjdvSTRGR3hGX0kteDJtbDl2UmtzbVdJV0x0cWlrS0tlbFVMV0NEbmV1Ni1XcEptY2NMRkctYXZ6UG0zaDFlVjdxelM3cjlxbFZMMjJNTkMxd1ZMUGVJN01ZYWFaTndtSkIySmtlOEc3T3NHM3Q1LUdHTFVHcTdNYw?oc=5",
-          "published_at": "2026-11-27T11:00:00+00:00"
+          "title": "Brock Purdy, Derrick Henry, NFL Injury Statuses and Fantasy Impact for Week 12 - Bleacher Report",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPY2dhaGRaTzZNdHBrYlZxYnc4cHhIdGI4M3pPQm9rUENENDZxc21SUmFhZTVmYjFmNDhxUEs5SF81SEZPS3dpVlpTVUdHSi1WQV82dXcya0JiVDUtRUFmSjdqN3RNRU5FaE9fdVFUaHpsdUgxZXEteFRYN3RsTnd1cjFxVElMWVZ4Tkt4VFFtQUN1V3R5c0NKUFdjM01kekpZT3ZfNTQ2cnVubHRVY0RmSDdnVzZYY0VM?oc=5",
+          "published_at": "2026-11-27T22:14:11+00:00"
         },
         {
-          "title": "Quarterback Trust Meter for All 32 NFL Teams Entering the Home Stretch - Bleacher Report",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcnV2NkhLRlVBNlFwVm1Td3lFUjByeTQ2N2d0ODVXd1QzdTJIQXZLbTFZSE9aTEZKaTB6dTRRY0ZEM2Z1WGxMM2k5eGdBYkJQZnp0UlFXbWpBMGN6ZjRjdktBNHdQLW9UM21YS3lhWUprX2ZuemVXcVVNVldhQ3ZiUjI2M0lvX0NaQ3E0S3ZSYnM0b2xDQVdPaTNnT2g2VTZwUTBXTGZpLVdHSU0?oc=5",
-          "published_at": "2026-11-27T15:20:27+00:00"
+          "title": "Raiders Receive Brutal Injury News Ahead of Sunday Night Showdown - Sports Illustrated",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNNFdzUjlZV2JIZjBMTXVRNnpXX2lzTWx4SWRYR0U4V2o0VklVSTRLVkZvbUNUUmlFTmlkcjJ6T2dRQW1jd2lobVhFOTdrNldWdWtGNm9JLTlLRE9ieFNMZzIyT1dtNVNuejNYc0F5MlNxRW9kYkpDTWpVckFPWXZPeFcxSGoteUFhMGpfS2ZtYlJUeDc0RFFrZlc1SThGOVdTT0E?oc=5",
+          "published_at": "2026-11-27T22:06:55+00:00"
         },
         {
-          "title": "Broncos vs. Steelers weather forecast looking windy and wet - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQYjRwanlnRUxiamNZbjhzRjRFbjRNNHVaNW9BUVM4YWdsN0RhU3NaUUdaSWlPMWp0RHdRZVp3ZE93S2dKRXRCakNqLWMwd3gzdEFpdWR6N3NFMlNxOGhNTGFxUEtvb1gzbFVWbTRwUWMxUXRjM3lmSUJ5cG9udUJkY1hJTWU5WDJ0VG54OVNDUUNWdFk?oc=5",
-          "published_at": "2026-11-27T12:00:00+00:00"
+          "title": "Brock Purdy (ankle) ruled out for 49ers' game vs. Seahawks; Mac Jones to start at QB - NFL.com",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPQWk1Z18yMXZiQUhyMzRianhQN1huSGRnYjZDSnFGNzg2VE1DLXRsdE5xd2ZMRU5pdzkySHE2bTV6aVFuNWxwcDQ0YkZ1UTA0aEUzZTkwWmNfaEtkRk1FbFNaRVFsUVROLXN1UVJVamVQT3FiTTBYS2ctQ1lMQlBWQzlTVQ?oc=5",
+          "published_at": "2026-11-27T22:21:36+00:00"
         },
         {
-          "title": "Jaguars lose WR Parker Washington to shoulder injury as playoffs draw near - CBS Sports",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOTTBpcXc3TUZVN29KTW9VaVI5MVlWVDJPdWx5bUlCcU53NWFndTVlOVNNT09DQVdqa3dKMENLV2tCaXh6TWNaMXRfcmljOEt0WXZNS3JQcllrUG1IbEs1YUx0ZjhwWmRmRHhhby1NTzNGYnQyR1RReV9mNkpzY2d5eUUzVlNuMTgtZ3pzUC1jWGNoSF9PV1k2VlZFVnlTZldZcER4VE81ZHRISFdtdXBydERjcDR0Y1N1ZDlyLUViS1NqS1E?oc=5",
-          "published_at": "2026-11-27T16:35:00+00:00"
-        },
-        {
-          "title": "Broncos vs. Steelers weather forecast presents concerns for Week 12 game - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPV0JQSnktODVmTFBwTjRqRGxqMHNrMTRGUHJoMnAtT2lNQVZnZFQ5TTZQUzhkaFpnSURJZEk4TjFicGZwdWxLQUN3M05RMHV3eHgxQk5Ub2ZxU1FheG10NlcxMXlrbGxUdEFzWFVCbmlWbUstT0RzbE15MGZuLU9ldl84dHpSeUNISVc0YUNZR19TNVk?oc=5",
-          "published_at": "2026-11-27T13:47:10+00:00"
+          "title": "Chicago Bears Injury Updates on Colston Loveland and Dayo Odeyingbo - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPdDVyZ1F5bW5ESHg3NDhYRXl5NHRhejBSSThtYm9ndndGWVZSU09ZTmJRVWtmVV9jMmNWN1IwaTJCenZsSDBNS1JDNXg4cXo3LXZydklzLTMtdVpZc2dqdE1yMVFMcGZmTDZfV1BzMk5EOGtQOHRpN3ctUGh5ai1qdlBwc1NWbWxnd21mbW10cTk1N28?oc=5",
+          "published_at": "2026-11-27T18:37:17+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -99,29 +99,29 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
-          "title": "Palmieri expected out rest of season for Islanders with right knee injury - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOS3ExTUJ0djlfUFF3OERacjd2VFhOYjFuSTZtUjBmYThEMXhPbkh1b0JzbndfQjVxWE5RNUx3Ti1oWWpOMVdEbkV0bTJreUFjZmdJRGNYU3RDU2h1WElrTXpyT1JMTGlFemxkbmJsY25iNHo4NjA2UWw4Vjl6aU5NQnNCM2FPT0Q1aG1wbVRTZjBLVDF3N0tOLS1TTQ?oc=5",
-          "published_at": "2026-11-27T15:57:35+00:00"
+          "title": "NHL Status Report: Pastrnak leaves Bruins game with injury - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBTNzZXRmxXN3hVUVotaFpZdGFFNmFFYVpac2R0b0hXRm00U1VzbV9zendvRy1GVnV3d2JPQllZcnZXVnQyZzF2YmVSUEFsWlhCbG5rdFJDY3VrS2lPelFNVm9MQTRJc0VfbXQzMklKdUhfNmhWOG5lZGlGaWFUaUE?oc=5",
+          "published_at": "2026-11-27T23:51:26+00:00"
         },
         {
           "title": "Projected Lineup: Nov. 27 vs. Dallas | St. Louis Blues - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9rei1iblJmeERMbUxvWFZDYm5ObW1QWXRlaWhLbGlMM21SU3FpWW1JYlcwNXlqM0YyUlEyTDJ2SVNONk1POVlvYmVPdEROTC1IOC1zY1F5dFZVSFhrMzhWQnE0dEdVOTQ0RExReDAwNndpdw?oc=5",
-          "published_at": "2026-11-27T17:50:50+00:00"
-        },
-        {
-          "title": "Sabres vs. Penguins | How to watch, lineup notes, and storylines - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTzFjY0FHdllXVHNvdUw2aFI4dFE5Vm05OTdTQWo0NWNseHNyejUtMWM4MlZwcjdtM05JY3dMX3p4eGUxbHY4N3ROaFFYRUNWRTE1S2dXVEVSMmZkODlFdXdjTUhDWXJqT1JyRS10eDduM3RPT2RHb1RPNm1leGJvVm9zZF9Md3VBU1ExTnl4dGI?oc=5",
-          "published_at": "2026-11-27T15:13:41+00:00"
+          "published_at": "2026-11-27T20:51:45+00:00"
         },
         {
           "title": "DeSmith to debut Grinch-themed goalie mask - NHL.com",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPT2tHdV8zNGRuaFRVdFBUQzdqQzBzR1dZUWI4b2lnQ29iOGdkQUJZVW1lcks0SFpvLTBEclQzbno5NnlFV0JxM01ERzJSVlA3MVV6UmZ6TmREdXRCS2tKdkZyWFpJSTY0blpoLU9BV1pZckhuS0x1elEyM0tGVjlkc0dtbVNrMVFXREtON3ZTQUI3UUE?oc=5",
-          "published_at": "2026-11-27T18:34:47+00:00"
+          "published_at": "2026-11-27T18:34:58+00:00"
         },
         {
-          "title": "PROJECTED LINEUP: Oilers vs. Kraken - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPQWlVaW9VZURpUnJpYkQ0OGg1MEhCdlU3anRGOXZ3bzdJbnYzSnIxZkVlYmgwcDgxb1JIWlg3blVMWXROaDBXdkVMaHdGUjU2bmdSdVFGZXZjQmVBQ1JHeU85LVFxUlM1NGdndE5nUkFXbUZ0VEhpS3pKQnZWSlFSaWlNNlRoYVE?oc=5",
-          "published_at": "2026-11-27T18:19:44+00:00"
+          "title": "Projected Lineup: Wild vs Avalanche - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvdHMydHAxemRQUHBld2VjbGxUck50dURKRV9SMEtsUkdMR2dDODVhVG52V2Q2U1d3SzNZRmQ0dXlzY19vcXp6Q1NhSkVaRjRtX2x0VDVNcDZ4UHoyTzBQenlrOVRscnJ1dDM3RDRBbGNZMTgxeWh6XzJtWQ?oc=5",
+          "published_at": "2026-11-27T19:13:47+00:00"
+        },
+        {
+          "title": "NHL Tonight: Matvei Michkov Scratch Discussion - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNQ3o3dDhjdG04VnlscFRMeV9YQjJWY0VUbXBnNEVqM3hEdTlLc2xCVHJDUEMtRGg1c1RfSUx4Y2tPSGhBM1d6Z1dDaXJZOW5NWmQ3WHhET0h1OGNUYTZsU1M0LVdaWXlXX2VwVXRLUDRPN3hiSEVGNEFDMjRCRTlVMnNpRW1yM0ptczZpM3hB?oc=5",
+          "published_at": "2026-11-27T22:15:20+00:00"
         },
         {
           "title": "Penguins at Sabres projected lineups - NHL.com",
@@ -129,14 +129,14 @@
           "published_at": "2026-11-27T18:16:30+00:00"
         },
         {
-          "title": "Jets at Islanders projected lineups - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQM1ZsMWJmN3p6NEtocjhEUHNpNktxZWZRQ3cwM3U2RVBHY1QtQ3BlRFUxcy16eTFvOE1vN1k3aldkTlpmNlJwSEdsZHVRUWQtU0gyb0lPWmdNdERrR29fNWhhU3JIMVRIT05HR2RZZEJlU0NkTGpUMDBZemNrMDRWNVB2T3VNNUU5R2hkWW5qajM?oc=5",
-          "published_at": "2026-11-27T18:04:26+00:00"
+          "title": "Unmasked: Despite rise of taller goalies, shorter ones enjoy some advantages - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB2SDVfUEdyQ2NaUTZNLWgwOV9uU0J3cmpFcjN6aWkzMHJ1X3pCcmwxbnZHdWNwQ1V2N21HQjR2UV9FYW9Id2hXanhLdXp5enlxTTlUM0RZZnZFTzdzcGl0UzJDM3l6em1xYTdoOFZzUlItMnlzcG1QRkRQQkQ2QzQ?oc=5",
+          "published_at": "2026-11-27T19:25:58+00:00"
         },
         {
-          "title": "Projected Lineup - Flames @ Devils - NHL.com",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9LclgtMUxJX1EzdHZ4bW9wakUtYmxxenEzcGhrOTlucTBrRERBcGZoNXBrdDBQZktIWThRc196QXNJYlZMR3RMR1BPOEhkSVhycm5IRU9pNkNicTUwV09LNnp6UDNuTkFFSnREemlhN3V5ZUVOVnFBSHNRbw?oc=5",
-          "published_at": "2026-11-27T17:56:24+00:00"
+          "title": "Sabres vs. Penguins | How to watch, lineup notes, and storylines - NHL.com",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTzFjY0FHdllXVHNvdUw2aFI4dFE5Vm05OTdTQWo0NWNseHNyejUtMWM4MlZwcjdtM05JY3dMX3p4eGUxbHY4N3ROaFFYRUNWRTE1S2dXVEVSMmZkODlFdXdjTUhDWXJqT1JyRS10eDduM3RPT2RHb1RPNm1leGJvVm9zZF9Md3VBU1ExTnl4dGI?oc=5",
+          "published_at": "2026-11-27T20:51:45+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
@@ -145,51 +145,57 @@
       "status": "HEADLINES_UNVERIFIED",
       "articles": [
         {
+          "title": "USWNT vs. El Salvador: Starting XI & Lineup Notes on Friday, Nov. 27 in Mansfield, Texas - US Soccer",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMUlhazY4Y1ZjY1ZJVWYwVS1OeUE1Y1d1T1FpU3N1NXVYUzF1UzRPT2dGMlUzd21URHBERW5UUGtNdHBsZ0VxQWFSbkN5UDRQM2pXWXdJWGlzalkzQzdmWExiNW9GR1l2ek5SRG9zbHBxdW45ZjBfLTNnbVBuWEtmZlJ4NUNLTHJYbGIyaEpxR0lXbXZxbFZoMVZOaHpCYWtYZnpLeUFwekpBNEdD?oc=5",
+          "published_at": "2026-11-28T00:36:04+00:00"
+        },
+        {
+          "title": "Georgia football injury report vs. Georgia Tech - 247Sports",
+          "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOV2lJYXdVakJZQXlaMXVOSHJmZ2NCMXVQYnRFcXhkSHZOcTJadV90UTJaSkl1VVJvYnItVUR5d2JfeVozVGZTREZ3QU9GRURRMmNJUmh2ZXNSampYckZld1MzUjF1eEtqWFY0SHpBdWJjZTRacUNxR0ZGM2VlcUpqa3pyVUhuTm5Zd3lKTzI5TjVCTUNlQmF6YUJGTVJjRDlQbFNvSjY0SlZINFo0alBacGVIMzFkWll0UEJiLVYzWFpKVHFpbGhodlFWYjNlbXd2WGlqVkI2cnQ3a21lcUpZWmZlVHp2Yk9TTVRpd3I1ODcwRU8zMFZzbndxWWtsSmE0SHlPMVBJNA?oc=5",
+          "published_at": "2026-11-27T21:00:39+00:00"
+        },
+        {
           "title": "Fantasy football Week 12 injury report: Last-minute pivots for Sunday and Monday - The New York Times",
           "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPX0tZMU5jMVdDMk1RbkJHSUFOTk53ZWhHMTg3bkcxQWh0d2hwVUtnYWxhSjNjOFlWeDhucmNDRUtFR0FDM1JTY3JPbDhDeldsckJsNmtMRmVlOW9JRnJBQXNmUVY0SndVLXRZemQtSGd2Y1ZPY2FGZlQ4VlF0SU5JUlZIcFcyVWxXMVpwNkhST0lsTHFhYU5mdkN4S19aQ3pI?oc=5",
-          "published_at": "2026-11-27T16:46:24+00:00"
+          "published_at": "2026-11-27T22:17:26+00:00"
         },
         {
-          "title": "UCLA football injury report: Ty Dieffenbach questionable to play against USC - 247Sports",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQUWM2cGFzbFJBOGhYUXFWbXZZRzRJQnMxdUhQaWZZejBBZnI2UmRURkw2Y3U4NERveXQ3VmJRdEljaGUwamx6MG1CblpGUVIwVENFdS14bEEyeHl4QmI5N3l1RXlJYXBhcm9kbUtsNF9TMVNvNGEwcEhvQnRiSF9PVkpueDVuQ2JqOEtIcVhYZmk5ZWprT0JkT3lQWmhFRVRqVFhJV0ZDcjJNcjIybndzVzVCLTM0ME9oTmlIcTRVeEk1aFRfdWNpVQ?oc=5",
-          "published_at": "2026-11-27T16:21:05+00:00"
+          "title": "FSU Football vs. Florida Gators: Pre-Game Injury Updates - Sports Illustrated",
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNZ2h0eFcwU04yQWhsQTgyTjdQek0tXzdhaGoyMVdlYWc5R1FzOHRibGZKVlpYTjNPTHJMY281SEltak4wajRMRUpydXdJYmI4X1VvT3A1ZTNseXZvTW5lVVlKaGFmZXNkc3g3RG5WaTZhMml0OE15ek9PbDVHTUcya21KR1JYS2htWmxSZmZwXzR3X2E3U05vVEpVSl93b0NwTUxjNEV1eURZWnU4cHAtMGJubGJ2NDhWZUU0NTFXWUpCNFQyRWNWNDY3ZWJyQ1NpMTRV?oc=5",
+          "published_at": "2026-11-27T19:54:56+00:00"
         },
         {
-          "title": "Auburn quarterback Byrum Brown injury update vs Alabama - Auburn Wire",
-          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPT0FXemltMmx2dFJlTEJqX29FeTFYTm1wR2pVeUtDVmQtQ1AxZVlXZGxKNUhKRHVCSzBnT2JlZlFyTkM2UWVJYzlLRVNsRnludnZQdG5PbnEyZjJFR3BQdGRFdmtxT2J3SmgxLXdoQVRQaW5jR09sdGFEV2tVbWNVNFl0U0NPbFdKZmxqYmo4NjdHaGp6TDNNVlJYWWNfbVZPQi1pLTdPTTBSMmZjMkpaNEswQ0gtSVNDbmF6MzF2Vl9CTkNFbzNoQXVqYXV6NGx3X0xwR2lyY0dCQTM1MkxNTWFvVQ?oc=5",
-          "published_at": "2026-11-27T14:53:00+00:00"
+          "title": "Alabama Football Gets Key Injury Updates Ahead of Iron Bowl Against Auburn - Yahoo Sports",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQYjc3dEdTYjVIdC1FVzZDVk9LQzhEbUI3RnhpSnh3TVRKcVdSUTJhdDRxejJUcHF6TkVhRVZudGJqNTl4elhKcE9IS0VCQjFJeVlNSnpwOXNleDl4OEVLUWpmOVE4bTlsN0FlZzg2LTF2eWFHZTVsSjVkNWRJRVQxd0NvYWJqSHI2VGZTVkVJNHFPYm0xQ3I3c2tzNWt0VVk?oc=5",
+          "published_at": "2026-11-27T17:35:23+00:00"
         },
         {
-          "title": "Fantasy Football Injury Update: DeVonta Smith Seen Limping After Win Over Cowboys, Clouding Week 13 Status - Sports Illustrated",
-          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQWTlhSzFXSDBTVW1RZm9yczJnYXNIaWFUelpMX05MMk1wblZndmkxQ0ptdDhxczNveDRqakFhM2s3YUNnaHJoLXV3Sk9JeWoycmExc2prdS1ZdGxfc3hFclRWSzlqSFdUc0lobm5OSjVCUGp5cUlRbmNXSXE4c19lTDZPNnpab0xHcVpxQk9pWkg3M3hTVFNvenRYWmFncXVhUmt0U0ZZNTlXWUpsdm1FdXo4MVcwVE5SMy1heXR1VDlFamxlRXQ4UHVHampuMWlUajAzT2FlUkVuOVRKRnc?oc=5",
-          "published_at": "2026-11-27T17:02:21+00:00"
+          "title": "Florida football injury report: S DJ Coleman, TE Lacota Dippre out for FSU - Gainesville Sun",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOQ1NQRkJ2VjMtNXlWVXRKMjRyM1FzVlA0QXNvSHJHT0pfcnhkOGFERm9FZTk4TWRVWkViOEdVX2JBZ3owcFF5X1Z1MzMzZWp1NjBQNnMtUkt2TmJFaTRPQzVUVl9IUERQYmxOMVNzamhtelJlOVVXeUtGT3JBTlI4MFZ2SHRqbmJwaWZKYXhUcXVENXM0aTUtZjNWVW9NeHdUbExBbUhJbnAtMC1nbHZMS0wwd0s5QVd4WHZEalN6NHRlRFhtV1FvdG9MdlA2YlhsNGdFOVVtdnpGZDIyYnpqV3lB?oc=5",
+          "published_at": "2026-11-27T19:59:00+00:00"
         },
         {
-          "title": "Michigan Releases Concerning Injury Report Ahead of Ohio State Showdown - Yahoo Sports",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPeDE5S0R2aGlrWl8xZWdGUHBJZUtPQkUyQ3hnMjcxVHZNV0ZacGt4RUk2WW44VWcxUXpEX3JmM0hGcW9IWm9kLVc0OG9OazhyNEt4WGxxX0hQTnZfMDBJYmx6cFkzTm5TZ3FYVzAxejFtdmxscHVDbHV3cGpKaVFkOXN3ZVVBS3pkX2gwUktkQjJuYTAzZnB4VUtEbzZSc0swMEFQQnowTFRLblpn?oc=5",
-          "published_at": "2026-11-27T16:08:14+00:00"
+          "title": "New York City Mayor Zohran Mamdani undergoes surgery after a soccer injury - CNN",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE94QUFleTl1RlBpejd4S2NzYUxuR3RacTd3WnB0ekFWU1pKcHVaNW1kNVdZdzBpalJsSG1SNjhQeFo1MVJwR0p1eUFZUFZqa0h0SjNxS1ZtaTRRSnpfb1NBTXJQSlVyMjVlRTdQREJqZjB2NnM?oc=5",
+          "published_at": "2026-11-27T20:10:54+00:00"
         },
         {
-          "title": "3 Alabama players removed from injury report before Auburn game - AL.com",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQY0preW5TMzE2elgxbHhwSk83Tjl2dnBtY3QtNDlmSndzNFBVWC14TFdpRkxCUzJUZG50OW9ZVW1mWmlZcGlETTg0X3l5djFSMmtEMWRSV1dHN2ZzZThpYVRsVG5iZlRQdVFGanVDaVAwNjBaOE1ob3JwczdPV2N1MlFZSzlhSWtGb2NieWhzdkx4YVFMcERnRjdGcjAtRV9aUkg5Ul9sN0p2WFRpVzFmVg?oc=5",
-          "published_at": "2026-11-27T01:37:00+00:00"
-        },
-        {
-          "title": "Fantasy playbook: Week 12 Shadow Reports, lineup locks and projected scores - ESPN",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNT0ZJa1ZDbnBfN1pLek9lbXRBWDAza1JvX3diaGI5R1VmQnI3WlVWSDFmNW1XTEFkSkFaQUFFczg5U0xzZVFPNnVvcmt0NDgxSzk5anF0NnFFbmNwTkplTEZmWXhXYVVvYWp6SVR6SEJ3Uy1MaTZidE5Janlub0xCOTJ3Tlhxc0N6bHFXTGdlTDBYRWZibkRUeWQxRzRGWW05dktLQ0xKX0xfeGRXcFdnc05mTjI?oc=5",
-          "published_at": "2026-11-27T11:51:00+00:00"
-        },
-        {
-          "title": "Fantasy football rankings, projections, lineup advice, sleeper picks for Week 12 from proven model - CBS Sports",
-          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPdkdpcFpKUVRGUmpSS1Nqb0RuQnNzUkJpZmg1YW5lRXVyVjNOc3dVbzZtSV9XMnhyT0hmSDIwVFJ5YXJVTUdyeUMwcU8zS0Mtc0gzZU0yQzVfeVl2QldFVWlwLVRhVWRuSGFQYnFfeGxrQVhKVzhOQnZaOTIySF91S2hOc0N3enk3WmtiUGF5blBPanVJQ19sNWpzTlJiSUNfV094dEltZ0tCRkxGSmRYS05yTFlRdW1ZSDNlcEFxckREalFMdzB2SnJfSzNMWlFHRERTcmFnTlZ5UQ?oc=5",
-          "published_at": "2026-11-27T16:59:45+00:00"
+          "title": "Texas edge Colin Simmons ruled out on pregame injury report - Burnt Orange Nation",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPS2V3bldRZ3JIc04xcUdPM0FNSnVDd2tWQmk1MkNlMTdZSldmbTNIMTJaaUt4SWJyZmx2NVVHLVVwdWl5Q1kzTFJ3SU1UTGh5TmVqLTdid2l0RFJyRmdHZ29xbkhtbUVGZkswNmVEd2kzYWdpM0l3R0FwRFFyYlE4NlFoczJtckNwVmlaQ0lmMEQyOURtaFpaM21yLURiUDJqY2JhUjVhS0MweXd5RnVjU0p5YUVQaFByNDQzWmlEV1AxNEE?oc=5",
+          "published_at": "2026-11-27T23:26:41+00:00"
         }
       ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
     },
     "tennis": {
-      "status": "NO_SIGNALS_IN_FEED",
-      "articles": [],
+      "status": "HEADLINES_UNVERIFIED",
+      "articles": [
+        {
+          "title": "Jannik Sinner's knee injury carries a hidden price, and one forfeited ATP bonus shows its true cost - www.tenniswatcher.com",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcFhNUEd2THJ5ek1BMUdPTTJuMUtYVjhzQzY5ZE43VmpDbHpvTzhlV3BieElPNWRLNkdLS1VVSGZhN0xvOExrNzNUUUI3ak9KS2dKVGZVRDhFak9seGZvYVRxbFdJZGxKaUx5RUExQ0NUem1yX3FNaWRoVVFpVlAtTU9mMHlwSG81V3BuUkdRcGZIT3M2Unc?oc=5",
+          "published_at": "2026-11-27T20:05:00+00:00"
+        }
+      ],
       "note": "Headlines are leads, not confirmed team news or P2 FORCE triggers."
     }
   }
